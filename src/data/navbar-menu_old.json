@@ -1,0 +1,105 @@
+{
+  "navLinks": [
+    {
+      "label": "Buy Used Bikes",
+      "path": "/",
+      "submenu": true,
+      "categories": [
+        {
+          "name": "Browse by Top deal",
+          "section_type": "append_as_link",
+          "subcategories": [
+            "Used Honda Activa 6G",
+            "Used Royal Enfield Classic 350",
+            "Used Yamaha R15 V4",
+            "Used Bajaj Pulsar 220F",
+            "Used TVS Apache RTR 160",
+            "Used Suzuki Access 125"
+          ]
+        },
+        {
+          "name": "Browse by Brand",
+          "section_type": "append_as_image",
+          "subcategories": [
+            "Hero MotoCorp",
+            "Bajaj",
+            "TVS",
+            "Royal Enfield",
+            "Honda",
+            "Yamaha",
+            "Suzuki",
+            "Kawasaki",
+            "KTM",
+            "Benelli",
+            "BMW Motorrad",
+            "Ducati",
+            "Harley-Davidson",
+            "Indian Motorcycle",
+            "Ather",
+            "Ola Electric",
+            "Revolt"
+          ]
+        },
+        {
+          "name": "Browse by Price",
+          "section_type": "append_as_link",
+          "subcategories": [
+            "Below ₹30,000",
+            "₹30,000 - ₹60,000",
+            "₹60,000 - ₹1,00,000",
+            "₹1,00,000 - ₹2,00,000",
+            "Above ₹2,00,000"
+          ]
+        },
+        {
+          "name": "Select by Type",
+          "section_type": "append_as_image",
+          "subcategories": [
+            "Scooter",
+            "Cruiser",
+            "Sportbike",
+            "Commuter",
+            "Adventure",
+            "Touring",
+            "Off-Road",
+            "Naked Bike",
+            "Dual-Sport"
+          ]
+        },
+        {
+          "name": "Browse by Fuel Type",
+          "section_type": "append_as_image",
+          "subcategories": ["Petrol", "Electric", "Hybrid"]
+        },
+        {
+          "name": "Browse by Transmission",
+          "section_type": "append_as_link",
+          "subcategories": ["Manual", "Automatic", "Semi-Automatic"]
+        },
+        {
+          "name": "Browse by City",
+          "section_type": "append_as_link",
+          "subcategories": [
+            "Chennai",
+            "Bangalore",
+            "Mumbai",
+            "Delhi",
+            "Hyderabad",
+            "Pune",
+            "Kolkata"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Sell Bike",
+      "path": "/sell",
+      "submenu": false
+    },
+    {
+      "label": "About",
+      "path": "/about",
+      "submenu": false
+    }
+  ]
+}
