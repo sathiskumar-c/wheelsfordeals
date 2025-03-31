@@ -7,7 +7,16 @@ import ContactUs from "./pages/contactus/contactus";
 const App = () => {
   return (
     <Router>
-      <nav>
+    
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contactus" element={<ContactUs />} />
+      </Routes>
+
+
+      {/* <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -19,13 +28,7 @@ const App = () => {
             <Link to="/contactus">Contact</Link>
           </li>
         </ul>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contactus" element={<ContactUs />} />
-      </Routes>
+      </nav> */}
     </Router>
   );
 };

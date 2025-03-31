@@ -1,0 +1,225 @@
+{
+  "navLinks": [
+    {
+      "label": "Buy Used Bikes",
+      "path": "/",
+      "submenu": true,
+      "categories": [
+        {
+          "name": "Browse by Top deal",
+          "section_type": "append_as_link",
+          "subcategories": [
+            "Used Honda Activa 6G",
+            "Used Royal Enfield Classic 350",
+            "Used Yamaha R15 V4",
+            "Used Bajaj Pulsar 220F",
+            "Used TVS Apache RTR 160",
+            "Used Suzuki Access 125"
+          ]
+        },
+        {
+          "name": "Browse by Brand",
+          "section_type": "append_as_image",
+          "subcategories": [
+            {
+              "name": "Hero MotoCorp",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Hero MotoCorp Logo"
+            },
+            {
+              "name": "Bajaj",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Bajaj Logo"
+            },
+            {
+              "name": "TVS",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "TVS Logo"
+            },
+            {
+              "name": "Royal Enfield",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Royal Enfield Logo"
+            },
+            {
+              "name": "Honda",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Honda Logo"
+            },
+            {
+              "name": "Yamaha",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Yamaha Logo"
+            },
+            {
+              "name": "Suzuki",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Suzuki Logo"
+            },
+            {
+              "name": "Kawasaki",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Kawasaki Logo"
+            },
+            {
+              "name": "KTM",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "KTM Logo"
+            },
+            {
+              "name": "Benelli",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Benelli Logo"
+            },
+            {
+              "name": "BMW Motorrad",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "BMW Motorrad Logo"
+            },
+            {
+              "name": "Ducati",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Ducati Logo"
+            },
+            {
+              "name": "Harley-Davidson",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Harley-Davidson Logo"
+            },
+            {
+              "name": "Indian Motorcycle",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Indian Motorcycle Logo"
+            },
+            {
+              "name": "Ather",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Ather Logo"
+            },
+            {
+              "name": "Ola Electric",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Ola Electric Logo"
+            },
+            {
+              "name": "Revolt",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Revolt Logo"
+            }
+          ]
+        },
+        {
+          "name": "Browse by Price",
+          "section_type": "append_as_link",
+          "subcategories": [
+            "Below ₹30,000",
+            "₹30,000 - ₹60,000",
+            "₹60,000 - ₹1,00,000",
+            "₹1,00,000 - ₹2,00,000",
+            "Above ₹2,00,000"
+          ]
+        },
+        {
+          "name": "Select by Type",
+          "section_type": "append_as_image",
+          "subcategories": [
+            {
+              "name": "Scooter",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Scooter"
+            },
+            {
+              "name": "Cruiser",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Cruiser"
+            },
+            {
+              "name": "Sportbike",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Sportbike"
+            },
+            {
+              "name": "Commuter",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Commuter"
+            },
+            {
+              "name": "Adventure",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Adventure"
+            },
+            {
+              "name": "Touring",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Touring"
+            },
+            {
+              "name": "Off-Road",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Off-Road"
+            },
+            {
+              "name": "Naked Bike",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Naked Bike"
+            },
+            {
+              "name": "Dual-Sport",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Dual-Sport"
+            }
+          ]
+        },
+        {
+          "name": "Browse by Fuel Type",
+          "section_type": "append_as_image",
+          "subcategories": [
+            {
+              "name": "Petrol",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Petrol"
+            },
+            {
+              "name": "Electric",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Electric"
+            },
+            {
+              "name": "Hybrid",
+              "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+              "alt": "Hybrid"
+            }
+          ]
+        },
+        {
+          "name": "Browse by Transmission",
+          "section_type": "append_as_link",
+          "subcategories": ["Manual", "Automatic", "Semi-Automatic"]
+        },
+        {
+          "name": "Browse by City",
+          "section_type": "append_as_link",
+          "subcategories": [
+            "Chennai",
+            "Bangalore",
+            "Mumbai",
+            "Delhi",
+            "Hyderabad",
+            "Pune",
+            "Kolkata"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Sell Bike",
+      "path": "/sell-your-bike",
+      "submenu": false
+    },
+    {
+      "label": "About",
+      "path": "/about",
+      "submenu": false
+    }
+  ]
+}
