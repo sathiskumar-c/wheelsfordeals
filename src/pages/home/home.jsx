@@ -1,7 +1,10 @@
+import OffcanvasNavbar from "../../components/navbar/navbar";
+
 const Home = () => {
   return (
     <>
-      <h1>Home Page Updated</h1>
+    <OffcanvasNavbar />
+      {/* <h1>Home Page Updated</h1> */}
     </>
   );
 };
