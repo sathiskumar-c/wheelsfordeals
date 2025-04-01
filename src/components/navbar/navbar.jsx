@@ -9,7 +9,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import navbarMenuData from "../../../src/data/navbar-menu.json";
 import "./navbar.scss";
 
-function ResponsiveOffcanvasNavbar() {
+function NavbarDeskTop() {
   const navigate = useNavigate(); // React Router navigation
 
   // State management
@@ -239,4 +239,4 @@ function ResponsiveOffcanvasNavbar() {
   );
 }
 
-export default ResponsiveOffcanvasNavbar;
+export default NavbarDeskTop;
