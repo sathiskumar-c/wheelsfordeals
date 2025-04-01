@@ -7,28 +7,11 @@ import ContactUs from "./pages/contactus/contactus";
 const App = () => {
   return (
     <Router>
-    
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contactus" element={<ContactUs />} />
       </Routes>
-
-
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contactus">Contact</Link>
-          </li>
-        </ul>
-      </nav> */}
     </Router>
   );
 };
