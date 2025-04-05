@@ -1,9 +1,16 @@
+import NavbarDeskTop from "../../components/navbar/navbar";
+import Footer from "../../components/footer/footer";
+import PopularBikes from "../../components/popular-bikes/popular-bikes";
+
 const Home = () => {
   return (
     <>
-      <h1>Home Page</h1>
+      <NavbarDeskTop />
+      <PopularBikes />
+      <Footer />
     </>
   );
 };
 
 export default Home;
+

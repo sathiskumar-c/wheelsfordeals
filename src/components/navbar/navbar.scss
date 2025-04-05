@@ -1,0 +1,68 @@
+.navbar-menu {
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+
+  .offcanvasNavbar {
+    .navbar-nav {
+      .menu-container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.sub-menu-desktop {
+  padding: 10px 0;
+  width: 100vw;
+  background: #fff;
+  border: 1px solid #dde5eb;
+  box-shadow: 0 24px 48px hsla(221, 9%, 54%, 0.08);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  transition: all 0.1s ease-in-out 0s;
+  z-index: 99;
+  height: 450px;
+
+  .sub-menu-desktop-left .sub-menu-ul-left {
+    list-style-type: none;
+    padding: 15px 0px 15px 0px;
+    border-right: 1px solid rgba(239, 239, 240);
+
+    li:hover {
+      cursor: pointer;
+      background-image: linear-gradient(
+        to right,
+        #003a60,
+        #0061a0 49%,
+        #007abc
+      );
+      color: #fff;
+    }
+  }
+
+  .sub-menu-desktop-right {
+    padding-left: 10px;
+    padding-top: 10px;
+
+    .sub-menu-ul-right {
+      padding-left: 10px !important;
+      padding-top: 0px !important;
+
+      li {
+        list-style-type: none;
+        padding-top: 5px;
+      }
+    }
+
+    .sub-menu-ul-right.append_as_image {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 15px;
+      column-gap: 15px;
+    }
+  }
+}
