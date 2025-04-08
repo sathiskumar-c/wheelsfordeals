@@ -1,0 +1,38 @@
+{
+  "sections": [
+    {
+      "title": "COMPANY",
+      "links": [
+        { "label": "About Us", "path": "/about" },
+        { "label": "Privacy Policy", "path": "/privacy-policy" },
+        { "label": "Testimonials", "path": "/testimonials" }
+      ]
+    },
+    {
+      "title": "DISCOVER",
+      "links": [
+        { "label": "Buy used bike", "path": "/buy-bike" },
+        { "label": "Sell used bike", "path": "/sell-bike" },
+        { "label": "Check vehicle details", "path": "/check-vehicle" }
+      ]
+    },
+    {
+      "title": "HELP & SUPPORT",
+      "links": [
+        { "label": "FAQs", "path": "/faqs" },
+        { "label": "Contact us", "path": "/contact" },
+        { "label": "Terms & conditions", "path": "/terms" }
+      ]
+    },
+    {
+      "title": "SOCIAL LINKS",
+      "socials": [
+        { "platform": "facebook", "url": "https://facebook.com" },
+        { "platform": "x", "url": "https://x.com" },
+        { "platform": "instagram", "url": "https://instagram.com" },
+        { "platform": "linkedin", "url": "https://linkedin.com" }
+      ]
+    }
+  ],
+  "copyright": "© 2025 WheelsForDeals, All rights reserved"
+}
