@@ -1,0 +1,25 @@
+{
+  "title": "Insights That Drive Us",
+  "data": [
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "value": "4.8/5",
+      "text": "Our average review rating on Google and on Social platforms"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "value": "35%",
+      "text": "The number of Spinny customers that are referrals"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "value": "> 70%",
+      "text": "People who’ve become customers after their first test drive"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "value": "32%",
+      "text": "Our women customer quotient"
+    }
+  ]
+}
