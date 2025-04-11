@@ -1,0 +1,45 @@
+{
+  "title": "Used Bike FAQ",
+  "faqData": [
+    {
+      "question": "What should I check before buying a used bike?",
+      "answer": "Always check the service history, RC book, insurance, chassis number, and test the bike's overall condition."
+    },
+    {
+      "question": "How do I know if a used bike is accident-free?",
+      "answer": "Inspect the chassis and frame for welding or damage, or get it inspected by our experts."
+    },
+    {
+      "question": "Can I get a loan to buy a used bike?",
+      "answer": "Yes, we offer easy financing options with low-interest EMIs for eligible customers."
+    },
+    {
+      "question": "Is test ride available before purchasing?",
+      "answer": "Yes, you can test ride the bike at our hub or request a home test ride (based on availability)."
+    },
+    {
+      "question": "How is RC transfer handled?",
+      "answer": "We take care of complete RC transfer and ensure it’s done safely and legally."
+    },
+    {
+      "question": "What documents do I need to buy a used bike?",
+      "answer": "You'll need an ID proof, address proof, and a passport-size photo."
+    },
+    {
+      "question": "How do I sell my bike through WheelsForDeals?",
+      "answer": "Submit your bike details, and we’ll contact you for inspection and price estimation."
+    },
+    {
+      "question": "How do you decide the price of my bike?",
+      "answer": "Pricing is based on your bike’s condition, model, year, kilometers run, and current market rates."
+    },
+    {
+      "question": "How long does it take to get payment after selling?",
+      "answer": "Once the deal is confirmed and paperwork is completed, payment is done on the same day."
+    },
+    {
+      "question": "Who will handle the paperwork and RC transfer after I sell?",
+      "answer": "We handle the full RC transfer and ownership change to ensure a smooth experience for you."
+    }
+  ]
+}
