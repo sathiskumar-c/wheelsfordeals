@@ -27,18 +27,13 @@ function NavbarDeskTop() {
       (item) => item.label === response
     );
 
-    // setCurrentMenuData((prevState) => ({
-    //   ...prevState, // Keep existing properties
-    //   ...findCurrentMenu, // Override with new values
-    // }));
-
     setCurrentMenuData(findCurrentMenu);
 
     console.log("handleMenuHoverandLeave:", findCurrentMenu, currentMenuData);
   }
 
   // Sub menu mouse hover
-  const handleSubMenuHover = (category) => {
+  const handleSubMenuHover = (e, category) => {
     setIsSubMenuHovered((prev) => ({ ...prev, [category]: true }));
 
     const findCurrentSubMenu = currentMenuData.categories.find((item) => {
@@ -76,7 +71,7 @@ function NavbarDeskTop() {
       window.open(subcategory, "_blank", "noopener,noreferrer");
     } else {
       // Internal Navigation - Uses useNavigate for faster navigation
-      navigate(`/category/${subcategory}`);
+      navigate(`/brand/${subcategory}`);
     }
 
     console.log("handleNavigation", subcategory);
@@ -149,44 +144,41 @@ function NavbarDeskTop() {
                         }
                       >
                         {/* Left Side - Categories */}
-                        <div
-                          className="sub-menu-desktop-left"
-                          style={{ width: "25%" }}
-                        >
+                        <div className="sub-menu-desktop-left">
                           <ul className="sub-menu-ul-left">
-                            {currentMenuData?.categories.map((category) => (
-                              <li
-                                style={{ padding: "10px" }}
-                                key={category.name}
-                                onMouseEnter={() =>
-                                  handleSubMenuHover(category.name)
-                                }
-                              >
-                                {category.name}
-                                <KeyboardArrowRightIcon
-                                  style={{ float: "right" }}
-                                />
-                              </li>
-                            ))}
+                            {currentMenuData?.categories?.length > 0 &&
+                              currentMenuData?.categories.map((category) => (
+                                <li
+                                  key={category.name}
+                                  onMouseEnter={(e) =>
+                                    handleSubMenuHover(e, category.name)
+                                  }
+                                  onMouseLeave={(e) =>
+                                    handleSubMenuLeave(e, category.name)
+                                  }
+                                >
+                                  {category.name}
+                                  <KeyboardArrowRightIcon
+                                    style={{ float: "right" }}
+                                  />
+                                </li>
+                              ))}
                           </ul>
                         </div>
 
                         {/* Right Side - Subcategories */}
-                        <div
-                          className="sub-menu-desktop-right"
-                          style={{ width: "75%" }}
-                        >
+                        <div className="sub-menu-desktop-right">
                           {/* Handling Different Submenu Types */}
                           {currentSubMenuData?.section_type ===
                             "append_as_link" && (
                             <ul className="sub-menu-ul-right">
                               {currentSubMenuData.subcategories.map((sub) => (
                                 <li
-                                  key={sub}
-                                  onClick={() => handleNavigation(sub)}
-                                  style={{ cursor: "pointer" }}
+                                  key={sub.id}
+                                  id={sub.id}
+                                  onClick={() => handleNavigation(sub.name)}
                                 >
-                                  {sub}
+                                  {sub.name}
                                 </li>
                               ))}
                             </ul>
@@ -195,34 +187,31 @@ function NavbarDeskTop() {
                           {currentSubMenuData?.section_type ===
                             "append_as_image" && (
                             <ul className="sub-menu-ul-right append_as_image">
-                              {currentSubMenuData.subcategories.map((sub) => (
-                                <li
-                                  key={sub.alt}
-                                  style={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    cursor: "pointer",
-                                  }}
-                                  onClick={() => handleNavigation(sub.alt)}
-                                >
-                                  {/* Error Handling: Default image if the URL is broken */}
-                                  <img
-                                    src={sub.image}
-                                    alt={sub.alt}
-                                    style={{
-                                      width: "50px",
-                                      height: "50px",
-                                      marginRight: "10px",
-                                    }}
-                                    onError={(e) => {
-                                      e.target.src = "/default-image.jpg"; //  Replaces broken image with a fallback
-                                      console.error(
-                                        `Image failed to load: ${sub.image}`
-                                      );
-                                    }}
-                                  />
-                                </li>
-                              ))}
+                              {currentSubMenuData.subcategories.map((sub) => {
+                                return (
+                                  <li
+                                    className="append_as_image_li"
+                                    key={sub.id}
+                                    id={sub.id}
+                                    onClick={() => handleNavigation(sub.path)}
+                                  >
+                                    {/* Error Handling: Default image if the URL is broken */}
+                                    <img
+                                      className="append_as_image_img"
+                                      id={sub.id}
+                                      src={sub.image}
+                                      alt={sub.alt}
+                                      title={sub.alt}
+                                      onError={(e) => {
+                                        e.target.src = "/default-image.jpg"; // Replaces broken image with a fallback
+                                        console.error(
+                                          `Image failed to load: ${sub.image}`
+                                        );
+                                      }}
+                                    />
+                                  </li>
+                                );
+                              })}
                             </ul>
                           )}
                         </div>
