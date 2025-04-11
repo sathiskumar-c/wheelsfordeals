@@ -22,7 +22,7 @@ $box-shadow: rgba(88, 97, 106, 0.22) 0px 4px 24px 0px;
   .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 32px;
+    gap: 20px;
     justify-items: center;
 
     .service-item {

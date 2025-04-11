@@ -1,0 +1,29 @@
+{
+  "title": "Need help?",
+  "needhelpdata": [
+    {
+      "id": 1,
+      "icon": "whatsapp",
+      "title": "Ask us on WhatsApp!",
+      "description": "Get instant support via experts",
+      "path": "contactus",
+      "alt": "WhatsApp"
+    },
+    {
+      "id": 2,
+      "icon": "helpline",
+      "title": "Request a callback",
+      "description": "Our team will contact you shortly!",
+      "path": "contactus",
+      "alt": "Callback"
+    },
+    {
+      "id": 3,
+      "icon": "questionmark",
+      "title": "FAQ's",
+      "description": "Get your doubts cleared",
+      "path": "faq",
+      "alt": "FAQs"
+    }
+  ]
+}
