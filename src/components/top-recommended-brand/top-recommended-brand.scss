@@ -1,0 +1,50 @@
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.brand-card {
+  width: 160px;
+  margin-right: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.brand-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.brand-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

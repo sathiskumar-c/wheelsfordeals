@@ -6,8 +6,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import navbarMenuData from "../../../src/data/navbar-menu.json";
 import "./navbar.scss";
+import JSON from "../../../src/data/navbar-menu.json";
 
 function NavbarDeskTop() {
   const navigate = useNavigate(); // React Router navigation
@@ -23,7 +23,7 @@ function NavbarDeskTop() {
   function handleMenuHoverandLeave(response) {
     setIsMenuHovered(response);
 
-    const findCurrentMenu = navbarMenuData.navLinks.find(
+    const findCurrentMenu = JSON.navLinks.find(
       (item) => item.label === response
     );
 
@@ -78,7 +78,7 @@ function NavbarDeskTop() {
   };
 
   useEffect(() => {
-    setNavbarData(navbarMenuData);
+    setNavbarData(JSON);
   }, []);
 
   useEffect(() => {
@@ -90,7 +90,7 @@ function NavbarDeskTop() {
       <Navbar expand="md" className="bg-body-tertiary mb-3 navbar-menu">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            WheelsForDeals
+            {JSON.title}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar-md" />
           <Navbar.Offcanvas
