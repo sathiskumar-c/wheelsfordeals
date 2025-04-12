@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../our-services/our-servcies.scss";
-import OurServicesData from "../../../src/data/our-services.json";
+import JSON from "../../../src/data/our-services.json";
 
 const OurServices = () => {
   const navigate = useNavigate();
@@ -11,10 +11,10 @@ const OurServices = () => {
   };
 
   return (
-    <section className="services-section">
-      <h2 className="services-heading">{OurServicesData.title}</h2>
+    <section className="services-section component-parent">
+      <h3 className="section-title text-center">{JSON.title}</h3>
       <div className="services-container">
-        {OurServicesData.ourservicesdata.map((service, index) => (
+        {JSON.ourservicesdata.map((service, index) => (
           <div
             onClick={() => handleNavigate(service.path)}
             className="service-item"

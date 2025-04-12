@@ -1,13 +1,13 @@
 import React from "react";
 import "./insight-driven.scss";
-import insightsData from "../../../src/data//insight-driven.json";
+import JSON from "../../../src/data//insight-driven.json";
 
 const Insights = () => {
   return (
-    <section className="insights-section">
-      <h2 className="section-title">{insightsData.title}</h2>
+    <section className="insights-section component-parent">
+      <h3 className="section-title text-center">{JSON.title}</h3>
       <div className="insights-grid">
-        {insightsData.data.map((insight, index) => (
+        {JSON.data.map((insight, index) => (
           <div key={index} className="insight-card">
             <img src={insight.image} alt="icon" className="insight-icon" />
             <div className="insight-content">
