@@ -6,7 +6,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./faq-questions.scss";
-import faqDataJSON from "../../data/faq-questions.json";
+import JSON from "../../data/faq-questions.json";
 
 const UsedBikeFaq = () => {
   const [expanded, setExpanded] = useState(false);
@@ -16,9 +16,9 @@ const UsedBikeFaq = () => {
   };
 
   return (
-    <div className="container faq-parent">
-      <h4 className="text-center pb-3">{faqDataJSON.title}</h4>
-      {faqDataJSON.faqData.map((item, index) => {
+    <div className="container faq-parent component-parent">
+      <h3 className="section-title text-center">{JSON.title}</h3>
+      {JSON.faqData.map((item, index) => {
         const panelId = `panel${index}`;
         return (
           <Accordion

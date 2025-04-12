@@ -5,7 +5,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import "../need-help/need-help.scss";
-import NeedHelpData from "../../../src/data/need-help.json";
+import JSON from "../../../src/data/need-help.json";
 
 const NeedHelp = () => {
   const navigate = useNavigate();
@@ -15,10 +15,10 @@ const NeedHelp = () => {
   };
 
   return (
-    <section className="help-section">
-      <h2>{NeedHelpData.title}</h2>
+    <section className="help-section component-parent">
+      <h3 className="section-title text-center">{JSON.title}</h3>
       <div className="help-options">
-        {NeedHelpData.needhelpdata.map((option, index) => (
+        {JSON.needhelpdata.map((option, index) => (
           <div
             onClick={() => handleNavigate(option.path)}
             className="help-card"
