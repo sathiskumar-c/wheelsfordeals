@@ -14,12 +14,12 @@ const Home = () => {
     <>
       <NavbarDeskTop />
       <PopularBikes />
-      <UsedBikeFaq />
-      <OurServices />
       <BrowseBikesBy />
+      <OurServices />
       <TopRecommendedBrand />
       <NeedHelp />
       <Insights />
+      <UsedBikeFaq />
       <Footer />
     </>
   );
