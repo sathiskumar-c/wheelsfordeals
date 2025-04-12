@@ -1,0 +1,20 @@
+.browsebikesby-parent {
+  .append-brand-parent {
+    .append-brand-img {
+      height: 75px;
+      width: 75px;
+      object-fit: contain;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  .tabpanel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 25px;
+  }
+}
