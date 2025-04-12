@@ -7,6 +7,7 @@ import NeedHelp from "../../components/need-help/need-help";
 import Insights from "../../components/insight-driven/insight-driven";
 import TopRecommendedBrand from "../../components/top-recommended-brand/top-recommended-brand";
 import "./home.scss";
+import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <PopularBikes />
       <UsedBikeFaq />
       <OurServices />
+      <BrowseBikesBy />
       <TopRecommendedBrand />
       <NeedHelp />
       <Insights />
