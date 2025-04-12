@@ -7,17 +7,19 @@ import NeedHelp from "../../components/need-help/need-help";
 import Insights from "../../components/insight-driven/insight-driven";
 import TopRecommendedBrand from "../../components/top-recommended-brand/top-recommended-brand";
 import "./home.scss";
+import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 
 const Home = () => {
   return (
     <>
       <NavbarDeskTop />
       <PopularBikes />
-      <UsedBikeFaq />
+      <BrowseBikesBy />
       <OurServices />
       <TopRecommendedBrand />
       <NeedHelp />
       <Insights />
+      <UsedBikeFaq />
       <Footer />
     </>
   );
