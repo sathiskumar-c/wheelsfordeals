@@ -8,16 +8,11 @@ $box-shadow: rgba(88, 97, 106, 0.22) 0px 4px 24px 0px;
   background: $bg-white;
   border-radius: 12px;
   box-shadow: $box-shadow;
-  padding: 32px;
+  padding: 25px;
   max-width: 80%;
-  margin: 0px auto 80px;
+  margin: auto;
   text-align: center;
-
-  .services-heading {
-    font-size: 28.8px;
-    margin-bottom: 32px;
-    color: $primary-color;
-  }
+  margin-top: 25px;
 
   .services-container {
     display: grid;

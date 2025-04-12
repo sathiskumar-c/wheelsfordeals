@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./footer.scss";
-import footerData from "../../../src/data/footer.json";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import "./footer.scss";
+import JSON from "../../../src/data/footer.json";
 
 const iconMap = {
   facebook: <FacebookIcon />,
@@ -18,9 +18,9 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="footer">
+    <footer className="footer component-parent">
       <div className="footer-container">
-        {footerData.sections.map((section, idx) => {
+        {JSON.sections.map((section, idx) => {
           return (
             <div
               className={`footer-section ${section.socials ? "social" : ""}`}
@@ -61,7 +61,7 @@ const Footer = () => {
           );
         })}
       </div>
-      <p className="footer-bottom">{footerData.copyright}</p>
+      <p className="footer-bottom">{JSON.copyright}</p>
     </footer>
   );
 };
