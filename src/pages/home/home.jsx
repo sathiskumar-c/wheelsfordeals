@@ -5,6 +5,8 @@ import UsedBikeFaq from "../../components/faq-questions/faq-questions";
 import OurServices from "../../components/our-services/our-services";
 import NeedHelp from "../../components/need-help/need-help";
 import Insights from "../../components/insight-driven/insight-driven";
+import TopRecommendedBrand from "../../components/top-recommended-brand/top-recommended-brand";
+import "./home.scss";
 
 const Home = () => {
   return (
@@ -13,6 +15,7 @@ const Home = () => {
       <PopularBikes />
       <UsedBikeFaq />
       <OurServices />
+      <TopRecommendedBrand />
       <NeedHelp />
       <Insights />
       <Footer />
