@@ -1,0 +1,287 @@
+{
+  "title": "Browse Bikes By",
+
+  "browsebybrand": {
+    "tabtitle": "Brand",
+    "value": "brand",
+    "data": [
+      {
+        "id": "brand-honda",
+        "name": "Honda",
+        "image": "/images/brands/honda.jpeg",
+        "alt": "Honda",
+        "path": "honda",
+        "fuel_type": "hybrid"
+      },
+      {
+        "id": "brand-hero",
+        "name": "Hero MotoCorp",
+        "image": "/images/brands/hero.png",
+        "alt": "Hero MotoCorp",
+        "path": "hero",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-bajaj",
+        "name": "Bajaj Auto Ltd",
+        "image": "/images/brands/bajaj.png",
+        "alt": "Bajaj Auto Ltd",
+        "path": "bajaj",
+        "fuel_type": "hybrid"
+      },
+      {
+        "id": "brand-tvs",
+        "name": "TVS Motor Company",
+        "image": "/images/brands/tvs.png",
+        "alt": "TVS Motor Company",
+        "path": "tvs",
+        "fuel_type": "hybrid"
+      },
+      {
+        "id": "brand-suzuki",
+        "name": "Suzuki Motorcycle",
+        "image": "/images/brands/suzuki.png",
+        "alt": "Suzuki Motorcycle",
+        "path": "suzuki",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-royal-enfield",
+        "name": "Royal Enfield",
+        "image": "/images/brands/royal-enfield.png",
+        "alt": "Royal Enfield",
+        "path": "royal-enfield",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-yamaha",
+        "name": "Yamaha Motor India",
+        "image": "/images/brands/yamaha.png",
+        "alt": "Yamaha Motor India",
+        "path": "yamaha",
+        "fuel_type": "hybrid"
+      },
+      {
+        "id": "brand-ktm",
+        "name": "KTM India",
+        "image": "/images/brands/ktm.png",
+        "alt": "KTM India",
+        "path": "ktm",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-kawasaki",
+        "name": "Kawasaki India",
+        "image": "/images/brands/kawasaki.png",
+        "alt": "Kawasaki India",
+        "path": "kawasaki",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-bmw-motorrad",
+        "name": "BMW Motorrad",
+        "image": "/images/brands/bmw motorrad.png",
+        "alt": "BMW Motorrad",
+        "path": "bmw-motorrad",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-ducati",
+        "name": "Ducati Indianapolis",
+        "image": "/images/brands/ducati.png",
+        "alt": "Ducati Indianapolis",
+        "path": "ducati",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-mahindra",
+        "name": "Mahindra Two Wheelers",
+        "image": "/images/brands/mahindra.png",
+        "alt": "Mahindra Two Wheelers",
+        "path": "mahindra",
+        "fuel_type": "hybrid"
+      },
+      {
+        "id": "brand-harley-davidson",
+        "name": "Harley-Davidson",
+        "image": "/images/brands/harley-davidson.png",
+        "alt": "Harley-Davidson",
+        "path": "harley-davidson",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-benelli",
+        "name": "Benelli",
+        "image": "/images/brands/benelli.png",
+        "alt": "Benelli",
+        "path": "benelli",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-triumph",
+        "name": "Triumph Motorcycles",
+        "image": "/images/brands/triumph.png",
+        "alt": "Triumph Motorcycles",
+        "path": "triumph",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-jawa",
+        "name": "Jawa Motorcycles",
+        "image": "/images/brands/jawa.png",
+        "alt": "Jawa Motorcycles",
+        "path": "jawa",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-yezdi",
+        "name": "Yezdi",
+        "image": "/images/brands/yezdi.png",
+        "alt": "Yezdi",
+        "path": "yezdi",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-indian-motorcycles",
+        "name": "Indian Motorcycles",
+        "image": "/images/brands/indian-motorcycle.png",
+        "alt": "Indian Motorcycles",
+        "path": "indian-motorcycles",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-mv-agusta",
+        "name": "MV Agusta Motor",
+        "image": "/images/brands/mv-agusta.png",
+        "alt": "MV Agusta Motor",
+        "path": "mv-agusta",
+        "fuel_type": "petrol"
+      },
+      {
+        "id": "brand-ather",
+        "name": "Ather Energy",
+        "image": "/images/brands/ather.png",
+        "alt": "Ather Energy",
+        "path": "ather",
+        "fuel_type": "ev"
+      },
+      {
+        "id": "brand-ola",
+        "name": "Ola Electric",
+        "image": "/images/brands/ola.png",
+        "alt": "Ola Electric",
+        "path": "ola",
+        "fuel_type": "ev"
+      },
+      {
+        "id": "brand-revolt",
+        "name": "Revolt Motors",
+        "image": "/images/brands/revolt.jpeg",
+        "alt": "Revolt Motors",
+        "path": "revolt",
+        "fuel_type": "ev"
+      },
+      {
+        "id": "brand-pure-ev",
+        "name": "PURE EV",
+        "image": "/images/brands/pure-ev.png",
+        "alt": "PURE EV",
+        "path": "pure-ev",
+        "fuel_type": "ev"
+      }
+    ]
+  },
+
+  "browsebyprice": {
+    "tabtitle": "Budget",
+    "value": "budget",
+    "data": [
+      {
+        "id": "under_20k",
+        "path": "below-20000",
+        "title": "Under ₹20,000"
+      },
+      {
+        "id": "under_30k",
+        "path": "below-30000",
+        "title": "Under ₹30,000"
+      },
+      {
+        "id": "under_50k",
+        "path": "below-50000",
+        "title": "Under ₹50,000"
+      },
+      {
+        "id": "under_70k",
+        "path": "below-70000",
+        "title": "Under ₹70,000"
+      },
+      {
+        "id": "under_1lakh",
+        "path": "below-1lakh",
+        "title": "Under ₹1 lakh"
+      },
+      {
+        "id": "under_1_5lakh",
+        "path": "below-1.5lakh",
+        "title": "Under ₹1.5 lakh"
+      },
+      {
+        "id": "under_2lakh",
+        "path": "below-2lakh",
+        "title": "Under ₹2 lakh"
+      },
+      {
+        "id": "above_2lakh",
+        "path": "above-2lakh",
+        "title": "Above ₹2 lakh"
+      }
+    ]
+  },
+  "browsebydisplacement": {
+    "tabtitle": "Displacement",
+    "value": "displacement",
+    "data": [
+      {
+        "id": "upto_100cc",
+        "path": "upto-100cc",
+        "title": "Upto 100cc"
+      },
+      {
+        "id": "100_110cc",
+        "path": "100-110cc",
+        "title": "100cc - 110cc"
+      },
+      {
+        "id": "110_125cc",
+        "path": "110-125cc",
+        "title": "110cc - 125cc"
+      },
+      {
+        "id": "125_150cc",
+        "path": "125-150cc",
+        "title": "125cc - 150cc"
+      },
+      {
+        "id": "150_200cc",
+        "path": "150-200cc",
+        "title": "150cc - 200cc"
+      },
+      {
+        "id": "200_250cc",
+        "path": "200-250cc",
+        "title": "200cc - 250cc"
+      },
+      {
+        "id": "250_500cc",
+        "path": "250-500cc",
+        "title": "250cc - 500cc"
+      },
+      {
+        "id": "above_500cc",
+        "path": "above-500cc",
+        "title": "Above 500cc"
+      }
+    ]
+  }
+}
