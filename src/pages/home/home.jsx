@@ -8,6 +8,7 @@ import Insights from "../../components/insight-driven/insight-driven";
 import TopRecommendedBrand from "../../components/top-recommended-brand/top-recommended-brand";
 import "./home.scss";
 import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
+import GetUpdates from "../../components/get-updates/get-updates";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <NeedHelp />
       <Insights />
       <UsedBikeFaq />
+      <GetUpdates />
       <Footer />
     </>
   );
