@@ -1,7 +1,9 @@
+@use "../../styles/colors";
+
 .scroll-container {
   width: 100%;
   overflow: hidden;
-  background-color: #fff;
+  background-color: colors.$white;
   padding: 20px 0;
 }
 
@@ -17,7 +19,7 @@
   text-align: center;
   flex-shrink: 0;
   border-radius: 10px;
-  background-color: #f8f8f8;
+  background-color: colors.$super-light-gray;
   padding: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
@@ -36,15 +38,5 @@
 .brand-name {
   font-size: 14px;
   font-weight: 500;
-  color: #333;
-}
-
-/* Scroll animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  color: colors.$text-dark;
 }
