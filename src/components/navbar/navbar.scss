@@ -1,3 +1,5 @@
+@use "../../styles/colors";
+
 .navbar-menu {
   padding-bottom: 0px !important;
   padding-top: 0px !important;
@@ -15,8 +17,8 @@
 .sub-menu-desktop {
   padding: 10px 0;
   width: 100vw;
-  background: #fff;
-  border: 1px solid #dde5eb;
+  background: colors.$white;
+  border: 1px solid colors.$pale-sky;
   box-shadow: 0 24px 48px hsla(221, 9%, 54%, 0.08);
   display: flex;
   justify-content: center;
@@ -33,7 +35,7 @@
     .sub-menu-ul-left {
       list-style-type: none;
       padding: 15px 0px 15px 0px;
-      border-right: 1px solid rgba(239, 239, 240);
+      border-right: 1px solid colors.$ultra-light-gray;
 
       li:hover {
         cursor: pointer;
@@ -43,7 +45,7 @@
           #0061a0 49%,
           #007abc
         );
-        color: #fff;
+        color: colors.$white;
       }
     }
 

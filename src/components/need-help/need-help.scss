@@ -6,24 +6,6 @@ $text-secondary: #666;
 $shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 $hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-2px);
-  }
-  50% {
-    transform: translateX(2px);
-  }
-  75% {
-    transform: translateX(-2px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 .help-card:hover .icon {
   animation: shake 0.4s ease-in-out;
 }
