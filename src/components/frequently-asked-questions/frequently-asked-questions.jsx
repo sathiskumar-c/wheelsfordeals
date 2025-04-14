@@ -5,10 +5,10 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import "./faq-questions.scss";
-import JSON from "../../data/faq-questions.json";
+import "./frequently-asked-questions.scss";
+import JSON from "../../data/frequently-asked-questions.json";
 
-const UsedBikeFaq = () => {
+const FrequentlyAskedQuestions = () => {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -45,4 +45,4 @@ const UsedBikeFaq = () => {
   );
 };
 
-export default UsedBikeFaq;
+export default FrequentlyAskedQuestions;
