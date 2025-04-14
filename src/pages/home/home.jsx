@@ -9,6 +9,7 @@ import Insights from "../../components/insight-driven/insight-driven";
 import TopRecommendedBrand from "../../components/top-recommended-brand/top-recommended-brand";
 import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 import GetUpdates from "../../components/get-updates/get-updates";
+import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <OurServices />
       <TopRecommendedBrand />
       <NeedHelp />
+      <WhyChooseUs />
       <Insights />
       <FrequentlyAskedQuestions />
       <GetUpdates />
