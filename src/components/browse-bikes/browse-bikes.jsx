@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
@@ -12,44 +12,51 @@ import JSON from "../../data/browse-bikes.json";
 
 // Reusable component for rendering data
 const AppendData = ({ data, renderItem }) => {
-  const navigate = useNavigate();
-
   return (
     <>
       {data.map((item, index) => (
         <React.Fragment key={item.id}>
-          {renderItem({ item, navigate, index })}
+          {renderItem({ item, index })}
         </React.Fragment>
       ))}
     </>
   );
 };
 
-// Specific render functions
-const renderPriceOrCC = ({ item, navigate }) => (
-  <Button key={item.id} onClick={() => navigate(item.path)} variant="outlined">
+// Specific render functions for Price, CC, and Brand
+const renderPriceOrCC = ({ item }) => (
+  <Button
+    key={item.id}
+    component={Link}
+    to={item.path}
+    variant="outlined"
+    aria-label={`Browse bikes by ${item.title}`}
+    className="browsebybikes_btn"
+  >
     {item.title}
   </Button>
 );
 
-const renderBrand = ({ item, navigate }) => (
-  <div
-    className="append-brand-parent"
-    key={item.id}
-    id={item.id}
-    onClick={() => navigate(item.path)}
-  >
-    <img
-      className="append-brand-img"
-      id={item.id}
-      src={item.image}
-      alt={item.alt}
-      title={item.alt}
-      onError={(e) => {
-        e.target.src = "/default-image.jpg";
-        console.error(`Image failed to load: ${item.image}`);
-      }}
-    />
+const renderBrand = ({ item }) => (
+  <div className="append-brand-parent" id={item.id}>
+    <Link
+      to={`brands/${item.path}`}
+      className="brand-link"
+      aria-label={`View bikes from ${item.alt}`}
+    >
+      <img
+        className="append-brand-img"
+        id={item.id}
+        src={item.image}
+        alt={item.alt}
+        title={item.alt}
+        loading="lazy"
+        onError={(e) => {
+          e.target.src = "/default-image.jpg";
+          console.error(`Image failed to load: ${item.image}`);
+        }}
+      />
+    </Link>
   </div>
 );
 
@@ -57,7 +64,6 @@ const BrowseBikesBy = () => {
   const [tabValue, setTabValue] = useState("brand");
 
   const handleChangeTab = (event, newValue) => {
-    console.log("newValue", newValue);
     setTabValue(newValue);
   };
 
@@ -83,36 +89,50 @@ const BrowseBikesBy = () => {
   ];
 
   return (
-    <div className="container component-parent browsebikesby-parent">
+    <section
+      className="container component-parent browsebikesby-parent"
+      aria-labelledby="browse-bikes"
+      role="region"
+    >
+      <h2 className="section-title" id="browse-bikes-section">
+        {JSON.title}
+      </h2>
       <Box sx={{ width: "100%", typography: "body1" }}>
-        <h3 className="section-title">{JSON.title}</h3>
         <TabContext value={tabValue}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList onChange={handleChangeTab} aria-label="browse bikes by">
+            <TabList
+              onChange={handleChangeTab}
+              aria-label="Browse bikes by categories"
+            >
               {tabs.map((tab) => (
-                <Tab key={tab.value} label={tab.label} value={tab.value} />
+                <Tab
+                  key={tab.value}
+                  label={tab.label}
+                  value={tab.value}
+                  aria-controls={`tabpanel-${tab.value}`}
+                />
               ))}
             </TabList>
           </Box>
-          {tabs.map((tab) => {
-            console.log("tab", tab);
-            return (
-              <TabPanel
-                key={tab.value}
-                className="tabpanel"
-                style={{
-                  columnGap: tab.value == "brand" ? "30px" : "15px",
-                  rowGap: tab.value == "brand" ? "20px" : "10px",
-                }}
-                value={tab.value}
-              >
-                <AppendData data={tab.data} renderItem={tab.render} />
-              </TabPanel>
-            );
-          })}
+          {tabs.map((tab) => (
+            <TabPanel
+              key={tab.value}
+              className="tabpanel"
+              value={tab.value}
+              id={`tabpanel-${tab.value}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${tab.value}`}
+              style={{
+                columnGap: tab.value === "brand" ? "30px" : "15px",
+                rowGap: tab.value === "brand" ? "20px" : "10px",
+              }}
+            >
+              <AppendData data={tab.data} renderItem={tab.render} />
+            </TabPanel>
+          ))}
         </TabContext>
       </Box>
-    </div>
+    </section>
   );
 };
 
