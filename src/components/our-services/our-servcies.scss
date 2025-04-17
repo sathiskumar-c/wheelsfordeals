@@ -1,7 +1,9 @@
-$primary-color: #333;
+@use "../../styles/colors";
+
+$primary-color: colors.$text-dark;
 $secondary-color: #222;
-$text-light: #666;
-$bg-white: #fff;
+$text-light: colors.$medium-dark-gray;
+$bg-white: colors.$white;
 $box-shadow: rgba(88, 97, 106, 0.22) 0px 4px 24px 0px;
 
 .services-section {
@@ -42,7 +44,7 @@ $box-shadow: rgba(88, 97, 106, 0.22) 0px 4px 24px 0px;
       }
 
       .service-description {
-        font-size: 14.4px;
+        font-size: 14px;
         color: $text-light;
       }
     }
