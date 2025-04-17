@@ -2,7 +2,7 @@
 
 .why-choose-us {
   padding: 60px 20px;
-  background-color: #f9fcfd;
+  background-color: colors.$super-light-gray;
 
   .container {
     max-width: 1200px;
@@ -50,7 +50,7 @@
 
     .card-desc {
       font-size: 14px;
-      color: #555;
+      color: colors.$medium-dark-gray;
       flex-grow: 1;
     }
   }

@@ -9,8 +9,8 @@
     border-top: 1px solid colors.$very-light-gray;
     padding: 16px;
   }
-}
 
-.MuiAccordion-root::before {
-  background-color: unset !important;
+  .MuiAccordion-root::before {
+    background-color: unset !important;
+  }
 }
