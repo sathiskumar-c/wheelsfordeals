@@ -63,7 +63,7 @@ const GetUpdates = () => {
               inputProps={{
                 "aria-label": "Email address input",
                 type: "email",
-                required: true,
+                // required: true,
               }}
             />
             <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
