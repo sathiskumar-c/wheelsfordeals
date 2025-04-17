@@ -16,32 +16,44 @@ const FrequentlyAskedQuestions = () => {
   };
 
   return (
-    <div className="container faq-parent component-parent">
-      <h3 className="section-title text-center">{JSON.title}</h3>
-      {JSON.faqData.map((item, index) => {
-        const panelId = `panel${index}`;
-        return (
-          <Accordion
-            TransitionProps={{ unmountOnExit: true, timeout: 500 }}
-            key={index}
-            className="accordion-parent"
-            expanded={expanded === panelId}
-            onChange={handleChange(panelId)}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={`${panelId}-content`}
-              id={`${panelId}-header`}
+    <section
+      className="container faq-parent component-parent"
+      aria-labelledby="frequently-asked-questions"
+      role="region"
+    >
+      <h3 className="section-title text-center" id="faq-title">
+        {JSON.title}
+      </h3>
+
+      <div className="faq-list" role="list">
+        {JSON.faqData.map((item, index) => {
+          const panelId = `panel${index}`;
+          return (
+            <Accordion
+              TransitionProps={{ unmountOnExit: true, timeout: 500 }}
+              key={index}
+              className="accordion-parent"
+              expanded={expanded === panelId}
+              onChange={handleChange(panelId)}
+              role="listitem"
             >
-              <Typography component="span">🏍️ {item.question}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{item.answer}</Typography>
-            </AccordionDetails>
-          </Accordion>
-        );
-      })}
-    </div>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls={`${panelId}-content`}
+                id={`${panelId}-header`}
+              >
+                <Typography component="h4" variant="subtitle1">
+                  🏍️ {item.question}
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography component="p">{item.answer}</Typography>
+              </AccordionDetails>
+            </Accordion>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 
