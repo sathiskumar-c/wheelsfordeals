@@ -158,9 +158,7 @@ function NavbarDeskTop() {
                                   }
                                 >
                                   {category.name}
-                                  <KeyboardArrowRightIcon
-                                    style={{ float: "right" }}
-                                  />
+                                  <KeyboardArrowRightIcon className="arrow_right_icon" />
                                 </li>
                               ))}
                           </ul>
