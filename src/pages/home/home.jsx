@@ -11,6 +11,7 @@ import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
 import Benefits from "../../components/benefits/benefits";
+import ServiceCards from "../../components/services-slider/services-slider";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <OurServices />
       <TopRecommendedBrand />
       <NeedHelp />
+      <ServiceCards />
       <WhyChooseUs />
       <Insights />
       <FrequentlyAskedQuestions />
