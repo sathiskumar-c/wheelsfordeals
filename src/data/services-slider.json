@@ -1,0 +1,125 @@
+{
+  "title": "Our Services",
+  "ourservices": [
+    {
+      "category": "buy",
+      "title": "Drive your dream bike",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#003a5d",
+      "features": [
+        { "icon": "/images/icons/quality.png", "text": "140 quality checks" },
+        { "icon": "/images/icons/date.png", "text": "7-day return" },
+        { "icon": "/images/icons/finance.png", "text": "Finance it your way" }
+      ],
+      "buttonText": "View all bikes",
+      "path": "brands"
+    },
+    {
+      "category": "Finance",
+      "title": "Dreams real with Finance",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#0056d2",
+      "features": [
+        {
+          "icon": "/images/icons/quality.png",
+          "text": "Attractive interest"
+        },
+        { "icon": "/images/icons/date.png", "text": "Disbursal in 5 mins" },
+        { "icon": "/images/icons/finance.png", "text": "Get upto Rs 10 Lakhs" }
+      ],
+      "buttonText": "Apply now",
+      "path": "finance"
+    },
+    {
+      "category": "Insurance",
+      "title": "Bike Insurance",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#112d4e",
+      "features": [
+        { "icon": "/images/icons/quality.png", "text": "30+ Card options" },
+        { "icon": "/images/icons/date.png", "text": "Digital process" },
+        { "icon": "/images/icons/finance.png", "text": "100% transparency" }
+      ],
+      "buttonText": "Apply now",
+      "path": "insurance"
+    },
+    {
+      "category": "Sell",
+      "title": "Sell your bike instantly",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#1f4068",
+      "features": [
+        { "icon": "/images/icons/quality.png", "text": "Free inspection" },
+        { "icon": "/images/icons/date.png", "text": "Instant payment" },
+        { "icon": "/images/icons/finance.png", "text": "Free pickup service" }
+      ],
+      "buttonText": "Sell now",
+      "path": "sell"
+    },
+    {
+      "category": "Service",
+      "title": "Doorstep Bike Service",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#364f6b",
+      "features": [
+        { "icon": "/images/icons/quality.png", "text": "Doorstep pickup" },
+        { "icon": "/images/icons/date.png", "text": "Expert mechanics" },
+        { "icon": "/images/icons/finance.png", "text": "3-month warranty" }
+      ],
+      "buttonText": "Book now",
+      "path": "service"
+    },
+    {
+      "category": "Accessories",
+      "title": "Shop riding gear & parts",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#3f72af",
+      "features": [
+        { "icon": "/images/icons/quality.png", "text": "Top-rated helmets" },
+        { "icon": "/images/icons/date.png", "text": "Stylish jackets" },
+        { "icon": "/images/icons/finance.png", "text": "Genuine spares" }
+      ],
+      "buttonText": "Shop now",
+      "path": "accessories"
+    },
+    {
+      "category": "Offers",
+      "title": "Seasonal Discounts",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#2c2e43",
+      "features": [
+        { "icon": "/images/icons/quality.png", "text": "Limited time deals" },
+        { "icon": "/images/icons/date.png", "text": "Up to 50% off" },
+        { "icon": "/images/icons/finance.png", "text": "Bonus vouchers" }
+      ],
+      "buttonText": "Grab offer",
+      "path": "offer"
+    },
+    {
+      "category": "Offers",
+      "title": "Seasonal Deals",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#2c2e43",
+      "features": [
+        { "icon": "/images/icons/quality.png", "text": "Limited time deals" },
+        { "icon": "/images/icons/date.png", "text": "Up to 50% off" },
+        { "icon": "/images/icons/finance.png", "text": "Bonus vouchers" }
+      ],
+      "buttonText": "Grab offer",
+      "path": "offer"
+    },
+    {
+      "category": "Offers",
+      "title": "Seasonal Offers",
+      "image": "/images/brands/benelli.png",
+      "backgroundColor": "#2c2e43",
+      "features": [
+        { "icon": "/images/icons/quality.png", "text": "Limited time deals" },
+        { "icon": "/images/icons/date.png", "text": "Up to 50% off" },
+        { "icon": "/images/icons/finance.png", "text": "Bonus vouchers" }
+      ],
+      "buttonText": "Grab offer",
+      "path": "offer"
+    }
+  ]
+}
