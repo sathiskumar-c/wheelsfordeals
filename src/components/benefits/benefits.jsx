@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Box, Typography, Grid, Button, Tabs, Tab, Fade } from "@mui/material";
 import "./benefits.scss";
 import JSON from "../../data/benefits.json";
-import { Link } from "react-router-dom";
 
 const Benefits = () => {
   const [tabIndex, setTabIndex] = useState(0);
