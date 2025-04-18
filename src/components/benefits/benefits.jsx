@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Box, Typography, Grid, Button, Tabs, Tab, Fade } from "@mui/material";
 import "./benefits.scss";
 import JSON from "../../data/benefits.json";
-import { Link } from "react-router-dom";
 
 const Benefits = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -45,9 +45,8 @@ const Benefits = () => {
           {JSON.title || "Benefits of Buying or Selling Bikes"}
         </h2>
 
-        <Fade in={true} timeout={700}>
+        <Fade in={true} key={tabIndex} timeout={1000}>
           <div
-            key={tabIndex}
             role="tabpanel"
             id={tabIndex === 0 ? "buy-bike-panel" : "sell-bike-panel"}
             aria-labelledby={tabIndex === 0 ? "buy-tab" : "sell-tab"}
