@@ -2,7 +2,7 @@
   "title": "Need help?",
   "needhelpdata": [
     {
-      "id": 1,
+      "id": "whatsapp",
       "icon": "whatsapp",
       "title": "Ask us on WhatsApp!",
       "description": "Get instant support via experts",
@@ -10,15 +10,15 @@
       "alt": "WhatsApp"
     },
     {
-      "id": 2,
+      "id": "helpline",
       "icon": "helpline",
       "title": "Request a callback",
       "description": "Our team will contact you shortly!",
-      "path": "contactus",
+      "path": "callback",
       "alt": "Callback"
     },
     {
-      "id": 3,
+      "id": "faq",
       "icon": "questionmark",
       "title": "FAQ's",
       "description": "Get your doubts cleared",
