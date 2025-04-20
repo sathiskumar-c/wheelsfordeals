@@ -1,5 +1,5 @@
-// reacct imports
-import React, { useState, useCallback, useEffect } from "react";
+// react imports
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 // material ui imports
@@ -60,56 +60,77 @@ const validateForm = ({ name, mobile, email }) => {
 };
 
 const NeedHelp = () => {
-  // nvigate
+  // navigate
   const navigate = useNavigate();
 
-  // react local states
+  // react local states for form
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [mobileError, setMobileError] = useState("");
-  const [nameError, setNameError] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+  });
+
+  //error value holding state
+  const [formErrors, setFormErrors] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+  });
 
   // open dialog
-  const handleDialogOpen = useCallback(() => setDialogOpen(true), []);
+  const handleDialogOpen = () => setDialogOpen(true);
 
-  // close dialog and set state default
-  const handleDialogClose = useCallback(() => {
+  // close dialog and reset state
+  const handleDialogClose = () => {
     setDialogOpen(false);
-    setMobile("");
-    setName("");
-    setEmail("");
-    setMobileError("");
-    setNameError("");
-  }, []);
+    setFormData({ name: "", mobile: "", email: "" });
+    setFormErrors({ name: "", mobile: "", email: "" });
+  };
 
-  //submit
-  const handleSubmit = useCallback(
-    (event) => {
-      event.preventDefault();
-      const errors = validateForm({ name, mobile, email });
+  // handle form change
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormErrors((prev) => ({ ...prev, [name]: "" }));
+  };
 
-      setNameError(errors.name || "");
-      setMobileError(errors.mobile || "");
-      if (errors.email) {
-        toast.error(errors.email);
-        return;
+  //handle form blur
+  const handleFormBlur = (e) => {
+    const { name, value } = e.target;
+    let error = "";
+
+    if (name === "email") {
+      if (value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        error = ERROR_MESSAGES.EMAIL_INVALID;
       }
-      if (errors.name || errors.mobile) return;
+    }
 
-      const data = { name, mobile, email };
-      setMobile("");
-      setName("");
-      setEmail("");
-      toast.success("Our team will contact you shortly!");
-      console.log("Form Data:", data);
-      handleDialogClose();
-    },
-    [name, mobile, email, handleDialogClose]
-  );
+    if (name === "mobile") {
+      if (value && !/^\d{10}$/.test(value)) {
+        error = ERROR_MESSAGES.MOBILE_INVALID;
+      }
+    }
 
-  // useeffect
+    setFormErrors((prev) => ({ ...prev, [name]: error }));
+  };
+
+  // submit button click
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errors = validateForm(formData);
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+
+    toast.success("Our team will contact you shortly!");
+    setFormData({ name: "", mobile: "", email: "" });
+    handleDialogClose();
+  };
+
+  // focus on first input when dialog opens
   useEffect(() => {
     if (dialogOpen) {
       const firstInput = document.querySelector('input[name="name"]');
@@ -117,7 +138,7 @@ const NeedHelp = () => {
     }
   }, [dialogOpen]);
 
-  // icons and title render
+  // render help options
   const helpOptions =
     JSON?.needhelpdata?.map((option) => {
       const isDialog = option.path === "callback";
@@ -177,7 +198,7 @@ const NeedHelp = () => {
 
       <Dialog
         open={dialogOpen}
-        onClose={handleDialogClose}
+        onClose={() => {}}
         fullWidth
         maxWidth="md"
         disableEscapeKeyDown
@@ -185,6 +206,12 @@ const NeedHelp = () => {
         keepMounted
         aria-labelledby="callback-dialog-title"
         aria-describedby="callback-dialog-description"
+        PaperProps={{
+          onClick: (e) => e.stopPropagation(), // prevent accidental bubbling
+        }}
+        BackdropProps={{
+          onClick: (e) => e.stopPropagation(), // block outside click
+        }}
       >
         <form onSubmit={handleSubmit}>
           <DialogTitle sx={{ m: 0, p: 2 }} id="callback-dialog-title">
@@ -210,7 +237,7 @@ const NeedHelp = () => {
               Please enter your details and we will get in touch with you
               shortly.
             </DialogContentText>
-            <div>
+            <React.Fragment>
               <TextField
                 required
                 name="name"
@@ -218,72 +245,89 @@ const NeedHelp = () => {
                 type="text"
                 fullWidth
                 variant="outlined"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                error={!!nameError}
-                helperText={nameError}
-                aria-label="Full Name"
-                aria-describedby={nameError ? "name-error" : undefined}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") e.preventDefault();
+                value={formData.name}
+                onChange={handleFormChange}
+                onBlur={(e) => {
+                  const val = e.target.value.trim();
+                  if (!val) {
+                    setFormErrors((prev) => ({
+                      ...prev,
+                      name: "Name is required.",
+                    }));
+                  } else {
+                    setFormErrors((prev) => ({
+                      ...prev,
+                      name: "",
+                    }));
+                  }
                 }}
+                error={!!formErrors.name}
+                helperText={formErrors.name}
+                aria-label="Full Name"
+                aria-describedby={formErrors.name ? "name-error" : undefined}
                 sx={{ mb: 2 }}
               />
-              {nameError && (
-                <span id="name-error" className="sr-only">
-                  {nameError}
-                </span>
-              )}
+
               <TextField
-                required
                 name="mobile"
                 label="Mobile Number"
                 type="tel"
                 fullWidth
                 variant="outlined"
-                value={mobile}
+                value={formData.mobile}
+                required
                 onChange={(e) => {
-                  const value = e.target.value;
-                  if (/^\d*$/.test(value)) {
-                    setMobile(value);
-                    setMobileError(
-                      value.length !== 10 && value.length > 0
-                        ? ERROR_MESSAGES.MOBILE_INVALID
-                        : ""
-                    );
-                  } else {
-                    setMobileError("Only numbers are allowed.");
+                  const val = e.target.value;
+                  // Only allow digits
+                  if (/^\d*$/.test(val)) {
+                    setFormData({ ...formData, mobile: val });
+
+                    // Don't show error while typing
+                    // Clear error only if already error and now correct
+                    if (formErrors.mobile && val.length === 10) {
+                      setFormErrors({ ...formErrors, mobile: "" });
+                    }
                   }
                 }}
-                error={!!mobileError}
-                helperText={mobileError}
-                aria-label="Mobile Number"
-                aria-describedby={mobileError ? "mobile-error" : undefined}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") e.preventDefault();
+                onBlur={(e) => {
+                  const val = e.target.value;
+                  if (!val) {
+                    setFormErrors({
+                      ...formErrors,
+                      mobile: "Mobile number is required",
+                    });
+                  } else if (val.length !== 10) {
+                    setFormErrors({
+                      ...formErrors,
+                      mobile: ERROR_MESSAGES.MOBILE_INVALID,
+                    });
+                  } else {
+                    setFormErrors({ ...formErrors, mobile: "" });
+                  }
+                }}
+                error={!!formErrors.mobile}
+                helperText={formErrors.mobile}
+                inputProps={{
+                  maxLength: 10,
+                  inputMode: "numeric",
+                  pattern: "[0-9]*",
                 }}
                 sx={{ mb: 2 }}
               />
-              {mobileError && (
-                <span id="mobile-error" className="sr-only">
-                  {mobileError}
-                </span>
-              )}
               <TextField
                 name="email"
                 label="Email"
                 type="email"
                 fullWidth
                 variant="outlined"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                aria-label="Email"
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") e.preventDefault();
-                }}
+                value={formData.email}
+                onChange={handleFormChange}
+                onBlur={handleFormBlur}
+                error={!!formErrors.email}
+                helperText={formErrors.email}
                 sx={{ mb: 2 }}
               />
-            </div>
+            </React.Fragment>
           </DialogContent>
           <DialogActions className="my-2" style={{ paddingRight: "25px" }}>
             <Button onClick={handleDialogClose}>Cancel</Button>
@@ -298,7 +342,7 @@ const NeedHelp = () => {
         </form>
       </Dialog>
 
-      <ToastContainer />
+      <ToastContainer aria-live="assertive" />
     </section>
   );
 };
