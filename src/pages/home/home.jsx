@@ -12,6 +12,10 @@ import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
 import Benefits from "../../components/benefits/benefits";
 import ServiceCards from "../../components/services-slider/services-slider";
+import TabsComponent from "../../components/common-components/tabs-component/tabs-component";
+
+// JSON import
+import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
 
 const Home = () => {
   return (
@@ -28,6 +32,7 @@ const Home = () => {
       <Insights />
       <FrequentlyAskedQuestions />
       <GetUpdates />
+      <TabsComponent data={ExploreByBodyTypeData} page="ExploreBodyType" />
       <Footer />
     </>
   );
