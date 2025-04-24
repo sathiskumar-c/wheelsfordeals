@@ -1,13 +1,13 @@
 import React from "react";
 import "./popular-bikes.scss";
-import popularBikesData from "../../../src/data/popular-bikes.json";
+import JSON from "../../../src/data/popular-bikes.json";
 
 const PopularBikes = () => {
   return (
-    <section className="popular-bike-container container-fluid">
-      <h2 className="heading">{popularBikesData.title}</h2>
+    <section className="popular-bike-container container-fluid component-parent">
+      <h3 className="section-title text-center">{JSON.title}</h3>
       <div className="cardContainer">
-        {popularBikesData.popularbikedata.map((item) => (
+        {JSON.popularbikedata.map((item) => (
           <div key={item.id} className="card">
             <img
               src={item.imgSrc}

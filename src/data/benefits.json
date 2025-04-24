@@ -1,0 +1,76 @@
+{
+  "title": "Wheelsfordeals Benefits",
+  "aria_labelledby": "benefits-title",
+  "aria_label": "Buy or Sell Bike Benefits Tabs",
+  "tabs": [
+    {
+      "id": "buy-tab",
+      "label": "Buy Bike",
+      "aria_controls": "buy-bike-panel",
+      "key": "buyBike"
+    },
+    {
+      "id": "sell-tab",
+      "label": "Sell Bike",
+      "aria_controls": "sell-bike-panel",
+      "key": "sellBike"
+    }
+  ],
+  "buyBike": [
+    {
+      "image": "/images/brands/harley-davidson.png",
+      "title": "Certified Quality Check",
+      "description": "Every vehicle undergoes a multi-point inspection to ensure top-notch quality before you buy.",
+      "path": "/buy/certified-quality-check"
+    },
+    {
+      "image": "/images/brands/harley-davidson.png",
+      "title": "5-Day Return Policy",
+      "description": "Not satisfied? Return the vehicle within 5 days, no questions asked.",
+      "path": "/buy/return-policy"
+    },
+    {
+      "image": "/images/brands/harley-davidson.png",
+      "title": "Hassle-Free Paperwork",
+      "description": "We manage all documentation including RC transfer, so you don’t have to worry.",
+      "path": "/buy/hassle-free-paperwork"
+    },
+    {
+      "image": "/images/brands/harley-davidson.png",
+      "title": "1-Year Warranty",
+      "description": "Drive confidently with a comprehensive 1-year warranty on your purchase.",
+      "path": "/buy/1-year-warranty"
+    }
+  ],
+  "sellBike": [
+    {
+      "image": "/images/brands/triumph.png",
+      "title": "Instant Online Quote",
+      "description": "Get a price estimate for your bike in minutes with our quick valuation tool.",
+      "path": "/sell/instant-quote"
+    },
+    {
+      "image": "/images/brands/triumph.png",
+      "title": "Home Inspection & Pickup",
+      "description": "We inspect your bike at your doorstep and offer free pickup once sold.",
+      "path": "/sell/home-inspection"
+    },
+    {
+      "image": "/images/brands/triumph.png",
+      "title": "RC Transfer by Us",
+      "description": "We take bike of the ownership transfer and documentation process.",
+      "path": "/sell/rc-transfer"
+    },
+    {
+      "image": "/images/brands/triumph.png",
+      "title": "Instant Payment",
+      "description": "Receive full payment instantly once the deal is finalized.",
+      "path": "/sell/instant-payment"
+    }
+  ],
+  "buttons": {
+    "aria_label": "Browse available bikes",
+    "label": "Browse Bike",
+    "path": "brands"
+  }
+}

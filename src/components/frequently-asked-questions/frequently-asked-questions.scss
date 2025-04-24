@@ -1,0 +1,16 @@
+@use "../../styles/colors";
+
+.accordion-parent {
+  margin-bottom: 8px;
+  border-radius: 8px !important;
+
+  .MuiAccordionDetails-root {
+    background-color: colors.$white;
+    border-top: 1px solid colors.$very-light-gray;
+    padding: 16px;
+  }
+
+  .MuiAccordion-root::before {
+    background-color: unset !important;
+  }
+}
