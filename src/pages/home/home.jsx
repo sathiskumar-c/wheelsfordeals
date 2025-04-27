@@ -12,6 +12,7 @@ import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
 import Benefits from "../../components/benefits/benefits";
 import ServiceCards from "../../components/services-slider/services-slider";
+import MotivateUs from "../../components/motivate-us/motivate-us";
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
       <Insights />
       <FrequentlyAskedQuestions />
       <GetUpdates />
+      <MotivateUs />
       <Footer />
     </>
   );
