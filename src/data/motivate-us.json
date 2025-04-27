@@ -1,0 +1,59 @@
+{
+  "title": "What motivates us",
+  "ratingValue": "4.5+",
+  "ratingLabel": "Average online rating",
+  "apps": [
+    {
+      "path": "/appstore",
+      "image": "images/icons/Appstore.png",
+      "label": "Appstore",
+      "aria_label": "Download on the App Store",
+      "alt": "App Store"
+    },
+    {
+      "path": "/playstore",
+      "image": "images/icons/Playstore.png",
+      "label": "Playstore",
+      "aria_label": "Download on the Play Store",
+      "alt": "Play Store"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Dhivya",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "text": "Car was well serviced! Big thanks to Finance & Delivery Team for the support!",
+      "date": "15 Mar 2025"
+    },
+    {
+      "name": "Sushant Kumar",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "text": "Great place to buy cars! Supportive staff & plenty of options.",
+      "date": "12 Mar 2025"
+    },
+    {
+      "name": "Vishwajit Dhale",
+      "avatar": "https://randomuser.me/api/portraits/men/12.jpg",
+      "text": "Great experience with Finance Team.",
+      "date": "07 Mar 2025"
+    },
+    {
+      "name": "Adit Rao",
+      "avatar": "https://randomuser.me/api/portraits/men/24.jpg",
+      "text": "Staff was super helpful, made the whole process smooth, safe experience!",
+      "date": "07 Mar 2025"
+    },
+    {
+      "name": "Dhivya",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "text": "Car was well serviced! Big thanks to Finance & Delivery Team for the support!",
+      "date": "15 Mar 2025"
+    },
+    {
+      "name": "Sushant Kumar",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "text": "Great place to buy cars! Supportive staff & plenty of options.",
+      "date": "12 Mar 2025"
+    }
+  ]
+}
