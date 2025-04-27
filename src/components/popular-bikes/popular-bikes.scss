@@ -1,19 +1,14 @@
-$primary-color: #333;
-$bg-color: #f8f8f8;
-$card-bg: #fff;
+@use "../../styles/colors";
+
+$primary-color: colors.$text-dark;
+$bg-color: colors.$super-light-gray;
+$card-bg: colors.$white;
 $shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 .popular-bike-container {
   text-align: center;
   background: $bg-color;
-  padding: 40px 20px;
-  margin: 60px 0;
-}
-
-.heading {
-  font-size: 1.8rem;
-  color: $primary-color;
-  margin-bottom: 20px;
+  padding: 20px;
 }
 
 .cardContainer {
@@ -48,12 +43,4 @@ $shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   font-weight: 600;
   color: $primary-color;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .cardContainer {
-    flex-direction: column;
-    align-items: center;
-  }
 }

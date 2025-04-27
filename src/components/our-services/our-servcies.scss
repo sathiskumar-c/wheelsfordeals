@@ -1,28 +1,25 @@
-$primary-color: #333;
+@use "../../styles/colors";
+
+$primary-color: colors.$text-dark;
 $secondary-color: #222;
-$text-light: #666;
-$bg-white: #fff;
+$text-light: colors.$medium-dark-gray;
+$bg-white: colors.$white;
 $box-shadow: rgba(88, 97, 106, 0.22) 0px 4px 24px 0px;
 
 .services-section {
   background: $bg-white;
   border-radius: 12px;
   box-shadow: $box-shadow;
-  padding: 32px;
+  padding: 25px;
   max-width: 80%;
-  margin: 0px auto 80px;
+  margin: auto;
   text-align: center;
-
-  .services-heading {
-    font-size: 28.8px;
-    margin-bottom: 32px;
-    color: $primary-color;
-  }
+  margin-top: 25px;
 
   .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 32px;
+    gap: 20px;
     justify-items: center;
 
     .service-item {
@@ -47,7 +44,7 @@ $box-shadow: rgba(88, 97, 106, 0.22) 0px 4px 24px 0px;
       }
 
       .service-description {
-        font-size: 14.4px;
+        font-size: 14px;
         color: $text-light;
       }
     }

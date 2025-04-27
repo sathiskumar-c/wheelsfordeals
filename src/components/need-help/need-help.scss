@@ -1,0 +1,94 @@
+@use "../../styles/colors";
+
+// Variables
+$primary-color: colors.$text-dark;
+$card-bg: #f5f5f5;
+$text-secondary: colors.$medium-dark-gray;
+$shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+.help-card:hover .icon {
+  animation: shake 0.4s ease-in-out;
+}
+
+.help-section {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 90vw;
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  .help-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .help-card {
+    display: flex;
+    align-items: center;
+    background-color: $card-bg;
+    padding: 16px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    text-decoration: none;
+    color: $primary-color;
+    transition: box-shadow 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: $hover-shadow;
+    }
+
+    .icon {
+      margin-right: 16px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .text {
+      h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: $primary-color;
+      }
+
+      p {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: $text-secondary;
+      }
+      text-align: left;
+    }
+
+    .arrow {
+      margin-left: auto;
+      font-size: 20px;
+      color: $text-secondary;
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .help-section {
+    margin: 0px auto 60px;
+    padding: 0px 16px;
+  }
+  .help-options {
+    flex-direction: column;
+  }
+  .help-card {
+    flex: 1 1 0px !important;
+  }
+}

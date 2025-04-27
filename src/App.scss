@@ -1,0 +1,21 @@
+@use "../src/styles/animations";
+@use "../src/styles/colors";
+
+/* all compoenent title header (h3) */
+.section-title {
+  font-weight: 700 !important;
+  color: #2b0a3d !important ;
+  font-size: 26px !important;
+  padding-bottom: 25px;
+}
+
+/* all component parent div */
+.component-parent {
+  margin: auto;
+  margin-top: 25px !important;
+}
+
+/* all image styles */
+img {
+  mix-blend-mode: multiply !important;
+}
