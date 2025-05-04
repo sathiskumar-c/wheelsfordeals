@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import { Box, Typography, Grid, Button, Tabs, Tab, Fade } from "@mui/material";
 
 // Local imports
-import "./tabs-component.scss";
+import "./horizontal-tabs.scss";
 
-const TabsComponent = ({ data, page }) => {
+const HorizontalTabs = ({ data, page }) => {
   const [tabIndex, setTabIndex] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -108,4 +108,4 @@ const TabsComponent = ({ data, page }) => {
   );
 };
 
-export default TabsComponent;
+export default HorizontalTabs;

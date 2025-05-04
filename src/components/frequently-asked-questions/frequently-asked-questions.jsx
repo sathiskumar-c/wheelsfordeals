@@ -6,9 +6,8 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./frequently-asked-questions.scss";
-import JSON from "../../data/frequently-asked-questions.json";
 
-const FrequentlyAskedQuestions = () => {
+const FrequentlyAskedQuestions = ({ JSON }) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -22,11 +21,11 @@ const FrequentlyAskedQuestions = () => {
       role="region"
     >
       <h3 className="section-title text-center" id="faq-title">
-        {JSON.title}
+        {JSON?.faq_data?.title}
       </h3>
 
       <div className="faq-list" role="list">
-        {JSON.faqData.map((item, index) => {
+        {JSON.faq_data?.faqData.map((item, index) => {
           const panelId = `panel${index}`;
           return (
             <Accordion
