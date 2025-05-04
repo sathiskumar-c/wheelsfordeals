@@ -12,10 +12,13 @@ import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
 import Benefits from "../../components/benefits/benefits";
 import ServiceCards from "../../components/services-slider/services-slider";
-import TabsComponent from "../../components/common-components/tabs-component/tabs-component";
+import MotivateUs from "../../components/motivate-us/motivate-us";
+import HorizontalTabs from "../../components/common-components/horizontal-tabs/horizontal-tabs";
+import Content from "../../components/common-components/content/content";
 
 // JSON import
 import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
+import FAQ from "../../data/frequently-asked-questions.json";
 
 const Home = () => {
   return (
@@ -30,9 +33,21 @@ const Home = () => {
       <ServiceCards />
       <WhyChooseUs />
       <Insights />
-      <FrequentlyAskedQuestions />
+
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <FrequentlyAskedQuestions JSON={FAQ} />
+          </div>
+          <div className="col-md-6">
+            <Content JSON={FAQ.faq_content} />
+          </div>
+        </div>
+      </div>
+
       <GetUpdates />
-      <TabsComponent data={ExploreByBodyTypeData} page="ExploreBodyType" />
+      <MotivateUs />
+      <HorizontalTabs data={ExploreByBodyTypeData} page="ExploreBodyType" />
       <Footer />
     </>
   );
