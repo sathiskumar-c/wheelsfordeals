@@ -5,35 +5,35 @@
       "id": "ourservices-usedbike",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Buy Used Bike",
-      "path": "brand",
+      "path": "/brands",
       "description": "A bike for every budget"
     },
     {
       "id": "ourservices-visithub",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Visit Our Hub",
-      "path": "contactus",
+      "path": "/contactus",
       "description": "Explore, Inspect & Ride!"
     },
     {
       "id": "ourservices-finance",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Finance",
-      "path": "faq",
+      "path": "/contactus",
       "description": "Low Intrest Rates"
     },
     {
       "id": "ourservices-rctransfer",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "RC Transfer",
-      "path": "brand",
+      "path": "/contactus",
       "description": "Hassle-free & safe"
     },
     {
       "id": "ourservices-bikeprice",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Bike Price Calculator",
-      "path": "brand",
+      "path": "/brands",
       "description": "Get instant price"
     }
   ]
