@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Make sure this is imported
 import "./popular-bikes.scss";
 import JSON from "../../../src/data/popular-bikes.json";
 
@@ -9,13 +10,15 @@ const PopularBikes = () => {
       <div className="cardContainer">
         {JSON.popularbikedata.map((item) => (
           <div key={item.id} className="card">
-            <img
-              src={item.imgSrc}
-              alt={item.title}
-              title={item.title}
-              className="image"
-            />
-            <p className="text">{item.title}</p>
+            <Link to={item.path} className="popularbike-link">
+              <img
+                src={item.imgSrc}
+                alt={item.title}
+                title={item.title}
+                className="image"
+              />
+              <p className="text">{item.title}</p>
+            </Link>
           </div>
         ))}
       </div>
