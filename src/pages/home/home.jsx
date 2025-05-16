@@ -11,6 +11,7 @@ import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
 import ServiceCards from "../../components/services-slider/services-slider";
+import MotivateUs from "../../components/motivate-us/motivate-us";
 import TabsComponent from "../../components/common-components/tabs-component/tabs-component";
 
 // JSON import
@@ -47,7 +48,8 @@ const Home = () => {
       </div>
 
       <GetUpdates />
-      <TabsComponent data={ExploreByBodyTypeData} component="ExploreBodyType" />
+      <MotivateUs />
+      <TabsComponent data={ExploreByBodyTypeData} page="ExploreBodyType" />
       <Footer />
     </>
   );

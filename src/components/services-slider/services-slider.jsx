@@ -15,12 +15,12 @@ const ServiceCards = () => {
       role="region"
       aria-labelledby="services-heading"
     >
-      <h2
+      <h3
         id="services-heading"
         className="services-title section-title pb-0 mb-0"
       >
         {JSON.title}
-      </h2>
+      </h3>
       <Swiper
         loop={true}
         slidesPerView={4}
