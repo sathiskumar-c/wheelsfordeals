@@ -50,7 +50,11 @@ const Home = () => {
       <GetUpdates />
       <MotivateUs />
       <HorizontalTabs data={ExploreByBodyTypeData} page="ExploreBodyType" />
-      <ImageCardSlider data={ImageReviewData} />
+      <ImageCardSlider
+        data={ImageReviewData}
+        show={{ title: true, logo: true, content: true }}
+        styles={{ aspectRatio: " 3/4" }}
+      />
       <Footer />
     </>
   );
