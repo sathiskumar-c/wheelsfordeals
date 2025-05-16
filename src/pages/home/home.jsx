@@ -12,11 +12,13 @@ import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
 import ServiceCards from "../../components/services-slider/services-slider";
 import MotivateUs from "../../components/motivate-us/motivate-us";
-import TabsComponent from "../../components/common-components/tabs-component/tabs-component";
+import HorizontalTabs from "../../components/common-components/horizontal-tabs/horizontal-tabs";
+import Content from "../../components/common-components/content/content";
 
 // JSON import
 import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
 import BenefitsData from "../../data/benefits.json";
+import FAQ from "../../data/frequently-asked-questions.json";
 
 const Home = () => {
   return (
@@ -32,24 +34,20 @@ const Home = () => {
       <WhyChooseUs />
       <Insights />
 
-      <div className="container row">
-        <div className="col-6">
-          <FrequentlyAskedQuestions />
-        </div>
-        <div className="col-6">
-          Have questions about buying or selling a used bike? We’ve got you
-          covered! Below are answers to some of the most common questions our
-          customers ask. Whether you're a first-time buyer or looking to sell
-          your bike with ease, this section will help you understand the process
-          better.
-
-          <button>viwl all faq</button>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <FrequentlyAskedQuestions JSON={FAQ} />
+          </div>
+          <div className="col-md-6">
+            <Content JSON={FAQ.faq_content} />
+          </div>
         </div>
       </div>
 
       <GetUpdates />
       <MotivateUs />
-      <TabsComponent data={ExploreByBodyTypeData} page="ExploreBodyType" />
+      <HorizontalTabs data={ExploreByBodyTypeData} page="ExploreBodyType" />
       <Footer />
     </>
   );
