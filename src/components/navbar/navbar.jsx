@@ -71,7 +71,7 @@ function NavbarDeskTop() {
       window.open(subcategory, "_blank", "noopener,noreferrer");
     } else {
       // Internal Navigation - Uses useNavigate for faster navigation
-      navigate(`/brand/${subcategory}`);
+      navigate(`/brands/${subcategory}`);
     }
 
     console.log("handleNavigation", subcategory);
