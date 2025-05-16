@@ -1,0 +1,118 @@
+.image-slider-wrapper {
+  padding: 3rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.image-slider-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  .image-slider-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c0053;
+  }
+}
+
+.image-slider-swiper {
+  padding-bottom: 2rem;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    color: #2c0053;
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 20px !important;
+  }
+
+  .swiper-button-prev:after {
+    margin-right: 3px;
+  }
+
+  .swiper-button-next:after {
+    margin-left: 3px;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after .swiper-pagination-bullet {
+    background: #bbb;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #2c0053;
+  }
+}
+
+.image-slider-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: black;
+}
+
+.image-slider-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  mix-blend-mode: normal !important;
+}
+
+.image-slider-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), #00000052);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.image-slider-brand {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: auto;
+  text-align: left;
+}
+
+.image-slider-content {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: auto;
+  text-align: left;
+}
+
+.image-slider-name {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  text-align: left;
+  display: flex;
+  column-gap: 10px;
+}
+
+.image-slider-quote {
+  font-size: 0.85rem;
+  color: #ddd;
+}
