@@ -1,0 +1,65 @@
+{
+  "title": "Over 2 Lakh WheelsforDeals Love Stories",
+  "cards": [
+    {
+      "name": "Manu Rasho",
+      "location": "Bengaluru",
+      "quote": "Our car looks like a new car, feels like a new car and drives like one. The smile on our daughters’ faces has made the decision worth it.",
+      "image": "/images/icons/image-review.png",
+      "brand": "WheelsforDeals",
+      "logo": {
+        "image": "/images/icons/quality.png",
+        "title": "Quality"
+      },
+      "user_icon": {
+        "image": "/images/icons/quality.png",
+        "title": "Quality"
+      }
+    },
+    {
+      "name": "Ayush Srivastava",
+      "location": "Lucknow",
+      "quote": "Our first car that we’d truly love for years to come.",
+      "image": "/images/icons/image-review.png",
+      "brand": "WheelsforDeals",
+      "logo": {
+        "image": "/images/icons/quality.png",
+        "title": "Quality"
+      },
+      "user_icon": {
+        "image": "/images/icons/quality.png",
+        "title": "Quality"
+      }
+    },
+    {
+      "name": "Pazhaniappan",
+      "location": "Chennai",
+      "quote": "Being able to spoil my picky kids with infinite options is a win for WheelsforDeals and a safe car in my budget is a win for me.",
+      "image": "/images/icons/image-review.png",
+      "brand": "WheelsforDeals",
+      "logo": {
+        "image": "/images/icons/quality.png",
+        "title": "Quality"
+      },
+      "user_icon": {
+        "image": "/images/icons/quality.png",
+        "title": "Quality"
+      }
+    },
+    {
+      "name": "Madhulika Singh",
+      "location": "",
+      "quote": "WheelsforDeals helped us find a family car that’s perfect for daily commutes and long trips.",
+      "image": "/images/icons/image-review.png",
+      "brand": "WheelsforDeals",
+      "logo": {
+        "image": "/images/icons/quality.png",
+        "title": "Quality"
+      },
+      "user_icon": {
+        "image": "/images/icons/quality.png",
+        "title": "Quality"
+      }
+    }
+  ]
+}

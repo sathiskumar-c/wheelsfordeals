@@ -14,9 +14,11 @@ import Benefits from "../../components/benefits/benefits";
 import ServiceCards from "../../components/services-slider/services-slider";
 import MotivateUs from "../../components/motivate-us/motivate-us";
 import TabsComponent from "../../components/common-components/tabs-component/tabs-component";
+import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
 
 // JSON import
 import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
+import ImageReviewData from "../../data/image-review.json";
 
 const Home = () => {
   return (
@@ -35,6 +37,7 @@ const Home = () => {
       <GetUpdates />
       <MotivateUs />
       <TabsComponent data={ExploreByBodyTypeData} page="ExploreBodyType" />
+      <ImageCardSlider data={ImageReviewData} />
       <Footer />
     </>
   );
