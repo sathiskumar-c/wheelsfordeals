@@ -14,11 +14,13 @@ import ServiceCards from "../../components/services-slider/services-slider";
 import MotivateUs from "../../components/motivate-us/motivate-us";
 import HorizontalTabs from "../../components/common-components/horizontal-tabs/horizontal-tabs";
 import Content from "../../components/common-components/content/content";
+import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
 
 // JSON import
 import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
 import BenefitsData from "../../data/benefits.json";
 import FAQ from "../../data/frequently-asked-questions.json";
+import ImageReviewData from "../../data/image-review.json";
 
 const Home = () => {
   return (
@@ -48,6 +50,7 @@ const Home = () => {
       <GetUpdates />
       <MotivateUs />
       <HorizontalTabs data={ExploreByBodyTypeData} page="ExploreBodyType" />
+      <ImageCardSlider data={ImageReviewData} />
       <Footer />
     </>
   );
