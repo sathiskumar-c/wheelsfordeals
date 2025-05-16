@@ -26,7 +26,7 @@ const Home = () => {
       <NavbarDeskTop />
       <PopularBikes />
       <BrowseBikesBy />
-      <TabsComponent data={BenefitsData} component="Benefits" />
+      <HorizontalTabs data={BenefitsData} component="Benefits" />
       <OurServices />
       <TopRecommendedBrand />
       <NeedHelp />
