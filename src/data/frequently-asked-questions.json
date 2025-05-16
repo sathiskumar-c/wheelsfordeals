@@ -1,45 +1,252 @@
 {
-  "title": "Frequently asked questions",
-  "faqData": [
-    {
-      "question": "What should I check before buying a used bike?",
-      "answer": "Always check the service history, RC book, insurance, chassis number, and test the bike's overall condition."
+  "faq_data": {
+    "title": "Frequently asked questions",
+    "faqData": [
+      {
+        "question": "🏍️ What should I check before buying a used bike?",
+        "answer": "Always check the service history, RC book, insurance, chassis number, and test the bike's overall condition."
+      },
+      {
+        "question": "🏍️ How do I know if a used bike is accident-free?",
+        "answer": "Inspect the chassis and frame for welding or damage, or get it inspected by our experts."
+      },
+      {
+        "question": "🏍️ Can I get a loan to buy a used bike?",
+        "answer": "Yes, we offer easy financing options with low-interest EMIs for eligible customers."
+      },
+      {
+        "question": "🏍️ Is test ride available before purchasing?",
+        "answer": "Yes, you can test ride the bike at our hub or request a home test ride (based on availability)."
+      },
+      {
+        "question": "🏍️ How is RC transfer handled?",
+        "answer": "We take care of complete RC transfer and ensure it’s done safely and legally."
+      },
+      {
+        "question": "🏍️ What documents do I need to buy a used bike?",
+        "answer": "You'll need an ID proof, address proof, and a passport-size photo."
+      },
+      {
+        "question": "🏍️ How do I sell my bike through WheelsForDeals?",
+        "answer": "Submit your bike details, and we’ll contact you for inspection and price estimation."
+      },
+      {
+        "question": "🏍️ How do you decide the price of my bike?",
+        "answer": "Pricing is based on your bike’s condition, model, year, kilometers run, and current market rates."
+      },
+      {
+        "question": "🏍️ How long does it take to get payment after selling?",
+        "answer": "Once the deal is confirmed and paperwork is completed, payment is done on the same day."
+      },
+      {
+        "question": "🏍️ Who will handle the paperwork and RC transfer after I sell?",
+        "answer": "We handle the full RC transfer and ownership change to ensure a smooth experience for you."
+      }
+    ]
+  },
+
+  "vertical_tabs_faq": {
+    "title": "Frequently Asked Questions",
+    "ariaLabel": "FAQ Categories",
+    "categories": [
+      {
+        "category": "Buy Bikes",
+        "tabId": "vertical-tab-0",
+        "panelId": "vertical-tabpanel-0",
+        "question_answer": [
+          {
+            "question": "What should I check before buying a used bike?",
+            "answer": "Always check the service history, RC book, insurance, chassis number, and test the bike's overall condition.",
+            "id": "faq-0-0-header",
+            "ariaControls": "faq-0-0-content",
+            "ariaLabelledby": "faq-0-0-header",
+            "panelId": "faq-0-0"
+          },
+          {
+            "question": "Is test ride available before purchasing?",
+            "answer": "Yes, you can test ride the bike at our hub or request a home test ride (based on availability).",
+            "id": "faq-0-1-header",
+            "ariaControls": "faq-0-1-content",
+            "ariaLabelledby": "faq-0-1-header",
+            "panelId": "faq-0-1"
+          },
+          {
+            "question": "Can I get a loan to buy a used bike?",
+            "answer": "Yes, we offer easy financing options with low-interest EMIs for eligible customers.",
+            "id": "faq-0-2-header",
+            "ariaControls": "faq-0-2-content",
+            "ariaLabelledby": "faq-0-2-header",
+            "panelId": "faq-0-2"
+          },
+          {
+            "question": "Do bikes come with active insurance?",
+            "answer": "Most bikes come with valid insurance. We also assist with new policies if required.",
+            "id": "faq-0-3-header",
+            "ariaControls": "faq-0-3-content",
+            "ariaLabelledby": "faq-0-3-header",
+            "panelId": "faq-0-3"
+          },
+          {
+            "question": "Are all bikes inspected before listing?",
+            "answer": "Yes, each bike undergoes a thorough inspection before being listed on our platform.",
+            "id": "faq-0-4-header",
+            "ariaControls": "faq-0-4-content",
+            "ariaLabelledby": "faq-0-4-header",
+            "panelId": "faq-0-4"
+          },
+          {
+            "question": "Do I get a warranty with my bike?",
+            "answer": "Yes, we provide a limited warranty for certain models. Check with our team for more details.",
+            "id": "faq-0-5-header",
+            "ariaControls": "faq-0-5-content",
+            "ariaLabelledby": "faq-0-5-header",
+            "panelId": "faq-0-5"
+          },
+          {
+            "question": "Can I reserve a bike before visiting?",
+            "answer": "Yes, you can reserve a bike for up to 24 hours through our online portal.",
+            "id": "faq-0-6-header",
+            "ariaControls": "faq-0-6-content",
+            "ariaLabelledby": "faq-0-6-header",
+            "panelId": "faq-0-6"
+          },
+          {
+            "question": "What documents do I need to purchase a bike?",
+            "answer": "You need ID proof, address proof, and a passport-size photograph.",
+            "id": "faq-0-7-header",
+            "ariaControls": "faq-0-7-content",
+            "ariaLabelledby": "faq-0-7-header",
+            "panelId": "faq-0-7"
+          },
+          {
+            "question": "Is there any return policy?",
+            "answer": "Yes, you can return the bike within 3 days if there is a major issue not disclosed earlier.",
+            "id": "faq-0-8-header",
+            "ariaControls": "faq-0-8-content",
+            "ariaLabelledby": "faq-0-8-header",
+            "panelId": "faq-0-8"
+          },
+          {
+            "question": "How is the RC transferred to my name?",
+            "answer": "We handle the complete RC transfer process for a hassle-free experience.",
+            "id": "faq-0-9-header",
+            "ariaControls": "faq-0-9-content",
+            "ariaLabelledby": "faq-0-9-header",
+            "panelId": "faq-0-9"
+          }
+        ]
+      },
+      {
+        "category": "Sell Bikes",
+        "tabId": "vertical-tab-1",
+        "panelId": "vertical-tabpanel-1",
+        "question_answer": [
+          {
+            "question": "How do I sell my bike through WheelsForDeals?",
+            "answer": "Submit your bike details, and we’ll contact you for inspection and price estimation.",
+            "id": "faq-1-0-header",
+            "ariaControls": "faq-1-0-content",
+            "ariaLabelledby": "faq-1-0-header",
+            "panelId": "faq-1-0"
+          },
+          {
+            "question": "How long does it take to get payment after selling?",
+            "answer": "Once the deal is confirmed and paperwork is completed, payment is done on the same day.",
+            "id": "faq-1-1-header",
+            "ariaControls": "faq-1-1-content",
+            "ariaLabelledby": "faq-1-1-header",
+            "panelId": "faq-1-1"
+          },
+          {
+            "question": "Do I need to bring the bike to your center?",
+            "answer": "We offer both in-hub and doorstep evaluation options for your convenience.",
+            "id": "faq-1-2-header",
+            "ariaControls": "faq-1-2-content",
+            "ariaLabelledby": "faq-1-2-header",
+            "panelId": "faq-1-2"
+          },
+          {
+            "question": "How is the value of my bike calculated?",
+            "answer": "We evaluate based on age, brand, model, mileage, condition, and current market demand.",
+            "id": "faq-1-3-header",
+            "ariaControls": "faq-1-3-content",
+            "ariaLabelledby": "faq-1-3-header",
+            "panelId": "faq-1-3"
+          },
+          {
+            "question": "Who handles the RC and ownership transfer?",
+            "answer": "We manage the full paperwork and legal transfer on your behalf.",
+            "id": "faq-1-4-header",
+            "ariaControls": "faq-1-4-content",
+            "ariaLabelledby": "faq-1-4-header",
+            "panelId": "faq-1-4"
+          },
+          {
+            "question": "Is there a service charge to sell my bike?",
+            "answer": "We charge a minimal service fee, which is deducted from the final sale amount.",
+            "id": "faq-1-5-header",
+            "ariaControls": "faq-1-5-content",
+            "ariaLabelledby": "faq-1-5-header",
+            "panelId": "faq-1-5"
+          },
+          {
+            "question": "Can I sell a bike that is still under finance?",
+            "answer": "Yes, but you must clear the pending dues or provide an NOC from your financer.",
+            "id": "faq-1-6-header",
+            "ariaControls": "faq-1-6-content",
+            "ariaLabelledby": "faq-1-6-header",
+            "panelId": "faq-1-6"
+          },
+          {
+            "question": "Do I need to service my bike before selling?",
+            "answer": "It's not mandatory, but a well-maintained bike typically fetches a better price.",
+            "id": "faq-1-7-header",
+            "ariaControls": "faq-1-7-content",
+            "ariaLabelledby": "faq-1-7-header",
+            "panelId": "faq-1-7"
+          },
+          {
+            "question": "What documents are required to sell my bike?",
+            "answer": "You'll need the RC book, valid insurance, ID proof, and two passport-size photos.",
+            "id": "faq-1-8-header",
+            "ariaControls": "faq-1-8-content",
+            "ariaLabelledby": "faq-1-8-header",
+            "panelId": "faq-1-8"
+          },
+          {
+            "question": "Will I get a confirmation of sale?",
+            "answer": "Yes, you'll receive a formal sale confirmation and receipt after deal completion.",
+            "id": "faq-1-9-header",
+            "ariaControls": "faq-1-9-content",
+            "ariaLabelledby": "faq-1-9-header",
+            "panelId": "faq-1-9"
+          }
+        ]
+      }
+    ]
+  },
+  "faq_content": {
+    "heading": {
+      "text": "Need help choosing or selling a bike?",
+      "id": "faq-sidebar-heading",
+      "ariaLabel": "FAQ Sidebar Heading"
     },
-    {
-      "question": "How do I know if a used bike is accident-free?",
-      "answer": "Inspect the chassis and frame for welding or damage, or get it inspected by our experts."
+    "paragraph": {
+      "text": "We simplify the process with inspection, financing, and paperwork. Reach out to our expert team anytime.",
+      "ariaLabel": "Additional information about bike assistance"
     },
-    {
-      "question": "Can I get a loan to buy a used bike?",
-      "answer": "Yes, we offer easy financing options with low-interest EMIs for eligible customers."
+    "image": {
+      "src": "/images/sections/faq.png",
+      "alt": "Bike assistance illustration",
+      "ariaLabel": "Bike assistance illustration"
     },
-    {
-      "question": "Is test ride available before purchasing?",
-      "answer": "Yes, you can test ride the bike at our hub or request a home test ride (based on availability)."
+    "button": {
+      "label": "View More",
+      "path": "faq",
+      "ariaLabel": "View more frequently asked questions"
     },
-    {
-      "question": "How is RC transfer handled?",
-      "answer": "We take care of complete RC transfer and ensure it’s done safely and legally."
-    },
-    {
-      "question": "What documents do I need to buy a used bike?",
-      "answer": "You'll need an ID proof, address proof, and a passport-size photo."
-    },
-    {
-      "question": "How do I sell my bike through WheelsForDeals?",
-      "answer": "Submit your bike details, and we’ll contact you for inspection and price estimation."
-    },
-    {
-      "question": "How do you decide the price of my bike?",
-      "answer": "Pricing is based on your bike’s condition, model, year, kilometers run, and current market rates."
-    },
-    {
-      "question": "How long does it take to get payment after selling?",
-      "answer": "Once the deal is confirmed and paperwork is completed, payment is done on the same day."
-    },
-    {
-      "question": "Who will handle the paperwork and RC transfer after I sell?",
-      "answer": "We handle the full RC transfer and ownership change to ensure a smooth experience for you."
+    "section": {
+      "ariaLabelledBy": "faq-sidebar-heading"
     }
-  ]
+  }
 }
