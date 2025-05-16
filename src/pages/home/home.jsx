@@ -30,7 +30,22 @@ const Home = () => {
       <ServiceCards />
       <WhyChooseUs />
       <Insights />
-      <FrequentlyAskedQuestions />
+
+      <div className="container row">
+        <div className="col-6">
+          <FrequentlyAskedQuestions />
+        </div>
+        <div className="col-6">
+          Have questions about buying or selling a used bike? We’ve got you
+          covered! Below are answers to some of the most common questions our
+          customers ask. Whether you're a first-time buyer or looking to sell
+          your bike with ease, this section will help you understand the process
+          better.
+
+          <button>viwl all faq</button>
+        </div>
+      </div>
+
       <GetUpdates />
       <TabsComponent data={ExploreByBodyTypeData} component="ExploreBodyType" />
       <Footer />
