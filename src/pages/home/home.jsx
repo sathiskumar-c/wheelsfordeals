@@ -10,8 +10,12 @@ import TopRecommendedBrand from "../../components/top-recommended-brand/top-reco
 import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
-import Benefits from "../../components/benefits/benefits";
 import ServiceCards from "../../components/services-slider/services-slider";
+import TabsComponent from "../../components/common-components/tabs-component/tabs-component";
+
+// JSON import
+import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
+import BenefitsData from "../../data/benefits.json";
 
 const Home = () => {
   return (
@@ -19,15 +23,31 @@ const Home = () => {
       <NavbarDeskTop />
       <PopularBikes />
       <BrowseBikesBy />
-      <Benefits />
+      <TabsComponent data={BenefitsData} component="Benefits" />
       <OurServices />
       <TopRecommendedBrand />
       <NeedHelp />
       <ServiceCards />
       <WhyChooseUs />
       <Insights />
-      <FrequentlyAskedQuestions />
+
+      <div className="container row">
+        <div className="col-6">
+          <FrequentlyAskedQuestions />
+        </div>
+        <div className="col-6">
+          Have questions about buying or selling a used bike? We’ve got you
+          covered! Below are answers to some of the most common questions our
+          customers ask. Whether you're a first-time buyer or looking to sell
+          your bike with ease, this section will help you understand the process
+          better.
+
+          <button>viwl all faq</button>
+        </div>
+      </div>
+
       <GetUpdates />
+      <TabsComponent data={ExploreByBodyTypeData} component="ExploreBodyType" />
       <Footer />
     </>
   );
