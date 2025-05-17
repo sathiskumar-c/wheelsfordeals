@@ -1,5 +1,5 @@
 // react imports
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // material ui imports
 import Accordion from "@mui/material/Accordion";
@@ -20,43 +20,9 @@ const ProductListFilter = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-  const filtersToURL = (filters) => {
-    const params = new URLSearchParams();
-
-    Object.entries(filters).forEach(([key, value]) => {
-      if (Array.isArray(value) && value.length > 0) {
-        params.set(key, value.join(","));
-      } else if (typeof value === "object" && value !== null) {
-        // For nested object like models: { brand1: [a, b], brand2: [] }
-        Object.entries(value).forEach(([subKey, subValue]) => {
-          if (Array.isArray(subValue) && subValue.length > 0) {
-            params.set(`${key}.${subKey}`, subValue.join(","));
-          }
-        });
-      } else if (value && typeof value !== "object") {
-        // For scalar values like string or number
-        params.set(key, value);
-      }
-      // else: skip empty array, empty string, or empty object
-    });
-
-    return params.toString();
-  };
-
-  // ✅ Update URL whenever selectedFilters changes
-  useEffect(() => {
-    const queryString = filtersToURL(selectedFilters);
-    const newURL = `${window.location.pathname}?${queryString}`;
-    window.history.replaceState(null, "", newURL);
-  }, [selectedFilters]);
-
   return (
     <React.Fragment>
       <div style={{ margin: "10px" }}>
-        <Typography variant="h6" gutterBottom>
-          Filter
-        </Typography>
-
         {productListFilterData.map((filter) => (
           <Accordion
             key={filter.id}
