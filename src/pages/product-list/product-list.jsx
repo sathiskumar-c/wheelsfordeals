@@ -8,8 +8,10 @@ import ImageCardSlider from "../../components/common-components/image-card-slide
 
 //JSON imports
 import ProductListImageSlider from "../../data/product-list-image-slider.json";
+import Bikedetails from "../../data/bike-details.json";
 
 const ProductList = () => {
+  console.log("Bikedetails", Bikedetails);
   return (
     <React.Fragment>
       <p>Product List</p>
