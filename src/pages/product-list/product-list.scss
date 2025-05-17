@@ -1,0 +1,44 @@
+.product-list-parent {
+  .bikelist_parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 25px;
+  }
+
+  .loader {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+
+    .spinner {
+      margin: 0 auto 10px;
+      width: 32px;
+      height: 32px;
+      border: 4px solid #ccc;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    p {
+      color: #555;
+      font-size: 14px;
+    }
+  }
+
+  .end-message {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 14px;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
