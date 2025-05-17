@@ -16,6 +16,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    opacity: 0; /* Hide tab initially */
+    transform: translateY(10px); /* Slightly slide up the tab */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+
+    &.active-tabpanel {
+      opacity: 1; /* Make tab visible */
+      transform: translateY(0); /* Slide tab back to normal position */
+    }
   }
 
   .browsebybikes_btn {

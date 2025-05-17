@@ -1,12 +1,17 @@
+// react imports
 import * as React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
+// material ui imports
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { Button } from "@mui/material";
+
+//local imports
 import "./browse-bikes.scss";
 import JSON from "../../data/browse-bikes.json";
 
@@ -14,10 +19,8 @@ import JSON from "../../data/browse-bikes.json";
 const AppendData = ({ data, renderItem }) => {
   return (
     <>
-      {data.map((item, index) => (
-        <React.Fragment key={item.id}>
-          {renderItem({ item, index })}
-        </React.Fragment>
+      {data.map((item) => (
+        <React.Fragment key={item.id}>{renderItem({ item })}</React.Fragment>
       ))}
     </>
   );
@@ -25,31 +28,37 @@ const AppendData = ({ data, renderItem }) => {
 
 // Specific render functions for Price, CC, and Brand
 const renderPriceOrCC = ({ item }) => (
-  <Button
-    key={item.id}
-    component={Link}
-    to={item.path}
-    variant="outlined"
-    aria-label={`Browse bikes by ${item.title}`}
-    className="browsebybikes_btn"
-  >
-    {item.title}
-  </Button>
+  <article>
+    <Button
+      key={item.id}
+      component={Link}
+      to={item.path}
+      variant="outlined"
+      aria-label={`Browse bikes by ${item.title}`}
+      className="browsebybikes_btn"
+    >
+      {item.title}
+    </Button>
+  </article>
 );
 
 const renderBrand = ({ item }) => (
-  <div className="append-brand-parent" id={item.id}>
+  <article
+    className="append-brand-parent"
+    id={item.id}
+    aria-label={`Bike brand: ${item.alt || item.title}`}
+  >
     <Link
-      to={`brands/${item.path}`}
+      to={`/brands/${item.path}`}
       className="brand-link"
-      aria-label={`View bikes from ${item.alt}`}
+      aria-label={`View bikes from brand ${item.alt || item.title}`}
     >
       <img
         className="append-brand-img"
-        id={item.id}
+        id={`img-${item.id}`}
         src={item.image}
-        alt={item.alt}
-        title={item.alt}
+        alt={item.alt ? `Logo of ${item.alt}` : "Brand logo"}
+        title={item.alt || "Brand"}
         loading="lazy"
         onError={(e) => {
           e.target.src = "/default-image.jpg";
@@ -57,7 +66,7 @@ const renderBrand = ({ item }) => (
         }}
       />
     </Link>
-  </div>
+  </article>
 );
 
 const BrowseBikesBy = () => {
@@ -69,21 +78,21 @@ const BrowseBikesBy = () => {
 
   const tabs = [
     {
-      label: JSON.browsebybrand.tabtitle,
-      value: JSON.browsebybrand.value,
-      data: JSON.browsebybrand.data,
+      label: JSON.browsebybrand?.tabtitle || "Brands",
+      value: JSON.browsebybrand?.value || "brand",
+      data: JSON.browsebybrand?.data || [],
       render: renderBrand,
     },
     {
-      label: JSON.browsebyprice.tabtitle,
-      value: JSON.browsebyprice.value,
-      data: JSON.browsebyprice.data,
+      label: JSON.browsebyprice?.tabtitle || "Price",
+      value: JSON.browsebyprice?.value || "price",
+      data: JSON.browsebyprice?.data || [],
       render: renderPriceOrCC,
     },
     {
-      label: JSON.browsebydisplacement.tabtitle,
-      value: JSON.browsebydisplacement.value,
-      data: JSON.browsebydisplacement.data,
+      label: JSON.browsebydisplacement?.tabtitle || "Displacement",
+      value: JSON.browsebydisplacement?.value || "displacement",
+      data: JSON.browsebydisplacement?.data || [],
       render: renderPriceOrCC,
     },
   ];
@@ -91,18 +100,18 @@ const BrowseBikesBy = () => {
   return (
     <section
       className="container component-parent browsebikesby-parent"
-      aria-labelledby="browse-bikes"
+      aria-labelledby="browse-bikes-section"
       role="region"
     >
       <h2 className="section-title" id="browse-bikes-section">
-        {JSON.title}
+        {JSON.title || "Browse Bikes By"}
       </h2>
       <Box sx={{ width: "100%", typography: "body1" }}>
         <TabContext value={tabValue}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }} component="nav">
             <TabList
               onChange={handleChangeTab}
-              aria-label="Browse bikes by categories"
+              aria-label="Select a category to browse bikes by"
             >
               {tabs.map((tab) => (
                 <Tab
@@ -110,6 +119,7 @@ const BrowseBikesBy = () => {
                   label={tab.label}
                   value={tab.value}
                   aria-controls={`tabpanel-${tab.value}`}
+                  id={`tab-${tab.value}`}
                 />
               ))}
             </TabList>
@@ -117,7 +127,9 @@ const BrowseBikesBy = () => {
           {tabs.map((tab) => (
             <TabPanel
               key={tab.value}
-              className="tabpanel"
+              className={`tabpanel ${
+                tabValue === tab.value ? "active-tabpanel" : ""
+              }`}
               value={tab.value}
               id={`tabpanel-${tab.value}`}
               role="tabpanel"

@@ -1,3 +1,21 @@
+/**
+ * TabsComponent
+ *
+ * Description:
+ * A reusable tabbed layout component that displays different cards based on selected tab.
+ *
+ * Usage:
+ * Used across multiple pages such as:
+ * - HomePage.jsx
+ *
+ * Related Components:
+ * - Benefits Component - Home.jsx
+ * - ExplorByBodyType Component - Home.jsx
+ *
+ * SCSS Styles:
+ * - Defined in `tabs-component.scss`
+ */
+
 // React imports
 import React, { useState } from "react";
 import { Link } from "react-router-dom";

@@ -10,15 +10,17 @@ import TopRecommendedBrand from "../../components/top-recommended-brand/top-reco
 import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
-import Benefits from "../../components/benefits/benefits";
 import ServiceCards from "../../components/services-slider/services-slider";
 import MotivateUs from "../../components/motivate-us/motivate-us";
 import HorizontalTabs from "../../components/common-components/horizontal-tabs/horizontal-tabs";
 import Content from "../../components/common-components/content/content";
+import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
 
 // JSON import
 import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
+import BenefitsData from "../../data/benefits.json";
 import FAQ from "../../data/frequently-asked-questions.json";
+import ImageReviewData from "../../data/image-review.json";
 
 const Home = () => {
   return (
@@ -26,7 +28,7 @@ const Home = () => {
       <NavbarDeskTop />
       <PopularBikes />
       <BrowseBikesBy />
-      <Benefits />
+      <HorizontalTabs data={BenefitsData} component="Benefits" />
       <OurServices />
       <TopRecommendedBrand />
       <NeedHelp />
@@ -48,6 +50,11 @@ const Home = () => {
       <GetUpdates />
       <MotivateUs />
       <HorizontalTabs data={ExploreByBodyTypeData} page="ExploreBodyType" />
+      <ImageCardSlider
+        data={ImageReviewData}
+        show={{ title: true, logo: true, content: true }}
+        styles={{ aspectRatio: " 3/4" }}
+      />
       <Footer />
     </>
   );
