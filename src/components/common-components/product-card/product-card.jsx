@@ -49,7 +49,7 @@ const ProductCard = ({ card, state }) => {
   return (
     <div className={`product-card ${isSold ? "sold" : isHeld ? "held" : ""}`}>
       <div className="image-container">
-        <img src={mainImage} alt={`${brand} ${model}`} />
+        <img src={mainImage} alt={`${brand} ${model}`} loading="lazy" />
         {isSold && <span className="badge sold">SOLD</span>}
         {isHeld && <span className="badge held">ON HOLD</span>}
       </div>
@@ -68,7 +68,12 @@ const ProductCard = ({ card, state }) => {
 
           <div className="details_child">
             <div className="year_parent">
-              <img src="/images/icons/year.gif" alt="year" title="year" />
+              <img
+                src="/images/icons/year.gif"
+                alt="year"
+                title="year"
+                loading="lazy"
+              />
               <h3>{`${year_of_model} `}</h3>
             </div>
 
