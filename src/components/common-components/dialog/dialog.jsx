@@ -7,8 +7,10 @@ import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 
-// Custom styled dialog
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+// Styled Dialog with dynamic width support
+const BootstrapDialog = styled(Dialog, {
+  shouldForwardProp: (prop) => prop !== "customWidth",
+})(({ theme, customWidth }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
   },
@@ -16,14 +18,20 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     padding: theme.spacing(1),
   },
   "& .MuiPaper-root": {
-    width: "75%",
-    margin: 0,
+    width: customWidth || "100%",
+    margin: "auto",
     maxWidth: "none",
   },
 }));
 
-// Functional Component
-const CommonDialog = ({ openDialog, onClose, title, content, footer }) => {
+const CommonDialog = ({
+  openDialog,
+  onClose,
+  title,
+  content,
+  footer,
+  width,
+}) => {
   return (
     <BootstrapDialog
       fullWidth
@@ -31,10 +39,12 @@ const CommonDialog = ({ openDialog, onClose, title, content, footer }) => {
       onClose={onClose}
       aria-labelledby="customized-dialog-title"
       open={openDialog}
+      customWidth={width}
     >
       <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
         {title}
       </DialogTitle>
+
       <IconButton
         aria-label="close"
         onClick={onClose}
@@ -47,7 +57,9 @@ const CommonDialog = ({ openDialog, onClose, title, content, footer }) => {
       >
         <CloseIcon />
       </IconButton>
+
       <DialogContent dividers>{content}</DialogContent>
+
       {footer && <DialogActions>{footer}</DialogActions>}
     </BootstrapDialog>
   );
