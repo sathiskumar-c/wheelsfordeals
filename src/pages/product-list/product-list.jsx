@@ -23,7 +23,7 @@ import BikeImageSwiper from "./utils/bike-images-swipper";
 import SortOptionsPopover from "./utils/sort-options-popover";
 import BikeDetailsOverview from "./utils/bike-details-overview";
 import { getSortedBikes, scrollToTop, throttle } from "./utils/utils";
-import SellerDealer from "./utils/sellerDealer";
+import SellerDealer from "./utils/seller-dealer";
 
 // Function to get initial items count based on screen width
 const getInitialItemsPerLoad = () => (window.innerWidth < 768 ? 15 : 30);
