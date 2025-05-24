@@ -1,0 +1,54 @@
+{
+  "title": "sortOptions",
+  "sort": [
+    {
+      "label": "",
+      "options": [{ "label": "Recently Posted", "value": "recently_posted" }]
+    },
+    {
+      "label": "PRICE",
+      "options": [
+        { "label": "Price (Low to High)", "value": "price_low_to_high" },
+        { "label": "Price (High to Low)", "value": "price_high_to_low" }
+      ]
+    },
+    {
+      "label": "KMS DRIVEN",
+      "options": [
+        {
+          "label": "KM Driven (Low to High)",
+          "value": "kms_driven_low_to_high"
+        },
+        {
+          "label": "KM Driven (High to Low)",
+          "value": "kms_driven_high_to_low"
+        }
+      ]
+    },
+    {
+      "label": "MILEAGE",
+      "options": [
+        { "label": "Mileage (Low to High)", "value": "mileage_low_to_high" },
+        { "label": "Mileage (High to Low)", "value": "mileage_high_to_low" }
+      ]
+    },
+    {
+      "label": "BIKES MODEL",
+      "options": [
+        { "label": "Year (Newest to Oldest)", "value": "year_new_to_old" },
+        { "label": "Year (Oldest to Newest)", "value": "year_old_to_new" }
+      ]
+    },
+    {
+      "label": "ENGINE CAPACITY",
+      "options": [
+        { "label": "CC (High to Low)", "value": "engine_high_to_low" },
+        { "label": "CC (Low to High)", "value": "engine_low_to_high" }
+      ]
+    },
+    {
+      "label": "OTHERS",
+      "options": [{ "label": "Brand (A - Z)", "value": "brand_a_to_z" }]
+    }
+  ]
+}
