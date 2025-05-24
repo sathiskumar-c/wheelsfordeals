@@ -7,7 +7,7 @@ import VerifiedIcon from "@mui/icons-material/Verified";
 // Local imports
 import "./product-card.scss";
 
-const ProductCard = ({ card, state }) => {
+const ProductCard = ({ card, dialogOpen }) => {
   const {
     brand,
     model,
@@ -41,11 +41,6 @@ const ProductCard = ({ card, state }) => {
   const isSold = selling_status === "sold";
   const isHeld = hold?.is_held && !isSold;
 
-  // Popup
-  const openPopup = () => {
-    state.setOpenPopup(!state.openPopup);
-  };
-
   return (
     <div className={`product-card ${isSold ? "sold" : isHeld ? "held" : ""}`}>
       <div className="image-container">
@@ -56,7 +51,7 @@ const ProductCard = ({ card, state }) => {
 
       <div className="icon_parent">
         <FavoriteBorderIcon />
-        <OpenInFullIcon onClick={() => openPopup()} />
+        <OpenInFullIcon onClick={() => dialogOpen(card)} />
       </div>
 
       <div className="product-details">
