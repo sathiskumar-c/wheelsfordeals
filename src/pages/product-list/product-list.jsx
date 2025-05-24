@@ -1,7 +1,5 @@
 // React Imports
-import React, { useEffect, useState, useCallback } from "react";
-
-// Component Imports
+import { useEffect, useState, useCallback, useRef } from "react";
 import NavbarDeskTop from "../../components/navbar/navbar";
 import ProductListFilter from "../../components/product-list-filter/product-list-filter";
 import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
@@ -22,11 +20,19 @@ import "./product-list.scss";
 import BikeImageSwiper from "./utils/bike-images-swipper";
 import SortOptionsPopover from "./utils/sort-options-popover";
 import BikeDetailsOverview from "./utils/bike-details-overview";
-import { getSortedBikes, scrollToTop, throttle } from "./utils/utils";
 import SellerDealer from "./utils/seller-dealer";
+import { getSortedBikes, scrollToTop, throttle } from "./utils/utils";
+import { BREAKPOINT_MD } from "../../config";
+
+// Configs
+const ITEMS_PER_LOAD_MOBILE = 15;
+const ITEMS_PER_LOAD_DESKTOP = 30;
 
 // Function to get initial items count based on screen width
-const getInitialItemsPerLoad = () => (window.innerWidth < 768 ? 15 : 30);
+const getInitialItemsPerLoad = () =>
+  window.innerWidth < BREAKPOINT_MD
+    ? ITEMS_PER_LOAD_MOBILE
+    : ITEMS_PER_LOAD_DESKTOP;
 
 const ProductList = () => {
   const [ITEMS_PER_LOAD, setItemsPerLoad] = useState(getInitialItemsPerLoad());
@@ -36,86 +42,148 @@ const ProductList = () => {
   const [sort, setSort] = useState("recently_posted");
   const [openDialog, setOpenDialog] = useState(false);
   const [expandedCard, setExpandedCard] = useState(null);
+  const [openMobileFilter, setOpenMobileFilter] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  // Refs for latest values to use in event listeners without recreating handlers
+  const loadingRef = useRef(loading);
+  const visibleCountRef = useRef(visibleCount);
+  const itemsPerLoadRef = useRef(ITEMS_PER_LOAD);
+  const openMobileFilterRef = useRef(openMobileFilter);
+
+  // Update refs whenever state changes
+  useEffect(() => {
+    loadingRef.current = loading;
+  }, [loading]);
+
+  useEffect(() => {
+    visibleCountRef.current = visibleCount;
+  }, [visibleCount]);
+
+  useEffect(() => {
+    itemsPerLoadRef.current = ITEMS_PER_LOAD;
+  }, [ITEMS_PER_LOAD]);
+
+  useEffect(() => {
+    openMobileFilterRef.current = openMobileFilter;
+  }, [openMobileFilter]);
+
+  // Throttled scroll handler reads refs instead of state directly
   const handleScroll = useCallback(
     throttle(() => {
       const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
       const fullHeight = document.body.offsetHeight;
 
-      if (scrollTop + windowHeight >= fullHeight - 100 && !loading) {
+      if (scrollTop + windowHeight >= fullHeight - 100 && !loadingRef.current) {
         loadMoreItems();
       }
     }, 200),
-    [visibleCount, loading, ITEMS_PER_LOAD]
+    []
   );
 
-  // Use Effect to scroll top
+  // Load more items function
+  const loadMoreItems = () => {
+    if (visibleCountRef.current >= Bikedetails.length) return;
+
+    setLoading(true);
+    setTimeout(() => {
+      setVisibleCount((prev) => prev + itemsPerLoadRef.current);
+      setLoading(false);
+    }, 500);
+  };
+
+  // Handle window resize (throttled)
   useEffect(() => {
-    const cleanup = scrollToTop();
-    return cleanup;
+    const throttledResize = throttle(() => {
+      const newWidth = window.innerWidth;
+      setWindowWidth(newWidth);
+
+      const newItemsPerLoad =
+        newWidth < BREAKPOINT_MD
+          ? ITEMS_PER_LOAD_MOBILE
+          : ITEMS_PER_LOAD_DESKTOP;
+      setItemsPerLoad((prev) => {
+        if (prev !== newItemsPerLoad) {
+          itemsPerLoadRef.current = newItemsPerLoad; // sync ref too
+          return newItemsPerLoad;
+        }
+        return prev;
+      });
+
+      setVisibleCount((prevVisible) => {
+        // Don't decrease visibleCount on resize, only increase if below threshold
+        return prevVisible < newItemsPerLoad ? newItemsPerLoad : prevVisible;
+      });
+
+      if (newWidth >= 769 && openMobileFilterRef.current) {
+        setOpenMobileFilter(false);
+      }
+    }, 200);
+
+    window.addEventListener("resize", throttledResize);
+    throttledResize(); // Run once on mount
+
+    return () => {
+      window.removeEventListener("resize", throttledResize);
+    };
   }, []);
 
+  // Scroll to top on sort change
   useEffect(() => {
-    const handleResize = () => {
-      const newItemsPerLoad = window.innerWidth < 768 ? 15 : 30;
-      setItemsPerLoad(newItemsPerLoad);
-      setVisibleCount(newItemsPerLoad);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
+    scrollToTop();
   }, []);
 
   // Reset visible count when sorting changes and scroll to top
   useEffect(() => {
     setVisibleCount(ITEMS_PER_LOAD);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [sort]);
+  }, [sort, ITEMS_PER_LOAD]);
 
-  // Run sorting
+  // Sort and slice bikes when sort or visibleCount changes
   useEffect(() => {
     const sorted = getSortedBikes(Bikedetails, sort);
     const sliced = sorted.slice(0, visibleCount);
     setVisibleBikes(sliced);
   }, [sort, visibleCount]);
 
+  // Add scroll event listener once
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
-  // Dialog open
+  // Dialog open handlers
   const handleDialogOpen = (expanded) => {
     setOpenDialog(true);
     setExpandedCard(expanded);
   };
 
-  // Dialog close
+  // Dialog close handlers
   const handleDialogClose = () => {
     setOpenDialog(false);
     setExpandedCard(null);
   };
 
-  // Load more items
-  const loadMoreItems = () => {
-    if (visibleCount >= Bikedetails.length) return;
+  // Mobile filter open
+  const handleOpenMobileFilter = () => {
+    if (windowWidth < 769) {
+      setOpenMobileFilter(true);
+    }
+  };
 
-    setLoading(true);
-    setTimeout(() => {
-      setVisibleCount((prev) => prev + ITEMS_PER_LOAD);
-      setLoading(false);
-    }, 500);
+  // Mobile filter close
+  const handleCloseMobileFilter = () => {
+    setOpenMobileFilter(false);
   };
 
   return (
-    <React.Fragment>
+    <>
       <NavbarDeskTop />
       <div className="container-fluid product-list-parent">
         <div className="row">
           <div className="col-md-3">
-            <ProductListFilter />
+            {windowWidth > BREAKPOINT_MD && <ProductListFilter />}
           </div>
 
           <div className="col-md-9">
@@ -129,7 +197,10 @@ const ProductList = () => {
             />
 
             <div className="sort_filter_parent">
-              <div className="filter_icon_parent">
+              <div
+                className="filter_icon_parent"
+                onClick={handleOpenMobileFilter}
+              >
                 <TuneIcon />
                 <h6 className="mb-0">Filter</h6>
               </div>
@@ -140,12 +211,11 @@ const ProductList = () => {
             </div>
 
             <div className="bikelist_parent">
-              {visibleBikes.map((res, index) => (
+              {visibleBikes.map((res) => (
                 <ProductCard
-                  key={res.id || index}
+                  key={res.id} // assuming id is unique and always present
                   card={res}
                   dialogOpen={handleDialogOpen}
-                  dialogClose={handleDialogClose}
                 />
               ))}
 
@@ -167,9 +237,41 @@ const ProductList = () => {
       </div>
       <Footer />
 
+      {/* Filter Dialog for Mobile */}
+      <CommonDialog
+        openDialog={openMobileFilter}
+        onClose={handleCloseMobileFilter}
+        title="Filter"
+        width="95%"
+        content={<ProductListFilter />}
+        footer={
+          <div
+            style={{
+              display: "flex",
+              marginRight: "15px",
+              padding: "10px",
+              columnGap: "20px",
+            }}
+          >
+            <Button onClick={handleCloseMobileFilter} color="primary">
+              Cancel
+            </Button>
+            <Button
+              onClick={handleCloseMobileFilter}
+              color="primary"
+              variant="contained"
+            >
+              Apply
+            </Button>
+          </div>
+        }
+      />
+
+      {/* Expanded Card Dialog */}
       <CommonDialog
         openDialog={openDialog}
         onClose={handleDialogClose}
+        width="75%"
         title={
           <div
             style={{ display: "flex", alignItems: "center", columnGap: "5px" }}
@@ -186,7 +288,10 @@ const ProductList = () => {
               <div className="col-md-6">
                 <BikeImageSwiper images={expandedCard?.images} />
               </div>
-              <div className="col-md-6"></div>
+              {/* Placeholder for additional content or remove if unused */}
+              <div className="col-md-6">
+                {/* Add more details here if needed */}
+              </div>
             </div>
 
             <div className="row">
@@ -196,29 +301,8 @@ const ProductList = () => {
             </div>
           </div>
         }
-        footer={
-          <div
-            style={{
-              display: "flex",
-              marginRight: "15px",
-              padding: "10px",
-              columnGap: "20px",
-            }}
-          >
-            <Button onClick={handleDialogClose} color="primary">
-              Cancel
-            </Button>
-            <Button
-              onClick={handleDialogClose}
-              color="primary"
-              variant="contained"
-            >
-              Test Drive
-            </Button>
-          </div>
-        }
       />
-    </React.Fragment>
+    </>
   );
 };
 
