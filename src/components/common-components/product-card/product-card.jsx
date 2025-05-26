@@ -1,10 +1,11 @@
-// MUI import
+// MUI Import
 import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import { Tooltip } from "@mui/material";
 
-// Local imports
+// Local Imports
 import "./product-card.scss";
 
 const ProductCard = ({ card, dialogOpen }) => {
@@ -50,8 +51,12 @@ const ProductCard = ({ card, dialogOpen }) => {
       </div>
 
       <div className="icon_parent">
-        <FavoriteBorderIcon />
-        <OpenInFullIcon onClick={() => dialogOpen(card)} />
+        <Tooltip title="Add to wishlist" arrow>
+          <FavoriteBorderIcon />
+        </Tooltip>
+        <Tooltip title="Expand Full View" arrow>
+          <OpenInFullIcon onClick={() => dialogOpen(card)} />
+        </Tooltip>
       </div>
 
       <div className="product-details">
@@ -89,11 +94,21 @@ const ProductCard = ({ card, dialogOpen }) => {
         <div className="seperator"></div>
 
         <div className="specs">
-          <span title={`${km_driven} KM`}>{`${formatToK(km_driven)}`}</span>
-          <span title="Fuel Type">{`${engine_and_performance?.fuel_type}`}</span>
-          <span title="Mileage">{`${engine_and_performance?.mileage_kmpl}`}</span>
-          <span title="Transmission Type">{`${engine_and_performance?.transmission_type}`}</span>
-          <span>{`${rto?.location_code}`}</span>
+          <Tooltip title={`KM Driven`} arrow>
+            <span>{`${formatToK(km_driven)}`}</span>
+          </Tooltip>
+          <Tooltip title="Fuel Type" arrow>
+            <span>{`${engine_and_performance?.fuel_type}`}</span>
+          </Tooltip>
+          <Tooltip title="Mileage" arrow>
+            <span>{`${engine_and_performance?.mileage_kmpl}`}</span>
+          </Tooltip>
+          <Tooltip title="Transmission Type" arrow>
+            <span>{`${engine_and_performance?.transmission_type}`}</span>
+          </Tooltip>
+          <Tooltip title="RTO" arrow>
+            <span>{`${rto?.location_code}`}</span>
+          </Tooltip>
         </div>
 
         <div className="card-footer">

@@ -1,11 +1,15 @@
 // React Imports
 import { useEffect, useState, useCallback, useRef } from "react";
+import { useParams } from "react-router-dom";
+
+// Component Imports
 import NavbarDeskTop from "../../components/navbar/navbar";
 import ProductListFilter from "../../components/product-list-filter/product-list-filter";
 import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
 import ProductCard from "../../components/common-components/product-card/product-card";
 import Footer from "../../components/footer/footer";
 import CommonDialog from "../../components/common-components/dialog/dialog";
+import HoverSwapCard from "../../components/common-components/cards/hover-swap-card/hover-swap-card";
 
 // MUI Imports
 import TuneIcon from "@mui/icons-material/Tune";
@@ -14,17 +18,18 @@ import Button from "@mui/material/Button";
 // JSON Imports
 import ProductListImageSlider from "../../data/product-list-image-slider.json";
 import Bikedetails from "../../data/bike-details.json";
+import BikeOffersData from "../../data/offers.json";
 
 // Local Imports
 import "./product-list.scss";
+import { BREAKPOINT_MD } from "../../config";
 import BikeImageSwiper from "./utils/bike-images-swipper";
 import SortOptionsPopover from "./utils/sort-options-popover";
 import BikeDetailsOverview from "./utils/bike-details-overview";
 import SellerDealer from "./utils/seller-dealer";
 import { getSortedBikes, scrollToTop, throttle } from "./utils/utils";
-import { BREAKPOINT_MD } from "../../config";
 
-// Configs
+// Component Configs
 const ITEMS_PER_LOAD_MOBILE = 15;
 const ITEMS_PER_LOAD_DESKTOP = 30;
 
@@ -35,6 +40,7 @@ const getInitialItemsPerLoad = () =>
     : ITEMS_PER_LOAD_DESKTOP;
 
 const ProductList = () => {
+  // Local States
   const [ITEMS_PER_LOAD, setItemsPerLoad] = useState(getInitialItemsPerLoad());
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_LOAD);
   const [visibleBikes, setVisibleBikes] = useState([]);
@@ -44,12 +50,16 @@ const ProductList = () => {
   const [expandedCard, setExpandedCard] = useState(null);
   const [openMobileFilter, setOpenMobileFilter] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [bikeOffers, setBikeOffers] = useState([]);
 
   // Refs for latest values to use in event listeners without recreating handlers
   const loadingRef = useRef(loading);
   const visibleCountRef = useRef(visibleCount);
   const itemsPerLoadRef = useRef(ITEMS_PER_LOAD);
   const openMobileFilterRef = useRef(openMobileFilter);
+
+  // URL params
+  const params = useParams();
 
   // Update refs whenever state changes
   useEffect(() => {
@@ -154,20 +164,26 @@ const ProductList = () => {
   }, [handleScroll]);
 
   // Dialog open handlers
-  const handleDialogOpen = (expanded) => {
+  const handleOpenExpandView = (expanded) => {
+    const checkOffers = BikeOffersData.offers.filter((item) => {
+      return expanded.offers.includes(item.key);
+    });
+
+    setBikeOffers(checkOffers);
     setOpenDialog(true);
     setExpandedCard(expanded);
   };
 
   // Dialog close handlers
-  const handleDialogClose = () => {
+  const handleCloseExpandView = () => {
     setOpenDialog(false);
     setExpandedCard(null);
+    setBikeOffers([]);
   };
 
   // Mobile filter open
   const handleOpenMobileFilter = () => {
-    if (windowWidth < 769) {
+    if (windowWidth < 768) {
       setOpenMobileFilter(true);
     }
   };
@@ -183,7 +199,7 @@ const ProductList = () => {
       <div className="container-fluid product-list-parent">
         <div className="row">
           <div className="col-md-3">
-            {windowWidth > BREAKPOINT_MD && <ProductListFilter />}
+            {windowWidth >= BREAKPOINT_MD && <ProductListFilter />}
           </div>
 
           <div className="col-md-9">
@@ -213,9 +229,9 @@ const ProductList = () => {
             <div className="bikelist_parent">
               {visibleBikes.map((res) => (
                 <ProductCard
-                  key={res.id} // assuming id is unique and always present
+                  key={res.id}
                   card={res}
-                  dialogOpen={handleDialogOpen}
+                  dialogOpen={handleOpenExpandView}
                 />
               ))}
 
@@ -270,7 +286,7 @@ const ProductList = () => {
       {/* Expanded Card Dialog */}
       <CommonDialog
         openDialog={openDialog}
-        onClose={handleDialogClose}
+        onClose={handleCloseExpandView}
         width="75%"
         title={
           <div
@@ -285,12 +301,58 @@ const ProductList = () => {
         content={
           <div>
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-5">
                 <BikeImageSwiper images={expandedCard?.images} />
               </div>
-              {/* Placeholder for additional content or remove if unused */}
-              <div className="col-md-6">
-                {/* Add more details here if needed */}
+              <div className="col-md-7">
+                <h3 className="section-title">Special offers for this bike</h3>
+
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    columnGap: "15px",
+                    rowGap: "15px",
+                  }}
+                >
+                  {bikeOffers?.map((res) => {
+                    return (
+                      // <HoverFadeCard
+                      //   frontSideContent={
+                      //     <img
+                      //       src={res.image}
+                      //       alt={res.title}
+                      //       title={res.title}
+                      //       loading="lazy"
+                      //       style={{
+                      //         height: "100px",
+                      //         width: "100px",
+                      //         objectFit: "contain",
+                      //       }}
+                      //     />
+                      //   }
+                      //   backSideContent={
+                      //     <h6 style={{ width: "75%", margin: "auto" }}>
+                      //       {res.title}
+                      //     </h6>
+                      //   }
+                      //   styles={{ width: "160px", height: "150px" }}
+                      // />
+                      <HoverSwapCard
+                        frontSideContent={
+                          <h6 style={{ margin: "auto", textAlign: "center" }}>
+                            {res?.title}
+                          </h6>
+                        }
+                        backSideContent=""
+                        backSideTitle={res?.title}
+                        subtitle={res?.short}
+                        styles={{ backGroundImage: res?.image }}
+                      />
+                    );
+                  })}
+                </div>
               </div>
             </div>
 

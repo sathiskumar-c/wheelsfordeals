@@ -90,7 +90,8 @@
     "dealer_details": {
       "name": "GearUp Dealers",
       "dealer_id": "dealer_001"
-    }
+    },
+    "offers": ["accessory_kit", "insurance", "helmet"]
   },
   {
     "bike_id": "HON4237-NT1942",
@@ -183,7 +184,8 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_002"
-    }
+    },
+    "offers": ["service_package", "insurance"]
   },
   {
     "bike_id": "YAM3333-NM9901",
@@ -276,7 +278,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_YAM3333-NM9901"
-    }
+    },
+    "offers": ["roadside_assistance", "helmet", "namechange"]
   },
   {
     "bike_id": "ROY7530-SP6539",
@@ -369,7 +372,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ROY7530-SP6539"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "roadside_assistance",
+      "road_tax_waiver",
+      "insurance",
+      "bus_ticket"
+    ]
   },
   {
     "bike_id": "YAM4379-WN6592",
@@ -462,7 +472,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_003"
-    }
+    },
+    "offers": ["service_package", "bus_ticket", "road_tax_waiver"]
   },
   {
     "bike_id": "TVS3184-WT5306",
@@ -555,7 +566,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_TVS3184-WT5306"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "service_package",
+      "insurance",
+      "namechange",
+      "helmet"
+    ]
   },
   {
     "bike_id": "ROY2599-XK7010",
@@ -648,7 +666,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ROY2599-XK7010"
-    }
+    },
+    "offers": ["extended_warranty", "road_tax_waiver", "accessory_kit"]
   },
   {
     "bike_id": "YAM4283-IO2468",
@@ -741,7 +760,14 @@
     "dealer_details": {
       "name": "RevRiders",
       "dealer_id": "dealer_004"
-    }
+    },
+    "offers": [
+      "bus_ticket",
+      "accessory_kit",
+      "namechange",
+      "road_tax_waiver",
+      "helmet"
+    ]
   },
   {
     "bike_id": "YAM4398-CZ1067",
@@ -834,7 +860,13 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_005"
-    }
+    },
+    "offers": [
+      "service_package",
+      "accessory_kit",
+      "helmet",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "KTM4310-YV9520",
@@ -927,7 +959,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_KTM4310-YV9520"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "accessory_kit",
+      "road_tax_waiver",
+      "namechange",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "HER2733-ZL7470",
@@ -1020,7 +1059,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_HER2733-ZL7470"
-    }
+    },
+    "offers": ["service_package", "fuel_voucher", "road_tax_waiver", "helmet"]
   },
   {
     "bike_id": "ROY4686-VD8031",
@@ -1113,7 +1153,13 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_006"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "road_tax_waiver",
+      "fuel_voucher",
+      "accessory_kit"
+    ]
   },
   {
     "bike_id": "TVS6645-OL6973",
@@ -1206,7 +1252,14 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_007"
-    }
+    },
+    "offers": [
+      "namechange",
+      "service_package",
+      "bus_ticket",
+      "fuel_voucher",
+      "insurance"
+    ]
   },
   {
     "bike_id": "ROY9442-WH4076",
@@ -1299,7 +1352,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ROY9442-WH4076"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "fuel_voucher",
+      "bus_ticket",
+      "namechange"
+    ]
   },
   {
     "bike_id": "HER6650-XF2053",
@@ -1392,7 +1451,8 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_008"
-    }
+    },
+    "offers": ["accessory_kit", "extended_warranty"]
   },
   {
     "bike_id": "HER2440-FX7028",
@@ -1485,7 +1545,14 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_009"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "bus_ticket",
+      "namechange",
+      "service_package",
+      "helmet"
+    ]
   },
   {
     "bike_id": "BAJ8967-BF7641",
@@ -1578,7 +1645,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_BAJ8967-BF7641"
-    }
+    },
+    "offers": [
+      "fuel_voucher",
+      "accessory_kit",
+      "namechange",
+      "bus_ticket",
+      "service_package"
+    ]
   },
   {
     "bike_id": "SUZ8607-OX1799",
@@ -1671,7 +1745,8 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_010"
-    }
+    },
+    "offers": ["insurance", "extended_warranty"]
   },
   {
     "bike_id": "KTM2360-BS4518",
@@ -1764,7 +1839,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_KTM2360-BS4518"
-    }
+    },
+    "offers": ["namechange", "helmet", "accessory_kit", "fuel_voucher"]
   },
   {
     "bike_id": "ROY4131-UK2747",
@@ -1857,7 +1933,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ROY4131-UK2747"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "service_package",
+      "accessory_kit",
+      "insurance",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "HON4662-EM8794",
@@ -1950,7 +2033,14 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_011"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "helmet",
+      "service_package",
+      "road_tax_waiver",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "ROY2584-GI3547",
@@ -2043,7 +2133,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_012"
-    }
+    },
+    "offers": ["bus_ticket", "extended_warranty", "accessory_kit"]
   },
   {
     "bike_id": "TVS4815-LZ3531",
@@ -2136,7 +2227,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_TVS4815-LZ3531"
-    }
+    },
+    "offers": ["bus_ticket", "fuel_voucher"]
   },
   {
     "bike_id": "HON9541-KR1745",
@@ -2229,7 +2321,13 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_013"
-    }
+    },
+    "offers": [
+      "insurance",
+      "roadside_assistance",
+      "road_tax_waiver",
+      "accessory_kit"
+    ]
   },
   {
     "bike_id": "KTM9834-VA2455",
@@ -2322,7 +2420,8 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_014"
-    }
+    },
+    "offers": ["accessory_kit", "namechange", "helmet"]
   },
   {
     "bike_id": "BAJ6312-LJ5734",
@@ -2415,7 +2514,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_BAJ6312-LJ5734"
-    }
+    },
+    "offers": ["insurance", "bus_ticket"]
   },
   {
     "bike_id": "SUZ4484-RD1384",
@@ -2508,7 +2608,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_015"
-    }
+    },
+    "offers": ["bus_ticket", "insurance"]
   },
   {
     "bike_id": "TVS4122-YW8575",
@@ -2601,7 +2702,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_TVS4122-YW8575"
-    }
+    },
+    "offers": [
+      "helmet",
+      "extended_warranty",
+      "roadside_assistance",
+      "fuel_voucher",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "SUZ2167-HZ6868",
@@ -2694,7 +2802,14 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_016"
-    }
+    },
+    "offers": [
+      "bus_ticket",
+      "service_package",
+      "roadside_assistance",
+      "extended_warranty",
+      "namechange"
+    ]
   },
   {
     "bike_id": "BAJ2035-JO6511",
@@ -2787,7 +2902,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_BAJ2035-JO6511"
-    }
+    },
+    "offers": ["bus_ticket", "fuel_voucher"]
   },
   {
     "bike_id": "HER6941-YY9659",
@@ -2880,7 +2996,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_HER6941-YY9659"
-    }
+    },
+    "offers": ["service_package", "accessory_kit"]
   },
   {
     "bike_id": "ROY9378-TA9579",
@@ -2973,7 +3090,14 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_017"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "extended_warranty",
+      "insurance",
+      "namechange",
+      "fuel_voucher"
+    ]
   },
   {
     "bike_id": "HON9143-II2430",
@@ -3066,7 +3190,14 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_018"
-    }
+    },
+    "offers": [
+      "helmet",
+      "road_tax_waiver",
+      "extended_warranty",
+      "service_package",
+      "roadside_assistance"
+    ]
   },
   {
     "bike_id": "HON6631-SB9641",
@@ -3159,7 +3290,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_HON6631-SB9641"
-    }
+    },
+    "offers": [
+      "helmet",
+      "extended_warranty",
+      "namechange",
+      "fuel_voucher",
+      "roadside_assistance"
+    ]
   },
   {
     "bike_id": "BAJ9449-XM6226",
@@ -3252,7 +3390,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_BAJ9449-XM6226"
-    }
+    },
+    "offers": ["insurance", "namechange", "fuel_voucher"]
   },
   {
     "bike_id": "ROY1369-JK3553",
@@ -3345,7 +3484,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ROY1369-JK3553"
-    }
+    },
+    "offers": [
+      "fuel_voucher",
+      "insurance",
+      "roadside_assistance",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "TVS4863-XM2437",
@@ -3438,7 +3583,14 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_019"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "fuel_voucher",
+      "service_package",
+      "road_tax_waiver",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "KTM7487-VF7309",
@@ -3531,7 +3683,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_KTM7487-VF7309"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "bus_ticket",
+      "namechange",
+      "fuel_voucher",
+      "service_package"
+    ]
   },
   {
     "bike_id": "KTM7101-SV2347",
@@ -3624,7 +3783,8 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_020"
-    }
+    },
+    "offers": ["road_tax_waiver", "roadside_assistance", "service_package"]
   },
   {
     "bike_id": "BAJ7080-WQ6341",
@@ -3717,7 +3877,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_BAJ7080-WQ6341"
-    }
+    },
+    "offers": [
+      "insurance",
+      "namechange",
+      "extended_warranty",
+      "roadside_assistance",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "YAM4180-VL4402",
@@ -3810,7 +3977,8 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_021"
-    }
+    },
+    "offers": ["helmet", "accessory_kit", "bus_ticket"]
   },
   {
     "bike_id": "SUZ5199-EI5825",
@@ -3903,7 +4071,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_SUZ5199-EI5825"
-    }
+    },
+    "offers": ["insurance", "helmet", "fuel_voucher"]
   },
   {
     "bike_id": "SUZ1557-PS4469",
@@ -3996,7 +4165,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_SUZ1557-PS4469"
-    }
+    },
+    "offers": ["bus_ticket", "extended_warranty", "fuel_voucher"]
   },
   {
     "bike_id": "HON9464-BG6825",
@@ -4089,7 +4259,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_HON9464-BG6825"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "helmet",
+      "extended_warranty",
+      "service_package",
+      "insurance"
+    ]
   },
   {
     "bike_id": "ROY1278-OG3767",
@@ -4182,7 +4359,8 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_022"
-    }
+    },
+    "offers": ["bus_ticket", "service_package"]
   },
   {
     "bike_id": "HON8944-PX6331",
@@ -4275,7 +4453,8 @@
     "dealer_details": {
       "name": "MotoKingz",
       "dealer_id": "dealer_023"
-    }
+    },
+    "offers": ["road_tax_waiver", "insurance", "roadside_assistance"]
   },
   {
     "bike_id": "BAJ7209-ZE1803",
@@ -4368,7 +4547,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_024"
-    }
+    },
+    "offers": ["helmet", "roadside_assistance", "fuel_voucher"]
   },
   {
     "bike_id": "ROY9153-YT3383",
@@ -4461,7 +4641,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ROY9153-YT3383"
-    }
+    },
+    "offers": ["bus_ticket", "accessory_kit"]
   },
   {
     "bike_id": "HON9647-CJ9124",
@@ -4554,7 +4735,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_HON9647-CJ9124"
-    }
+    },
+    "offers": [
+      "bus_ticket",
+      "accessory_kit",
+      "service_package",
+      "helmet",
+      "roadside_assistance"
+    ]
   },
   {
     "bike_id": "HON4486-EE5973",
@@ -4647,7 +4835,8 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_025"
-    }
+    },
+    "offers": ["road_tax_waiver", "namechange", "accessory_kit", "insurance"]
   },
   {
     "bike_id": "TVS5139-PC9685",
@@ -4740,7 +4929,8 @@
     "dealer_details": {
       "name": "MotoKingz",
       "dealer_id": "dealer_026"
-    }
+    },
+    "offers": ["fuel_voucher", "namechange", "helmet", "bus_ticket"]
   },
   {
     "bike_id": "CT100-00001",
@@ -4833,7 +5023,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_CT100-00001"
-    }
+    },
+    "offers": ["roadside_assistance", "service_package"]
   },
   {
     "bike_id": "GixxerSF-00002",
@@ -4926,7 +5117,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_GixxerSF-00002"
-    }
+    },
+    "offers": ["service_package", "insurance"]
   },
   {
     "bike_id": "Xtreme160R-00003",
@@ -5019,7 +5211,8 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_027"
-    }
+    },
+    "offers": ["extended_warranty", "namechange"]
   },
   {
     "bike_id": "CBShine-00004",
@@ -5112,7 +5305,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_CBShine-00004"
-    }
+    },
+    "offers": ["bus_ticket", "namechange", "fuel_voucher", "helmet"]
   },
   {
     "bike_id": "GixxerSF-00005",
@@ -5205,7 +5399,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_028"
-    }
+    },
+    "offers": ["extended_warranty", "service_package", "namechange"]
   },
   {
     "bike_id": "Z400-00006",
@@ -5298,7 +5493,14 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_029"
-    }
+    },
+    "offers": [
+      "helmet",
+      "accessory_kit",
+      "road_tax_waiver",
+      "service_package",
+      "roadside_assistance"
+    ]
   },
   {
     "bike_id": "PanigaleV4-00007",
@@ -5391,7 +5593,8 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_030"
-    }
+    },
+    "offers": ["road_tax_waiver", "bus_ticket"]
   },
   {
     "bike_id": "Sport-00008",
@@ -5484,7 +5687,8 @@
     "dealer_details": {
       "name": "GearUp Dealers",
       "dealer_id": "dealer_031"
-    }
+    },
+    "offers": ["road_tax_waiver", "service_package"]
   },
   {
     "bike_id": "Hypermotard950-00009",
@@ -5577,7 +5781,8 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_032"
-    }
+    },
+    "offers": ["roadside_assistance", "helmet"]
   },
   {
     "bike_id": "Meteor350-00010",
@@ -5670,7 +5875,13 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_033"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "extended_warranty",
+      "fuel_voucher",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "AvengerCruise220-00011",
@@ -5763,7 +5974,13 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_034"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "service_package",
+      "roadside_assistance",
+      "helmet"
+    ]
   },
   {
     "bike_id": "MultistradaV4-00012",
@@ -5856,7 +6073,8 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_035"
-    }
+    },
+    "offers": ["extended_warranty", "bus_ticket"]
   },
   {
     "bike_id": "PassionPro-00013",
@@ -5949,7 +6167,14 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_036"
-    }
+    },
+    "offers": [
+      "insurance",
+      "roadside_assistance",
+      "accessory_kit",
+      "road_tax_waiver",
+      "namechange"
+    ]
   },
   {
     "bike_id": "XL100-00014",
@@ -6042,7 +6267,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_XL100-00014"
-    }
+    },
+    "offers": [
+      "service_package",
+      "extended_warranty",
+      "insurance",
+      "helmet",
+      "namechange"
+    ]
   },
   {
     "bike_id": "Glamour-00015",
@@ -6135,7 +6367,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Glamour-00015"
-    }
+    },
+    "offers": [
+      "fuel_voucher",
+      "accessory_kit",
+      "road_tax_waiver",
+      "roadside_assistance"
+    ]
   },
   {
     "bike_id": "Bullet350-00016",
@@ -6228,7 +6466,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Bullet350-00016"
-    }
+    },
+    "offers": ["insurance", "accessory_kit"]
   },
   {
     "bike_id": "BurgmanStreet-00017",
@@ -6321,7 +6560,14 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_037"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "bus_ticket",
+      "helmet",
+      "fuel_voucher",
+      "namechange"
+    ]
   },
   {
     "bike_id": "Platina100-00018",
@@ -6414,7 +6660,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Platina100-00018"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "fuel_voucher",
+      "helmet",
+      "namechange",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "FZ-SV3-00019",
@@ -6507,7 +6760,8 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_038"
-    }
+    },
+    "offers": ["bus_ticket", "insurance", "namechange"]
   },
   {
     "bike_id": "HFDeluxe-00020",
@@ -6600,7 +6854,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_HFDeluxe-00020"
-    }
+    },
+    "offers": [
+      "bus_ticket",
+      "service_package",
+      "helmet",
+      "extended_warranty",
+      "namechange"
+    ]
   },
   {
     "bike_id": "MultistradaV4-00021",
@@ -6693,7 +6954,13 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_039"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "bus_ticket",
+      "service_package",
+      "accessory_kit"
+    ]
   },
   {
     "bike_id": "PassionPro-00022",
@@ -6786,7 +7053,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_PassionPro-00022"
-    }
+    },
+    "offers": ["bus_ticket", "extended_warranty"]
   },
   {
     "bike_id": "MT-15-00023",
@@ -6879,7 +7147,13 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_040"
-    }
+    },
+    "offers": [
+      "bus_ticket",
+      "extended_warranty",
+      "helmet",
+      "roadside_assistance"
+    ]
   },
   {
     "bike_id": "MT-15-00024",
@@ -6972,7 +7246,8 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_041"
-    }
+    },
+    "offers": ["roadside_assistance", "namechange"]
   },
   {
     "bike_id": "Monster797-00025",
@@ -7065,7 +7340,8 @@
     "dealer_details": {
       "name": "MotoKingz",
       "dealer_id": "dealer_042"
-    }
+    },
+    "offers": ["namechange", "bus_ticket", "fuel_voucher"]
   },
   {
     "bike_id": "NTORQ125-00026",
@@ -7158,7 +7434,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_NTORQ125-00026"
-    }
+    },
+    "offers": ["road_tax_waiver", "fuel_voucher"]
   },
   {
     "bike_id": "Versys650-00027",
@@ -7251,7 +7528,8 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_043"
-    }
+    },
+    "offers": ["namechange", "service_package", "insurance"]
   },
   {
     "bike_id": "Access125-00028",
@@ -7344,7 +7622,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Access125-00028"
-    }
+    },
+    "offers": ["namechange", "accessory_kit"]
   },
   {
     "bike_id": "Fascino-00029",
@@ -7437,7 +7716,13 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_044"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "accessory_kit",
+      "roadside_assistance",
+      "namechange"
+    ]
   },
   {
     "bike_id": "Glamour-00030",
@@ -7530,7 +7815,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Glamour-00030"
-    }
+    },
+    "offers": ["extended_warranty", "bus_ticket", "helmet", "insurance"]
   },
   {
     "bike_id": "Meteor350-00031",
@@ -7623,7 +7909,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Meteor350-00031"
-    }
+    },
+    "offers": ["service_package", "roadside_assistance", "bus_ticket", "helmet"]
   },
   {
     "bike_id": "CBR150R-00032",
@@ -7716,7 +8003,8 @@
     "dealer_details": {
       "name": "GearUp Dealers",
       "dealer_id": "dealer_045"
-    }
+    },
+    "offers": ["service_package", "helmet", "namechange", "accessory_kit"]
   },
   {
     "bike_id": "Z650-00033",
@@ -7809,7 +8097,8 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_046"
-    }
+    },
+    "offers": ["bus_ticket", "namechange"]
   },
   {
     "bike_id": "390Adventure-00034",
@@ -7902,7 +8191,14 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_047"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "accessory_kit",
+      "bus_ticket",
+      "helmet",
+      "roadside_assistance"
+    ]
   },
   {
     "bike_id": "Z650-00035",
@@ -7995,7 +8291,8 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_048"
-    }
+    },
+    "offers": ["bus_ticket", "service_package"]
   },
   {
     "bike_id": "PulsarNS160-00036",
@@ -8088,7 +8385,14 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_049"
-    }
+    },
+    "offers": [
+      "helmet",
+      "namechange",
+      "accessory_kit",
+      "extended_warranty",
+      "insurance"
+    ]
   },
   {
     "bike_id": "RayZR-00037",
@@ -8181,7 +8485,14 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_050"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "fuel_voucher",
+      "roadside_assistance",
+      "bus_ticket",
+      "namechange"
+    ]
   },
   {
     "bike_id": "CBShine-00038",
@@ -8274,7 +8585,8 @@
     "dealer_details": {
       "name": "RevRiders",
       "dealer_id": "dealer_051"
-    }
+    },
+    "offers": ["insurance", "fuel_voucher"]
   },
   {
     "bike_id": "MT-15-00039",
@@ -8367,7 +8679,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_MT-15-00039"
-    }
+    },
+    "offers": ["roadside_assistance", "namechange", "accessory_kit"]
   },
   {
     "bike_id": "Activa6G-00040",
@@ -8460,7 +8773,8 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_052"
-    }
+    },
+    "offers": ["insurance", "fuel_voucher"]
   },
   {
     "bike_id": "NTORQ125-00041",
@@ -8553,7 +8867,8 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_053"
-    }
+    },
+    "offers": ["roadside_assistance", "helmet", "fuel_voucher"]
   },
   {
     "bike_id": "AvengerCruise220-00042",
@@ -8646,7 +8961,14 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_054"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "namechange",
+      "bus_ticket",
+      "fuel_voucher",
+      "insurance"
+    ]
   },
   {
     "bike_id": "ApacheRTR160-00043",
@@ -8739,7 +9061,14 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_055"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "accessory_kit",
+      "insurance",
+      "roadside_assistance",
+      "fuel_voucher"
+    ]
   },
   {
     "bike_id": "Duke200-00044",
@@ -8832,7 +9161,13 @@
     "dealer_details": {
       "name": "RevRiders",
       "dealer_id": "dealer_056"
-    }
+    },
+    "offers": [
+      "fuel_voucher",
+      "roadside_assistance",
+      "namechange",
+      "bus_ticket"
+    ]
   },
   {
     "bike_id": "PulsarNS160-00045",
@@ -8925,7 +9260,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_PulsarNS160-00045"
-    }
+    },
+    "offers": ["fuel_voucher", "accessory_kit", "namechange", "bus_ticket"]
   },
   {
     "bike_id": "SplendorPlus-00046",
@@ -9018,7 +9354,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_SplendorPlus-00046"
-    }
+    },
+    "offers": ["service_package", "helmet", "fuel_voucher"]
   },
   {
     "bike_id": "FZ-SV3-00047",
@@ -9111,7 +9448,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_FZ-SV3-00047"
-    }
+    },
+    "offers": ["fuel_voucher", "extended_warranty"]
   },
   {
     "bike_id": "Xtreme160R-00048",
@@ -9204,7 +9542,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Xtreme160R-00048"
-    }
+    },
+    "offers": [
+      "namechange",
+      "service_package",
+      "roadside_assistance",
+      "helmet",
+      "insurance"
+    ]
   },
   {
     "bike_id": "Unicorn-00049",
@@ -9297,7 +9642,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Unicorn-00049"
-    }
+    },
+    "offers": [
+      "bus_ticket",
+      "insurance",
+      "accessory_kit",
+      "roadside_assistance",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "Fascino-00050",
@@ -9390,7 +9742,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Fascino-00050"
-    }
+    },
+    "offers": ["helmet", "accessory_kit", "roadside_assistance"]
   },
   {
     "bike_id": "390Duke-00001",
@@ -9483,7 +9836,13 @@
     "dealer_details": {
       "name": "RevRiders",
       "dealer_id": "dealer_057"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "fuel_voucher",
+      "service_package",
+      "bus_ticket"
+    ]
   },
   {
     "bike_id": "Bullet350-00002",
@@ -9576,7 +9935,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Bullet350-00002"
-    }
+    },
+    "offers": ["road_tax_waiver", "fuel_voucher"]
   },
   {
     "bike_id": "BurgmanStreet-00003",
@@ -9669,7 +10029,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_058"
-    }
+    },
+    "offers": ["bus_ticket", "fuel_voucher"]
   },
   {
     "bike_id": "Jupiter-00004",
@@ -9762,7 +10123,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Jupiter-00004"
-    }
+    },
+    "offers": ["namechange", "service_package", "bus_ticket"]
   },
   {
     "bike_id": "PassionPro-00005",
@@ -9855,7 +10217,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_PassionPro-00005"
-    }
+    },
+    "offers": ["roadside_assistance", "namechange", "service_package"]
   },
   {
     "bike_id": "Interceptor650-00006",
@@ -9948,7 +10311,8 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_059"
-    }
+    },
+    "offers": ["road_tax_waiver", "insurance"]
   },
   {
     "bike_id": "Z900-00007",
@@ -10041,7 +10405,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Z900-00007"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "insurance",
+      "bus_ticket",
+      "namechange",
+      "service_package"
+    ]
   },
   {
     "bike_id": "Z900-00008",
@@ -10134,7 +10505,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Z900-00008"
-    }
+    },
+    "offers": ["fuel_voucher", "road_tax_waiver", "service_package"]
   },
   {
     "bike_id": "Jupiter-00009",
@@ -10227,7 +10599,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Jupiter-00009"
-    }
+    },
+    "offers": ["road_tax_waiver", "helmet"]
   },
   {
     "bike_id": "ApacheRTR160-00010",
@@ -10320,7 +10693,8 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_060"
-    }
+    },
+    "offers": ["helmet", "roadside_assistance"]
   },
   {
     "bike_id": "390Duke-00011",
@@ -10413,7 +10787,8 @@
     "dealer_details": {
       "name": "RevRiders",
       "dealer_id": "dealer_061"
-    }
+    },
+    "offers": ["namechange", "road_tax_waiver", "roadside_assistance"]
   },
   {
     "bike_id": "G310GS-00012",
@@ -10506,7 +10881,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_G310GS-00012"
-    }
+    },
+    "offers": ["bus_ticket", "extended_warranty"]
   },
   {
     "bike_id": "Z900-00013",
@@ -10599,7 +10975,8 @@
     "dealer_details": {
       "name": "GearUp Dealers",
       "dealer_id": "dealer_062"
-    }
+    },
+    "offers": ["extended_warranty", "accessory_kit"]
   },
   {
     "bike_id": "MT-03-00014",
@@ -10692,7 +11069,13 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_063"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "fuel_voucher",
+      "namechange",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "G310GS-00015",
@@ -10785,7 +11168,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_064"
-    }
+    },
+    "offers": ["bus_ticket", "extended_warranty", "fuel_voucher", "namechange"]
   },
   {
     "bike_id": "ApacheRTR160-00016",
@@ -10878,7 +11262,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ApacheRTR160-00016"
-    }
+    },
+    "offers": ["extended_warranty", "bus_ticket"]
   },
   {
     "bike_id": "FZ-SV3-00017",
@@ -10971,7 +11356,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_FZ-SV3-00017"
-    }
+    },
+    "offers": [
+      "namechange",
+      "extended_warranty",
+      "fuel_voucher",
+      "bus_ticket",
+      "service_package"
+    ]
   },
   {
     "bike_id": "CBR250R-00018",
@@ -11064,7 +11456,8 @@
     "dealer_details": {
       "name": "MotoKingz",
       "dealer_id": "dealer_065"
-    }
+    },
+    "offers": ["helmet", "namechange", "bus_ticket"]
   },
   {
     "bike_id": "GoldWing-00019",
@@ -11157,7 +11550,8 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_066"
-    }
+    },
+    "offers": ["accessory_kit", "road_tax_waiver"]
   },
   {
     "bike_id": "PassionPro-00020",
@@ -11250,7 +11644,8 @@
     "dealer_details": {
       "name": "RevRiders",
       "dealer_id": "dealer_067"
-    }
+    },
+    "offers": ["extended_warranty", "bus_ticket"]
   },
   {
     "bike_id": "Bullet350-00021",
@@ -11343,7 +11738,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Bullet350-00021"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "roadside_assistance",
+      "namechange",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "RC125-00022",
@@ -11436,7 +11837,14 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_068"
-    }
+    },
+    "offers": [
+      "namechange",
+      "fuel_voucher",
+      "bus_ticket",
+      "service_package",
+      "insurance"
+    ]
   },
   {
     "bike_id": "Bullet350-00023",
@@ -11529,7 +11937,8 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_069"
-    }
+    },
+    "offers": ["roadside_assistance", "helmet", "insurance", "fuel_voucher"]
   },
   {
     "bike_id": "FZ-SV3-00024",
@@ -11622,7 +12031,14 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_070"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "road_tax_waiver",
+      "bus_ticket",
+      "extended_warranty",
+      "service_package"
+    ]
   },
   {
     "bike_id": "RS150-00025",
@@ -11715,7 +12131,14 @@
     "dealer_details": {
       "name": "Urban Wheels",
       "dealer_id": "dealer_071"
-    }
+    },
+    "offers": [
+      "fuel_voucher",
+      "bus_ticket",
+      "road_tax_waiver",
+      "extended_warranty",
+      "insurance"
+    ]
   },
   {
     "bike_id": "GoldWing-00026",
@@ -11808,7 +12231,8 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_072"
-    }
+    },
+    "offers": ["insurance", "service_package", "road_tax_waiver"]
   },
   {
     "bike_id": "RS150-00027",
@@ -11901,7 +12325,14 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_073"
-    }
+    },
+    "offers": [
+      "bus_ticket",
+      "service_package",
+      "helmet",
+      "fuel_voucher",
+      "accessory_kit"
+    ]
   },
   {
     "bike_id": "SR160-00028",
@@ -11994,7 +12425,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_SR160-00028"
-    }
+    },
+    "offers": ["insurance", "service_package"]
   },
   {
     "bike_id": "BurgmanStreet-00029",
@@ -12087,7 +12519,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_BurgmanStreet-00029"
-    }
+    },
+    "offers": ["bus_ticket", "namechange", "insurance"]
   },
   {
     "bike_id": "G310R-00030",
@@ -12180,7 +12613,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_G310R-00030"
-    }
+    },
+    "offers": ["extended_warranty", "accessory_kit", "namechange"]
   },
   {
     "bike_id": "CBR250R-00031",
@@ -12273,7 +12707,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_CBR250R-00031"
-    }
+    },
+    "offers": ["fuel_voucher", "road_tax_waiver", "accessory_kit"]
   },
   {
     "bike_id": "ApacheRTR160-00032",
@@ -12366,7 +12801,14 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_074"
-    }
+    },
+    "offers": [
+      "fuel_voucher",
+      "helmet",
+      "namechange",
+      "insurance",
+      "service_package"
+    ]
   },
   {
     "bike_id": "G310R-00033",
@@ -12459,7 +12901,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_075"
-    }
+    },
+    "offers": ["bus_ticket", "helmet", "accessory_kit"]
   },
   {
     "bike_id": "RS150-00034",
@@ -12552,7 +12995,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_RS150-00034"
-    }
+    },
+    "offers": ["service_package", "helmet"]
   },
   {
     "bike_id": "Ninja300-00035",
@@ -12645,7 +13089,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Ninja300-00035"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "fuel_voucher",
+      "road_tax_waiver",
+      "extended_warranty",
+      "namechange"
+    ]
   },
   {
     "bike_id": "FZ-SV3-00036",
@@ -12738,7 +13189,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_FZ-SV3-00036"
-    }
+    },
+    "offers": ["extended_warranty", "service_package", "bus_ticket"]
   },
   {
     "bike_id": "GoldWing-00037",
@@ -12831,7 +13283,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_GoldWing-00037"
-    }
+    },
+    "offers": ["insurance", "road_tax_waiver", "helmet", "fuel_voucher"]
   },
   {
     "bike_id": "GoldWing-00038",
@@ -12924,7 +13377,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_GoldWing-00038"
-    }
+    },
+    "offers": ["service_package", "extended_warranty"]
   },
   {
     "bike_id": "Interceptor650-00039",
@@ -13017,7 +13471,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Interceptor650-00039"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "service_package",
+      "bus_ticket",
+      "accessory_kit"
+    ]
   },
   {
     "bike_id": "Bullet350-00040",
@@ -13110,7 +13570,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Bullet350-00040"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "insurance",
+      "helmet",
+      "service_package",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "GoldWing-00041",
@@ -13203,7 +13670,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_GoldWing-00041"
-    }
+    },
+    "offers": ["insurance", "fuel_voucher", "roadside_assistance"]
   },
   {
     "bike_id": "Z900-00042",
@@ -13296,7 +13764,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Z900-00042"
-    }
+    },
+    "offers": ["bus_ticket", "accessory_kit", "namechange", "helmet"]
   },
   {
     "bike_id": "PassionPro-00043",
@@ -13389,7 +13858,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_PassionPro-00043"
-    }
+    },
+    "offers": [
+      "namechange",
+      "accessory_kit",
+      "insurance",
+      "extended_warranty",
+      "fuel_voucher"
+    ]
   },
   {
     "bike_id": "Bullet350-00044",
@@ -13482,7 +13958,8 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_076"
-    }
+    },
+    "offers": ["road_tax_waiver", "bus_ticket", "helmet"]
   },
   {
     "bike_id": "RC125-00045",
@@ -13575,7 +14052,14 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_077"
-    }
+    },
+    "offers": [
+      "roadside_assistance",
+      "insurance",
+      "road_tax_waiver",
+      "accessory_kit",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "Ninja300-00046",
@@ -13668,7 +14152,8 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_078"
-    }
+    },
+    "offers": ["namechange", "service_package"]
   },
   {
     "bike_id": "G310GS-00047",
@@ -13761,7 +14246,8 @@
     "dealer_details": {
       "name": "GearUp Dealers",
       "dealer_id": "dealer_079"
-    }
+    },
+    "offers": ["accessory_kit", "bus_ticket"]
   },
   {
     "bike_id": "RC125-00048",
@@ -13854,7 +14340,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_RC125-00048"
-    }
+    },
+    "offers": ["accessory_kit", "namechange"]
   },
   {
     "bike_id": "ApacheRTR160-00049",
@@ -13947,7 +14434,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ApacheRTR160-00049"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "accessory_kit",
+      "namechange",
+      "roadside_assistance"
+    ]
   },
   {
     "bike_id": "FZ-SV3-00050",
@@ -14040,7 +14533,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_FZ-SV3-00050"
-    }
+    },
+    "offers": ["roadside_assistance", "road_tax_waiver", "helmet"]
   },
   {
     "bike_id": "iQube-00001",
@@ -14133,7 +14627,14 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_080"
-    }
+    },
+    "offers": [
+      "helmet",
+      "insurance",
+      "bus_ticket",
+      "road_tax_waiver",
+      "accessory_kit"
+    ]
   },
   {
     "bike_id": "Xtreme160R-00002",
@@ -14226,7 +14727,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Xtreme160R-00002"
-    }
+    },
+    "offers": ["bus_ticket", "namechange", "fuel_voucher", "insurance"]
   },
   {
     "bike_id": "G310GS-00003",
@@ -14319,7 +14821,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_G310GS-00003"
-    }
+    },
+    "offers": ["service_package", "extended_warranty"]
   },
   {
     "bike_id": "RS150-00004",
@@ -14412,7 +14915,8 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_081"
-    }
+    },
+    "offers": ["road_tax_waiver", "helmet", "extended_warranty"]
   },
   {
     "bike_id": "Classic500-00005",
@@ -14505,7 +15009,14 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_082"
-    }
+    },
+    "offers": [
+      "insurance",
+      "roadside_assistance",
+      "accessory_kit",
+      "namechange",
+      "helmet"
+    ]
   },
   {
     "bike_id": "ContinentalGT-00006",
@@ -14598,7 +15109,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ContinentalGT-00006"
-    }
+    },
+    "offers": ["roadside_assistance", "insurance", "namechange"]
   },
   {
     "bike_id": "X-ADV750-00007",
@@ -14691,7 +15203,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_X-ADV750-00007"
-    }
+    },
+    "offers": [
+      "service_package",
+      "roadside_assistance",
+      "extended_warranty",
+      "helmet",
+      "bus_ticket"
+    ]
   },
   {
     "bike_id": "G310R-00008",
@@ -14784,7 +15303,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_G310R-00008"
-    }
+    },
+    "offers": ["bus_ticket", "road_tax_waiver", "namechange"]
   },
   {
     "bike_id": "GoldWing-00009",
@@ -14877,7 +15397,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_GoldWing-00009"
-    }
+    },
+    "offers": ["road_tax_waiver", "fuel_voucher", "accessory_kit"]
   },
   {
     "bike_id": "GSX-R1000-00010",
@@ -14970,7 +15491,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_GSX-R1000-00010"
-    }
+    },
+    "offers": ["bus_ticket", "accessory_kit", "insurance", "road_tax_waiver"]
   },
   {
     "bike_id": "KarizmaZMR-00011",
@@ -15063,7 +15585,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_KarizmaZMR-00011"
-    }
+    },
+    "offers": ["roadside_assistance", "service_package", "namechange"]
   },
   {
     "bike_id": "Hayabusa-00012",
@@ -15156,7 +15679,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Hayabusa-00012"
-    }
+    },
+    "offers": ["namechange", "service_package"]
   },
   {
     "bike_id": "GoldWing-00013",
@@ -15249,7 +15773,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_GoldWing-00013"
-    }
+    },
+    "offers": ["road_tax_waiver", "namechange"]
   },
   {
     "bike_id": "R3-00014",
@@ -15342,7 +15867,8 @@
     "dealer_details": {
       "name": "RevRiders",
       "dealer_id": "dealer_083"
-    }
+    },
+    "offers": ["helmet", "roadside_assistance", "service_package"]
   },
   {
     "bike_id": "250Duke-00015",
@@ -15435,7 +15961,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_250Duke-00015"
-    }
+    },
+    "offers": ["fuel_voucher", "bus_ticket"]
   },
   {
     "bike_id": "iQube-00016",
@@ -15528,7 +16055,8 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_084"
-    }
+    },
+    "offers": ["accessory_kit", "insurance", "roadside_assistance"]
   },
   {
     "bike_id": "Ronin225-00017",
@@ -15621,7 +16149,8 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_085"
-    }
+    },
+    "offers": ["accessory_kit", "road_tax_waiver"]
   },
   {
     "bike_id": "ApacheRR310-00018",
@@ -15714,7 +16243,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_ApacheRR310-00018"
-    }
+    },
+    "offers": ["road_tax_waiver", "accessory_kit"]
   },
   {
     "bike_id": "FZ-X-00019",
@@ -15807,7 +16337,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_FZ-X-00019"
-    }
+    },
+    "offers": ["namechange", "road_tax_waiver", "insurance", "helmet"]
   },
   {
     "bike_id": "1290SuperDukeR-00020",
@@ -15900,7 +16431,8 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_086"
-    }
+    },
+    "offers": ["service_package", "insurance"]
   },
   {
     "bike_id": "RS150-00021",
@@ -15993,7 +16525,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_RS150-00021"
-    }
+    },
+    "offers": ["service_package", "bus_ticket"]
   },
   {
     "bike_id": "GoldWing-00022",
@@ -16086,7 +16619,8 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_087"
-    }
+    },
+    "offers": ["service_package", "helmet", "bus_ticket", "roadside_assistance"]
   },
   {
     "bike_id": "CB650R-00023",
@@ -16179,7 +16713,8 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_088"
-    }
+    },
+    "offers": ["bus_ticket", "extended_warranty"]
   },
   {
     "bike_id": "Hayabusa-00024",
@@ -16272,7 +16807,14 @@
     "dealer_details": {
       "name": "Rapid Motors",
       "dealer_id": "dealer_089"
-    }
+    },
+    "offers": [
+      "namechange",
+      "accessory_kit",
+      "helmet",
+      "bus_ticket",
+      "insurance"
+    ]
   },
   {
     "bike_id": "G310R-00025",
@@ -16365,7 +16907,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_G310R-00025"
-    }
+    },
+    "offers": [
+      "insurance",
+      "namechange",
+      "road_tax_waiver",
+      "service_package",
+      "bus_ticket"
+    ]
   },
   {
     "bike_id": "R1250GS-00026",
@@ -16458,7 +17007,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_R1250GS-00026"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "service_package",
+      "insurance",
+      "namechange",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "Meteor350-00027",
@@ -16551,7 +17107,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_Meteor350-00027"
-    }
+    },
+    "offers": [
+      "helmet",
+      "accessory_kit",
+      "extended_warranty",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "SplendoriSmart-00028",
@@ -16644,7 +17206,13 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_090"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "service_package",
+      "accessory_kit",
+      "namechange"
+    ]
   },
   {
     "bike_id": "FZ-X-00029",
@@ -16737,7 +17305,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_FZ-X-00029"
-    }
+    },
+    "offers": [
+      "insurance",
+      "roadside_assistance",
+      "road_tax_waiver",
+      "service_package"
+    ]
   },
   {
     "bike_id": "CB650R-00030",
@@ -16830,7 +17404,8 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_091"
-    }
+    },
+    "offers": ["helmet", "service_package", "road_tax_waiver", "bus_ticket"]
   },
   {
     "bike_id": "X-ADV750-00031",
@@ -16923,7 +17498,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_X-ADV750-00031"
-    }
+    },
+    "offers": ["bus_ticket", "service_package"]
   },
   {
     "bike_id": "ZH2-00032",
@@ -17016,7 +17592,14 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_092"
-    }
+    },
+    "offers": [
+      "extended_warranty",
+      "roadside_assistance",
+      "road_tax_waiver",
+      "helmet",
+      "bus_ticket"
+    ]
   },
   {
     "bike_id": "GoldWing-00033",
@@ -17109,7 +17692,14 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_093"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "roadside_assistance",
+      "helmet",
+      "road_tax_waiver",
+      "namechange"
+    ]
   },
   {
     "bike_id": "R3-00034",
@@ -17202,7 +17792,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_R3-00034"
-    }
+    },
+    "offers": ["roadside_assistance", "road_tax_waiver"]
   },
   {
     "bike_id": "MT-09-00035",
@@ -17295,7 +17886,14 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_094"
-    }
+    },
+    "offers": [
+      "road_tax_waiver",
+      "bus_ticket",
+      "roadside_assistance",
+      "service_package",
+      "namechange"
+    ]
   },
   {
     "bike_id": "ContinentalGT-00036",
@@ -17388,7 +17986,8 @@
     "dealer_details": {
       "name": "MotoKingz",
       "dealer_id": "dealer_095"
-    }
+    },
+    "offers": ["fuel_voucher", "insurance", "accessory_kit"]
   },
   {
     "bike_id": "Hayabusa-00037",
@@ -17481,7 +18080,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_096"
-    }
+    },
+    "offers": ["extended_warranty", "helmet"]
   },
   {
     "bike_id": "R1250GS-00038",
@@ -17574,7 +18174,8 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_R1250GS-00038"
-    }
+    },
+    "offers": ["service_package", "accessory_kit", "insurance"]
   },
   {
     "bike_id": "X-ADV750-00039",
@@ -17667,7 +18268,8 @@
     "dealer_details": {
       "name": "RoadRiders Hub",
       "dealer_id": "dealer_097"
-    }
+    },
+    "offers": ["fuel_voucher", "insurance", "namechange", "service_package"]
   },
   {
     "bike_id": "1290SuperDukeR-00040",
@@ -17760,7 +18362,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_1290SuperDukeR-00040"
-    }
+    },
+    "offers": [
+      "fuel_voucher",
+      "roadside_assistance",
+      "service_package",
+      "accessory_kit"
+    ]
   },
   {
     "bike_id": "Hayabusa-00041",
@@ -17853,7 +18461,13 @@
     "dealer_details": {
       "name": "SpeedZone Bikes",
       "dealer_id": "dealer_098"
-    }
+    },
+    "offers": [
+      "fuel_voucher",
+      "extended_warranty",
+      "service_package",
+      "namechange"
+    ]
   },
   {
     "bike_id": "KarizmaZMR-00042",
@@ -17946,7 +18560,13 @@
     "dealer_details": {
       "name": "ThrottleHub",
       "dealer_id": "dealer_099"
-    }
+    },
+    "offers": [
+      "accessory_kit",
+      "namechange",
+      "service_package",
+      "road_tax_waiver"
+    ]
   },
   {
     "bike_id": "1290SuperDukeR-00043",
@@ -18039,7 +18659,13 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_1290SuperDukeR-00043"
-    }
+    },
+    "offers": [
+      "insurance",
+      "extended_warranty",
+      "service_package",
+      "bus_ticket"
+    ]
   },
   {
     "bike_id": "KarizmaZMR-00044",
@@ -18132,7 +18758,8 @@
     "dealer_details": {
       "name": "MotoKingz",
       "dealer_id": "dealer_100"
-    }
+    },
+    "offers": ["bus_ticket", "accessory_kit"]
   },
   {
     "bike_id": "RC200-00045",
@@ -18225,7 +18852,8 @@
     "dealer_details": {
       "name": "Velocity Motors",
       "dealer_id": "dealer_101"
-    }
+    },
+    "offers": ["namechange", "service_package"]
   },
   {
     "bike_id": "GSX-R1000-00046",
@@ -18318,7 +18946,8 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_102"
-    }
+    },
+    "offers": ["service_package", "roadside_assistance", "accessory_kit"]
   },
   {
     "bike_id": "R1250GS-00047",
@@ -18411,7 +19040,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_R1250GS-00047"
-    }
+    },
+    "offers": [
+      "bus_ticket",
+      "road_tax_waiver",
+      "roadside_assistance",
+      "accessory_kit",
+      "service_package"
+    ]
   },
   {
     "bike_id": "1290SuperDukeR-00048",
@@ -18504,7 +19140,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_1290SuperDukeR-00048"
-    }
+    },
+    "offers": [
+      "namechange",
+      "insurance",
+      "fuel_voucher",
+      "bus_ticket",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "250Duke-00049",
@@ -18597,7 +19240,14 @@
     "individual_details": {
       "name": "Individual Seller",
       "dealer_id": "individual_250Duke-00049"
-    }
+    },
+    "offers": [
+      "namechange",
+      "fuel_voucher",
+      "service_package",
+      "road_tax_waiver",
+      "extended_warranty"
+    ]
   },
   {
     "bike_id": "R1250GS-00050",
@@ -18690,6 +19340,7 @@
     "dealer_details": {
       "name": "BikePoint India",
       "dealer_id": "dealer_103"
-    }
+    },
+    "offers": ["fuel_voucher", "bus_ticket", "service_package"]
   }
 ]
