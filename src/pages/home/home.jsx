@@ -1,11 +1,10 @@
-import "./home.scss";
+// Components Imports
 import NavbarDeskTop from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import PopularBikes from "../../components/popular-bikes/popular-bikes";
 import FrequentlyAskedQuestions from "../../components/frequently-asked-questions/frequently-asked-questions";
 import OurServices from "../../components/our-services/our-services";
 import NeedHelp from "../../components/need-help/need-help";
-import Insights from "../../components/insight-driven/insight-driven";
 import TopRecommendedBrand from "../../components/top-recommended-brand/top-recommended-brand";
 import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 import GetUpdates from "../../components/get-updates/get-updates";
@@ -15,12 +14,17 @@ import MotivateUs from "../../components/motivate-us/motivate-us";
 import HorizontalTabs from "../../components/common-components/horizontal-tabs/horizontal-tabs";
 import Content from "../../components/common-components/content/content";
 import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
+import CardGrid from "../../components/common-components/card-grid/card-grid";
 
-// JSON import
+// JSON Imports
 import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
 import BenefitsData from "../../data/benefits.json";
 import FAQ from "../../data/frequently-asked-questions.json";
 import ImageReviewData from "../../data/image-review.json";
+import InsightsData from "../../data/insight-driven.json";
+
+// Local Imports
+import "./home.scss";
 
 const Home = () => {
   return (
@@ -34,7 +38,8 @@ const Home = () => {
       <NeedHelp />
       <ServiceCards />
       <WhyChooseUs />
-      <Insights />
+
+      <CardGrid data={InsightsData.data} title={InsightsData.title} />
 
       <div className="container">
         <div className="row">

@@ -1,9 +1,12 @@
+// Swiper Imports
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+
+// Local Imports
 import "./utils.scss";
-import { EffectCreative } from "swiper/modules";
 
 const BikeImageSwiper = ({ images }) => {
   if (!images || images.length === 0) {
@@ -12,21 +15,14 @@ const BikeImageSwiper = ({ images }) => {
 
   return (
     <Swiper
-      grabCursor={true}
-      effect={"creative"}
-      creativeEffect={{
-        prev: {
-          shadow: true,
-          translate: [0, 0, -400],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
+      pagination={{
+        dynamicBullets: true,
+        clickable: true,
       }}
-      modules={[EffectCreative]}
+      modules={[Pagination]}
       className="mySwiper"
     >
-      {images.map((image, index) => (
+      {images?.map((image, index) => (
         <SwiperSlide key={index}>
           <div className="slide-container">
             <img

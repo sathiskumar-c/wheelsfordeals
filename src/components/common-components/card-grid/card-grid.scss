@@ -1,90 +1,101 @@
-.insights-section {
+.card-grid-section {
   padding: 32px;
   text-align: center;
   max-width: 1300px;
   margin: 0 auto;
 
-  .insights-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
-    justify-items: center;
   }
 
-  .insight-card {
+  .card {
     display: flex;
+    flex-direction: row;
     align-items: center;
     border-radius: 16px;
     padding: 24px;
     color: #2b0a3d;
-    width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    border: unset;
+
+    /* width for 4 cards per row */
+    flex: 1 1 calc((100% - 3 * 24px) / 4);
+    max-width: calc((100% - 3 * 24px) / 4);
 
     &:hover {
       transform: translateY(-5px);
       cursor: pointer;
     }
 
-    .insight-icon {
+    .card-icon {
       width: 100px;
       height: 100px;
       margin-right: 24px;
       flex-shrink: 0;
     }
 
-    .insight-content {
+    .card-content {
       text-align: left;
 
-      .insight-value {
+      .card-value {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 8px;
       }
 
-      .insight-text {
+      .card-text {
         font-size: 14px;
         line-height: 1.4;
       }
     }
   }
 
-  .insight-card:nth-child(1) {
+  /* Background colors for first four cards */
+  .card:nth-child(1) {
     background-color: #d0b3ff;
   }
 
-  .insight-card:nth-child(2) {
+  .card:nth-child(2) {
     background-color: #b3e5fc;
   }
 
-  .insight-card:nth-child(3) {
+  .card:nth-child(3) {
     background-color: #ffcdd2;
   }
 
-  .insight-card:nth-child(4) {
+  .card:nth-child(4) {
     background-color: #c8e6c9;
   }
 
   @media (max-width: 1024px) {
-    .insights-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .card {
+      /* 2 cards per row */
+      flex: 1 1 calc((100% - 24px) / 2);
+      max-width: calc((100% - 24px) / 2);
     }
   }
 
   @media (max-width: 576px) {
-    .insights-grid {
-      grid-template-columns: 1fr;
+    .card-grid {
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .insight-card {
+    .card {
+      flex: 1 1 100%;
+      max-width: 100%;
       flex-direction: column;
       text-align: center;
 
-      .insight-icon {
+      .card-icon {
         margin: 0 0 16px 0;
       }
 
-      .insight-content {
+      .card-content {
         text-align: center;
       }
     }

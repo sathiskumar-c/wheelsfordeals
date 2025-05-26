@@ -1,4 +1,7 @@
+// React Imports
 import { useMemo } from "react";
+
+// Local Imports
 import "./utils.scss";
 
 // Reusable component for each label-value pair
@@ -30,7 +33,7 @@ const BikeDetailsOverview = ({ bike }) => {
 
   return (
     <div className="bike-overview-container">
-      <h2 className="bike-overview-title">Bike Overview</h2>
+      <h2 className="bike-overview-title section-title mb-0">Bike Overview</h2>
       <div className="bike-overview-card">
         <div className="bike-overview-note">
           <span className="note-star">*</span>
@@ -140,10 +143,6 @@ const BikeDetailsOverview = ({ bike }) => {
                   : "Not Available"
               }
             />
-          </OverviewRow>
-
-          <OverviewRow className="location-row">
-            <OverviewItem label="Dealer" value={bike?.dealer_details?.name} />
           </OverviewRow>
         </div>
       </div>

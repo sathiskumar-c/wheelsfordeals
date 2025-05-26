@@ -1,376 +1,286 @@
 {
-  "brands": [
+  "name": "All Brands",
+  "all_brands": [
     {
-      "name": "Honda",
-      "models": [
-        {
-          "name": "Activa",
-          "slug": "activa",
-          "variants": [
-            { "name": "Activa 6G", "slug": "activa-6g" },
-            { "name": "Activa 125", "slug": "activa-125" }
-          ]
-        },
-        {
-          "name": "CB Shine",
-          "slug": "cb-shine",
-          "variants": []
-        },
-        {
-          "name": "Hornet",
-          "slug": "hornet",
-          "variants": [{ "name": "Hornet 2.0", "slug": "hornet-2-0" }]
-        }
-      ]
-    },
-    {
-      "name": "Hero MotoCorp",
-      "models": [
-        {
-          "name": "Splendor",
-          "slug": "splendor",
-          "variants": [
-            { "name": "Splendor Plus", "slug": "splendor-plus" },
-            { "name": "Splendor iSmart", "slug": "splendor-ismart" }
-          ]
-        },
-        {
-          "name": "Passion",
-          "slug": "passion",
-          "variants": [
-            { "name": "Passion Pro", "slug": "passion-pro" },
-            { "name": "Passion XPro", "slug": "passion-xpro" }
-          ]
-        },
-        {
-          "name": "Xtreme",
-          "slug": "xtreme",
-          "variants": [{ "name": "Xtreme 160R", "slug": "xtreme-160r" }]
-        }
-      ]
-    },
-    {
-      "name": "Bajaj Auto Ltd",
-      "models": [
-        {
-          "name": "Pulsar",
-          "slug": "pulsar",
-          "variants": [
-            { "name": "Pulsar 120", "slug": "pulsar-120" },
-            { "name": "Pulsar 150", "slug": "pulsar-150" },
-            { "name": "Pulsar 200", "slug": "pulsar-200" },
-            { "name": "Pulsar NS200", "slug": "pulsar-ns200" }
-          ]
-        },
-        {
-          "name": "Dominar",
-          "slug": "dominar",
-          "variants": [{ "name": "Dominar 400", "slug": "dominar-400" }]
-        }
-      ]
-    },
-    {
-      "name": "TVS Motor Company",
-      "models": [
-        {
-          "name": "Apache",
-          "slug": "apache",
-          "variants": [
-            { "name": "Apache RTR 160", "slug": "apache-rtr-160" },
-            { "name": "Apache RTR 200", "slug": "apache-rtr-200" },
-            { "name": "Apache RR 310", "slug": "apache-rr-310" }
-          ]
-        },
-        {
-          "name": "Jupiter",
-          "slug": "jupiter",
-          "variants": []
-        },
-        {
-          "name": "Star City",
-          "slug": "star-city",
-          "variants": []
-        }
-      ]
-    },
-    {
-      "name": "Suzuki Motorcycle",
-      "models": [
-        {
-          "name": "Gixxer",
-          "slug": "gixxer",
-          "variants": [{ "name": "Gixxer SF", "slug": "gixxer-sf" }]
-        },
-        {
-          "name": "Access",
-          "slug": "access",
-          "variants": []
-        }
-      ]
-    },
-    {
-      "name": "Royal Enfield",
-      "models": [
-        {
-          "name": "Classic",
-          "slug": "classic",
-          "variants": [
-            { "name": "Classic 350", "slug": "classic-350" },
-            { "name": "Classic 500", "slug": "classic-500" }
-          ]
-        },
-        {
-          "name": "Bullet",
-          "slug": "bullet",
-          "variants": [
-            { "name": "Bullet 350", "slug": "bullet-350" },
-            { "name": "Bullet 500", "slug": "bullet-500" }
-          ]
-        },
-        {
-          "name": "Meteor",
-          "slug": "meteor",
-          "variants": [{ "name": "Meteor 350", "slug": "meteor-350" }]
-        }
-      ]
-    },
-    {
-      "name": "Yamaha Motor India",
-      "models": [
-        {
-          "name": "FZ",
-          "slug": "fz",
-          "variants": [
-            { "name": "FZ-S", "slug": "fz-s" },
-            { "name": "FZ-FI", "slug": "fz-fi" }
-          ]
-        },
-        {
-          "name": "R15",
-          "slug": "r15",
-          "variants": [{ "name": "R15 V3", "slug": "r15-v3" }]
-        }
-      ]
-    },
-    {
-      "name": "KTM India",
-      "models": [
-        {
-          "name": "Duke",
-          "slug": "duke",
-          "variants": [
-            { "name": "Duke 125", "slug": "duke-125" },
-            { "name": "Duke 200", "slug": "duke-200" },
-            { "name": "Duke 390", "slug": "duke-390" }
-          ]
-        },
-        {
-          "name": "RC",
-          "slug": "rc",
-          "variants": [
-            { "name": "RC 125", "slug": "rc-125" },
-            { "name": "RC 200", "slug": "rc-200" },
-            { "name": "RC 390", "slug": "rc-390" }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Kawasaki India",
-      "models": [
-        {
-          "name": "Ninja",
-          "slug": "ninja",
-          "variants": [
-            { "name": "Ninja 300", "slug": "ninja-300" },
-            { "name": "Ninja 400", "slug": "ninja-400" }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "BMW Motorrad",
-      "models": [
-        {
-          "name": "G 310",
-          "slug": "g-310",
-          "variants": [
-            { "name": "G 310 R", "slug": "g-310-r" },
-            { "name": "G 310 GS", "slug": "g-310-gs" }
-          ]
-        },
-        {
-          "name": "R 1250",
-          "slug": "r-1250",
-          "variants": [
-            { "name": "R 1250 GS", "slug": "r-1250-gs" },
-            { "name": "R 1250 RT", "slug": "r-1250-rt" }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Ducati Indianapolis",
-      "models": [
-        {
-          "name": "Panigale",
-          "slug": "panigale",
-          "variants": [
-            { "name": "Panigale V2", "slug": "panigale-v2" },
-            { "name": "Panigale V4", "slug": "panigale-v4" }
-          ]
-        },
-        {
-          "name": "Monster",
-          "slug": "monster",
-          "variants": []
-        }
-      ]
-    },
-    {
-      "name": "Mahindra Two Wheelers",
-      "models": [
-        {
-          "name": "Gusto",
-          "slug": "gusto",
-          "variants": []
-        }
-      ]
-    },
-    {
-      "name": "Harley-Davidson",
-      "models": [
-        {
-          "name": "Street",
-          "slug": "street",
-          "variants": [{ "name": "Street 750", "slug": "street-750" }]
-        },
-        {
-          "name": "Iron",
-          "slug": "iron",
-          "variants": [{ "name": "Iron 883", "slug": "iron-883" }]
-        }
-      ]
-    },
-    {
-      "name": "Benelli",
-      "models": [
-        {
-          "name": "Imperial",
-          "slug": "imperial",
-          "variants": []
-        },
-        {
-          "name": "TNT",
-          "slug": "tnt",
-          "variants": [{ "name": "TNT 300", "slug": "tnt-300" }]
-        }
-      ]
-    },
-    {
-      "name": "Triumph Motorcycles",
-      "models": [
-        {
-          "name": "Street Twin",
-          "slug": "street-twin",
-          "variants": []
-        },
-        {
-          "name": "Bonneville",
-          "slug": "bonneville",
-          "variants": []
-        }
-      ]
-    },
-    {
-      "name": "Jawa Motorcycles",
-      "models": [
-        {
-          "name": "Jawa Classic",
-          "slug": "jawa-classic",
-          "variants": []
-        },
-        {
-          "name": "Jawa Forty Two",
-          "slug": "jawa-forty-two",
-          "variants": []
-        }
-      ]
-    },
-    {
-      "name": "Yezdi",
-      "models": [
-        {
-          "name": "Roadster",
-          "slug": "roadster",
-          "variants": []
-        }
-      ]
-    },
-    {
-      "name": "Indian Motorcycles",
-      "models": [
-        {
-          "name": "Scout",
-          "slug": "scout",
-          "variants": []
-        },
-        {
-          "name": "Chief",
-          "slug": "chief",
-          "variants": []
-        }
-      ]
-    },
-    {
-      "name": "MV Agusta Motor",
-      "models": [
-        {
-          "name": "Brutale",
-          "slug": "brutale",
-          "variants": []
-        }
-      ]
-    },
-    {
+      "id": "brand-ather",
       "name": "Ather Energy",
-      "models": [
-        {
-          "name": "450X",
-          "slug": "450x",
-          "variants": []
-        }
+      "image": "/images/brands/ather.png",
+      "alt": "Ather Energy",
+      "path": "ather",
+      "fuel_type": "ev",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "ather",
+      "keywords": ["ather energy", "ather", "ev", "indian"]
+    },
+    {
+      "id": "brand-bajaj",
+      "name": "Bajaj Auto Ltd",
+      "image": "/images/brands/bajaj.png",
+      "alt": "Bajaj Auto Ltd",
+      "path": "bajaj",
+      "fuel_type": "hybrid",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "bajaj",
+      "keywords": ["bajaj auto ltd", "bajaj", "hybrid", "indian"]
+    },
+    {
+      "id": "brand-benelli",
+      "name": "Benelli",
+      "image": "/images/brands/benelli.png",
+      "alt": "Benelli",
+      "path": "benelli",
+      "fuel_type": "petrol",
+      "country": "Italy",
+      "origin": "Italian",
+      "slug": "benelli",
+      "keywords": ["benelli", "benelli", "petrol", "italian"]
+    },
+    {
+      "id": "brand-bmw-motorrad",
+      "name": "BMW Motorrad",
+      "image": "/images/brands/bmw motorrad.png",
+      "alt": "BMW Motorrad",
+      "path": "bmw-motorrad",
+      "fuel_type": "petrol",
+      "country": "Germany",
+      "origin": "German",
+      "slug": "bmw-motorrad",
+      "keywords": ["bmw motorrad", "bmw-motorrad", "petrol", "german"]
+    },
+    {
+      "id": "brand-ducati",
+      "name": "Ducati Indianapolis",
+      "image": "/images/brands/ducati.png",
+      "alt": "Ducati Indianapolis",
+      "path": "ducati",
+      "fuel_type": "petrol",
+      "country": "Italy",
+      "origin": "Italian",
+      "slug": "ducati",
+      "keywords": ["ducati indianapolis", "ducati", "petrol", "italian"]
+    },
+    {
+      "id": "brand-harley-davidson",
+      "name": "Harley-Davidson",
+      "image": "/images/brands/harley-davidson.png",
+      "alt": "Harley-Davidson",
+      "path": "harley-davidson",
+      "fuel_type": "petrol",
+      "country": "USA",
+      "origin": "American",
+      "slug": "harley-davidson",
+      "keywords": ["harley-davidson", "harley-davidson", "petrol", "american"]
+    },
+    {
+      "id": "brand-hero",
+      "name": "Hero MotoCorp",
+      "image": "/images/brands/hero.png",
+      "alt": "Hero MotoCorp",
+      "path": "hero",
+      "fuel_type": "petrol",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "hero",
+      "keywords": ["hero motocorp", "hero", "petrol", "indian"]
+    },
+    {
+      "id": "brand-honda",
+      "name": "Honda",
+      "image": "/images/brands/honda.jpeg",
+      "alt": "Honda",
+      "path": "honda",
+      "fuel_type": "hybrid",
+      "country": "Japan",
+      "origin": "Japanese",
+      "slug": "honda",
+      "keywords": ["honda", "honda", "hybrid", "japanese"]
+    },
+    {
+      "id": "brand-indian-motorcycles",
+      "name": "Indian Motorcycles",
+      "image": "/images/brands/indian-motorcycle.png",
+      "alt": "Indian Motorcycles",
+      "path": "indian-motorcycles",
+      "fuel_type": "petrol",
+      "country": "USA",
+      "origin": "American",
+      "slug": "indian-motorcycles",
+      "keywords": [
+        "indian motorcycles",
+        "indian-motorcycles",
+        "petrol",
+        "american"
       ]
     },
     {
+      "id": "brand-jawa",
+      "name": "Jawa Motorcycles",
+      "image": "/images/brands/jawa.png",
+      "alt": "Jawa Motorcycles",
+      "path": "jawa",
+      "fuel_type": "petrol",
+      "country": "Czech Republic",
+      "origin": "Czech",
+      "slug": "jawa",
+      "keywords": ["jawa motorcycles", "jawa", "petrol", "czech"]
+    },
+    {
+      "id": "brand-kawasaki",
+      "name": "Kawasaki India",
+      "image": "/images/brands/kawasaki.png",
+      "alt": "Kawasaki India",
+      "path": "kawasaki",
+      "fuel_type": "petrol",
+      "country": "Japan",
+      "origin": "Japanese",
+      "slug": "kawasaki",
+      "keywords": ["kawasaki india", "kawasaki", "petrol", "japanese"]
+    },
+    {
+      "id": "brand-ktm",
+      "name": "KTM India",
+      "image": "/images/brands/ktm.png",
+      "alt": "KTM India",
+      "path": "ktm",
+      "fuel_type": "petrol",
+      "country": "Austria",
+      "origin": "Austrian",
+      "slug": "ktm",
+      "keywords": ["ktm india", "ktm", "petrol", "austrian"]
+    },
+    {
+      "id": "brand-mahindra",
+      "name": "Mahindra Two Wheelers",
+      "image": "/images/brands/mahindra.png",
+      "alt": "Mahindra Two Wheelers",
+      "path": "mahindra",
+      "fuel_type": "hybrid",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "mahindra",
+      "keywords": ["mahindra two wheelers", "mahindra", "hybrid", "indian"]
+    },
+    {
+      "id": "brand-mv-agusta",
+      "name": "MV Agusta Motor",
+      "image": "/images/brands/mv-agusta.png",
+      "alt": "MV Agusta Motor",
+      "path": "mv-agusta",
+      "fuel_type": "petrol",
+      "country": "Italy",
+      "origin": "Italian",
+      "slug": "mv-agusta",
+      "keywords": ["mv agusta motor", "mv-agusta", "petrol", "italian"]
+    },
+    {
+      "id": "brand-ola",
       "name": "Ola Electric",
-      "models": [
-        {
-          "name": "S1",
-          "slug": "s1",
-          "variants": []
-        }
-      ]
+      "image": "/images/brands/ola.png",
+      "alt": "Ola Electric",
+      "path": "ola",
+      "fuel_type": "ev",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "ola",
+      "keywords": ["ola electric", "ola", "ev", "indian"]
     },
     {
-      "name": "Revolt Motors",
-      "models": [
-        {
-          "name": "RV400",
-          "slug": "rv400",
-          "variants": []
-        }
-      ]
-    },
-    {
+      "id": "brand-pure-ev",
       "name": "PURE EV",
-      "models": [
-        {
-          "name": "EPluto 7G",
-          "slug": "epluto-7g",
-          "variants": []
-        }
-      ]
+      "image": "/images/brands/pure-ev.png",
+      "alt": "PURE EV",
+      "path": "pure-ev",
+      "fuel_type": "ev",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "pure-ev",
+      "keywords": ["pure ev", "pure-ev", "ev", "indian"]
+    },
+    {
+      "id": "brand-revolt",
+      "name": "Revolt Motors",
+      "image": "/images/brands/revolt.jpeg",
+      "alt": "Revolt Motors",
+      "path": "revolt",
+      "fuel_type": "ev",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "revolt",
+      "keywords": ["revolt motors", "revolt", "ev", "indian"]
+    },
+    {
+      "id": "brand-royal-enfield",
+      "name": "Royal Enfield",
+      "image": "/images/brands/royal-enfield.png",
+      "alt": "Royal Enfield",
+      "path": "royal-enfield",
+      "fuel_type": "petrol",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "royal-enfield",
+      "keywords": ["royal enfield", "royal-enfield", "petrol", "indian"]
+    },
+    {
+      "id": "brand-suzuki",
+      "name": "Suzuki Motorcycle",
+      "image": "/images/brands/suzuki.png",
+      "alt": "Suzuki Motorcycle",
+      "path": "suzuki",
+      "fuel_type": "petrol",
+      "country": "Japan",
+      "origin": "Japanese",
+      "slug": "suzuki",
+      "keywords": ["suzuki motorcycle", "suzuki", "petrol", "japanese"]
+    },
+    {
+      "id": "brand-triumph",
+      "name": "Triumph Motorcycles",
+      "image": "/images/brands/triumph.png",
+      "alt": "Triumph Motorcycles",
+      "path": "triumph",
+      "fuel_type": "petrol",
+      "country": "UK",
+      "origin": "British",
+      "slug": "triumph",
+      "keywords": ["triumph motorcycles", "triumph", "petrol", "british"]
+    },
+    {
+      "id": "brand-tvs",
+      "name": "TVS Motor Company",
+      "image": "/images/brands/tvs.png",
+      "alt": "TVS Motor Company",
+      "path": "tvs",
+      "fuel_type": "hybrid",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "tvs",
+      "keywords": ["tvs motor company", "tvs", "hybrid", "indian"]
+    },
+    {
+      "id": "brand-yamaha",
+      "name": "Yamaha Motor India",
+      "image": "/images/brands/yamaha.png",
+      "alt": "Yamaha Motor India",
+      "path": "yamaha",
+      "fuel_type": "hybrid",
+      "country": "Japan",
+      "origin": "Japanese",
+      "slug": "yamaha",
+      "keywords": ["yamaha motor india", "yamaha", "hybrid", "japanese"]
+    },
+    {
+      "id": "brand-yezdi",
+      "name": "Yezdi",
+      "image": "/images/brands/yezdi.png",
+      "alt": "Yezdi",
+      "path": "yezdi",
+      "fuel_type": "petrol",
+      "country": "India",
+      "origin": "Indian",
+      "slug": "yezdi",
+      "keywords": ["yezdi", "yezdi", "petrol", "indian"]
     }
   ]
 }
