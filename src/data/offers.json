@@ -1,0 +1,94 @@
+{
+  "offers": [
+    {
+      "key": "helmet",
+      "title": "🪖 Free Helmet with Every Purchase",
+      "description": "🛡️ Get a free branded helmet with every two-wheeler purchase for your safety.",
+      "validity": "📅 Valid until 30th June 2025",
+      "cta": "🎁 Claim Helmet",
+      "short": "Free Helmet",
+      "image": "https://img.freepik.com/premium-vector/helmet-vector-helmet-illustration-helmet-logo-design-bike-helmet_921448-838.jpg"
+    },
+    {
+      "key": "insurance",
+      "title": "🛡️ Free Insurance for the First Year",
+      "description": "✔️ Enjoy complete peace of mind with 1-year free insurance on all new purchases.",
+      "validity": "⏳ Offer valid till end of this month",
+      "cta": "📝 Get Insurance",
+      "short": "1-Year Insurance",
+      "image": "/images/brands/bajaj.png"
+    },
+    {
+      "key": "namechange",
+      "title": "📄 Free Name Transfer & Documentation",
+      "description": "📌 We’ll handle all paperwork and name transfer at no cost.",
+      "validity": "📆 Valid for current month bookings",
+      "cta": "🔁 Start Transfer",
+      "short": "Free Name Change",
+      "image": "/images/brands/benelli.png"
+    },
+    {
+      "key": "bus_ticket",
+      "title": "🚌 Free Bus Ticket from Anywhere in Tamil Nadu",
+      "description": "🚍 We’ll cover your bus travel to our showroom from any location in Tamil Nadu.",
+      "validity": "✅ Applicable on confirmed bookings only",
+      "cta": "🎟️ Book My Travel",
+      "short": "Free Bus Travel",
+      "image": "/images/brands/bmw motorrad.png"
+    },
+    {
+      "key": "service_package",
+      "title": "🔧 Free 2-Year Service Package",
+      "description": "🛠️ Enjoy free servicing for two years with your new vehicle purchase.",
+      "validity": "📌 Valid for selected models",
+      "cta": "⚙️ Activate Package",
+      "short": "2-Year Service",
+      "image": "/images/brands/ducati.png"
+    },
+    {
+      "key": "roadside_assistance",
+      "title": "🚨 24/7 Roadside Assistance for 1 Year",
+      "description": "🛻 Stay protected with 1-year nationwide roadside assistance, absolutely free.",
+      "validity": "🕒 Must activate within 7 days of delivery",
+      "cta": "🔒 Enable Assistance",
+      "short": "1-Year RSA",
+      "image": "/images/brands/harley-davidson.png"
+    },
+    {
+      "key": "extended_warranty",
+      "title": "🛡️ Extended Warranty up to 3 Years",
+      "description": "🔁 Get up to 3 years of extended warranty at no extra charge.",
+      "validity": "⏳ Limited time offer",
+      "cta": "📈 Extend Warranty",
+      "short": "3-Year Warranty",
+      "image": "/images/brands/hero.png"
+    },
+    {
+      "key": "fuel_voucher",
+      "title": "⛽ Free Fuel Voucher Worth ₹1000",
+      "description": "💸 Receive a ₹1000 fuel voucher with your vehicle purchase.",
+      "validity": "📅 Offer valid this month only",
+      "cta": "🏷️ Get Voucher",
+      "short": "₹1000 Fuel Free",
+      "image": "/images/brands/honda.jpeg"
+    },
+    {
+      "key": "accessory_kit",
+      "title": "🎒 Free Accessory Kit",
+      "description": "🧰 Includes indicators, seat cover, floor mat, and more.",
+      "validity": "⏳ While stocks last",
+      "cta": "🛍️ Claim Kit",
+      "short": "Free Accessories",
+      "image": "/images/brands/indian-motorcycle.png"
+    },
+    {
+      "key": "road_tax_waiver",
+      "title": "🛣️ Road Tax Waiver for First Year",
+      "description": "📢 We’ll take care of your first-year road tax completely.",
+      "validity": "📆 Valid on bookings before 30th June 2025",
+      "cta": "📝 Avail Offer",
+      "short": "1-Year Tax Free",
+      "image": "/images/brands/jawa.png"
+    }
+  ]
+}

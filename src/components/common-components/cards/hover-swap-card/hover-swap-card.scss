@@ -1,0 +1,128 @@
+.swap-card {
+  overflow: visible;
+  cursor: pointer;
+  width: 190px;
+  height: 190px;
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 5px;
+
+    .swap-card__front,
+    .swap-card__back {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .swap-card__front {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 160px;
+        height: 160%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #ff9966,
+          #ff9966,
+          #ff9966,
+          #ff9966,
+          transparent
+        );
+        animation: rotation_481 5000ms infinite linear;
+      }
+
+      &-content {
+        position: absolute;
+        width: 99%;
+        height: 99%;
+        background-color: #151515;
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+    }
+
+    .swap-card__back {
+      transform: rotateY(180deg);
+      color: white;
+
+      &-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .swap-card__badge {
+        background-color: #00000055;
+        padding: 2px 10px;
+        border-radius: 10px;
+        backdrop-filter: blur(2px);
+        width: fit-content;
+      }
+
+      .swap-card__description {
+        box-shadow: 0px 0px 10px 5px #00000088;
+        width: 100%;
+        padding: 10px;
+        background-color: #00000099;
+        backdrop-filter: blur(2px);
+        border-radius: 5px;
+
+        .swap-card__title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .swap-card__title-text {
+            margin: 0;
+          }
+        }
+
+        .swap-card__footer {
+          margin-top: 8px;
+          font-size: 12px;
+          color: #ccc;
+        }
+      }
+    }
+  }
+
+  &:hover &__content {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
