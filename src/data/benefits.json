@@ -71,6 +71,6 @@
   "buttons": {
     "aria_label": "Browse available bikes",
     "label": "Browse Bike",
-    "path": "brands"
+    "path": "bikes"
   }
 }
