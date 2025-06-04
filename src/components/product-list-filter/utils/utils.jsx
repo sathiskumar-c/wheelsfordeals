@@ -1,7 +1,7 @@
-// react imports
-import React, { useState } from "react";
+// React Imports
+import { useState } from "react";
 
-//material ui imports
+// Material UI Imports
 import {
   Checkbox,
   FormControlLabel,
@@ -14,10 +14,10 @@ import {
   Box,
 } from "@mui/material";
 
-// icons import
+// Icons Imports
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-//only for range filter
+// Only for range filter
 export const RangeFieldMUI = ({
   filter,
   selectedFilters,
@@ -129,7 +129,6 @@ export const CheckboxMUI = ({
   );
 };
 
-// only for brandfilter
 export const BrandFilterMUI = ({
   filter,
   selectedFilters,
@@ -137,19 +136,21 @@ export const BrandFilterMUI = ({
 }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const handleBrandChange = (brand) => (event) => {
+  // 🔹 Handle Brand Checkbox
+  const handleBrandChange = (slugBrand) => (event) => {
     const { checked } = event.target;
     setSelectedFilters((prev) => {
       const currentBrands = prev.brands || [];
       return {
         ...prev,
         brands: checked
-          ? [...currentBrands, brand]
-          : currentBrands.filter((b) => b !== brand),
+          ? [...currentBrands, slugBrand]
+          : currentBrands.filter((b) => b !== slugBrand),
       };
     });
   };
 
+  // 🔹 Handle Model Checkbox (optional if needed)
   const handleModelChange = (brand, model) => (event) => {
     const { checked } = event.target;
     setSelectedFilters((prev) => {
@@ -169,54 +170,58 @@ export const BrandFilterMUI = ({
 
   return (
     <Box>
-      {filter.options.map((option, idx) => (
-        <Accordion
-          key={idx}
-          expanded={expanded === idx}
-          onChange={() => setExpanded(expanded === idx ? false : idx)}
-        >
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={(selectedFilters.brands || []).includes(
-                    option.brand
-                  )}
-                  onChange={handleBrandChange(option.brand)}
-                  onClick={(event) => event.stopPropagation()}
-                />
-              }
-              label={
-                <Box display="flex" alignItems="center">
-                  <img
-                    src={option.image}
-                    alt={option.brand}
-                    style={{ width: 24, height: 24, marginRight: 8 }}
-                  />
-                  <Typography>{option.brand}</Typography>
-                </Box>
-              }
-              onClick={(event) => event.stopPropagation()}
-            />
-          </AccordionSummary>
-          <AccordionDetails>
-            {option.models.map((model, modelIdx) => (
+      {filter.options.map((option, idx) => {
+        const slugBrand = option.slug?.brand?.toLowerCase();
+
+        return (
+          <Accordion
+            key={idx}
+            expanded={expanded === idx}
+            onChange={() => setExpanded(expanded === idx ? false : idx)}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <FormControlLabel
-                key={modelIdx}
                 control={
                   <Checkbox
-                    checked={(
-                      selectedFilters.models?.[option.brand] || []
-                    ).includes(model)}
-                    onChange={handleModelChange(option.brand, model)}
+                    checked={(selectedFilters.brands || []).includes(slugBrand)}
+                    onChange={handleBrandChange(slugBrand)}
+                    onClick={(event) => event.stopPropagation()}
                   />
                 }
-                label={model}
+                label={
+                  <Box display="flex" alignItems="center">
+                    <img
+                      src={option.image}
+                      alt={option.brand}
+                      style={{ width: 24, height: 24, marginRight: 8 }}
+                    />
+                    <Typography>{option.brand}</Typography>
+                  </Box>
+                }
+                onClick={(event) => event.stopPropagation()}
               />
-            ))}
-          </AccordionDetails>
-        </Accordion>
-      ))}
+            </AccordionSummary>
+
+            {/* Optional: Show models inside brand accordion */}
+            <AccordionDetails>
+              {option.models?.map((model, modelIdx) => (
+                <FormControlLabel
+                  key={modelIdx}
+                  control={
+                    <Checkbox
+                      checked={(
+                        selectedFilters.models?.[option.brand] || []
+                      ).includes(model)}
+                      onChange={handleModelChange(option.brand, model)}
+                    />
+                  }
+                  label={model}
+                />
+              ))}
+            </AccordionDetails>
+          </Accordion>
+        );
+      })}
     </Box>
   );
 };

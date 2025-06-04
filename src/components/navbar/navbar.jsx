@@ -1,11 +1,18 @@
+// React Imports
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
+// Bootstrap Imports
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+
+// Material UI Imports
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+
+// Local Imports
 import "./navbar.scss";
 import JSON from "../../../src/data/navbar-menu.json";
 
@@ -71,7 +78,7 @@ function NavbarDeskTop() {
       window.open(subcategory, "_blank", "noopener,noreferrer");
     } else {
       // Internal Navigation - Uses useNavigate for faster navigation
-      navigate(`/brands/${subcategory}`);
+      navigate(`/bikes/brands/${subcategory}`);
     }
 
     console.log("handleNavigation", subcategory);
