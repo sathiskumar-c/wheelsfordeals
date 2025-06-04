@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+// React Imports
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+// Material UI Imports
 import { Box, Typography, Grid, Button, Tabs, Tab, Fade } from "@mui/material";
+
+// Local Imports
 import "./benefits.scss";
 import JSON from "../../data/benefits.json";
 
 const Benefits = () => {
+  // State management
   const [tabIndex, setTabIndex] = useState(0);
 
+  // Tab Change
   const handleChange = (event, newValue) => {
     setTabIndex(newValue);
   };
@@ -97,7 +104,7 @@ const Benefits = () => {
         </Fade>
 
         <Box className="action-buttons">
-          <Link to="/brands">
+          <Link to="/bikes">
             <Button
               variant="contained"
               className="browse-btn"
