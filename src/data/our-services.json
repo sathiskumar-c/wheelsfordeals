@@ -5,7 +5,7 @@
       "id": "ourservices-usedbike",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Buy Used Bike",
-      "path": "/brands",
+      "path": "/bikes",
       "description": "A bike for every budget"
     },
     {
@@ -33,7 +33,7 @@
       "id": "ourservices-bikeprice",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Bike Price Calculator",
-      "path": "/brands",
+      "path": "/bikes",
       "description": "Get instant price"
     }
   ]
