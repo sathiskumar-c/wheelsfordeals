@@ -30,7 +30,7 @@ const TopRecommendedBrand = () => {
             role="listitem"
           >
             <Link
-              to={`/brands/${brand.path}`}
+              to={`/bikes/brands/${brand.path}`}
               className="brand-link"
               aria-label={`Explore ${brand.name} ${brand.fuel_type} motorcycles`}
               title={`${brand.name} Motorcycles`}

@@ -339,6 +339,12 @@
     "options": ["1st Owner", "2nd Owner", "3rd Owner", "4th Owner and above"]
   },
   {
+    "id": "accidentHistory",
+    "label": "Accident History",
+    "type": "checkbox",
+    "options": ["Yes", "No"]
+  },
+  {
     "id": "insuranceValidity",
     "label": "Insurance Validity",
     "type": "range",
@@ -386,6 +392,16 @@
     "label": "Brake Type",
     "type": "checkbox",
     "options": ["Disc", "Drum", "ABS"]
+  },
+  {
+    "id": "serviceHistory",
+    "label": "Service History",
+    "type": "checkbox",
+    "options": [
+      "Full Service History",
+      "Partial Service History",
+      "No Service History"
+    ]
   },
   {
     "id": "sellerType",

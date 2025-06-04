@@ -40,11 +40,12 @@
     margin-bottom: 20px;
     margin-left: 5px;
     display: flex;
-    justify-content: space-between;
+    column-gap: 15px;
   }
 
   .sort_icon_parent {
     margin-right: 10px;
+    margin-left: auto;
   }
 
   .filter_icon_parent {
@@ -56,9 +57,45 @@
     border-radius: 5px;
     background-color: #f5f5f5;
     cursor: pointer;
+    min-width: max-content;
 
     svg {
       font-size: 20px;
+    }
+
+    h6 {
+      span {
+        font-weight: 600;
+        padding: 2px 8px 2px 8px;
+        background-color: lightgray;
+        border-radius: 30px;
+        color: black;
+      }
+    }
+  }
+
+  .chips_parent {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    .chips {
+      width: fit-content;
+      padding: 5px 15px 5px 15px;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      background-color: #e5f3ff;
+      border-radius: 5px;
+      min-width: max-content;
+      cursor: pointer;
+      border: 1px solid #0059a3;
+    }
+
+    .clear_all {
+      color: #ef6e0b;
+      font-weight: 600;
+      cursor: pointer;
     }
   }
 

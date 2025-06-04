@@ -5,19 +5,19 @@
       "id": 1,
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Lowest Price",
-      "path": "/brands"
+      "path": "/bikes"
     },
     {
       "id": 2,
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Best Deals",
-      "path": "/brands"
+      "path": "/bikes"
     },
     {
       "id": 3,
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Certified Pre-Owned",
-      "path": "/brands"
+      "path": "/bikes"
     }
   ]
 }

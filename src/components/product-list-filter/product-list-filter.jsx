@@ -12,10 +12,11 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import productListFilterData from "../../data/product-list-filter.json";
 import { BrandFilterMUI, CheckboxMUI, RangeFieldMUI } from "./utils/utils";
 
-const ProductListFilter = () => {
+const ProductListFilter = ({ selectedFilters, setSelectedFilters }) => {
+  // State management
   const [expanded, setExpanded] = useState(false);
-  const [selectedFilters, setSelectedFilters] = useState({});
 
+  // Expand Accordion
   const handleExpansion = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };

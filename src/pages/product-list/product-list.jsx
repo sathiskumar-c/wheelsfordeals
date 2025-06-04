@@ -1,6 +1,6 @@
 // React Imports
 import { useEffect, useState, useCallback, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // Component Imports
 import NavbarDeskTop from "../../components/navbar/navbar";
@@ -14,11 +14,13 @@ import HoverSwapCard from "../../components/common-components/cards/hover-swap-c
 // MUI Imports
 import TuneIcon from "@mui/icons-material/Tune";
 import Button from "@mui/material/Button";
+import ClearIcon from "@mui/icons-material/Clear";
 
 // JSON Imports
 import ProductListImageSlider from "../../data/product-list-image-slider.json";
 import Bikedetails from "../../data/bike-details.json";
 import BikeOffersData from "../../data/offers.json";
+import ProductFiltersJSON from "../../data/product-list-filter.json";
 
 // Local Imports
 import "./product-list.scss";
@@ -27,7 +29,16 @@ import BikeImageSwiper from "./utils/bike-images-swipper";
 import SortOptionsPopover from "./utils/sort-options-popover";
 import BikeDetailsOverview from "./utils/bike-details-overview";
 import SellerDealer from "./utils/seller-dealer";
-import { getSortedBikes, scrollToTop, throttle } from "./utils/utils";
+import {
+  buildPathFromFilters,
+  filterBikes,
+  getSortedBikes,
+  parseFiltersFromParams,
+  parseFiltersFromPath,
+  scrollToTop,
+  throttle,
+  updateChips,
+} from "./utils/utils";
 
 // Component Configs
 const ITEMS_PER_LOAD_MOBILE = 15;
@@ -40,6 +51,10 @@ const getInitialItemsPerLoad = () =>
     : ITEMS_PER_LOAD_DESKTOP;
 
 const ProductList = () => {
+  // Component References
+  const location = useLocation();
+  const navigate = useNavigate();
+
   // Local States
   const [ITEMS_PER_LOAD, setItemsPerLoad] = useState(getInitialItemsPerLoad());
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_LOAD);
@@ -51,15 +66,16 @@ const ProductList = () => {
   const [openMobileFilter, setOpenMobileFilter] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [bikeOffers, setBikeOffers] = useState([]);
+  const [chips, setChips] = useState([]);
+  const [selectedFilters, setSelectedFilters] = useState(() =>
+    parseFiltersFromPath(location.pathname)
+  );
 
   // Refs for latest values to use in event listeners without recreating handlers
   const loadingRef = useRef(loading);
   const visibleCountRef = useRef(visibleCount);
   const itemsPerLoadRef = useRef(ITEMS_PER_LOAD);
   const openMobileFilterRef = useRef(openMobileFilter);
-
-  // URL params
-  const params = useParams();
 
   // Update refs whenever state changes
   useEffect(() => {
@@ -78,30 +94,32 @@ const ProductList = () => {
     openMobileFilterRef.current = openMobileFilter;
   }, [openMobileFilter]);
 
-  // Throttled scroll handler reads refs instead of state directly
-  const handleScroll = useCallback(
-    throttle(() => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const fullHeight = document.body.offsetHeight;
+  // Update bikes filtered values
+  useEffect(() => {
+    if (location.search) {
+      const searchParams = new URLSearchParams(location.search);
+      const filters = parseFiltersFromParams(searchParams);
+      const newPath = buildPathFromFilters(filters);
+      navigate(newPath, { replace: true });
+    }
+  }, []);
 
-      if (scrollTop + windowHeight >= fullHeight - 100 && !loadingRef.current) {
-        loadMoreItems();
-      }
-    }, 200),
-    []
-  );
+  useEffect(() => {
+    const newPath = buildPathFromFilters(selectedFilters);
+    if (location.pathname !== newPath) {
+      navigate(newPath, { replace: true });
+    }
 
-  // Load more items function
-  const loadMoreItems = () => {
-    if (visibleCountRef.current >= Bikedetails.length) return;
+    // Add new chips
+    updateChips("add", selectedFilters, ProductFiltersJSON, chips, setChips);
+  }, [selectedFilters]);
 
-    setLoading(true);
-    setTimeout(() => {
-      setVisibleCount((prev) => prev + itemsPerLoadRef.current);
-      setLoading(false);
-    }, 500);
-  };
+  useEffect(() => {
+    const sorted = getSortedBikes(Bikedetails, sort);
+    const filtered = filterBikes(sorted, selectedFilters);
+    const sliced = filtered.slice(0, visibleCount);
+    setVisibleBikes(sliced);
+  }, [sort, visibleCount, selectedFilters]);
 
   // Handle window resize (throttled)
   useEffect(() => {
@@ -150,12 +168,30 @@ const ProductList = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [sort, ITEMS_PER_LOAD]);
 
-  // Sort and slice bikes when sort or visibleCount changes
-  useEffect(() => {
-    const sorted = getSortedBikes(Bikedetails, sort);
-    const sliced = sorted.slice(0, visibleCount);
-    setVisibleBikes(sliced);
-  }, [sort, visibleCount]);
+  // Load more items function
+  const loadMoreItems = () => {
+    if (visibleCountRef.current >= Bikedetails.length) return;
+
+    setLoading(true);
+    setTimeout(() => {
+      setVisibleCount((prev) => prev + itemsPerLoadRef.current);
+      setLoading(false);
+    }, 500);
+  };
+
+  // Throttled scroll handler reads refs instead of state directly
+  const handleScroll = useCallback(
+    throttle(() => {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const fullHeight = document.body.offsetHeight;
+
+      if (scrollTop + windowHeight >= fullHeight - 100 && !loadingRef.current) {
+        loadMoreItems();
+      }
+    }, 200),
+    []
+  );
 
   // Add scroll event listener once
   useEffect(() => {
@@ -193,13 +229,35 @@ const ProductList = () => {
     setOpenMobileFilter(false);
   };
 
+  // Clear all filters / chips
+  const handleClearAll = () => {
+    updateChips("clear", null, ProductFiltersJSON, chips, setChips);
+    setSelectedFilters([]);
+  };
+
+  // Particular filters / chips
+  const handleClear = (chipToRemove) => {
+    updateChips("remove", chipToRemove, ProductFiltersJSON, chips, setChips);
+
+    setSelectedFilters((prev) => {
+      const updated = { ...prev };
+      delete updated[chipToRemove.id];
+      return updated;
+    });
+  };
+
   return (
     <>
       <NavbarDeskTop />
       <div className="container-fluid product-list-parent">
         <div className="row">
           <div className="col-md-3">
-            {windowWidth >= BREAKPOINT_MD && <ProductListFilter />}
+            {windowWidth >= BREAKPOINT_MD && (
+              <ProductListFilter
+                selectedFilters={selectedFilters}
+                setSelectedFilters={setSelectedFilters}
+              />
+            )}
           </div>
 
           <div className="col-md-9">
@@ -219,6 +277,22 @@ const ProductList = () => {
               >
                 <TuneIcon />
                 <h6 className="mb-0">Filter</h6>
+              </div>
+
+              <div className="chips_parent">
+                {chips?.map((item) => {
+                  return (
+                    <div className="chips" onClick={() => handleClear(item)}>
+                      <span>{item.label}</span>
+                      <ClearIcon />
+                    </div>
+                  );
+                })}
+                {chips.length > 0 && (
+                  <div className="clear_all" onClick={() => handleClearAll()}>
+                    Clear All
+                  </div>
+                )}
               </div>
 
               <div className="sort_icon_parent">
@@ -293,8 +367,9 @@ const ProductList = () => {
             style={{ display: "flex", alignItems: "center", columnGap: "5px" }}
           >
             <h5 className="mb-0">
-              {expandedCard?.brand} | {expandedCard?.model}
+              {expandedCard?.brand || ""} | {expandedCard?.model || ""}
             </h5>
+
             <SellerDealer data={expandedCard} />
           </div>
         }

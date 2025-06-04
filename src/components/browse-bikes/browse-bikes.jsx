@@ -1,9 +1,9 @@
-// react imports
+// React Imports
 import * as React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-// material ui imports
+// Material UI Imports
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
@@ -11,7 +11,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { Button } from "@mui/material";
 
-//local imports
+// Local Imports
 import "./browse-bikes.scss";
 import JSON from "../../data/browse-bikes.json";
 
@@ -49,7 +49,7 @@ const renderBrand = ({ item }) => (
     aria-label={`Bike brand: ${item.alt || item.title}`}
   >
     <Link
-      to={`/brands/${item.path}`}
+      to={`/bikes/brands/${item.path}`}
       className="brand-link"
       aria-label={`View bikes from brand ${item.alt || item.title}`}
     >
@@ -70,6 +70,7 @@ const renderBrand = ({ item }) => (
 );
 
 const BrowseBikesBy = () => {
+  // State management
   const [tabValue, setTabValue] = useState("brand");
 
   const handleChangeTab = (event, newValue) => {
