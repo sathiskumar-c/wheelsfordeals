@@ -1,7 +1,11 @@
+// Components Imports
+import ContactUsQuery from "../../components/contactus-query/contactus-query";
+import ContactUsBanner from "../../components/contactus-banner/contactus-banner";
 const ContactUs = () => {
   return (
     <>
-      <h1>ContactUs Page</h1>
+      <ContactUsBanner />
+      <ContactUsQuery />
     </>
   );
 };

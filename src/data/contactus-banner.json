@@ -1,0 +1,16 @@
+{
+  "title": "Contact Us",
+  "subtitle": "Queries related to your delivery:",
+  "linkUrl": "#",
+  "phone": "+91-727-727-7275",
+  "email": "contact@wheelsfordeals.com",
+  "actions": [
+    {
+      "text": "Have a Query? Ask our Team"
+    },
+    {
+      "text": "Visit us here"
+    }
+  ],
+  "backgroundImage": "/images/icons/contact-us-banner.jpg"
+}
