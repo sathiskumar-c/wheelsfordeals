@@ -266,7 +266,6 @@ export function filterBikes(bikes, filters) {
 
     // Filter by Accident History
     if (filters.accidentHistory?.length) {
-      const accidentValue = accidentHistorySlug === true ? "Yes" : "No";
       if (!filters.accidentHistory.includes(accidentHistorySlug)) return false;
     }
 
@@ -317,8 +316,8 @@ export function filterBikes(bikes, filters) {
 
     // Filter by Seller Type
     if (filters.sellerType?.length) {
-      const selleTypeMatches = filters.sellerType.map((c) => c.toLowerCase());
-      if (!selleTypeMatches.includes(sellerTypeSlug)) return false;
+      const sellerTypeMatches = filters.sellerType.map((c) => c.toLowerCase());
+      if (!sellerTypeMatches.includes(sellerTypeSlug)) return false;
     }
 
     // Filter by brand
