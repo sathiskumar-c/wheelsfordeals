@@ -15,6 +15,7 @@ import HoverSwapCard from "../../components/common-components/cards/hover-swap-c
 import TuneIcon from "@mui/icons-material/Tune";
 import Button from "@mui/material/Button";
 import ClearIcon from "@mui/icons-material/Clear";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 // JSON Imports
 import ProductListImageSlider from "../../data/product-list-image-slider.json";
@@ -180,24 +181,24 @@ const ProductList = () => {
   };
 
   // Throttled scroll handler reads refs instead of state directly
-  const handleScroll = useCallback(
-    throttle(() => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const fullHeight = document.body.offsetHeight;
+  // const handleScroll = useCallback(
+  //   throttle(() => {
+  //     const scrollTop = window.scrollY;
+  //     const windowHeight = window.innerHeight;
+  //     const fullHeight = document.body.offsetHeight;
 
-      if (scrollTop + windowHeight >= fullHeight - 100 && !loadingRef.current) {
-        loadMoreItems();
-      }
-    }, 200),
-    []
-  );
+  //     if (scrollTop + windowHeight >= fullHeight - 100 && !loadingRef.current) {
+  //       loadMoreItems();
+  //     }
+  //   }, 200),
+  //   []
+  // );
 
   // Add scroll event listener once
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [handleScroll]);
 
   // Dialog open handlers
   const handleOpenExpandView = (expanded) => {
@@ -279,7 +280,32 @@ const ProductList = () => {
                 <h6 className="mb-0">Filter</h6>
               </div>
 
-              <div className="chips_parent">
+              {window.innerWidth > 768 && (
+                <div className="chips_parent">
+                  {chips?.map((item) => {
+                    return (
+                      <div className="chips" onClick={() => handleClear(item)}>
+                        <span>{item.label}</span>
+                        <ClearIcon />
+                      </div>
+                    );
+                  })}
+                  {chips.length > 0 && (
+                    <div className="clear_all" onClick={() => handleClearAll()}>
+                      Clear All
+                      <DeleteIcon />
+                    </div>
+                  )}
+                </div>
+              )}
+
+              <div className="sort_icon_parent">
+                <SortOptionsPopover sort={sort} setSort={setSort} />
+              </div>
+            </div>
+
+            {window.innerWidth <= 768 && (
+              <div className="chips_parent chips_parent_mobile">
                 {chips?.map((item) => {
                   return (
                     <div className="chips" onClick={() => handleClear(item)}>
@@ -294,11 +320,7 @@ const ProductList = () => {
                   </div>
                 )}
               </div>
-
-              <div className="sort_icon_parent">
-                <SortOptionsPopover sort={sort} setSort={setSort} />
-              </div>
-            </div>
+            )}
 
             <div className="bikelist_parent">
               {visibleBikes.map((res) => (
@@ -308,6 +330,12 @@ const ProductList = () => {
                   dialogOpen={handleOpenExpandView}
                 />
               ))}
+
+              {!loading && visibleBikes?.length >= visibleCount && (
+                <button onClick={() => loadMoreItems()} class="loadmore_button">
+                  <span class="btn-txt">Load More</span>
+                </button>
+              )}
 
               {loading && (
                 <div className="loader">
@@ -333,7 +361,12 @@ const ProductList = () => {
         onClose={handleCloseMobileFilter}
         title="Filter"
         width="95%"
-        content={<ProductListFilter />}
+        content={
+          <ProductListFilter
+            selectedFilters={selectedFilters}
+            setSelectedFilters={setSelectedFilters}
+          />
+        }
         footer={
           <div
             style={{
