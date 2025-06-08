@@ -20,7 +20,7 @@
       "title": "HELP & SUPPORT",
       "links": [
         { "label": "FAQs", "path": "/faqs" },
-        { "label": "Contact us", "path": "/contact" },
+        { "label": "Contact us", "path": "/contactus" },
         { "label": "Terms & conditions", "path": "/terms" }
       ]
     },

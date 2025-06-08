@@ -1,0 +1,128 @@
+.contactus-query {
+  position: relative;
+  background-color: #f8f4fb;
+  margin-top: -50px;
+  z-index: 2;
+  border-radius: 15px;
+}
+
+.query-wrapper {
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.query-left,
+.query-right {
+  flex: 1 1 500px;
+}
+
+.query-left h2,
+.query-right h2 {
+  color: #2c0053;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.query-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.query-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.query-input:focus {
+  border-color: #6c00e6;
+}
+
+.submit-btn {
+  background-color: #f36;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #d12c5e;
+}
+
+.office-block {
+  margin-bottom: 10px;
+}
+
+.office-heading {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.office-company {
+  font-weight: 600;
+  color: #000;
+  font-size: 16px;
+}
+
+.office-address {
+  color: #555;
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.office-map-link {
+  display: inline-block;
+  color: #6c00e6;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.office-map-link span {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.grievance-officer {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.officer-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+#mui-component-select-queryType {
+  li {
+    padding: 0px;
+  }
+}
+
+.query-form .MuiFormControl-root {
+  margin-bottom: 0 !important;
+}
+
+.error-text {
+  font-size: 0.75rem;
+  color: #d32f2f;
+  margin-left: 14px;
+  margin-top: 3px;
+}

@@ -1,0 +1,52 @@
+{
+  "leftTitle": "Have a Query? Ask our Team",
+  "rightTitle": "Visit us here",
+  "formFields": [
+    {
+      "type": "select",
+      "placeholder": "Select Type of Query",
+      "name": "queryType",
+      "options": [
+        { "id": "sell", "title": "Car Selling Query" },
+        { "id": "buy", "title": "Car Buying Query" },
+        { "id": "careers", "title": "Careers" },
+        { "id": "partners", "title": "Partnerships" },
+        { "id": "others", "title": "Others" }
+      ]
+    },
+    {
+      "type": "textarea",
+      "placeholder": "Describe Your Query",
+      "name": "queryDescription"
+    },
+    {
+      "type": "text",
+      "placeholder": "Enter Your Name",
+      "name": "name"
+    },
+    {
+      "type": "text",
+      "placeholder": "Enter Your Mobile Number",
+      "name": "mobile"
+    },
+    {
+      "type": "email",
+      "placeholder": "Enter Your Email",
+      "name": "email"
+    }
+  ],
+  "buttonText": "SUBMIT",
+  "offices": [
+    {
+      "heading": "Registered Office",
+      "company": "Valuedrive Technologies Private Limited",
+      "address": "8th Floor, Capital Business Park, Sector 48, Gurugram, Haryana 122018",
+      "mapLabel": "View on Google Map",
+      "mapUrl": "#",
+      "officer": {
+        "name": "Pratim Pathak",
+        "designation": "Legal"
+      }
+    }
+  ]
+}
