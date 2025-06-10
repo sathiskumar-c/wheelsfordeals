@@ -18,10 +18,6 @@
         {
           "label": "KM Driven (Low to High)",
           "value": "kms_driven_low_to_high"
-        },
-        {
-          "label": "KM Driven (High to Low)",
-          "value": "kms_driven_high_to_low"
         }
       ]
     },
