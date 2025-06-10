@@ -95,6 +95,11 @@ const ProductList = () => {
     openMobileFilterRef.current = openMobileFilter;
   }, [openMobileFilter]);
 
+  useEffect(() => {
+    const filtersFromPath = parseFiltersFromPath(location.pathname);
+    setSelectedFilters(filtersFromPath);
+  }, [location.pathname]);
+
   // Update bikes filtered values
   useEffect(() => {
     if (location.search) {
@@ -269,6 +274,13 @@ const ProductList = () => {
                 image_bg: "unset",
                 parentPadding: "unset",
               }}
+              componentClass="product_list_slider"
+              breakpoints={{
+                0: { slidesPerView: 2 },
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+              }}
             />
 
             <div className="sort_filter_parent">
@@ -304,7 +316,7 @@ const ProductList = () => {
               </div>
             </div>
 
-            {window.innerWidth <= 768 && (
+            {window.innerWidth <= 768 && chips.length > 0 && (
               <div className="chips_parent chips_parent_mobile">
                 {chips?.map((item) => {
                   return (

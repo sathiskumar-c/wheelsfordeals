@@ -160,6 +160,36 @@
       margin: 0px 0px 15px 0px;
       padding: 10px;
     }
+
+    .product_list_slider {
+      padding: 20px 5px 20px 5px !important;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .product_list_slider {
+      .swiper-wrapper {
+        margin-left: 10px !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .sort_filter_parent {
+      h6 {
+        font-size: 10px;
+      }
+
+      .sort_icon_parent {
+        button {
+          font-size: 10px;
+        }
+      }
+
+      svg {
+        font-size: 14px;
+      }
+    }
   }
 
   @keyframes spin {
