@@ -248,5 +248,235 @@
     "section": {
       "ariaLabelledBy": "faq-sidebar-heading"
     }
+  },
+  "faq_page": {
+    "Sell Car": {
+      "Booking an Appointment": [
+        {
+          "question": "I cannot find my car’s registration state while booking the appointment online.",
+          "answer": "This may just happen because we are not currently present in your state. However, we are expanding at a rapid pace and plan to launch the used car buying service in many more cities pan India, very soon."
+        },
+        {
+          "question": "Does CARS24 provide home inspection?",
+          "answer": "Yes, CARS24 is currently offering Car Inspection at Home for a hassle-free selling experience."
+        },
+        {
+          "question": "Can I reschedule my appointment?",
+          "answer": "Yes, you can change your appointment time, date or branch by logging in with your mobile number."
+        }
+      ],
+      "Branch Visit": [
+        {
+          "question": "Where are your branches located?",
+          "answer": "You can find our branches using the locator on our site."
+        },
+        {
+          "question": "Can I walk in without an appointment?",
+          "answer": "Yes, but appointments are preferred to save time."
+        },
+        {
+          "question": "What documents should I carry?",
+          "answer": "RC book, ID proof, and insurance copy are required."
+        }
+      ],
+      "CARS24 Best Price": [
+        {
+          "question": "How is the best price calculated?",
+          "answer": "Based on inspection, market data, and demand."
+        },
+        {
+          "question": "Is the quoted price negotiable?",
+          "answer": "Yes, we offer a transparent price but minor negotiations are possible."
+        },
+        {
+          "question": "Do you match competitor offers?",
+          "answer": "We strive to offer the best rate. You can share other quotes."
+        }
+      ],
+      "CARS24 Seller Protection Policy": [
+        {
+          "question": "What is the seller protection policy?",
+          "answer": "It ensures safe transactions and document verification."
+        },
+        {
+          "question": "Am I liable after selling?",
+          "answer": "No, liability transfers post ownership change."
+        },
+        {
+          "question": "What does the policy cover?",
+          "answer": "Covers document handling, RC transfer, and fraud protection."
+        }
+      ],
+      "Post-Sales Service": [
+        {
+          "question": "What happens after I sell my car?",
+          "answer": "We handle ownership transfer and payment."
+        },
+        {
+          "question": "How long for payment after sale?",
+          "answer": "Typically within 1 working day."
+        },
+        {
+          "question": "How do I get proof of sale?",
+          "answer": "We email and upload it in your dashboard."
+        }
+      ],
+      "Transaction Guidelines": [
+        {
+          "question": "What are your transaction policies?",
+          "answer": "We follow verified payment and RC transfer practices."
+        },
+        {
+          "question": "Do you charge extra fees?",
+          "answer": "No hidden charges. Final quote includes everything."
+        },
+        {
+          "question": "Is payment instant?",
+          "answer": "Mostly within hours of final confirmation."
+        }
+      ],
+      "Pricing and Documentation": [
+        {
+          "question": "Do I need insurance?",
+          "answer": "Yes, even expired insurance is acceptable during valuation."
+        },
+        {
+          "question": "Is NOC required?",
+          "answer": "Yes, for interstate or loan closure sales."
+        },
+        {
+          "question": "What affects my car’s price?",
+          "answer": "Model, mileage, condition, service history etc."
+        }
+      ],
+      "Home Inspection": [
+        {
+          "question": "How to book a home inspection?",
+          "answer": "Select your city and choose home inspection while booking."
+        },
+        {
+          "question": "Is it free?",
+          "answer": "Yes, currently it’s a free service."
+        },
+        {
+          "question": "What happens during inspection?",
+          "answer": "Our experts check the car and provide a quote."
+        }
+      ]
+    },
+    "Buy Car": {
+      "Booking an Appointment": [
+        {
+          "question": "How do I book a car test drive?",
+          "answer": "Go to the car listing and click on 'Book Test Drive'."
+        },
+        {
+          "question": "Is test drive free?",
+          "answer": "Yes, we offer free test drives in selected cities."
+        },
+        {
+          "question": "Can I cancel my test drive?",
+          "answer": "Yes, you can cancel or reschedule through your account."
+        }
+      ],
+      "Branch Visit": [
+        {
+          "question": "Can I visit without booking?",
+          "answer": "Yes, but booking is recommended for faster service."
+        },
+        {
+          "question": "What are your branch timings?",
+          "answer": "We’re open 10AM–7PM on all working days."
+        },
+        {
+          "question": "Do branches have all cars?",
+          "answer": "Only select inventory is available. Confirm before visiting."
+        }
+      ],
+      "CARS24 Best Price": [
+        {
+          "question": "Is price negotiable?",
+          "answer": "We offer competitive pricing, but deals are non-negotiable."
+        },
+        {
+          "question": "Do I get discounts?",
+          "answer": "Yes, seasonal and coupon-based offers are available."
+        },
+        {
+          "question": "Can I see price history?",
+          "answer": "Yes, pricing transparency is available on listings."
+        }
+      ],
+      "CARS24 Seller Protection Policy": [
+        {
+          "question": "Is buyer protected?",
+          "answer": "Yes, with warranties and return windows."
+        },
+        {
+          "question": "What if the car has issues?",
+          "answer": "Return or claim support is available within warranty."
+        },
+        {
+          "question": "Does it cover refund?",
+          "answer": "Yes, for eligible vehicles under buyer protection."
+        }
+      ],
+      "Post-Sales Service": [
+        {
+          "question": "Do you offer car servicing?",
+          "answer": "Yes, with partner garages post-sale."
+        },
+        {
+          "question": "What is the return policy?",
+          "answer": "Cars can be returned within 7 days if eligible."
+        },
+        {
+          "question": "How do I claim warranty?",
+          "answer": "Via the app or customer support within coverage terms."
+        }
+      ],
+      "Transaction Guidelines": [
+        {
+          "question": "What is the payment method?",
+          "answer": "Online payments, loan EMI, or UPI."
+        },
+        {
+          "question": "Is there a finance option?",
+          "answer": "Yes, via partner NBFCs with flexible EMIs."
+        },
+        {
+          "question": "Can I use my credit card?",
+          "answer": "Yes, subject to amount limits and transaction fees."
+        }
+      ],
+      "Pricing and Documentation": [
+        {
+          "question": "Do I get all documents?",
+          "answer": "Yes, including RC, insurance and service history."
+        },
+        {
+          "question": "How is tax handled?",
+          "answer": "RTO taxes are included in the final price shown."
+        },
+        {
+          "question": "Is invoice provided?",
+          "answer": "Yes, digital and printed invoice both available."
+        }
+      ],
+      "Home Inspection": [
+        {
+          "question": "Can I inspect the car at home?",
+          "answer": "Not available. Cars are inspected before listing."
+        },
+        {
+          "question": "How to trust the condition?",
+          "answer": "Cars are inspected and certified before sale."
+        },
+        {
+          "question": "Are photos real?",
+          "answer": "Yes, taken during physical inspection by our experts."
+        }
+      ]
+    }
   }
 }
