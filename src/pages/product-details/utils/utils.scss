@@ -1,0 +1,227 @@
+.bike-card {
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #111827;
+
+    .bike-card__at-highlight {
+      color: #dc2626;
+      font-weight: 600;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    opacity: 0.75;
+    margin-top: 2px;
+  }
+
+  &__wishlist {
+    text-align: right;
+
+    .bike-card__shortlist-info {
+      font-size: 12px;
+      color: #6b7280;
+    }
+  }
+
+  &__info {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+
+    .bike-card__info-item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 4px;
+
+      svg {
+        margin-right: 6px;
+        color: #6b7280;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    .bike_chip {
+      border-radius: 0px 10px 0px 10px;
+    }
+  }
+
+  &__chip {
+    background-color: #f3f4f6;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.75);
+  }
+
+  &__divider {
+    margin: 16px 0;
+  }
+
+  &__label {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 6px;
+    margin-top: 6px;
+  }
+
+  &__price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 4px 0;
+  }
+
+  &__inclusion {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 12px;
+  }
+
+  &__emi-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+
+    .bike-card__emi-original {
+      text-decoration: line-through;
+      color: #9ca3af;
+      font-size: 13px;
+    }
+
+    .bike-card__emi-discount {
+      font-size: 16px;
+      font-weight: 600;
+      color: #059669;
+    }
+
+    .bike-card__emi-validity {
+      font-size: 12px;
+      color: #b91c1c;
+    }
+  }
+
+  &__savings {
+    background-color: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 0px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  &__emi-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 16px;
+
+    .bike-card__emi-button {
+      text-transform: none;
+      font-size: 13px;
+      font-weight: 500;
+      color: #7c3aed;
+    }
+  }
+
+  &__cta {
+    margin-top: 12px;
+    justify-content: center;
+
+    .bike-card__book-btn {
+      background-color: #6d28d9;
+
+      &:hover {
+        background-color: #5b21b6;
+        animation: shake 0.4s ease-in-out;
+      }
+
+      font-weight: 700;
+      border-radius: 0px;
+      font-size: 12px;
+    }
+
+    .bike-card__testdrive-btn {
+      background-color: #f43f5e;
+
+      &:hover {
+        background-color: #e11d48;
+        animation: shake 0.4s ease-in-out;
+      }
+
+      font-weight: 700;
+      border-radius: 0px;
+      font-size: 12px;
+    }
+  }
+
+  &__share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .price_parent {
+    display: flex;
+    column-gap: 5px;
+    align-items: flex-start;
+
+    .final_price_parent {
+      color: green;
+      font-size: 20px;
+    }
+
+    .original_price {
+      font-size: 20px;
+      text-decoration: line-through;
+    }
+
+    .bike-card__tcs {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #6b7280;
+      margin-left: 8px;
+    }
+  }
+
+  .share_icons {
+    &:hover {
+      animation: shake 0.4s ease-in-out;
+    }
+  }
+}

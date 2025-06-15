@@ -1,5 +1,6 @@
 // React Imports
-import { useMemo } from "react";
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 
 // Local Imports
 import "./utils.scss";
@@ -140,7 +141,7 @@ const BikeDetailsOverview = ({ bike }) => {
               value={
                 bike?.test_ride?.availability
                   ? `Available (${bike.test_ride.range_km} km)`
-                  : "Not Available"
+                  : "Available in Office"
               }
             />
           </OverviewRow>
@@ -151,3 +152,17 @@ const BikeDetailsOverview = ({ bike }) => {
 };
 
 export default BikeDetailsOverview;
+
+OverviewItem.propTypes = {
+  label: PropTypes.node.isRequired,
+  value: PropTypes.node,
+};
+
+OverviewRow.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+};
+
+BikeDetailsOverview.propTypes = {
+  bike: PropTypes.object,
+};
