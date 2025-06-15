@@ -1,0 +1,136 @@
+.emi-calculator {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-top: 2rem;
+
+  .emi-output {
+    flex: 1;
+    padding: 2rem;
+    border-right: 1px solid #eee;
+
+    .emi-amount-title {
+      font-size: 12px;
+    }
+
+    .emi-amount {
+      font-size: 2rem;
+      color: #8a2be2;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    .summary {
+      margin-top: 1.5rem;
+      border-bottom: 1px solid #f6f6f6;
+      padding-bottom: 10px;
+
+      &__item,
+      &__total {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        align-items: center;
+
+        p {
+          color: #888;
+          margin: 0;
+          font-size: 14px;
+        }
+
+        h6 {
+          font-size: 14px;
+          margin: 0;
+          font-weight: 600;
+        }
+      }
+
+      &__total h3 {
+        font-size: 1.25rem;
+        color: #000;
+      }
+    }
+  }
+
+  .emi-controls {
+    flex: 1;
+    padding: 2rem;
+
+    .control {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: #333;
+      }
+
+      input[type="range"] {
+        width: 100%;
+        accent-color: #8a2be2;
+      }
+
+      p {
+        margin-top: 0.3rem;
+        font-weight: 500;
+        color: #000;
+        text-align: right;
+      }
+    }
+
+    .eligibility-btn {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #ffc107, #8a2be2);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: linear-gradient(90deg, #ffb300, #7a1ff2);
+      }
+    }
+
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: -0.5rem;
+    }
+  }
+
+  .chart-card {
+    .chart-labels {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: #444;
+
+        span {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
