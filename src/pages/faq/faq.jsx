@@ -1,9 +1,5 @@
 // React Imports
-import { useState } from "react";
-
-// Component Imports
-import NavbarDeskTop from "../../components/navbar/navbar";
-import Footer from "../../components/footer/footer";
+import React, { useState } from "react";
 
 // Local Imports
 import "./faq.scss";
@@ -39,8 +35,6 @@ const FrequentlyAskedQuestions = () => {
 
   return (
     <div className="faq-page">
-      <NavbarDeskTop />
-
       <main className="faq-container container">
         <h1 className="faq-main-heading">Frequently Asked Questions</h1>
 
@@ -91,8 +85,6 @@ const FrequentlyAskedQuestions = () => {
           ))}
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
