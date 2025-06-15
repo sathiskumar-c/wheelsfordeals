@@ -1,0 +1,412 @@
+[
+  {
+    "id": "budget",
+    "label": "Budget",
+    "type": "range",
+    "min": 5000,
+    "max": 500000,
+    "step": 5000,
+    "unit": "price"
+  },
+  {
+    "id": "brands",
+    "label": "Brand",
+    "type": "accordion",
+    "options": [
+      {
+        "brand": "Ather Energy",
+        "models": ["Ather 450X", "Ather 450 Plus"],
+        "image": "/images/brands/ather.png",
+        "slug": {
+          "brand": "ather"
+        }
+      },
+      {
+        "brand": "Bajaj Auto Ltd",
+        "models": [
+          "Bajaj Pulsar 150",
+          "Bajaj Avenger Street 160",
+          "Bajaj Dominar 400",
+          "Bajaj Platina 110"
+        ],
+        "image": "/images/brands/bajaj.png",
+        "slug": {
+          "brand": "bajaj"
+        }
+      },
+      {
+        "brand": "Benelli",
+        "models": [
+          "Benelli TNT 300",
+          "Benelli Imperiale 400",
+          "Benelli Leoncino 500",
+          "Benelli TRK 502"
+        ],
+        "image": "/images/brands/benelli.png",
+        "slug": {
+          "brand": "benelli"
+        }
+      },
+      {
+        "brand": "BMW Motorrad",
+        "models": [
+          "BMW G 310 R",
+          "BMW F 750 GS",
+          "BMW R 1250 GS",
+          "BMW S 1000 RR"
+        ],
+        "image": "/images/brands/bmw otorrad.png",
+        "slug": {
+          "brand": "bmw"
+        }
+      },
+      {
+        "brand": "Ducati Indianapolis",
+        "models": [
+          "Ducati Monster 821",
+          "Ducati Panigale V2",
+          "Ducati Multistrada 950",
+          "Ducati Scrambler"
+        ],
+        "image": "/images/brands/ducati.png",
+        "slug": {
+          "brand": "ducati"
+        }
+      },
+      {
+        "brand": "Harley-Davidson",
+        "models": [
+          "Harley-Davidson Street 750",
+          "Harley-Davidson Iron 883",
+          "Harley-Davidson Fat Boy",
+          "Harley-Davidson Road King"
+        ],
+        "image": "/images/brands/harley-avidson.png",
+        "slug": {
+          "brand": "harley-davidson"
+        }
+      },
+      {
+        "brand": "Hero MotoCorp",
+        "models": [
+          "Hero Splendor Plus",
+          "Hero Passion Pro",
+          "Hero Xtreme 160R",
+          "Hero HF Deluxe"
+        ],
+        "image": "/images/brands/hero.png",
+        "slug": {
+          "brand": "hero"
+        }
+      },
+      {
+        "brand": "Honda",
+        "models": [
+          "Honda CB Hornet 160R",
+          "Honda CBR 250R",
+          "Honda Activa 6G",
+          "Honda CB Shine"
+        ],
+        "image": "/images/brands/honda.jpeg",
+        "slug": {
+          "brand": "honda"
+        }
+      },
+      {
+        "brand": "Indian Motorcycles",
+        "models": [
+          "Indian Scout",
+          "Indian Chief",
+          "Indian Chieftain",
+          "Indian FTR 1200"
+        ],
+        "image": "/images/brands/indian_motorcycle.png",
+        "slug": {
+          "brand": "indian-motorcycles"
+        }
+      },
+      {
+        "brand": "Jawa Motorcycles",
+        "models": ["Jawa 42", "Jawa Perak", "Jawa Standard"],
+        "image": "/images/brands/jawa_motorcycles.png",
+        "slug": {
+          "brand": "jawa"
+        }
+      },
+      {
+        "brand": "Kawasaki India",
+        "models": [
+          "Kawasaki Ninja 300",
+          "Kawasaki Z650",
+          "Kawasaki Versys 650",
+          "Kawasaki Vulcan S"
+        ],
+        "image": "/images/brands/kawasaki.png",
+        "slug": {
+          "brand": "kawasaki"
+        }
+      },
+      {
+        "brand": "KTM India",
+        "models": [
+          "KTM Duke 200",
+          "KTM RC 390",
+          "KTM 390 Adventure",
+          "KTM Duke 390"
+        ],
+        "image": "/images/brands/ktm.png",
+        "slug": {
+          "brand": "ktm"
+        }
+      },
+      {
+        "brand": "Mahindra Two Wheelers",
+        "models": ["Mahindra Mojo", "Mahindra Centuro", "Mahindra Gusto"],
+        "image": "/images/brands/mahindra.png",
+        "slug": {
+          "brand": "mahindra"
+        }
+      },
+      {
+        "brand": "MV Agusta Motor",
+        "models": [
+          "MV Agusta Brutale 800",
+          "MV Agusta F3 675",
+          "MV Agusta Dragster 800"
+        ],
+        "image": "/images/brands/mv-agusta.png",
+        "slug": {
+          "brand": "mv-agusta"
+        }
+      },
+      {
+        "brand": "Ola Electric",
+        "models": ["Ola S1", "Ola S1 Pro"],
+        "image": "/images/brands/ola.png",
+        "slug": {
+          "brand": "ola"
+        }
+      },
+      {
+        "brand": "PURE EV",
+        "models": ["PURE EV ETrance", "PURE EV EPluto 7G"],
+        "image": "/images/brands/pure-ev.png",
+        "slug": {
+          "brand": "pure-ev"
+        }
+      },
+      {
+        "brand": "Revolt Motors",
+        "models": ["Revolt RV400", "Revolt RV300"],
+        "image": "/images/brands/revolt.png",
+        "slug": {
+          "brand": "revolt"
+        }
+      },
+      {
+        "brand": "Royal Enfield",
+        "models": [
+          "Royal Enfield Classic 350",
+          "Royal Enfield Bullet 350",
+          "Royal Enfield Meteor 350",
+          "Royal Enfield Interceptor 650"
+        ],
+        "image": "/images/brands/royal-enfield.png",
+        "slug": {
+          "brand": "royal-enfield"
+        }
+      },
+      {
+        "brand": "Suzuki Motorcycle",
+        "models": [
+          "Suzuki Gixxer",
+          "Suzuki Access 125",
+          "Suzuki V-Strom 650",
+          "Suzuki Burgman Street"
+        ],
+        "image": "/images/brands/suzuki.png",
+        "slug": {
+          "brand": "suzuki"
+        }
+      },
+      {
+        "brand": "TVS Motor Company",
+        "models": [
+          "TVS Apache RTR 160",
+          "TVS Jupiter",
+          "TVS Ntorq 125",
+          "TVS Radeon"
+        ],
+        "image": "/images/brands/tvs.png",
+        "slug": {
+          "brand": "tvs"
+        }
+      },
+      {
+        "brand": "Triumph Motorcycles",
+        "models": [
+          "Triumph Bonneville T100",
+          "Triumph Tiger 900",
+          "Triumph Street Triple",
+          "Triumph Speed Triple"
+        ],
+        "image": "/images/brands/triumph.png",
+        "slug": {
+          "brand": "triumph"
+        }
+      },
+      {
+        "brand": "Yamaha Motor India",
+        "models": [
+          "Yamaha FZ-S V3",
+          "Yamaha R15 V3",
+          "Yamaha MT-15",
+          "Yamaha Fascino 125"
+        ],
+        "image": "/images/brands/yamaha.png",
+        "slug": {
+          "brand": "yamaha"
+        }
+      },
+      {
+        "brand": "Yezdi",
+        "models": ["Yezdi Roadster", "Yezdi Scrambler", "Yezdi Adventure"],
+        "image": "/images/brands/yezdi.png",
+        "slug": {
+          "brand": "yezdi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "year",
+    "label": "Year of Model",
+    "type": "range",
+    "min": 1990,
+    "max": 2025,
+    "step": 1,
+    "unit": "year"
+  },
+  {
+    "id": "kmsDriven",
+    "label": "Kilometers Driven",
+    "type": "range",
+    "min": 0,
+    "max": 200000,
+    "step": 1000,
+    "unit": "km"
+  },
+  {
+    "id": "fuelType",
+    "label": "Fuel Type",
+    "type": "checkbox",
+    "options": ["Petrol", "Electric"]
+  },
+  {
+    "id": "transmissionType",
+    "label": "Transmission Type",
+    "type": "checkbox",
+    "options": ["Manual", "Automatic", "Semi-Automatic"]
+  },
+  {
+    "id": "bodyType",
+    "label": "Body Type",
+    "type": "checkbox",
+    "options": ["Cruiser", "Sport", "Street", "Scooter", "Touring"]
+  },
+  {
+    "id": "engineCC",
+    "label": "Engine CC",
+    "type": "range",
+    "min": 50,
+    "max": 1500,
+    "step": 50,
+    "unit": "cc"
+  },
+  {
+    "id": "mileage",
+    "label": "Mileage",
+    "type": "range",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "kmpl"
+  },
+  {
+    "id": "ownerCount",
+    "label": "Owner Count",
+    "type": "checkbox",
+    "options": ["1st Owner", "2nd Owner", "3rd Owner", "4th Owner and above"]
+  },
+  {
+    "id": "accidentHistory",
+    "label": "Accident History",
+    "type": "checkbox",
+    "options": ["Yes", "No"]
+  },
+  {
+    "id": "insuranceValidity",
+    "label": "Insurance Validity",
+    "type": "range",
+    "min": 0,
+    "max": 60,
+    "step": 1,
+    "unit": "months"
+  },
+  {
+    "id": "testRideAvailable",
+    "label": "Test Ride Available",
+    "type": "checkbox",
+    "options": ["Yes"]
+  },
+  {
+    "id": "rcAvailable",
+    "label": "RC Available",
+    "type": "checkbox",
+    "options": ["Yes"]
+  },
+  {
+    "id": "exchangeAvailable",
+    "label": "Exchange Available",
+    "type": "checkbox",
+    "options": ["Yes"]
+  },
+  {
+    "id": "color",
+    "label": "Color",
+    "type": "checkbox",
+    "options": [
+      "Red",
+      "Blue",
+      "Black",
+      "White",
+      "Green",
+      "Yellow",
+      "Silver",
+      "Grey",
+      "Other"
+    ]
+  },
+  {
+    "id": "brakeType",
+    "label": "Brake Type",
+    "type": "checkbox",
+    "options": ["Disc", "Drum", "ABS"]
+  },
+  {
+    "id": "serviceHistory",
+    "label": "Service History",
+    "type": "checkbox",
+    "options": [
+      "Full Service History",
+      "Partial Service History",
+      "No Service History"
+    ]
+  },
+  {
+    "id": "sellerType",
+    "label": "Seller Type",
+    "type": "checkbox",
+    "options": ["Dealer", "Individual"]
+  }
+]

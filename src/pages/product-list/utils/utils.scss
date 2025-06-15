@@ -1,0 +1,228 @@
+// Component : BikeDetailsOverview
+.bike-overview-container {
+  padding: 20px 0 0 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #26003c;
+
+  // .bike-overview-title {
+  //   font-size: 2rem;
+  //   font-weight: 700;
+  //   margin-left: 10px;
+  //   margin-bottom: 10px;
+  // }
+
+  .bike-overview-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 12px 0 rgba(38, 0, 60, 0.04);
+    position: relative;
+    min-width: 280px;
+  }
+
+  .bike-overview-note {
+    background: #fafafb;
+    border-radius: 8px;
+    color: #a9a9ab;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .note-star {
+    color: #ff9d5c;
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+
+  .bike-overview-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .bike-overview-row {
+    display: flex;
+    border-bottom: 1px solid #f0f0f2;
+    padding: 8px 0;
+  }
+
+  .bike-overview-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .bike-overview-item {
+    flex: 1 1 0px;
+    min-width: 150px;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .bike-overview-item.full {
+    flex: 3 1 100%;
+  }
+
+  .bike-overview-label {
+    color: #a9a9ab;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .bike-overview-value {
+    color: #26003c;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  .original-price-strike {
+    margin-left: 6px;
+    color: #a9a9ab;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: line-through;
+  }
+
+  .info-icon {
+    display: inline-flex;
+    margin-left: 0.4em;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .info-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .location-row .bike-overview-item {
+    padding-right: 0;
+  }
+}
+
+// Component : BikeDetailsSwiper
+.mySwiper {
+  width: 100%;
+  height: 100%;
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Component : SellerDealer
+.seller_dealer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  .individual,
+  .dealer {
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+    margin-left: 5px;
+  }
+
+  .individual {
+    color: green;
+  }
+
+  .dealer {
+    color: blueviolet;
+  }
+
+  * {
+    font-size: 12px;
+  }
+}
+
+// Component : SortOptionsPopover
+.sort_btn {
+  column-gap: 3px;
+  padding-left: 5px !important;
+  padding-right: 10px !important;
+  color: black !important;
+  border: 1px solid black !important;
+
+  span {
+    margin-left: 0px !important;
+  }
+
+  svg {
+    font-size: 20px;
+  }
+}
+
+// Responsive styles (till 900px) : BikeDetailsOverview
+@media (max-width: 900px) {
+  .bike-overview-card {
+    padding: 1.2rem;
+    margin: 0 1rem;
+  }
+
+  // .bike-overview-title {
+  //   margin-left: 1rem;
+  //   font-size: 1.6rem;
+  // }
+
+  .bike-overview-row {
+    padding: 0.8rem 0;
+  }
+}
+
+// Responsive styles (till 600px) : BikeDetailsOverview
+@media (max-width: 600px) {
+  .bike-overview-grid {
+    gap: 0;
+  }
+
+  .bike-overview-row {
+    flex-direction: column;
+    border-bottom: none;
+    border-top: 1px solid #f0f0f2;
+    padding: 0.8rem 0 0.2rem 0;
+  }
+
+  .bike-overview-row:first-child {
+    border-top: none;
+  }
+
+  .bike-overview-item {
+    padding-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .bike-overview-item.full {
+    width: 100%;
+  }
+
+  .bike-overview-label {
+    font-size: 1rem;
+  }
+
+  .bike-overview-value {
+    font-size: 1.1rem;
+  }
+}

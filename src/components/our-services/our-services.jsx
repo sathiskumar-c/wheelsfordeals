@@ -1,5 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Use Link instead of useNavigate
+// React Imports
+import { Link } from "react-router-dom";
+
+// Local Imports
 import "../our-services/our-servcies.scss";
 import JSON from "../../../src/data/our-services.json";
 

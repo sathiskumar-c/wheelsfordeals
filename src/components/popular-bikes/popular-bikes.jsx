@@ -1,5 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Make sure this is imported
+// React Imports
+import { Link } from "react-router-dom";
+
+// Local Imports
 import "./popular-bikes.scss";
 import JSON from "../../../src/data/popular-bikes.json";
 
