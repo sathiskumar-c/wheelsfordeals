@@ -1,6 +1,7 @@
+// React Imports
+import React from "react";
+
 // Components Imports
-import NavbarDeskTop from "../../components/navbar/navbar";
-import Footer from "../../components/footer/footer";
 import PopularBikes from "../../components/popular-bikes/popular-bikes";
 import FrequentlyAskedQuestions from "../../components/frequently-asked-questions/frequently-asked-questions";
 import OurServices from "../../components/our-services/our-services";
@@ -28,8 +29,7 @@ import "./home.scss";
 
 const Home = () => {
   return (
-    <>
-      <NavbarDeskTop />
+    <React.Fragment>
       <PopularBikes />
       <BrowseBikesBy />
       <HorizontalTabs data={BenefitsData} component="Benefits" />
@@ -60,8 +60,7 @@ const Home = () => {
         show={{ title: true, logo: true, content: true }}
         styles={{ aspectRatio: " 3/4" }}
       />
-      <Footer />
-    </>
+    </React.Fragment>
   );
 };
 
