@@ -1,17 +1,27 @@
-// Package imports
+// React Imports
+import React from "react";
+import PropTypes from "prop-types";
+
+// Swiper Imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-// Local imports
+// Local Imports
 import "./image-card-slider.scss";
 
-const ImageCardSlider = ({ data, show, styles }) => {
+const ImageCardSlider = ({
+  data,
+  show,
+  styles,
+  breakpoints,
+  componentClass,
+}) => {
   const { title, cards } = data;
 
   return (
-    <section className="image-slider-wrapper">
+    <section className={`image-slider-wrapper ${componentClass}`}>
       {show?.title && (
         <div className="image-slider-heading">
           <h2 className="image-slider-title">{title}</h2>
@@ -22,12 +32,7 @@ const ImageCardSlider = ({ data, show, styles }) => {
         modules={[Navigation]}
         spaceBetween={20}
         navigation
-        breakpoints={{
-          320: { slidesPerView: 1 },
-          640: { slidesPerView: 1.2 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
+        breakpoints={breakpoints}
         className="image-slider-swiper"
       >
         {cards?.map((item, index) => (
@@ -82,6 +87,13 @@ const ImageCardSlider = ({ data, show, styles }) => {
       </Swiper>
     </section>
   );
+};
+ImageCardSlider.propTypes = {
+  data: PropTypes.object.isRequired,
+  show: PropTypes.object,
+  styles: PropTypes.object,
+  breakpoints: PropTypes.object,
+  componentClass: PropTypes.string,
 };
 
 export default ImageCardSlider;

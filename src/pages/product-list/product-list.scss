@@ -40,11 +40,12 @@
     margin-bottom: 20px;
     margin-left: 5px;
     display: flex;
-    justify-content: space-between;
+    column-gap: 15px;
   }
 
   .sort_icon_parent {
     margin-right: 10px;
+    margin-left: auto;
   }
 
   .filter_icon_parent {
@@ -55,9 +56,139 @@
     padding: 8px 15px 8px 15px;
     border-radius: 5px;
     background-color: #f5f5f5;
+    cursor: pointer;
+    min-width: max-content;
 
     svg {
       font-size: 20px;
+    }
+
+    h6 {
+      span {
+        font-weight: 600;
+        padding: 2px 8px 2px 8px;
+        background-color: lightgray;
+        border-radius: 30px;
+        color: black;
+      }
+    }
+  }
+
+  .chips_parent {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    .chips {
+      width: fit-content;
+      padding: 5px 15px 5px 15px;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      background-color: #e5f3ff;
+      border-radius: 5px;
+      min-width: max-content;
+      cursor: pointer;
+      border: 1px solid #0059a3;
+    }
+
+    .clear_all {
+      color: #ef6e0b;
+      font-weight: 600;
+      cursor: pointer;
+      text-wrap-mode: nowrap;
+      display: flex;
+      align-items: center;
+      column-gap: 2px;
+
+      svg {
+        font-size: 18px;
+        margin-top: -2px;
+      }
+    }
+  }
+
+  .loadmore_button {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #252525;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+    margin: auto;
+    margin-top: 25px;
+  }
+
+  .btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+
+  .loadmore_button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+
+  .loadmore_button:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: #fff;
+    border: none;
+  }
+
+  .loadmore_button:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+
+  @media screen and (max-width: 768px) {
+    .chips_parent_mobile {
+      overflow-x: scroll;
+      margin: 0px 0px 15px 0px;
+      padding: 10px;
+    }
+
+    .product_list_slider {
+      padding: 20px 5px 20px 5px !important;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .product_list_slider {
+      .swiper-wrapper {
+        margin-left: 10px !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .sort_filter_parent {
+      h6 {
+        font-size: 10px;
+      }
+
+      .sort_icon_parent {
+        button {
+          font-size: 10px;
+        }
+      }
+
+      svg {
+        font-size: 14px;
+      }
     }
   }
 

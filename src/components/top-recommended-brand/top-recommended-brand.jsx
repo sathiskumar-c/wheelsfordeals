@@ -1,9 +1,14 @@
-import React from "react";
+// React Imports
 import { Link } from "react-router-dom";
+
+// Local Imports
 import "./top-recommended-brand.scss";
 import JSON from "../../data/top-recommended-brand.json";
 
 const TopRecommendedBrand = () => {
+  // Duplicate the data for seamless infinite scroll
+  const brandsData = [...JSON.toprecommendeddata, ...JSON.toprecommendeddata];
+
   return (
     <section
       className="scroll-container component-parent"
@@ -18,10 +23,14 @@ const TopRecommendedBrand = () => {
         role="list"
         aria-label="List of top recommended motorcycle brands"
       >
-        {JSON.toprecommendeddata.map((brand) => (
-          <article className="brand-card" key={brand.id} role="listitem">
+        {brandsData.map((brand, index) => (
+          <article
+            className="brand-card"
+            key={`${brand.id}-${index}`}
+            role="listitem"
+          >
             <Link
-              to={`/brands/${brand.path}`}
+              to={`/bikes/brands/${brand.path}`}
               className="brand-link"
               aria-label={`Explore ${brand.name} ${brand.fuel_type} motorcycles`}
               title={`${brand.name} Motorcycles`}
@@ -33,9 +42,6 @@ const TopRecommendedBrand = () => {
                 loading="lazy"
               />
               <p className="brand-name">{brand.name}</p>
-              {/* <span className="fuel-type sr-only">
-                {brand.fuel_type} powered
-              </span> */}
             </Link>
           </article>
         ))}

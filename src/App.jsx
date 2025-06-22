@@ -1,29 +1,42 @@
-// react & router imports
+// React & Router Imports
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// pages imports
+// Pages Imports
 import Home from "./pages/home/home";
-import About from "./pages/about/about";
+import AboutUs from "./pages/aboutus/aboutus";
 import ContactUs from "./pages/contactus/contactus";
 import ProductList from "./pages/product-list/product-list";
-
-// local imports
+import ProductDetails from "./pages/product-details/product-details";
 import FrequentlyAskedQuestions from "./pages/faq/faq";
+
+// Components Imports
+import NavbarDeskTop from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
+
+// Local Imports
 import "./App.scss";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/brands" element={<ProductList />} />
-        <Route path="/brands/:brand_name" element={<ProductList />} />
-        <Route path="/faq" element={<FrequentlyAskedQuestions />} />
-      </Routes>
-    </Router>
+    <React.Fragment>
+      <Router>
+        <NavbarDeskTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/bikes" element={<ProductList />} />
+          <Route path="/bikes/*" element={<ProductList />} />
+          <Route
+            path="/bike/details/:brand/:bike-name/:bike_id"
+            element={<ProductDetails />}
+          />
+          <Route path="/faq" element={<FrequentlyAskedQuestions />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </React.Fragment>
   );
 };
 

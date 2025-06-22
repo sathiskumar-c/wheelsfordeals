@@ -1,0 +1,16 @@
+.product-details {
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+
+    &::after {
+      font-size: 20px;
+    }
+  }
+
+  .mySwiper {
+    border-radius: 10px;
+  }
+}
