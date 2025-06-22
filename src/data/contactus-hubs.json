@@ -1,0 +1,26 @@
+{
+  "title": "Hubs in Tamilnadu",
+  "hubs": [
+    {
+      "title": "CARS24 Hub, Metro Walk, Rohini",
+      "image": "/images/icons/hub.webp",
+      "address": "Metro Walk Parking, Gate no. 4, GF, Nr Crown Central Park, Sec 10, Rohini, New Delhi 110085",
+      "timing": "11:00 AM – 08:00 PM",
+      "cars": "130"
+    },
+    {
+      "title": "CARS24 Hub, Rajouri Garden, New Delhi",
+      "image": "/images/icons/hub.webp",
+      "address": "Rcube Monad Mall, Ground Floor, Near Gate no. 1, Rajouri Garden, Shivaji Place, Delhi 110027",
+      "timing": "11:00 AM – 08:00 PM",
+      "cars": "58"
+    },
+    {
+      "title": "CARS24 Hub, Rajouri Garden, New Delhi",
+      "image": "/images/icons/hub.webp",
+      "address": "Rcube Monad Mall, Ground Floor, Near Gate no. 1, Rajouri Garden, Shivaji Place, Delhi 110027",
+      "timing": "11:00 AM – 08:00 PM",
+      "cars": "58"
+    }
+  ]
+}

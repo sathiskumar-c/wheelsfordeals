@@ -1,0 +1,13 @@
+{
+  "label": "Our Mission",
+  "title": "To provide a",
+  "highlightedText": ["simplified", "credible", "and hassle-free"],
+  "description": "mobility ecosystem.",
+  "stats": [
+    { "number": "40k+", "label": "Vehicles Sold" },
+    { "number": "50+", "label": "Stores" },
+    { "number": "1.4L+", "label": "Happy Customers" }
+  ],
+  "image": "/images/icons/about-us.jpg",
+  "altText": "Founder Image"
+}

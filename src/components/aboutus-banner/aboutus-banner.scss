@@ -1,0 +1,121 @@
+.aboutus-banner {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  padding: 60px 24px;
+
+  .aboutus-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .aboutus-left {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 0 12px;
+
+    .aboutus-label {
+      color: #919191;
+      font-size: 13px;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .aboutus-title {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 600px;
+      word-break: break-word;
+
+      .highlight {
+        color: #ff5c35;
+        font-weight: 400;
+      }
+    }
+
+    .aboutus-stats {
+      margin-top: 30px;
+
+      .stat-inline {
+        display: inline-block;
+        margin: 0px 20px 0px 0px;
+        font-size: 15px;
+
+        .stat-number {
+          font-weight: 500;
+          font-size: 18px;
+          margin-right: 2px;
+        }
+
+        .stat-label {
+          color: #919191;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .aboutus-right {
+    flex: 1 1 100%;
+    text-align: center;
+
+    .aboutus-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      mix-blend-mode: normal !important;
+      opacity: 0.8;
+    }
+  }
+
+  // Larger devices
+  @media (min-width: 768px) {
+    .aboutus-left,
+    .aboutus-right {
+      flex: 1 1 48%;
+      text-align: left;
+    }
+
+    .aboutus-left {
+      .aboutus-title {
+        font-size: 22px;
+        margin-left: 0;
+      }
+
+      .stat-inline {
+        font-size: 16px;
+
+        .stat-number {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .aboutus-right {
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .aboutus-title {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .aboutus-left {
+      text-align: left;
+    }
+    .aboutus-stats {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+}
