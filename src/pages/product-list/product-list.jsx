@@ -1,13 +1,11 @@
 // React Imports
-import { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 // Component Imports
-import NavbarDeskTop from "../../components/navbar/navbar";
 import ProductListFilter from "../../components/product-list-filter/product-list-filter";
 import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
 import ProductCard from "../../components/common-components/product-card/product-card";
-import Footer from "../../components/footer/footer";
 import CommonDialog from "../../components/common-components/dialog/dialog";
 import HoverSwapCard from "../../components/common-components/cards/hover-swap-card/hover-swap-card";
 
@@ -253,8 +251,7 @@ const ProductList = () => {
   };
 
   return (
-    <>
-      <NavbarDeskTop />
+    <React.Fragment>
       <div className="container-fluid product-list-parent">
         <div className="row">
           <div className="col-md-3">
@@ -294,9 +291,13 @@ const ProductList = () => {
 
               {window.innerWidth > 768 && (
                 <div className="chips_parent">
-                  {chips?.map((item) => {
+                  {chips?.map((item, index) => {
                     return (
-                      <div className="chips" onClick={() => handleClear(item)}>
+                      <div
+                        key={index}
+                        className="chips"
+                        onClick={() => handleClear(item)}
+                      >
                         <span>{item.label}</span>
                         <ClearIcon />
                       </div>
@@ -318,9 +319,13 @@ const ProductList = () => {
 
             {window.innerWidth <= 768 && chips.length > 0 && (
               <div className="chips_parent chips_parent_mobile">
-                {chips?.map((item) => {
+                {chips?.map((item, index) => {
                   return (
-                    <div className="chips" onClick={() => handleClear(item)}>
+                    <div
+                      key={index}
+                      className="chips"
+                      onClick={() => handleClear(item)}
+                    >
                       <span>{item.label}</span>
                       <ClearIcon />
                     </div>
@@ -344,8 +349,11 @@ const ProductList = () => {
               ))}
 
               {!loading && visibleBikes?.length >= visibleCount && (
-                <button onClick={() => loadMoreItems()} class="loadmore_button">
-                  <span class="btn-txt">Load More</span>
+                <button
+                  onClick={() => loadMoreItems()}
+                  className="loadmore_button"
+                >
+                  <span className="btn-txt">Load More</span>
                 </button>
               )}
 
@@ -365,7 +373,6 @@ const ProductList = () => {
           </div>
         </div>
       </div>
-      <Footer />
 
       {/* Filter Dialog for Mobile */}
       <CommonDialog
@@ -436,7 +443,7 @@ const ProductList = () => {
                     rowGap: "15px",
                   }}
                 >
-                  {bikeOffers?.map((res) => {
+                  {bikeOffers?.map((res, index) => {
                     return (
                       // <HoverFadeCard
                       //   frontSideContent={
@@ -460,6 +467,7 @@ const ProductList = () => {
                       //   styles={{ width: "160px", height: "150px" }}
                       // />
                       <HoverSwapCard
+                        key={index}
                         frontSideContent={
                           <h6 style={{ margin: "auto", textAlign: "center" }}>
                             {res?.title}
@@ -484,7 +492,7 @@ const ProductList = () => {
           </div>
         }
       />
-    </>
+    </React.Fragment>
   );
 };
 

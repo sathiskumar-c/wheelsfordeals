@@ -1,3 +1,7 @@
+// React Imports
+import React from "react";
+import PropTypes from "prop-types";
+
 // Swiper Imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -83,6 +87,13 @@ const ImageCardSlider = ({
       </Swiper>
     </section>
   );
+};
+ImageCardSlider.propTypes = {
+  data: PropTypes.object.isRequired,
+  show: PropTypes.object,
+  styles: PropTypes.object,
+  breakpoints: PropTypes.object,
+  componentClass: PropTypes.string,
 };
 
 export default ImageCardSlider;
