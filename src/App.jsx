@@ -24,15 +24,15 @@ const App = () => {
         <NavbarDeskTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/bikes" element={<ProductList />} />
           <Route path="/bikes/*" element={<ProductList />} />
           <Route
             path="/bike/details/:brand/:bike-name/:bike_id"
             element={<ProductDetails />}
           />
-          <Route path="/faq" element={<FrequentlyAskedQuestions />} />
+          <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
         </Routes>
         <Footer />
       </Router>

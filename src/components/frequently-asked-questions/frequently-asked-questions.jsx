@@ -1,6 +1,12 @@
-import { useState } from "react";
-import "./frequently-asked-questions.scss";
+// React Imports
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+
+// Component Imports
 import CommonAccordion from "../common-components/accordion/accordion";
+
+// Local Imports
+import "./frequently-asked-questions.scss";
 
 const FrequentlyAskedQuestions = ({ JSON }) => {
   const [expanded, setExpanded] = useState(false);
@@ -36,6 +42,10 @@ const FrequentlyAskedQuestions = ({ JSON }) => {
       </div>
     </section>
   );
+};
+
+FrequentlyAskedQuestions.propTypes = {
+  JSON: PropTypes.object.isRequired,
 };
 
 export default FrequentlyAskedQuestions;
