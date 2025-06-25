@@ -242,7 +242,7 @@
     },
     "button": {
       "label": "View More",
-      "path": "faq",
+      "path": "faqs",
       "ariaLabel": "View more frequently asked questions"
     },
     "section": {

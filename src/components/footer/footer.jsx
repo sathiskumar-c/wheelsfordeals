@@ -18,7 +18,7 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <footer className="footer component-parent">
+    <footer className="footer">
       <div className="footer-container">
         {JSON.sections.map((section, idx) => {
           return (
