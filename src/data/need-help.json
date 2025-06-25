@@ -6,7 +6,7 @@
       "icon": "whatsapp",
       "title": "Ask us on WhatsApp!",
       "description": "Get instant support via experts",
-      "path": "contactus",
+      "path": "contact-us",
       "alt": "WhatsApp"
     },
     {
@@ -22,7 +22,7 @@
       "icon": "questionmark",
       "title": "FAQ's",
       "description": "Get your doubts cleared",
-      "path": "faq",
+      "path": "faqs",
       "alt": "FAQs"
     }
   ]
