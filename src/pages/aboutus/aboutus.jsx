@@ -1,12 +1,11 @@
 // React Import
 import React from "react";
 
+// Components Imports
+import AboutusBanner from "../../components/aboutus-banner/aboutus-banner";
+
 const AboutUs = () => {
-  return (
-    <React.Fragment>
-      <h1>About Page</h1>
-    </React.Fragment>
-  );
+  return <AboutusBanner />;
 };
 
 export default AboutUs;

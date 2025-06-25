@@ -3,7 +3,7 @@
     {
       "title": "COMPANY",
       "links": [
-        { "label": "About Us", "path": "/about" },
+        { "label": "About Us", "path": "/about-us" },
         { "label": "Privacy Policy", "path": "/privacy-policy" },
         { "label": "Testimonials", "path": "/testimonials" }
       ]
@@ -20,7 +20,7 @@
       "title": "HELP & SUPPORT",
       "links": [
         { "label": "FAQs", "path": "/faqs" },
-        { "label": "Contact us", "path": "/contactus" },
+        { "label": "Contact us", "path": "/contact-us" },
         { "label": "Terms & conditions", "path": "/terms" }
       ]
     },
