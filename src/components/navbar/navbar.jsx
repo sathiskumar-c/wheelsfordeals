@@ -94,7 +94,7 @@ function NavbarDeskTop() {
 
   return (
     <>
-      <Navbar expand="md" className="bg-body-tertiary mb-3 navbar-menu">
+      <Navbar expand="md" className="bg-body-tertiary navbar-menu">
         <Container>
           <Navbar.Brand as={Link} to="/">
             {JSON.title}

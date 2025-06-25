@@ -12,21 +12,21 @@
       "id": "ourservices-visithub",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Visit Our Hub",
-      "path": "/contactus",
+      "path": "/contact-us",
       "description": "Explore, Inspect & Ride!"
     },
     {
       "id": "ourservices-finance",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "Finance",
-      "path": "/contactus",
+      "path": "/contact-us",
       "description": "Low Intrest Rates"
     },
     {
       "id": "ourservices-rctransfer",
       "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
       "title": "RC Transfer",
-      "path": "/contactus",
+      "path": "/contact-us",
       "description": "Hassle-free & safe"
     },
     {

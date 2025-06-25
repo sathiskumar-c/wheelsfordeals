@@ -1,11 +1,15 @@
 // React Imports
 import React, { useState } from "react";
 
+// Component Imports
+import InfoWithImageBlock from "../../components/common-components/info-with-image-block/info-with-image-block";
+
 // Local Imports
 import "./faq.scss";
 
 // JSON Import
 import FAQData from "../../data/frequently-asked-questions.json";
+import RaiseYourQuery from "../../data/raise-your-query.json";
 
 // Tabs
 const tabs = ["Sell Car", "Buy Car"];
@@ -34,7 +38,7 @@ const FrequentlyAskedQuestions = () => {
   const faqs = faqData[activeTab][activeCategory] || [];
 
   return (
-    <div className="faq-page">
+    <div className="faq-page py-5">
       <main className="faq-container container">
         <h1 className="faq-main-heading">Frequently Asked Questions</h1>
 
@@ -85,6 +89,9 @@ const FrequentlyAskedQuestions = () => {
           ))}
         </section>
       </main>
+      <div className="container">
+        <InfoWithImageBlock content={RaiseYourQuery} />
+      </div>
     </div>
   );
 };
