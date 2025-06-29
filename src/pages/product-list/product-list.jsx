@@ -39,6 +39,9 @@ import {
   updateChips,
 } from "./utils/utils";
 
+// Image Imports
+import noData from "../../../public/images/illustrations/no-data.png";
+
 // Component Configs
 const ITEMS_PER_LOAD_MOBILE = 15;
 const ITEMS_PER_LOAD_DESKTOP = 30;
@@ -339,37 +342,58 @@ const ProductList = () => {
               </div>
             )}
 
-            <div className="bikelist_parent">
-              {visibleBikes.map((res) => (
-                <ProductCard
-                  key={res.id}
-                  card={res}
-                  dialogOpen={handleOpenExpandView}
+            {visibleBikes.length >= 1 ? (
+              <div className="bikelist_parent">
+                {visibleBikes.map((res) => (
+                  <ProductCard
+                    key={res.id}
+                    card={res}
+                    dialogOpen={handleOpenExpandView}
+                  />
+                ))}
+
+                {!loading && visibleBikes?.length >= visibleCount && (
+                  <button
+                    onClick={() => loadMoreItems()}
+                    className="loadmore_button"
+                  >
+                    <span className="btn-txt">Load More</span>
+                  </button>
+                )}
+
+                {loading && (
+                  <div className="loader">
+                    <div className="spinner" />
+                    <p>Loading more bikes...</p>
+                  </div>
+                )}
+
+                {!loading && visibleCount >= Bikedetails.length && (
+                  <div className="end-message">
+                    🏁 You’ve reached the finish line!
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="no-results">
+                <img
+                  src={noData}
+                  alt="No bikes found"
+                  className="no-results__image"
                 />
-              ))}
-
-              {!loading && visibleBikes?.length >= visibleCount && (
+                <h2 className="no-results__title">No Bikes Found</h2>
+                <p className="no-results__message">
+                  We couldn’t find any results for the selected filters. <br />
+                  Try adjusting them.
+                </p>
                 <button
-                  onClick={() => loadMoreItems()}
-                  className="loadmore_button"
+                  className="no-results__button"
+                  onClick={() => handleClearAll()}
                 >
-                  <span className="btn-txt">Load More</span>
+                  Reset Filters
                 </button>
-              )}
-
-              {loading && (
-                <div className="loader">
-                  <div className="spinner" />
-                  <p>Loading more bikes...</p>
-                </div>
-              )}
-
-              {!loading && visibleCount >= Bikedetails.length && (
-                <div className="end-message">
-                  🏁 You’ve reached the finish line!
-                </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
