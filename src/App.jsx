@@ -1,6 +1,11 @@
 // React & Router Imports
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 // Pages Imports
 import Home from "./pages/home/home";
@@ -13,6 +18,7 @@ import FrequentlyAskedQuestions from "./pages/faq/faq";
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
+import PageNotFound from "./components/page-not-found/page-not-found";
 
 // Local Imports
 import "./App.scss";
@@ -33,6 +39,9 @@ const App = () => {
             element={<ProductDetails />}
           />
           <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
+
+          <Route path="/page-not-found" element={<PageNotFound />} />
+          <Route path="*" element={<Navigate to="/page-not-found" replace />} />
         </Routes>
         <Footer />
       </Router>
