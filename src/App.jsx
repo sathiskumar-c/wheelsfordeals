@@ -14,6 +14,8 @@ import ContactUs from "./pages/contactus/contactus";
 import ProductList from "./pages/product-list/product-list";
 import ProductDetails from "./pages/product-details/product-details";
 import FrequentlyAskedQuestions from "./pages/faq/faq";
+import Login from "./pages/login/login";
+import SignUp from "./pages/signup/signup";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -23,12 +25,18 @@ import PageNotFound from "./components/page-not-found/page-not-found";
 // Local Imports
 import "./App.scss";
 
+const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup"];
+
 const App = () => {
+  const hideHeaderFooter = HIDE_HEADER_FOOTER_PATHS.includes(location.pathname);
+
   return (
     <React.Fragment>
       <Router>
-        <NavbarDeskTop />
+        {!hideHeaderFooter && <NavbarDeskTop />}
         <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
@@ -43,7 +51,7 @@ const App = () => {
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" replace />} />
         </Routes>
-        <Footer />
+        {!hideHeaderFooter && <Footer />}
       </Router>
     </React.Fragment>
   );
