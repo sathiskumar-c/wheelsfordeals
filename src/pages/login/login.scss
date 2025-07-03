@@ -20,7 +20,7 @@ $font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   background-color: $bg-color;
   padding: $form-padding;
   width: 90%;
@@ -32,6 +32,11 @@ $font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   .MuiOutlinedInput-root {
     border-radius: 2px !important;
     max-height: 50px !important;
+  }
+
+  .Mui-error {
+    margin-top: 5px;
+    margin-left: 3px;
   }
 }
 
@@ -91,6 +96,7 @@ $font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   display: flex;
   justify-content: center;
   column-gap: 5px;
+  margin-bottom: 0px;
 
   a {
     text-decoration: none;
@@ -110,6 +116,7 @@ $font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 .login__divider {
   margin-top: 5px;
   margin-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .login__social-buttons {
