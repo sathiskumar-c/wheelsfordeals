@@ -1,0 +1,110 @@
+{
+  "pageTitle": "Privacy Policy",
+  "sections": [
+    {
+      "heading": "1. Introduction",
+      "content": [
+        "This Privacy Policy (\"Policy\") describes how CARS24 Services Private Limited (\"CARS24\", \"Company\", \"We\", \"Us\", or \"Our\") collects, processes, stores, discloses, and safeguards your personal information when you interact with our websites (https://www.cars24.com, https://www.loans24.co.in), mobile applications, subdomains, or any affiliated services (collectively referred to as the \"Platform\").",
+        "By accessing or using our services, you agree to the terms of this Policy and consent to the practices described herein."
+      ]
+    },
+    {
+      "heading": "2. Scope of This Policy",
+      "content": [
+        "This Policy applies to all users (\"You\", \"Your\", or \"User\") who access, browse, register on, or use our Platform in any capacity.",
+        "It governs how we collect, use, retain, disclose, and protect personal data across all interfaces, including web, mobile, and conversational bots (e.g., Google Assistant bots)."
+      ]
+    },
+    {
+      "heading": "3. Types of Information We Collect",
+      "content": [
+        "We may collect the following categories of personal data from or about you:",
+        "- **Personal Identifiers**: Name, gender, email address, mobile number, residential address.",
+        "- **KYC and Authentication Data**: Aadhaar, PAN, passport, driver’s license, GST registration, utility bills.",
+        "- **Financial Data**: Bank account details, card numbers (masked/tokenized), UPI IDs, payment transaction data.",
+        "- **Vehicle and Service Data**: Vehicle registration, insurance policies, FASTag ID, pollution certificate, service records.",
+        "- **Device and Technical Information**: IP address, device model, OS, browser type, session duration, geolocation.",
+        "- **Usage and Interaction Data**: Clickstream, pages visited, search queries, customer support chats, call recordings."
+      ]
+    },
+    {
+      "heading": "4. How We Use Your Information",
+      "content": [
+        "We use the personal data we collect for the following lawful and operational purposes:",
+        "- To provide and manage access to our Platform and services.",
+        "- To verify your identity, perform KYC/AML checks, and process financial transactions.",
+        "- To personalize your experience, including service recommendations and location-specific content.",
+        "- To send important updates such as order confirmations, transaction details, legal notices, or system alerts.",
+        "- To analyze usage trends, improve user experience, and enhance performance through analytics.",
+        "- To comply with legal, regulatory, or contractual obligations and to prevent fraud or abuse."
+      ]
+    },
+    {
+      "heading": "5. Cookies and Tracking Technologies",
+      "content": [
+        "We use cookies, pixels, and similar tracking tools to enhance your user experience. These tools allow us to remember your preferences, monitor traffic, and provide targeted advertisements.",
+        "You may manage your cookie preferences through your browser settings or use third-party cookie opt-out tools."
+      ]
+    },
+    {
+      "heading": "6. Sharing of Personal Information",
+      "content": [
+        "We do not sell your personal information. However, we may share your data under the following circumstances:",
+        "- With trusted affiliates, vendors, payment processors, loan or insurance partners who help us provide services.",
+        "- With government bodies, regulatory authorities, or law enforcement when legally obligated to do so.",
+        "- During corporate transactions such as mergers, acquisitions, or restructuring, subject to confidentiality agreements.",
+        "All third-party data processors are contractually bound to implement appropriate data protection measures."
+      ]
+    },
+    {
+      "heading": "7. Data Retention Policy",
+      "content": [
+        "We retain your personal data only for as long as necessary to fulfill the purposes outlined in this Policy or to comply with legal, tax, or regulatory requirements.",
+        "Retention periods may vary depending on the type of data and applicable laws (e.g., KYC records under RBI/SEBI guidelines)."
+      ]
+    },
+    {
+      "heading": "8. Data Security Measures",
+      "content": [
+        "We implement industry-standard security controls including encryption, firewalls, access control, anonymization, and audit trails to safeguard your data.",
+        "Our infrastructure is routinely tested for vulnerabilities, and access to personal data is strictly limited to authorized personnel on a need-to-know basis."
+      ]
+    },
+    {
+      "heading": "9. Your Rights and Choices",
+      "content": [
+        "Depending on the applicable data protection law (e.g., India’s DPDP Act or GDPR), you may have rights including:",
+        "- Right to access personal data we hold about you.",
+        "- Right to request correction or deletion of inaccurate or outdated data.",
+        "- Right to withdraw consent for specific processing activities.",
+        "- Right to restrict or object to data processing under certain circumstances.",
+        "To exercise any of these rights, please contact us using the details in the ‘Contact Us’ section below. We may verify your identity before responding."
+      ]
+    },
+    {
+      "heading": "10. Children's Privacy",
+      "content": [
+        "Our services are intended for use by adults only. We do not knowingly collect personal information from children under the age of 18. If you are a parent or guardian and believe that your child has provided us data, please contact us immediately so that we may delete such information."
+      ]
+    },
+    {
+      "heading": "11. International Data Transfers",
+      "content": [
+        "Your data may be transferred to and stored on servers outside of your country of residence. Where such transfers occur, we ensure an adequate level of data protection is maintained through appropriate safeguards like standard contractual clauses or data transfer agreements."
+      ]
+    },
+    {
+      "heading": "12. Updates to This Policy",
+      "content": [
+        "We may modify this Policy periodically to reflect changes in legal, technological, or operational frameworks. All updates will be posted on this page with a revised 'Last Updated' date. If changes materially affect your rights, we will notify you by email or a prominent platform notice where feasible."
+      ]
+    },
+    {
+      "heading": "13. Contact Us",
+      "content": [
+        "If you have any questions, feedback, or complaints regarding this Policy or how your personal data is handled, please reach out to us at privacy@cars24.com.",
+        "You may also write to our Data Protection Officer (DPO) at our registered office address listed on the CARS24 website."
+      ]
+    }
+  ]
+}

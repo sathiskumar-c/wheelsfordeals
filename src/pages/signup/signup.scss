@@ -1,0 +1,52 @@
+// This file reuses most styles from login.scss using @extend for consistency across auth pages.
+@import "../login/login.scss";
+
+.signup-wrapper {
+  @extend .login-wrapper;
+}
+
+.signup-form {
+  @extend .login-form;
+}
+
+.signup-title {
+  @extend .login-title;
+}
+
+.signup__img {
+  @extend .login__img;
+}
+
+.signup__submit-button {
+  @extend .login__submit-button;
+}
+
+.signup__text {
+  @extend .login__text;
+}
+
+.signup__divider {
+  @extend .login__divider;
+}
+
+.signup__social-buttons {
+  @extend .login__social-buttons;
+}
+
+.signup__social-btn {
+  @extend .login__social-btn;
+}
+
+.signup__google-img {
+  @extend .login__google-img;
+}
+
+.signup__login-link {
+  color: $primary-color;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
