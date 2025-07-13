@@ -1,0 +1,109 @@
+.privacy-policy-page {
+  padding: 2rem;
+  background-color: #fdfdfd;
+  color: #2c2c2c;
+  font-family: "Segoe UI", sans-serif;
+
+  .privacy-header {
+    text-align: center;
+    margin-bottom: 24px;
+
+    h1 {
+      font-size: 34px;
+      font-weight: bold;
+      color: #222;
+    }
+  }
+
+  .policy-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .policy-section {
+      margin-bottom: 30px;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+        color: #444;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  // 📱 Mobile (<= 767px)
+  @media (max-width: 767px) {
+    padding: 10px;
+
+    .privacy-header {
+      h1 {
+        font-size: 26px;
+      }
+    }
+
+    .policy-content {
+      .policy-section {
+        h2 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  // 📱 Tablet (768px - 1023px)
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 15px;
+
+    .privacy-header {
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .policy-content {
+      .policy-section {
+        h2 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 23px;
+        }
+      }
+    }
+  }
+
+  // 🖥️ Large Monitors (>= 1200px)
+  @media (min-width: 1200px) {
+    .privacy-header {
+      h1 {
+        font-size: 38px;
+      }
+    }
+
+    .policy-content {
+      .policy-section {
+        h2 {
+          font-size: 26px;
+        }
+
+        p {
+          font-size: 17px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
