@@ -18,6 +18,7 @@ import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
 import PrivacyPolicy from "./pages/privacy-policy/privacy-policy";
 import TermsandConditions from "./pages/terms-conditions/terms-conditions";
+import AdminLogin from "./pages/admin-login/admin-login";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -27,7 +28,7 @@ import PageNotFound from "./components/page-not-found/page-not-found";
 // Local Imports
 import "./App.scss";
 
-const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup"];
+const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup", "/admin/login"];
 
 const App = () => {
   const hideHeaderFooter = HIDE_HEADER_FOOTER_PATHS.includes(location.pathname);
@@ -39,6 +40,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
