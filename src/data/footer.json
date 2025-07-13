@@ -21,7 +21,8 @@
       "links": [
         { "label": "FAQs", "path": "/faqs" },
         { "label": "Contact us", "path": "/contact-us" },
-        { "label": "Terms & conditions", "path": "/terms" }
+        { "label": "Privacy Policy", "path": "/privacy-policy" },
+        { "label": "Terms & conditions", "path": "/terms-and-conditions" }
       ]
     },
     {
