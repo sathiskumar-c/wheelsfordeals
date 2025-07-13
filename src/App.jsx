@@ -16,6 +16,8 @@ import ProductDetails from "./pages/product-details/product-details";
 import FrequentlyAskedQuestions from "./pages/faq/faq";
 import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
+import PrivacyPolicy from "./pages/privacy-policy/privacy-policy";
+import TermsandConditions from "./pages/terms-conditions/terms-conditions";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -40,6 +42,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsandConditions />}
+          />
           <Route path="/bikes" element={<ProductList />} />
           <Route path="/bikes/*" element={<ProductList />} />
           <Route
