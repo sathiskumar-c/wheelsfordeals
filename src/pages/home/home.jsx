@@ -1,5 +1,5 @@
 // React Imports
-import React from "react";
+import React, { useEffect } from "react";
 
 // Components Imports
 import PopularBikes from "../../components/popular-bikes/popular-bikes";
@@ -24,10 +24,19 @@ import FAQ from "../../data/frequently-asked-questions.json";
 import ImageReviewData from "../../data/image-review.json";
 import InsightsData from "../../data/insight-driven.json";
 
+// Services & API
+import { getHomePageData } from "../../api/getHomePage";
+const API = import.meta.env.VITE_API_BASE_URL;
+
 // Local Imports
 import "./home.scss";
 
 const Home = () => {
+  // Get Home Page Data
+  useEffect(() => {
+    getHomePageData(API).then((data) => console.log(data));
+  }, []);
+
   return (
     <React.Fragment>
       <PopularBikes />
