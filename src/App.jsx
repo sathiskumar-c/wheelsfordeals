@@ -16,7 +16,6 @@ import ProductDetails from "./pages/product-details/product-details";
 import FrequentlyAskedQuestions from "./pages/faq/faq";
 import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
-import AdminLogin from "./pages/admin-login/admin-login";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -38,7 +37,6 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
@@ -53,6 +51,7 @@ const App = () => {
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" replace />} />
         </Routes>
+
         {!hideHeaderFooter && <Footer />}
       </Router>
     </React.Fragment>
