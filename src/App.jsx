@@ -16,7 +16,8 @@ import ProductDetails from "./pages/product-details/product-details";
 import FrequentlyAskedQuestions from "./pages/faq/faq";
 import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
-import AdminLogin from "./pages/admin-login/admin-login";
+import PrivacyPolicy from "./pages/privacy-policy/privacy-policy";
+import TermsandConditions from "./pages/terms-conditions/terms-conditions";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -38,10 +39,14 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsandConditions />}
+          />
           <Route path="/bikes" element={<ProductList />} />
           <Route path="/bikes/*" element={<ProductList />} />
           <Route
@@ -53,6 +58,7 @@ const App = () => {
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" replace />} />
         </Routes>
+
         {!hideHeaderFooter && <Footer />}
       </Router>
     </React.Fragment>
