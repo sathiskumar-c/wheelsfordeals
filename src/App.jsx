@@ -18,6 +18,8 @@ import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
 import PrivacyPolicy from "./pages/privacy-policy/privacy-policy";
 import TermsandConditions from "./pages/terms-conditions/terms-conditions";
+import BookRide from "./pages/test-ride/test-ride";
+import BookBike from "./pages/book-bike/book-bike";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -54,6 +56,15 @@ const App = () => {
             element={<ProductDetails />}
           />
           <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
+          <Route
+            path="/test-drive/:bike_brand/:bike_model/:bike_id"
+            element={<BookRide />}
+          />
+
+          <Route
+            path="/book-bike/:bike_brand/:bike_model/:bike_id"
+            element={<BookBike />}
+          />
 
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" replace />} />
