@@ -1,0 +1,138 @@
+.address-details-row.single-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.quarter-width,
+.third-width,
+.half-width {
+  flex: 1 1 0;
+  max-width: 300px;
+  min-width: 0;
+  width: 25%;
+}
+
+.full-width {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.address-paper {
+  max-width: 300px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .address-details-row.single-row {
+    gap: 12px;
+  }
+  .quarter-width,
+  .third-width,
+  .half-width {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .address-details-row.single-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .quarter-width,
+  .third-width,
+  .half-width {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+  .full-width {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+}
+// Personal details two-column layout
+
+.personal-details-row.single-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.quarter-width {
+  flex: 1 1 0;
+  max-width: 300px;
+  min-width: 0;
+}
+
+.book-bike-container {
+  .personal-details-row.single-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .quarter-width {
+    flex: 1 1 0;
+    max-width: 300px;
+    min-width: 0;
+  }
+  @media (max-width: 900px) {
+    .personal-details-row.single-row {
+      gap: 12px;
+    }
+    .quarter-width {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    .personal-details-row.single-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    .quarter-width {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.book-bike-container {
+  .personal-details-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .half-width {
+    flex: 1 1 0;
+    max-width: 300px;
+  }
+
+  @media (max-width: 768px) {
+    .personal-details-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    .half-width {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .personal-details-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .half-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
