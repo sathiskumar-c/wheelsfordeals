@@ -1,5 +1,6 @@
 // React Imports
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 // MUI Imports & MUI Icons
@@ -210,18 +211,36 @@ export default function BikeProductDetailCard({ bikeData }) {
 
       <Grid container spacing={2} className="bike-card__cta">
         <Grid item xs={6}>
-          <Button variant="contained" fullWidth className="bike-card__book-btn">
-            BOOK NOW
-          </Button>
+          <Link
+            to={`/book-bike/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
+              bikeData.bike_id
+            }`}
+            style={{ textDecoration: "none" }}
+          >
+            <Button
+              variant="contained"
+              fullWidth
+              className="bike-card__book-btn"
+            >
+              BOOK NOW
+            </Button>
+          </Link>
         </Grid>
         <Grid item xs={6}>
-          <Button
-            variant="contained"
-            fullWidth
-            className="bike-card__testdrive-btn"
+          <Link
+            to={`/test-drive/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
+              bikeData.bike_id
+            }`}
+            style={{ textDecoration: "none" }}
           >
-            FREE TEST DRIVE
-          </Button>
+            <Button
+              variant="contained"
+              fullWidth
+              className="bike-card__testdrive-btn"
+            >
+              FREE TEST DRIVE
+            </Button>
+          </Link>
         </Grid>
       </Grid>
 
