@@ -22,6 +22,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import XIcon from "@mui/icons-material/X";
 import TelegramIcon from "@mui/icons-material/Telegram";
+
+//  Local Imports
 import { calculateEMI } from "./utils";
 
 export default function BikeProductDetailCard({ bikeData }) {
@@ -128,11 +130,29 @@ export default function BikeProductDetailCard({ bikeData }) {
             • {engine_and_performance.transmission_type}
           </p>
         </div>
-        <div className="bike-card__wishlist">
+        <div
+          className="bike-card__wishlist"
+          style={{ display: "flex", alignItems: "center", gap: 0 }}
+        >
+          {/* Make Hold icon button, only if not held - now before wishlist */}
+          {!bikeData.hold?.is_held && (
+            <Link
+              to={`/hold-bike/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
+                bikeData.bike_id
+              }`}
+              style={{ display: "inline-flex" }}
+            >
+              <Tooltip title="Hold this bike" arrow>
+                <IconButton color="warning" size="small">
+                  {/* You can use a lock or reservation icon, here using DirectionsBikeIcon for demo */}
+                  <DirectionsBikeIcon />
+                </IconButton>
+              </Tooltip>
+            </Link>
+          )}
           <IconButton>
             <FavoriteBorderIcon />
           </IconButton>
-          <p className="mb-0 bike-card__shortlist-info">5 people shortlisted</p>
         </div>
       </div>
 
@@ -210,7 +230,7 @@ export default function BikeProductDetailCard({ bikeData }) {
       </div>
 
       <Grid container spacing={2} className="bike-card__cta">
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <Link
             to={`/book-bike/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
               bikeData.bike_id
@@ -226,7 +246,7 @@ export default function BikeProductDetailCard({ bikeData }) {
             </Button>
           </Link>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <Link
             to={`/test-drive/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
               bikeData.bike_id
@@ -242,6 +262,23 @@ export default function BikeProductDetailCard({ bikeData }) {
             </Button>
           </Link>
         </Grid>
+        {/* <Grid item xs={4}>
+          {!(bikeData.hold?.is_held) && (
+            <Link
+              to={`/hold-bike`}
+              style={{ textDecoration: "none" }}
+            >
+              <Button
+                variant="contained"
+                color="warning"
+                fullWidth
+                className="bike-card__book-btn"
+              >
+                MAKE HOLD
+              </Button>
+            </Link>
+          )}
+        </Grid> */}
       </Grid>
 
       <Divider className="bike-card__divider" />

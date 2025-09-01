@@ -94,7 +94,7 @@ const bikeData = {
   },
   accessories_included: ["Guards", "Mirrors", "Tank Bag", "Gloves"],
   hold: {
-    is_held: true,
+    is_held: false,
     held_by_user_id: "user_93797",
     hold_start_time: "2025-05-16T18:58:50.980431Z",
     hold_expiry_time: "2025-05-17T18:58:50.980431Z",
