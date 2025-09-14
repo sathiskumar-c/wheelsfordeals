@@ -20,6 +20,7 @@ import PrivacyPolicy from "./pages/privacy-policy/privacy-policy";
 import TermsandConditions from "./pages/terms-conditions/terms-conditions";
 import BookRide from "./pages/test-ride/test-ride";
 import BookBike from "./pages/book-bike/book-bike";
+import MyProfile from "./pages/my-profile/my-profile";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -60,6 +61,7 @@ const App = () => {
             path="/test-drive/:bike_brand/:bike_model/:bike_id"
             element={<BookRide />}
           />
+          <Route path="/my-profile" element={<MyProfile />} />
 
           <Route
             path="/book-bike/:bike_brand/:bike_model/:bike_id"
