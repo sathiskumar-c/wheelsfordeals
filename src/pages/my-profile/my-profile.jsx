@@ -1,169 +1,266 @@
+// React Imports
 import React, { useState } from "react";
+
+// MUI Imports
 import { TextField, Button, Avatar } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
+
+// Local Imports
 import "./my-profile.scss";
 import EditProfileDialog from "./utils/edit-profile-dialog";
+import EditAddressDialog from "./utils/edit-address-dialog";
 
 const MyProfile = () => {
-    const [formData, setFormData] = useState({
-        firstName: "Natashia",
-        lastName: "Khaleira",
-        dob: "1990-10-12",
-        email: "info@binary-fusion.com",
-        phone: "+62 821 2554 5846",
-        role: "Admin",
-        country: "United Kingdom",
-        city: "Leeds, East London",
-        postalCode: "ERT 1254",
+  const [formData, setFormData] = useState({
+    firstName: "Natashia",
+    lastName: "Khaleira",
+    email: "info@binary-fusion.com",
+    phone: "+919876543210",
+    streetAddress: "123 Main Street, Apartment 4B",
+    city: "Leeds, East London",
+    state: "Tamil Nadu",
+    postalCode: "123456",
+  });
+  const [openDialog, setOpenDialog] = useState(false);
+  const [openAddressDialog, setOpenAddressDialog] = useState(false);
+  const [tempProfileData, setTempProfileData] = useState({});
+  const [tempAddressData, setTempAddressData] = useState({});
+
+  // Handle changes in profile dialog
+  const handleProfileChange = (e) => {
+    setTempProfileData({
+      ...tempProfileData,
+      [e.target.name]: e.target.value,
     });
-    const [openDialog, setOpenDialog] = useState(false);
+  };
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-    };
+  // Handle changes in address dialog
+  const handleAddressChange = (e) => {
+    setTempAddressData({
+      ...tempAddressData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-    const handleSave = () => {
-        console.log("Saved data:", formData);
-        setOpenDialog(false);
-    };
+  // Open profile dialog and initialize temp data
+  const openProfileDialog = () => {
+    setTempProfileData({
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+    });
+    setOpenDialog(true);
+  };
 
-    return (
-        <div className="profile-container">
-            {/* Profile Header */}
-            <header className="profile-header">
-                <Avatar
-                    alt={`${formData.firstName} ${formData.lastName}`}
-                    src="https://i.pravatar.cc/150?img=12"
-                    sx={{ width: 80, height: 80 }}
-                />
-                <div>
-                    <h1 tabIndex="0">{`${formData.firstName} ${formData.lastName}`}</h1>
-                    <p role="text" aria-label="User Role">
-                        {formData.role}
-                    </p>
-                </div>
-            </header>
+  // Open address dialog and initialize temp data
+  const openAddressDialogHandler = () => {
+    setTempAddressData({
+      streetAddress: formData.streetAddress,
+      city: formData.city,
+      state: formData.state,
+      postalCode: formData.postalCode,
+    });
+    setOpenAddressDialog(true);
+  };
 
-            {/* Personal Info Section */}
-            <section className="profile-section" aria-labelledby="personal-info-heading">
-                <div className="section-header">
-                    <h2 id="personal-info-heading">Personal Information</h2>
-                    <Button
-                        variant="contained"
-                        color="warning"
-                        startIcon={<EditIcon />}
-                        onClick={() => {
-                            setOpenDialog(true)
-                        }}
-                        aria-label="Edit personal information"
-                    >
-                        Edit
-                    </Button>
-                </div>
+  // Save profile changes
+  const handleSave = () => {
+    setFormData({
+      ...formData,
+      ...tempProfileData,
+    });
+    console.log("Saved profile data:", { ...formData, ...tempProfileData });
+    setOpenDialog(false);
+    setTempProfileData({});
+  };
 
-                <div className="profile-form">
-                    <TextField
-                        label="First Name"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Last Name"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Date of Birth"
-                        type="date"
-                        name="dob"
-                        value={formData.dob}
-                        onChange={handleChange}
-                        fullWidth
-                        margin="normal"
-                        InputLabelProps={{ shrink: true }}
-                    />
-                    <TextField
-                        label="Email"
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        fullWidth
-                        margin="normal"
-                    />
-                </div>
-            </section>
+  // Save address changes
+  const handleAddressSave = () => {
+    setFormData({
+      ...formData,
+      ...tempAddressData,
+    });
+    console.log("Saved address data:", { ...formData, ...tempAddressData });
+    setOpenAddressDialog(false);
+    setTempAddressData({});
+  };
 
-            {/* Address Section */}
-            <section className="profile-section" aria-labelledby="address-heading">
-                <div className="section-header">
-                    <h2 id="address-heading">Address</h2>
-                    <Button
-                        variant="contained"
-                        color="warning"
-                        startIcon={<EditIcon />}
-                        onClick={handleSave}
-                        aria-label="Edit address information"
-                    >
-                        Edit
-                    </Button>
-                </div>
+  // Close dialogs without saving
+  const closeProfileDialog = () => {
+    setOpenDialog(false);
+    setTempProfileData({});
+  };
 
-                <div className="profile-form">
-                    <TextField
-                        label="Country"
-                        name="country"
-                        value={formData.country}
-                        onChange={handleChange}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="City"
-                        name="city"
-                        value={formData.city}
-                        onChange={handleChange}
-                        fullWidth
-                        margin="normal"
-                    />
-                    <TextField
-                        label="Postal Code"
-                        name="postalCode"
-                        value={formData.postalCode}
-                        onChange={handleChange}
-                        fullWidth
-                        margin="normal"
-                    />
-                </div>
-            </section>
+  const closeAddressDialog = () => {
+    setOpenAddressDialog(false);
+    setTempAddressData({});
+  };
 
-            <EditProfileDialog
-                open={openDialog}
-                onClose={() => setOpenDialog(false)}
-                values={formData}
-                onChange={handleChange}
-                onSave={handleSave}
-            />
-
+  return (
+    <div className="profile-container">
+      {/* Profile Header */}
+      <header className="profile-header">
+        <Avatar
+          alt={`${formData.firstName} ${formData.lastName}`}
+          src="https://i.pravatar.cc/150?img=12"
+          sx={{ width: 80, height: 80 }}
+        />
+        <div>
+          <h1 tabIndex="0">{`${formData.firstName} ${formData.lastName}`}</h1>
         </div>
-    );
+      </header>
+
+      {/* Personal Info Section */}
+      <section
+        className="profile-section"
+        aria-labelledby="personal-info-heading"
+      >
+        <div className="section-header">
+          <h2 id="personal-info-heading">Personal Information</h2>
+          <Button
+            variant="contained"
+            color="warning"
+            startIcon={<EditIcon />}
+            onClick={openProfileDialog}
+            aria-label="Edit personal information"
+          >
+            Edit
+          </Button>
+        </div>
+
+        <div className="profile-form">
+          <TextField
+            label="First Name"
+            name="firstName"
+            value={formData.firstName}
+            fullWidth
+            margin="normal"
+            InputProps={{
+              readOnly: true,
+            }}
+            variant="outlined"
+          />
+          <TextField
+            label="Last Name"
+            name="lastName"
+            value={formData.lastName}
+            fullWidth
+            margin="normal"
+            InputProps={{
+              readOnly: true,
+            }}
+            variant="outlined"
+          />
+
+          <TextField
+            label="Email"
+            type="email"
+            name="email"
+            value={formData.email}
+            fullWidth
+            margin="normal"
+            InputProps={{
+              readOnly: true,
+            }}
+            variant="outlined"
+          />
+          <TextField
+            label="Phone"
+            name="phone"
+            value={formData.phone}
+            fullWidth
+            margin="normal"
+            InputProps={{
+              readOnly: true,
+            }}
+            variant="outlined"
+          />
+        </div>
+      </section>
+
+      {/* Address Section */}
+      <section className="profile-section" aria-labelledby="address-heading">
+        <div className="section-header">
+          <h2 id="address-heading">Address</h2>
+          <Button
+            variant="contained"
+            color="warning"
+            startIcon={<EditIcon />}
+            onClick={openAddressDialogHandler}
+            aria-label="Edit address information"
+          >
+            Edit
+          </Button>
+        </div>
+
+        <div className="profile-form">
+          <TextField
+            label="Street Address"
+            name="streetAddress"
+            value={formData.streetAddress}
+            fullWidth
+            margin="normal"
+            InputProps={{
+              readOnly: true,
+            }}
+            variant="outlined"
+            multiline
+          />
+          <TextField
+            label="City"
+            name="city"
+            value={formData.city}
+            fullWidth
+            margin="normal"
+            InputProps={{
+              readOnly: true,
+            }}
+            variant="outlined"
+          />
+
+          <TextField
+            label="Postal Code"
+            name="postalCode"
+            value={formData.postalCode}
+            fullWidth
+            margin="normal"
+            InputProps={{
+              readOnly: true,
+            }}
+            variant="outlined"
+          />
+          <TextField
+            label="State"
+            name="state"
+            value="Tamil Nadu"
+            fullWidth
+            margin="normal"
+            InputProps={{
+              readOnly: true,
+            }}
+            variant="outlined"
+          />
+        </div>
+      </section>
+
+      <EditProfileDialog
+        open={openDialog}
+        onClose={closeProfileDialog}
+        values={tempProfileData}
+        onChange={handleProfileChange}
+        onSave={handleSave}
+      />
+
+      <EditAddressDialog
+        open={openAddressDialog}
+        onClose={closeAddressDialog}
+        values={tempAddressData}
+        onChange={handleAddressChange}
+        onSave={handleAddressSave}
+      />
+    </div>
+  );
 };
 
 export default MyProfile;
