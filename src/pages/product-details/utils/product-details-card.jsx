@@ -38,6 +38,7 @@ export default function BikeProductDetailCard({ bikeData }) {
     engine_and_performance,
     key_points,
     emi_and_payments,
+    hold,
   } = bikeData;
 
   // Extract EMI & Payment Info
@@ -210,38 +211,59 @@ export default function BikeProductDetailCard({ bikeData }) {
       </div>
 
       <Grid container spacing={2} className="bike-card__cta">
-        <Grid item xs={6}>
-          <Link
-            to={`/book-bike/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
-              bikeData.bike_id
-            }`}
-            style={{ textDecoration: "none" }}
-          >
+        {hold?.is_held ? (
+          <Grid item xs={12}>
             <Button
-              variant="contained"
+              variant="outlined"
               fullWidth
-              className="bike-card__book-btn"
+              disabled
+              className="bike-card__hold-btn"
             >
-              BOOK NOW
+              CURRENTLY ON HOLD
             </Button>
-          </Link>
-        </Grid>
-        <Grid item xs={6}>
-          <Link
-            to={`/test-drive/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
-              bikeData.bike_id
-            }`}
-            style={{ textDecoration: "none" }}
-          >
-            <Button
-              variant="contained"
-              fullWidth
-              className="bike-card__testdrive-btn"
-            >
-              FREE TEST DRIVE
-            </Button>
-          </Link>
-        </Grid>
+            <p className="bike-card__hold-info">
+              This bike is currently held by another user until{" "}
+              {hold.hold_expiry_time
+                ? new Date(hold.hold_expiry_time).toLocaleDateString()
+                : "further notice"}
+            </p>
+          </Grid>
+        ) : (
+          <>
+            <Grid item xs={6}>
+              <Link
+                to={`/book-bike/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
+                  bikeData.bike_id
+                }`}
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  variant="contained"
+                  fullWidth
+                  className="bike-card__book-btn"
+                >
+                  BOOK NOW
+                </Button>
+              </Link>
+            </Grid>
+            <Grid item xs={6}>
+              <Link
+                to={`/test-drive/${bikeData.brand.toLowerCase()}/${bikeData.model.toLowerCase()}/${
+                  bikeData.bike_id
+                }`}
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  variant="contained"
+                  fullWidth
+                  className="bike-card__testdrive-btn"
+                >
+                  FREE TEST DRIVE
+                </Button>
+              </Link>
+            </Grid>
+          </>
+        )}
       </Grid>
 
       <Divider className="bike-card__divider" />

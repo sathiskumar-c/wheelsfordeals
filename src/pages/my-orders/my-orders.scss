@@ -1,0 +1,492 @@
+@import "../../styles/colors";
+@import "../../styles/animations";
+
+.my-orders-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  // Header Section
+  .my-orders-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .page-title {
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.75rem;
+      }
+    }
+
+    .page-subtitle {
+      color: #7f8c8d;
+      max-width: 600px;
+      margin: 0 auto;
+
+      @media (max-width: 768px) {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  // Orders List
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  // Order Card
+  .order-card {
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .order-content {
+      padding: 2rem;
+
+      @media (max-width: 768px) {
+        padding: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        padding: 1rem;
+      }
+    }
+  }
+
+  // Order Header
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ecf0f1;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .order-info {
+      .order-id {
+        font-weight: 700;
+        color: #2980b9;
+        margin-bottom: 0.25rem;
+
+        @media (max-width: 768px) {
+          font-size: 1.25rem;
+        }
+      }
+
+      .order-date {
+        color: #7f8c8d;
+        font-size: 0.875rem;
+      }
+    }
+
+    .track-order-btn {
+      background: linear-gradient(45deg, #f39c12, #e67e22);
+      border-radius: 25px;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(45deg, #e67e22, #d35400);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        padding: 0.625rem 1.5rem;
+        font-size: 0.75rem;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  // Bikes List
+  .bikes-list {
+    margin-bottom: 1.5rem;
+  }
+
+  // Bike Item
+  .bike-item {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+
+    // Bike Image
+    .bike-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      overflow: hidden;
+
+      .bike-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      @media (max-width: 768px) {
+        height: 100px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    // Bike Details
+    .bike-details {
+      .bike-name {
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 0.25rem;
+
+        @media (max-width: 768px) {
+          font-size: 1.125rem;
+        }
+      }
+
+      .bike-seller {
+        color: #7f8c8d;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .bike-specs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 480px) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.25rem;
+        }
+
+        .bike-price {
+          font-weight: 700;
+          color: #27ae60;
+        }
+      }
+    }
+
+    // Order Status
+    .order-status {
+      text-align: center;
+
+      @media (max-width: 768px) {
+        text-align: left;
+        margin-top: 1rem;
+      }
+
+      .status-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        @media (max-width: 768px) {
+          justify-content: flex-start;
+        }
+
+        .status-chip {
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      .delivery-info {
+        font-size: 0.875rem;
+        color: #7f8c8d;
+        font-weight: 500;
+
+        &.cancelled {
+          color: #e74c3c;
+        }
+      }
+    }
+
+    // Bike Actions
+    .bike-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 1rem;
+      }
+
+      .cancel-btn {
+        border-radius: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #e74c3c;
+          color: white;
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
+
+  // Order Footer
+  .order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #ecf0f1;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .payment-info {
+      color: #7f8c8d;
+      font-size: 0.875rem;
+    }
+
+    .total-amount {
+      font-weight: 700;
+      color: #27ae60;
+      font-size: 1.25rem;
+    }
+  }
+
+  // Empty State
+  .empty-orders {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #7f8c8d;
+
+    h6 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 1024px) {
+    padding: 1.5rem 0;
+
+    .my-orders-header {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem 0;
+
+    .container {
+      padding: 0 0.75rem;
+    }
+
+    .orders-list {
+      gap: 1.5rem;
+    }
+
+    .my-orders-header {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 0.5rem;
+    }
+
+    .orders-list {
+      gap: 1rem;
+    }
+
+    .my-orders-header {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Accessibility Improvements
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  // High Contrast Mode
+  @media (prefers-contrast: high) {
+    .order-card {
+      border: 2px solid #000;
+      background: #fff;
+    }
+
+    .bike-item {
+      border: 1px solid #000;
+      background: #fff;
+    }
+
+    .page-title,
+    .order-id,
+    .bike-name {
+      color: #000;
+    }
+
+    .page-subtitle,
+    .order-date,
+    .bike-seller,
+    .delivery-info {
+      color: #333;
+    }
+  }
+
+  // Focus Styles for Accessibility
+  *:focus {
+    outline: 2px solid #2980b9;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  button:focus,
+  .track-order-btn:focus {
+    outline: 2px solid #fff;
+    box-shadow: 0 0 0 4px rgba(41, 128, 185, 0.5);
+  }
+
+  // Print Styles
+  @media print {
+    .my-orders-container {
+      background: white;
+
+      .order-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+      }
+
+      .track-order-btn,
+      .bike-actions {
+        display: none;
+      }
+    }
+  }
+}
+
+// Loading Animation
+.order-card-loading {
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+// Status-specific animations
+.status-chip {
+  &.MuiChip-colorSuccess {
+    animation: pulse-success 2s infinite;
+  }
+
+  &.MuiChip-colorInfo {
+    animation: pulse-info 2s infinite;
+  }
+
+  &.MuiChip-colorWarning {
+    animation: pulse-warning 2s infinite;
+  }
+}
+
+@keyframes pulse-success {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+}
+
+@keyframes pulse-info {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+  }
+}
+
+@keyframes pulse-warning {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 152, 0, 0);
+  }
+}
