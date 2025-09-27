@@ -1,0 +1,1517 @@
+[
+  {
+    "bike_id": "YZFR15V4M-TN21U1256",
+    "brand": "Yamaha",
+    "model": "YZF-R15 V4 M",
+    "year_of_model": 2023,
+    "registration_year": 2023,
+    "posted_date": "2025-05-17",
+    "price": {
+      "original_price": 165000,
+      "discount_percent": 20
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 12078,
+    "owner_count": "1st Owner",
+    "location": "Salem",
+    "color": "Black",
+    "images": [
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Front view of Yamaha YZF-R15 V4 M",
+        "title": "Front View"
+      },
+      {
+        "url": "https://5.imimg.com/data5/SELLER/Default/2024/8/444873949/UZ/RO/OL/16402/bajaj-pulsar-ns400z-motorcycle-500x500.png",
+        "alt": "Side profile of Yamaha YZF-R15 V4 M",
+        "title": "Side View"
+      },
+      {
+        "url": "https://5.imimg.com/data5/SELLER/Default/2024/8/444873949/UZ/RO/OL/16402/bajaj-pulsar-ns400z-motorcycle-500x500.png",
+        "alt": "Rear view of Yamaha YZF-R15 V4 M",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://gaadiwaadi.com/wp-content/uploads/2023/06/triumph-scrambler-400x-4-1068x673.jpg",
+        "alt": "Close-up of odometer showing 12,078 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 155.0,
+      "max_torque": "14.2 Nm @ 7,500 rpm",
+      "top_speed_kmph": 142,
+      "mileage_kmpl": 45,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 11,
+      "emission_standard": "BS6"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "ABS",
+        "rear": "ABS"
+      },
+      "abs": true
+    },
+    "tyre_condition": "Good",
+    "body_type": "Street",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": false,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "TN21 U 1256",
+      "location_code": "TN21"
+    },
+    "seller_type": "Dealer",
+    "test_ride": {
+      "availability": true,
+      "range_km": "10-25"
+    },
+    "exchange": {
+      "availability": true,
+      "condition": "Based on vehicle"
+    },
+    "accessories_included": ["Helmet", "Mirrors", "Guards"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": "user_12345",
+      "hold_start_time": "2025-05-17T10:00:00Z",
+      "hold_expiry_time": "2025-05-18T10:00:00Z"
+    },
+    "selling_status": "available",
+    "dealer_details": {
+      "name": "GearUp Dealers",
+      "dealer_id": "dealer_001"
+    },
+    "offers": ["accessory_kit", "insurance", "helmet"],
+    "slug": {
+      "brand": "yamaha",
+      "model": "yzf-r15-v4-m"
+    }
+  },
+  {
+    "bike_id": "HON4237-NT1942",
+    "brand": "Honda",
+    "model": "CBR150R",
+    "year_of_model": 2024,
+    "registration_year": 2024,
+    "posted_date": "2024-11-27",
+    "price": {
+      "original_price": 363399.0,
+      "discount_percent": 5
+    },
+    "bike_condition": "Good",
+    "km_driven": 38666,
+    "owner_count": "1st Owner",
+    "location": "Bangalore",
+    "color": "Matte Black",
+    "images": [
+      {
+        "url": "https://static.toiimg.com/photo/80452572.cms?imgsize=156776",
+        "alt": "Front view of Honda CBR150R",
+        "title": "Front View"
+      },
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/08/63809_2022_Royal_Enfield_Hunter_350_468x263.jpg",
+        "alt": "Side profile of Honda CBR150R",
+        "title": "Side View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Rear view of Honda CBR150R",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://beepkart.com/images/blogs/fastest-bikes.webp",
+        "alt": "Close-up of odometer showing 38666 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 403.1,
+      "max_torque": "32.1 Nm @ 7917 rpm",
+      "top_speed_kmph": 152,
+      "mileage_kmpl": 32,
+      "transmission_type": "Manual",
+      "gear_count": 5,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 13.7,
+      "emission_standard": "BS4"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Good",
+    "body_type": "Commuter",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": false,
+        "validity_period": "Expired"
+      },
+      "accident_history": false,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "CO43 65 NT 1942",
+      "location_code": "CO43"
+    },
+    "seller_type": "Dealer",
+    "test_ride": {
+      "availability": false,
+      "range_km": "0"
+    },
+    "exchange": {
+      "availability": true,
+      "condition": "Based on vehicle"
+    },
+    "accessories_included": ["Guards", "Mirrors", "Tank Bag", "Gloves"],
+    "hold": {
+      "is_held": true,
+      "held_by_user_id": "user_93797",
+      "hold_start_time": "2025-05-16T18:58:50.980431Z",
+      "hold_expiry_time": "2025-05-17T18:58:50.980431Z"
+    },
+    "selling_status": "available",
+    "dealer_details": {
+      "name": "Rapid Motors",
+      "dealer_id": "dealer_002"
+    },
+    "offers": ["service_package", "insurance"],
+    "slug": {
+      "brand": "honda",
+      "model": "cbr150r"
+    }
+  },
+  {
+    "bike_id": "YAM3333-NM9901",
+    "brand": "Yamaha",
+    "model": "FZ V3",
+    "year_of_model": 2015,
+    "registration_year": 2016,
+    "posted_date": "2016-09-18",
+    "price": {
+      "original_price": 335876.0,
+      "discount_percent": 15
+    },
+    "bike_condition": "Good",
+    "km_driven": 39154,
+    "owner_count": "2nd Owner",
+    "location": "Mumbai",
+    "color": "Orange",
+    "images": [
+      {
+        "url": "https://static.toiimg.com/photo/80452572.cms?imgsize=156776",
+        "alt": "Front view of Yamaha FZ V3",
+        "title": "Front View"
+      },
+      {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9u2v03FVIkHFp0kK-7tetOMoOWkyXB-_i-9lH6EuYeIvTPmillx513zhSOoQMo9eVRvs&usqp=CAU",
+        "alt": "Side profile of Yamaha FZ V3",
+        "title": "Side View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Rear view of Yamaha FZ V3",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://gaadiwaadi.com/wp-content/uploads/2023/06/triumph-scrambler-400x-4-1068x673.jpg",
+        "alt": "Close-up of odometer showing 39154 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 317.7,
+      "max_torque": "12.3 Nm @ 8424 rpm",
+      "top_speed_kmph": 164,
+      "mileage_kmpl": 44,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 12.6,
+      "emission_standard": "BS4"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Excellent",
+    "body_type": "Adventure",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": false,
+        "validity_period": "Expired"
+      },
+      "accident_history": true,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "BA16 93 NM 9901",
+      "location_code": "BA16"
+    },
+    "seller_type": "Individual",
+    "test_ride": {
+      "availability": false,
+      "range_km": "0"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Gloves", "Guards"],
+    "hold": {
+      "is_held": true,
+      "held_by_user_id": "user_32335",
+      "hold_start_time": "2025-05-16T02:58:50.980542Z",
+      "hold_expiry_time": "2025-05-17T02:58:50.980542Z"
+    },
+    "selling_status": "available",
+    "individual_details": {
+      "name": "Individual Seller",
+      "dealer_id": "individual_YAM3333-NM9901"
+    },
+    "offers": ["roadside_assistance", "helmet", "namechange"],
+    "slug": {
+      "brand": "yamaha",
+      "model": "fz-v3"
+    }
+  },
+  {
+    "bike_id": "ROY7530-SP6539",
+    "brand": "Royal Enfield",
+    "model": "Interceptor 650",
+    "year_of_model": 2015,
+    "registration_year": 2016,
+    "posted_date": "2019-10-11",
+    "price": {
+      "original_price": 251881.0,
+      "discount_percent": 20
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 3598,
+    "owner_count": "1st Owner",
+    "location": "Delhi",
+    "color": "Red",
+    "images": [
+      {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9u2v03FVIkHFp0kK-7tetOMoOWkyXB-_i-9lH6EuYeIvTPmillx513zhSOoQMo9eVRvs&usqp=CAU",
+        "alt": "Front view of Royal Enfield Interceptor 650",
+        "title": "Front View"
+      },
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/07/63632_2022_Ather_Energy_450_3_468x263.jpg",
+        "alt": "Side profile of Royal Enfield Interceptor 650",
+        "title": "Side View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg",
+        "alt": "Rear view of Royal Enfield Interceptor 650",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://static.toiimg.com/photo/80452572.cms?imgsize=156776",
+        "alt": "Close-up of odometer showing 3598 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 219.8,
+      "max_torque": "23.1 Nm @ 5500 rpm",
+      "top_speed_kmph": 142,
+      "mileage_kmpl": 51,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 9.1,
+      "emission_standard": "BS6"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Excellent",
+    "body_type": "Adventure",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": false,
+      "service_history": false
+    },
+    "rto": {
+      "rg_number": "BA78 56 SP 6539",
+      "location_code": "BA78"
+    },
+    "seller_type": "Individual",
+    "test_ride": {
+      "availability": false,
+      "range_km": "0"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Gloves", "Guards"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "sold",
+    "individual_details": {
+      "name": "Individual Seller",
+      "dealer_id": "individual_ROY7530-SP6539"
+    },
+    "offers": [
+      "accessory_kit",
+      "roadside_assistance",
+      "road_tax_waiver",
+      "insurance",
+      "bus_ticket"
+    ],
+    "slug": {
+      "brand": "royal-enfield",
+      "model": "interceptor-650"
+    }
+  },
+  {
+    "bike_id": "YAM4379-WN6592",
+    "brand": "Yamaha",
+    "model": "YZF-R15 V4 M",
+    "year_of_model": 2020,
+    "registration_year": 2021,
+    "posted_date": "2025-05-05",
+    "price": {
+      "original_price": 275640.0,
+      "discount_percent": 5
+    },
+    "bike_condition": "Good",
+    "km_driven": 23205,
+    "owner_count": "1st Owner",
+    "location": "Delhi",
+    "color": "Grey",
+    "images": [
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/08/63809_2022_Royal_Enfield_Hunter_350_468x263.jpg",
+        "alt": "Front view of Yamaha YZF-R15 V4 M",
+        "title": "Front View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Side profile of Yamaha YZF-R15 V4 M",
+        "title": "Side View"
+      },
+      {
+        "url": "https://5.imimg.com/data5/SELLER/Default/2024/8/444873949/UZ/RO/OL/16402/bajaj-pulsar-ns400z-motorcycle-500x500.png",
+        "alt": "Rear view of Yamaha YZF-R15 V4 M",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/08/63809_2022_Royal_Enfield_Hunter_350_468x263.jpg",
+        "alt": "Close-up of odometer showing 23205 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 232.8,
+      "max_torque": "13.9 Nm @ 8063 rpm",
+      "top_speed_kmph": 129,
+      "mileage_kmpl": 32,
+      "transmission_type": "Manual",
+      "gear_count": 5,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 14.1,
+      "emission_standard": "BS4"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Fair",
+    "body_type": "Adventure",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": false,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "PU53 43 WN 6592",
+      "location_code": "PU53"
+    },
+    "seller_type": "Dealer",
+    "test_ride": {
+      "availability": true,
+      "range_km": "10-30"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Tank Bag", "Helmet", "Mirrors", "Gloves"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "reserved",
+    "dealer_details": {
+      "name": "RoadRiders Hub",
+      "dealer_id": "dealer_003"
+    },
+    "offers": ["service_package", "bus_ticket", "road_tax_waiver"],
+    "slug": {
+      "brand": "yamaha",
+      "model": "yzf-r15-v4-m"
+    }
+  },
+  {
+    "bike_id": "TVS3184-WT5306",
+    "brand": "TVS",
+    "model": "NTORQ 125",
+    "year_of_model": 2015,
+    "registration_year": 2015,
+    "posted_date": "2023-11-17",
+    "price": {
+      "original_price": 225907.0,
+      "discount_percent": 5
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 19665,
+    "owner_count": "3rd Owner",
+    "location": "Coimbatore",
+    "color": "Red",
+    "images": [
+      {
+        "url": "https://beepkart.com/images/blogs/fastest-bikes.webp",
+        "alt": "Front view of TVS NTORQ 125",
+        "title": "Front View"
+      },
+      {
+        "url": "https://beepkart.com/images/blogs/fastest-bikes.webp",
+        "alt": "Side profile of TVS NTORQ 125",
+        "title": "Side View"
+      },
+      {
+        "url": "https://5.imimg.com/data5/SELLER/Default/2024/8/444873949/UZ/RO/OL/16402/bajaj-pulsar-ns400z-motorcycle-500x500.png",
+        "alt": "Rear view of TVS NTORQ 125",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://beepkart.com/images/blogs/fastest-bikes.webp",
+        "alt": "Close-up of odometer showing 19665 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 188.5,
+      "max_torque": "32.9 Nm @ 6647 rpm",
+      "top_speed_kmph": 140,
+      "mileage_kmpl": 42,
+      "transmission_type": "Manual",
+      "gear_count": 5,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 13.2,
+      "emission_standard": "BS4"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Fair",
+    "body_type": "Street",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": false,
+      "service_history": false
+    },
+    "rto": {
+      "rg_number": "HY52 86 WT 5306",
+      "location_code": "HY52"
+    },
+    "seller_type": "Individual",
+    "test_ride": {
+      "availability": false,
+      "range_km": "0"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Helmet"],
+    "hold": {
+      "is_held": true,
+      "held_by_user_id": "user_25446",
+      "hold_start_time": "2025-05-16T01:58:50.980720Z",
+      "hold_expiry_time": "2025-05-17T01:58:50.980720Z"
+    },
+    "selling_status": "available",
+    "individual_details": {
+      "name": "Individual Seller",
+      "dealer_id": "individual_TVS3184-WT5306"
+    },
+    "offers": [
+      "road_tax_waiver",
+      "service_package",
+      "insurance",
+      "namechange",
+      "helmet"
+    ],
+    "slug": {
+      "brand": "tvs",
+      "model": "ntorq-125"
+    }
+  },
+  {
+    "bike_id": "ROY2599-XK7010",
+    "brand": "Royal Enfield",
+    "model": "Interceptor 650",
+    "year_of_model": 2015,
+    "registration_year": 2015,
+    "posted_date": "2015-02-14",
+    "price": {
+      "original_price": 215120.0,
+      "discount_percent": 15
+    },
+    "bike_condition": "Good",
+    "km_driven": 3268,
+    "owner_count": "1st Owner",
+    "location": "Coimbatore",
+    "color": "Orange",
+    "images": [
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Front view of Royal Enfield Interceptor 650",
+        "title": "Front View"
+      },
+      {
+        "url": "https://5.imimg.com/data5/SELLER/Default/2024/8/444873949/UZ/RO/OL/16402/bajaj-pulsar-ns400z-motorcycle-500x500.png",
+        "alt": "Side profile of Royal Enfield Interceptor 650",
+        "title": "Side View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg",
+        "alt": "Rear view of Royal Enfield Interceptor 650",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://beepkart.com/images/blogs/fastest-bikes.webp",
+        "alt": "Close-up of odometer showing 3268 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 181.3,
+      "max_torque": "20.3 Nm @ 6520 rpm",
+      "top_speed_kmph": 178,
+      "mileage_kmpl": 53,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 11.1,
+      "emission_standard": "BS4"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Excellent",
+    "body_type": "Adventure",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": true,
+      "service_history": false
+    },
+    "rto": {
+      "rg_number": "KO91 48 XK 7010",
+      "location_code": "KO91"
+    },
+    "seller_type": "Individual",
+    "test_ride": {
+      "availability": false,
+      "range_km": "0"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Helmet", "Guards"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "sold",
+    "individual_details": {
+      "name": "Individual Seller",
+      "dealer_id": "individual_ROY2599-XK7010"
+    },
+    "offers": ["extended_warranty", "road_tax_waiver", "accessory_kit"],
+    "slug": {
+      "brand": "royal-enfield",
+      "model": "interceptor-650"
+    }
+  },
+  {
+    "bike_id": "YAM4283-IO2468",
+    "brand": "Yamaha",
+    "model": "MT-15",
+    "year_of_model": 2017,
+    "registration_year": 2017,
+    "posted_date": "2019-08-05",
+    "price": {
+      "original_price": 184063.0,
+      "discount_percent": 0
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 7350,
+    "owner_count": "2nd Owner",
+    "location": "Mumbai",
+    "color": "Green",
+    "images": [
+      {
+        "url": "https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/pulsar-ns400-2024/ns400z-bike.png",
+        "alt": "Front view of Yamaha MT-15",
+        "title": "Front View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Side profile of Yamaha MT-15",
+        "title": "Side View"
+      },
+      {
+        "url": "https://static.toiimg.com/photo/80452572.cms?imgsize=156776",
+        "alt": "Rear view of Yamaha MT-15",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9u2v03FVIkHFp0kK-7tetOMoOWkyXB-_i-9lH6EuYeIvTPmillx513zhSOoQMo9eVRvs&usqp=CAU",
+        "alt": "Close-up of odometer showing 7350 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 145.1,
+      "max_torque": "24.4 Nm @ 7943 rpm",
+      "top_speed_kmph": 141,
+      "mileage_kmpl": 50,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 15.2,
+      "emission_standard": "BS4"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Fair",
+    "body_type": "Street",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": false,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "DE96 79 IO 2468",
+      "location_code": "DE96"
+    },
+    "seller_type": "Dealer",
+    "test_ride": {
+      "availability": true,
+      "range_km": "10-30"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Helmet"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "sold",
+    "dealer_details": {
+      "name": "RevRiders",
+      "dealer_id": "dealer_004"
+    },
+    "offers": [
+      "bus_ticket",
+      "accessory_kit",
+      "namechange",
+      "road_tax_waiver",
+      "helmet"
+    ],
+    "slug": {
+      "brand": "yamaha",
+      "model": "mt-15"
+    }
+  },
+  {
+    "bike_id": "YAM4398-CZ1067",
+    "brand": "Yamaha",
+    "model": "YZF-R15 V3",
+    "year_of_model": 2022,
+    "registration_year": 2023,
+    "posted_date": "2023-10-06",
+    "price": {
+      "original_price": 364238.0,
+      "discount_percent": 0
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 36887,
+    "owner_count": "3rd Owner",
+    "location": "Hyderabad",
+    "color": "Orange",
+    "images": [
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Front view of Yamaha YZF-R15 V3",
+        "title": "Front View"
+      },
+      {
+        "url": "https://gaadiwaadi.com/wp-content/uploads/2023/06/triumph-scrambler-400x-4-1068x673.jpg",
+        "alt": "Side profile of Yamaha YZF-R15 V3",
+        "title": "Side View"
+      },
+      {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9u2v03FVIkHFp0kK-7tetOMoOWkyXB-_i-9lH6EuYeIvTPmillx513zhSOoQMo9eVRvs&usqp=CAU",
+        "alt": "Rear view of Yamaha YZF-R15 V3",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://static.toiimg.com/photo/80452572.cms?imgsize=156776",
+        "alt": "Close-up of odometer showing 36887 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 378.8,
+      "max_torque": "24.0 Nm @ 8403 rpm",
+      "top_speed_kmph": 148,
+      "mileage_kmpl": 41,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 11.8,
+      "emission_standard": "BS6"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "ABS",
+        "rear": "ABS"
+      },
+      "abs": true
+    },
+    "tyre_condition": "Excellent",
+    "body_type": "Sport",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": false,
+        "validity_period": "Expired"
+      },
+      "accident_history": false,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "SA49 40 CZ 1067",
+      "location_code": "SA49"
+    },
+    "seller_type": "Dealer",
+    "test_ride": {
+      "availability": true,
+      "range_km": "10-30"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Tank Bag"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "reserved",
+    "dealer_details": {
+      "name": "SpeedZone Bikes",
+      "dealer_id": "dealer_005"
+    },
+    "offers": [
+      "service_package",
+      "accessory_kit",
+      "helmet",
+      "extended_warranty"
+    ],
+    "slug": {
+      "brand": "yamaha",
+      "model": "yzf-r15-v3"
+    }
+  },
+  {
+    "bike_id": "KTM4310-YV9520",
+    "brand": "KTM",
+    "model": "390 Adventure",
+    "year_of_model": 2022,
+    "registration_year": 2023,
+    "posted_date": "2025-11-23",
+    "price": {
+      "original_price": 273457.0,
+      "discount_percent": 0
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 26877,
+    "owner_count": "3rd Owner",
+    "location": "Salem",
+    "color": "Blue",
+    "images": [
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/07/63632_2022_Ather_Energy_450_3_468x263.jpg",
+        "alt": "Front view of KTM 390 Adventure",
+        "title": "Front View"
+      },
+      {
+        "url": "https://static.toiimg.com/photo/80452572.cms?imgsize=156776",
+        "alt": "Side profile of KTM 390 Adventure",
+        "title": "Side View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg",
+        "alt": "Rear view of KTM 390 Adventure",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg",
+        "alt": "Close-up of odometer showing 26877 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 278.8,
+      "max_torque": "24.0 Nm @ 6648 rpm",
+      "top_speed_kmph": 139,
+      "mileage_kmpl": 31,
+      "transmission_type": "Manual",
+      "gear_count": 5,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 15.3,
+      "emission_standard": "BS4"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Excellent",
+    "body_type": "Adventure",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": false,
+        "validity_period": "Expired"
+      },
+      "accident_history": false,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "CH20 68 YV 9520",
+      "location_code": "CH20"
+    },
+    "seller_type": "Individual",
+    "test_ride": {
+      "availability": false,
+      "range_km": "0"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Gloves"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "sold",
+    "individual_details": {
+      "name": "Individual Seller",
+      "dealer_id": "individual_KTM4310-YV9520"
+    },
+    "offers": [
+      "roadside_assistance",
+      "accessory_kit",
+      "road_tax_waiver",
+      "namechange",
+      "extended_warranty"
+    ],
+    "slug": {
+      "brand": "ktm",
+      "model": "390-adventure"
+    }
+  },
+  {
+    "bike_id": "HER2733-ZL7470",
+    "brand": "Hero",
+    "model": "Splendor Plus",
+    "year_of_model": 2020,
+    "registration_year": 2021,
+    "posted_date": "2022-10-11",
+    "price": {
+      "original_price": 210161.0,
+      "discount_percent": 10
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 15650,
+    "owner_count": "3rd Owner",
+    "location": "Chennai",
+    "color": "Blue",
+    "images": [
+      {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9u2v03FVIkHFp0kK-7tetOMoOWkyXB-_i-9lH6EuYeIvTPmillx513zhSOoQMo9eVRvs&usqp=CAU",
+        "alt": "Front view of Hero Splendor Plus",
+        "title": "Front View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Side profile of Hero Splendor Plus",
+        "title": "Side View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg",
+        "alt": "Rear view of Hero Splendor Plus",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://static.toiimg.com/photo/80452572.cms?imgsize=156776",
+        "alt": "Close-up of odometer showing 15650 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 191.3,
+      "max_torque": "27.9 Nm @ 5596 rpm",
+      "top_speed_kmph": 154,
+      "mileage_kmpl": 40,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 15.2,
+      "emission_standard": "BS4"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "ABS",
+        "rear": "ABS"
+      },
+      "abs": true
+    },
+    "tyre_condition": "Excellent",
+    "body_type": "Commuter",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": false,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "DE81 47 ZL 7470",
+      "location_code": "DE81"
+    },
+    "seller_type": "Individual",
+    "test_ride": {
+      "availability": false,
+      "range_km": "0"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Mirrors", "Gloves"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "available",
+    "individual_details": {
+      "name": "Individual Seller",
+      "dealer_id": "individual_HER2733-ZL7470"
+    },
+    "offers": ["service_package", "fuel_voucher", "road_tax_waiver", "helmet"],
+    "slug": {
+      "brand": "hero",
+      "model": "splendor-plus"
+    }
+  },
+  {
+    "bike_id": "ROY4686-VD8031",
+    "brand": "Royal Enfield",
+    "model": "Himalayan",
+    "year_of_model": 2019,
+    "registration_year": 2019,
+    "posted_date": "2019-03-31",
+    "price": {
+      "original_price": 329720.0,
+      "discount_percent": 10
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 12536,
+    "owner_count": "3rd Owner",
+    "location": "Chennai",
+    "color": "Yellow",
+    "images": [
+      {
+        "url": "https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/pulsar-ns400-2024/ns400z-bike.png",
+        "alt": "Front view of Royal Enfield Himalayan",
+        "title": "Front View"
+      },
+      {
+        "url": "https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/pulsar-ns400-2024/ns400z-bike.png",
+        "alt": "Side profile of Royal Enfield Himalayan",
+        "title": "Side View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-06613f885e681c.jpg",
+        "alt": "Rear view of Royal Enfield Himalayan",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://gaadiwaadi.com/wp-content/uploads/2023/06/triumph-scrambler-400x-4-1068x673.jpg",
+        "alt": "Close-up of odometer showing 12536 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 313.7,
+      "max_torque": "18.6 Nm @ 5996 rpm",
+      "top_speed_kmph": 121,
+      "mileage_kmpl": 48,
+      "transmission_type": "Manual",
+      "gear_count": 5,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 15.5,
+      "emission_standard": "BS6"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Good",
+    "body_type": "Cruiser",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": true,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "BA41 99 VD 8031",
+      "location_code": "BA41"
+    },
+    "seller_type": "Dealer",
+    "test_ride": {
+      "availability": true,
+      "range_km": "10-30"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Guards"],
+    "hold": {
+      "is_held": true,
+      "held_by_user_id": "user_67842",
+      "hold_start_time": "2025-05-15T23:58:50.981442Z",
+      "hold_expiry_time": "2025-05-16T23:58:50.981442Z"
+    },
+    "selling_status": "reserved",
+    "dealer_details": {
+      "name": "BikePoint India",
+      "dealer_id": "dealer_006"
+    },
+    "offers": [
+      "extended_warranty",
+      "road_tax_waiver",
+      "fuel_voucher",
+      "accessory_kit"
+    ],
+    "slug": {
+      "brand": "royal-enfield",
+      "model": "himalayan"
+    }
+  },
+  {
+    "bike_id": "TVS6645-OL6973",
+    "brand": "TVS",
+    "model": "Apache RTR 160",
+    "year_of_model": 2019,
+    "registration_year": 2019,
+    "posted_date": "2022-09-11",
+    "price": {
+      "original_price": 146975.0,
+      "discount_percent": 5
+    },
+    "bike_condition": "Excellent",
+    "km_driven": 28220,
+    "owner_count": "1st Owner",
+    "location": "Hyderabad",
+    "color": "Black",
+    "images": [
+      {
+        "url": "https://beepkart.com/images/blogs/fastest-bikes.webp",
+        "alt": "Front view of TVS Apache RTR 160",
+        "title": "Front View"
+      },
+      {
+        "url": "https://5.imimg.com/data5/SELLER/Default/2024/8/444873949/UZ/RO/OL/16402/bajaj-pulsar-ns400z-motorcycle-500x500.png",
+        "alt": "Side profile of TVS Apache RTR 160",
+        "title": "Side View"
+      },
+      {
+        "url": "https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/pulsar-ns400-2024/ns400z-bike.png",
+        "alt": "Rear view of TVS Apache RTR 160",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/pulsar-ns400-2024/ns400z-bike.png",
+        "alt": "Close-up of odometer showing 28220 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 104.2,
+      "max_torque": "24.1 Nm @ 5627 rpm",
+      "top_speed_kmph": 146,
+      "mileage_kmpl": 30,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 11.2,
+      "emission_standard": "BS6"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "ABS",
+        "rear": "ABS"
+      },
+      "abs": true
+    },
+    "tyre_condition": "Good",
+    "body_type": "Sport",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": false,
+      "service_history": false
+    },
+    "rto": {
+      "rg_number": "MU42 88 OL 6973",
+      "location_code": "MU42"
+    },
+    "seller_type": "Dealer",
+    "test_ride": {
+      "availability": true,
+      "range_km": "10-30"
+    },
+    "exchange": {
+      "availability": true,
+      "condition": "Based on vehicle"
+    },
+    "accessories_included": ["Mirrors", "Tank Bag"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "available",
+    "dealer_details": {
+      "name": "Rapid Motors",
+      "dealer_id": "dealer_007"
+    },
+    "offers": [
+      "namechange",
+      "service_package",
+      "bus_ticket",
+      "fuel_voucher",
+      "insurance"
+    ],
+    "slug": {
+      "brand": "tvs",
+      "model": "apache-rtr-160"
+    }
+  },
+  {
+    "bike_id": "ROY9442-WH4076",
+    "brand": "Royal Enfield",
+    "model": "Interceptor 650",
+    "year_of_model": 2021,
+    "registration_year": 2022,
+    "posted_date": "2022-11-02",
+    "price": {
+      "original_price": 325161.0,
+      "discount_percent": 0
+    },
+    "bike_condition": "Fair",
+    "km_driven": 2263,
+    "owner_count": "1st Owner",
+    "location": "Coimbatore",
+    "color": "Grey",
+    "images": [
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/07/63632_2022_Ather_Energy_450_3_468x263.jpg",
+        "alt": "Front view of Royal Enfield Interceptor 650",
+        "title": "Front View"
+      },
+      {
+        "url": "https://cdn.bikedekho.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/source/kawasaki-ninja-zx-10r674008194e755.jpg",
+        "alt": "Side profile of Royal Enfield Interceptor 650",
+        "title": "Side View"
+      },
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/08/63809_2022_Royal_Enfield_Hunter_350_468x263.jpg",
+        "alt": "Rear view of Royal Enfield Interceptor 650",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/07/63632_2022_Ather_Energy_450_3_468x263.jpg",
+        "alt": "Close-up of odometer showing 2263 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 346.3,
+      "max_torque": "21.0 Nm @ 8323 rpm",
+      "top_speed_kmph": 148,
+      "mileage_kmpl": 55,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 11.3,
+      "emission_standard": "BS6"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "Disc",
+        "rear": "Disc"
+      },
+      "abs": false
+    },
+    "tyre_condition": "Fair",
+    "body_type": "Sport",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": false,
+        "validity_period": "Expired"
+      },
+      "accident_history": false,
+      "service_history": false
+    },
+    "rto": {
+      "rg_number": "MU64 87 WH 4076",
+      "location_code": "MU64"
+    },
+    "seller_type": "Individual",
+    "test_ride": {
+      "availability": false,
+      "range_km": "0"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Mirrors", "Guards", "Gloves", "Helmet"],
+    "hold": {
+      "is_held": true,
+      "held_by_user_id": "user_37792",
+      "hold_start_time": "2025-05-15T09:58:50.981574Z",
+      "hold_expiry_time": "2025-05-16T09:58:50.981574Z"
+    },
+    "selling_status": "reserved",
+    "individual_details": {
+      "name": "Individual Seller",
+      "dealer_id": "individual_ROY9442-WH4076"
+    },
+    "offers": [
+      "roadside_assistance",
+      "fuel_voucher",
+      "bus_ticket",
+      "namechange"
+    ],
+    "slug": {
+      "brand": "royal-enfield",
+      "model": "interceptor-650"
+    }
+  },
+  {
+    "bike_id": "HER6650-XF2053",
+    "brand": "Hero",
+    "model": "Splendor Plus",
+    "year_of_model": 2021,
+    "registration_year": 2022,
+    "posted_date": "2024-04-20",
+    "price": {
+      "original_price": 297952.0,
+      "discount_percent": 15
+    },
+    "bike_condition": "Good",
+    "km_driven": 38854,
+    "owner_count": "3rd Owner",
+    "location": "Mumbai",
+    "color": "Green",
+    "images": [
+      {
+        "url": "https://static.toiimg.com/photo/80452572.cms?imgsize=156776",
+        "alt": "Front view of Hero Splendor Plus",
+        "title": "Front View"
+      },
+      {
+        "url": "https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/pulsar-ns400-2024/ns400z-bike.png",
+        "alt": "Side profile of Hero Splendor Plus",
+        "title": "Side View"
+      },
+      {
+        "url": "https://5.imimg.com/data5/SELLER/Default/2024/8/444873949/UZ/RO/OL/16402/bajaj-pulsar-ns400z-motorcycle-500x500.png",
+        "alt": "Rear view of Hero Splendor Plus",
+        "title": "Rear View"
+      },
+      {
+        "url": "https://images.overdrive.in/wp-content/odgallery/2022/07/63632_2022_Ather_Energy_450_3_468x263.jpg",
+        "alt": "Close-up of odometer showing 38854 km",
+        "title": "Odometer Reading"
+      }
+    ],
+    "engine_and_performance": {
+      "engine_cc": 321.4,
+      "max_torque": "34.1 Nm @ 7799 rpm",
+      "top_speed_kmph": 137,
+      "mileage_kmpl": 34,
+      "transmission_type": "Manual",
+      "gear_count": 6,
+      "fuel_type": "Petrol",
+      "fuel_tank_capacity_litres": 16.9,
+      "emission_standard": "BS6"
+    },
+    "brakes": {
+      "brake_type": {
+        "front": "ABS",
+        "rear": "ABS"
+      },
+      "abs": true
+    },
+    "tyre_condition": "Fair",
+    "body_type": "Adventure",
+    "documents": {
+      "rc_available": true,
+      "insurance": {
+        "is_valid": true,
+        "validity_period": "1 year"
+      },
+      "accident_history": false,
+      "service_history": true
+    },
+    "rto": {
+      "rg_number": "CO47 32 XF 2053",
+      "location_code": "CO47"
+    },
+    "seller_type": "Dealer",
+    "test_ride": {
+      "availability": true,
+      "range_km": "10-30"
+    },
+    "exchange": {
+      "availability": false,
+      "condition": "N/A"
+    },
+    "accessories_included": ["Gloves"],
+    "hold": {
+      "is_held": false,
+      "held_by_user_id": null,
+      "hold_start_time": null,
+      "hold_expiry_time": null
+    },
+    "selling_status": "sold",
+    "dealer_details": {
+      "name": "Urban Wheels",
+      "dealer_id": "dealer_008"
+    },
+    "offers": ["accessory_kit", "extended_warranty"],
+    "slug": {
+      "brand": "hero",
+      "model": "splendor-plus"
+    }
+  }
+]

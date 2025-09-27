@@ -7,13 +7,14 @@ import { Link } from "react-router-dom";
 import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import { Tooltip } from "@mui/material";
 
 // Local Imports
 import "./product-card.scss";
 
-const ProductCard = ({ card, dialogOpen }) => {
+const ProductCard = ({ card, dialogOpen, isWishlist = false }) => {
   const {
     brand,
     model,
@@ -66,8 +67,8 @@ const ProductCard = ({ card, dialogOpen }) => {
         </Link>
 
         <div className="icon_parent">
-          <Tooltip title="Add to wishlist" arrow>
-            <FavoriteBorderIcon />
+          <Tooltip title={isWishlist ? "Remove from wishlist" : "Add to wishlist"} arrow>
+            {isWishlist ? <FavoriteIcon className="filled-heart" /> : <FavoriteBorderIcon />}
           </Tooltip>
           <Tooltip title="Expand Full View" arrow>
             <OpenInFullIcon onClick={() => dialogOpen(card)} />
@@ -155,6 +156,7 @@ const ProductCard = ({ card, dialogOpen }) => {
 ProductCard.propTypes = {
   card: PropTypes.object.isRequired,
   dialogOpen: PropTypes.func.isRequired,
+  isWishlist: PropTypes.bool,
 };
 
 export default ProductCard;

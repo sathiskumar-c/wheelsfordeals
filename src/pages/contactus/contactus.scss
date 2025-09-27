@@ -1,0 +1,15 @@
+.contact-us-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .MuiBreadcrumbs-root {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-us-container {
+    padding: 1rem;
+  }
+}

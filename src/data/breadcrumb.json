@@ -1,0 +1,200 @@
+{
+  "home": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "aboutUs": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "About Us",
+        "path": "/about-us",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "contactUs": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "Contact Us",
+        "path": "/contact-us",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "productList": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "Bikes",
+        "path": "/product-list",
+        "isHome": false,
+        "hasDropdown": true
+      }
+    ]
+  },
+  "productDetails": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "Bikes",
+        "path": "/bikes",
+        "isHome": false,
+        "hasDropdown": true
+      },
+      {
+        "label": "Royal Enfield Classic 350",
+        "path": "/product-details/royal-enfield-classic-350",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "myWishlist": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "My Wishlist",
+        "path": "/my-wishlist",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "myProfile": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "My Profile",
+        "path": "/my-profile",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "testRide": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "Test Ride",
+        "path": "/test-ride",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "faq": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "FAQ",
+        "path": "/faq",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "termsConditions": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "Terms & Conditions",
+        "path": "/terms-conditions",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "privacyPolicy": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "Privacy Policy",
+        "path": "/privacy-policy",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  },
+  "bookBike": {
+    "breadcrumbs": [
+      {
+        "label": "Home",
+        "path": "/",
+        "isHome": true,
+        "hasDropdown": false
+      },
+      {
+        "label": "Bikes",
+        "path": "/bikes",
+        "isHome": false,
+        "hasDropdown": true
+      },
+      {
+        "label": "Book Bike",
+        "path": "/book-bike",
+        "isHome": false,
+        "hasDropdown": false
+      }
+    ]
+  }
+}

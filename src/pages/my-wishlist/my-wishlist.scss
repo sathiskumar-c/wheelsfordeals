@@ -1,0 +1,130 @@
+.my-wishlist-container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  .wishlist-header {
+    margin-bottom: 2rem;
+    text-align: left;
+    
+    .MuiBreadcrumbs-root {
+      margin-bottom: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+
+  .wishlist-content {
+    width: 100%;
+    
+    .wishlist-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+      
+      .product-card {
+        width: calc(33.33% - 14px);
+        margin: 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+
+    .empty-wishlist {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      
+      img {
+        max-width: 200px;
+        margin-bottom: 2rem;
+        opacity: 0.8;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #666;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Tablet styles
+@media screen and (max-width: 992px) {
+  .my-wishlist-container {
+    padding: 1.5rem;
+
+    .wishlist-header {
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    .wishlist-content {
+      .wishlist-grid {
+        .product-card {
+          width: calc(50% - 10px);
+        }
+      }
+    }
+  }
+}
+
+// Mobile styles
+@media screen and (max-width: 576px) {
+  .my-wishlist-container {
+    padding: 1rem;
+
+    .wishlist-header {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .wishlist-content {
+      .wishlist-grid {
+        gap: 15px;
+        
+        .product-card {
+          width: 100%;
+        }
+      }
+
+      .empty-wishlist {
+        img {
+          max-width: 150px;
+        }
+
+        h2 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
