@@ -32,7 +32,7 @@ import PageNotFound from "./components/page-not-found/page-not-found";
 // Local Imports
 import "./App.scss";
 
-const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup", "/admin/login"];
+const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup"];
 
 const App = () => {
   const hideHeaderFooter = HIDE_HEADER_FOOTER_PATHS.includes(location.pathname);
