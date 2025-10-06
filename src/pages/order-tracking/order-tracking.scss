@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+// Variables
+$font-family-base: "Open Sans", serif;
+$color-white: #fff;
+$color-text-primary: #333;
+$color-text-secondary: #444;
+$border-color: rgba(0, 0, 0, 0.1);
+$border-radius: 0.25rem;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+// Breakpoints
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+
+// Spacing
+$spacing-xs: 0.875rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.25rem;
+$spacing-lg: 1.5rem;
+
+// Mixins
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin card-base {
+  background-color: $color-white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+}
+
+// Styles
+.order-tracking-container {
+  margin: 20px auto;
+  font-family: $font-family-base;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  @include respond-to($breakpoint-md) {
+    margin: 50px auto;
+  }
+}
+
+.tracking-wrapper {
+  @include card-base;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  box-shadow: $box-shadow;
+  margin: 0 auto;
+  width: 100%;
+
+  .tracking-header {
+    padding: $spacing-xs $spacing-sm;
+    margin-bottom: 0;
+    border-bottom: 1px solid $border-color;
+    border-radius: $border-radius $border-radius 0 0;
+    font-weight: 600;
+    color: $color-text-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+
+    @include respond-to($breakpoint-md) {
+      padding: $spacing-sm $spacing-md;
+      font-size: 1rem;
+    }
+  }
+
+  .tracking-content {
+    padding: $spacing-sm;
+
+    @include respond-to($breakpoint-md) {
+      padding: $spacing-md;
+    }
+
+    h6 {
+      color: $color-text-secondary;
+      margin-bottom: $spacing-sm;
+      font-size: 1rem;
+      font-weight: 600;
+
+      @include respond-to($breakpoint-md) {
+        margin-bottom: $spacing-xs;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .tracking-info-box {
+    @include card-base;
+    margin-bottom: $spacing-sm;
+    padding: $spacing-xs;
+
+    @include respond-to($breakpoint-md) {
+      margin-bottom: $spacing-lg;
+      padding: $spacing-sm;
+      display: flex;
+      gap: $spacing-md;
+      align-items: center;
+    }
+  }
+
+  .order-details-wrapper {
+    @include respond-to($breakpoint-md) {
+      flex: 0 0 30%;
+    }
+  }
+
+  .tracking-info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+    padding: $spacing-sm;
+    width: 100%; // Full width on mobile
+
+    @include respond-to($breakpoint-md) {
+      gap: $spacing-lg;
+      padding: $spacing-md;
+      flex: 1 1 70%; // Takes remaining 75% on desktop
+    }
+
+    .col {
+      // On desktop, each item takes roughly 50% of the container width, creating a 2x2 grid.
+      @include respond-to($breakpoint-md) {
+        flex: 1 1 calc(50% - #{$spacing-lg});
+      }
+    }
+  }
+}
+
+.track {
+  position: relative;
+  background-color: #ddd;
+  height: 7px;
+  display: flex;
+  margin-bottom: 60px;
+  margin-top: 50px;
+
+  .step {
+    flex-grow: 1;
+    width: 25%;
+    margin-top: -18px;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      height: 7px;
+      position: absolute;
+      content: "";
+      width: 100%;
+      left: 0;
+      top: 18px;
+    }
+
+    &.active {
+      &::before {
+        background: #ff5722;
+      }
+
+      .icon {
+        background: #ee5435;
+        color: #fff;
+      }
+
+      .text {
+        font-weight: 500;
+        color: #000;
+      }
+    }
+
+    .icon {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      position: relative;
+      border-radius: 100%;
+      background: #ddd;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+
+      svg {
+        font-size: 20px;
+      }
+    }
+
+    .text {
+      display: block;
+      margin-top: 7px;
+      color: #777;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.itemside {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .aside {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .info {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .title {
+    display: block;
+    margin-bottom: 5px;
+    color: #212529;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .text-muted {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .animated-action-btn {
+    margin: 5px 0px 0px 0px;
+    width: fit-content;
+
+    span {
+      font-size: 12px !important;
+    }
+    svg {
+      font-size: 12px !important;
+    }
+  }
+}
+
+.img-sm {
+  width: 80px;
+  height: 80px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.btn-back-to-order {
+  color: #000;
+  padding: 8px 10px !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+
+  &:hover {
+    // border-color: #ff2b00;
+    transform: translateY(-1px);
+    text-decoration: underline !important;
+  }
+
+  svg {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.phone-icon {
+  font-size: 16px;
+  vertical-align: text-bottom;
+  margin: 0 4px;
+  color: #666;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.col {
+  font-size: 14px !important;
+  font-weight: 500;
+  color: #333;
+
+  strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #444;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+
+    &.row {
+      gap: 1rem;
+    }
+  }
+
+  .track {
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+    .step {
+      .text {
+        font-size: 0.8rem;
+      }
+
+      .icon {
+        width: 35px;
+        height: 35px;
+
+        svg {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .itemside {
+    padding: 0.75rem;
+
+    .title {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .card-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .track {
+    .step {
+      .text {
+        font-size: 0.75rem;
+      }
+
+      .icon {
+        width: 30px;
+        height: 30px;
+
+        svg {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

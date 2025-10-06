@@ -23,6 +23,7 @@ import BookBike from "./pages/book-bike/book-bike";
 import MyOrders from "./pages/my-orders/my-orders";
 import HoldBike from "./pages/hold-bike/hold-bike";
 import MyProfile from "./pages/my-profile/my-profile";
+import OrderTracking from "./pages/order-tracking/order-tracking";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -65,6 +66,8 @@ const App = () => {
             element={<BookRide />}
           />
           <Route path="/my-profile" element={<MyProfile />} />
+
+          <Route path="/track-my-order/:order_id" element={<OrderTracking />} />
 
           <Route
             path="/hold-bike/:bike_brand/:bike_model/:bike_id"
