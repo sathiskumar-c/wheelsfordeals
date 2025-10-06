@@ -3,20 +3,26 @@
   "popularbikedata": [
     {
       "id": 1,
-      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
-      "title": "Lowest Price",
+      "imgSrc": "https://media.istockphoto.com/id/1225772778/vector/man-buying-motorcycle-on-sale-flat-doodle-illustration-tourist-purchasing-local-transport.jpg?s=612x612&w=0&k=20&c=hSYarWP2cDx_DEOqPSqjvag_z5wTreWFW_ehEAqAY3M=",
+      "title": "Trending Now",
+      "description": "Check out the most popular bikes among buyers this week.",
+      "actionText": "See Trending Bikes",
       "path": "/bikes"
     },
     {
       "id": 2,
-      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
-      "title": "Best Deals",
+      "imgSrc": "https://media.istockphoto.com/id/1225772778/vector/man-buying-motorcycle-on-sale-flat-doodle-illustration-tourist-purchasing-local-transport.jpg?s=612x612&w=0&k=20&c=hSYarWP2cDx_DEOqPSqjvag_z5wTreWFW_ehEAqAY3M=",
+      "title": "Best Value",
+      "description": "Bikes that offer the best features for your budget.",
+      "actionText": "Explore Value Picks",
       "path": "/bikes"
     },
     {
       "id": 3,
-      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "imgSrc": "https://media.istockphoto.com/id/1225772778/vector/man-buying-motorcycle-on-sale-flat-doodle-illustration-tourist-purchasing-local-transport.jpg?s=612x612&w=0&k=20&c=hSYarWP2cDx_DEOqPSqjvag_z5wTreWFW_ehEAqAY3M=",
       "title": "Certified Pre-Owned",
+      "description": "Buy with confidence—our certified bikes come with warranty and inspection.",
+      "actionText": "Shop Certified Bikes",
       "path": "/bikes"
     }
   ]

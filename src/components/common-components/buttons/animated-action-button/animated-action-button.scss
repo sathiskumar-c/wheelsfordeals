@@ -1,0 +1,67 @@
+.animated-action-btn {
+  padding: 0;
+  margin: auto;
+  border: none;
+  background: none;
+  cursor: pointer;
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+
+  &__text {
+    position: relative;
+    font-size: 14px;
+    color: var(--primary-color);
+    z-index: 1;
+    display: inline-block;
+    transition: color 0.3s;
+    .animated-action-btn__text--hover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      color: var(--hovered-color);
+      overflow: hidden;
+      white-space: nowrap;
+      transition: width 0.3s ease-out;
+      pointer-events: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:hover .animated-action-btn__text--hover {
+    width: 100%;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+    color: var(--hovered-color);
+  }
+
+  svg {
+    color: var(--primary-color);
+    transition: 0.2s;
+    position: relative;
+    width: 12px;
+    transition-delay: 0.2s;
+  }
+}

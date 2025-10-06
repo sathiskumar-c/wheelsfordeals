@@ -20,7 +20,10 @@ import PrivacyPolicy from "./pages/privacy-policy/privacy-policy";
 import TermsandConditions from "./pages/terms-conditions/terms-conditions";
 import BookRide from "./pages/test-ride/test-ride";
 import BookBike from "./pages/book-bike/book-bike";
+import MyOrders from "./pages/my-orders/my-orders";
+import HoldBike from "./pages/hold-bike/hold-bike";
 import MyProfile from "./pages/my-profile/my-profile";
+import OrderTracking from "./pages/order-tracking/order-tracking";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -30,7 +33,7 @@ import PageNotFound from "./components/page-not-found/page-not-found";
 // Local Imports
 import "./App.scss";
 
-const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup", "/admin/login"];
+const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup"];
 
 const App = () => {
   const hideHeaderFooter = HIDE_HEADER_FOOTER_PATHS.includes(location.pathname);
@@ -40,12 +43,14 @@ const App = () => {
       <Router>
         {!hideHeaderFooter && <NavbarDeskTop />}
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
+          <Route path="/my-orders" element={<MyOrders />} />
           <Route
             path="/terms-and-conditions"
             element={<TermsandConditions />}
@@ -56,12 +61,18 @@ const App = () => {
             path="/bike/details/:brand/:bike-name/:bike_id"
             element={<ProductDetails />}
           />
-          <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
           <Route
             path="/test-drive/:bike_brand/:bike_model/:bike_id"
             element={<BookRide />}
           />
           <Route path="/my-profile" element={<MyProfile />} />
+
+          <Route path="/track-my-order/:order_id" element={<OrderTracking />} />
+
+          <Route
+            path="/hold-bike/:bike_brand/:bike_model/:bike_id"
+            element={<HoldBike />}
+          />
 
           <Route
             path="/book-bike/:bike_brand/:bike_model/:bike_id"
