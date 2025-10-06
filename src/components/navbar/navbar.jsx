@@ -1,6 +1,5 @@
 // React Imports
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 // Bootstrap Imports
@@ -14,6 +13,10 @@ import Collapse from "react-bootstrap/Collapse";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import LogoutIcon from "@mui/icons-material/Logout";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -30,8 +33,17 @@ import { getScreenInfo } from "../../utils/getScreenSize";
 function NavbarDeskTop() {
   const navigate = useNavigate();
 
-  // Get user from Redux store
-  const user = useSelector((state) => state.auth?.user);
+  // Temporary profile data (remove once Redux auth is implemented)
+  const tempProfileData = {
+    name: "Musharof Chowdhury",
+    email: "randomuser@pimjo.com",
+    profileImage: "https://avatars.githubusercontent.com/u/1234567",
+    isLoggedIn: true,
+  };
+
+  // Get user from Redux store (commented out until Redux auth is implemented)
+  // const user = useSelector((state) => state.auth?.user);
+  const user = tempProfileData;
 
   const { isMobile } = getScreenInfo();
   const [navbarData, setNavbarData] = useState(null);
@@ -340,71 +352,140 @@ function NavbarDeskTop() {
           </Navbar.Offcanvas>
 
           <Box sx={{ flexGrow: 0 }}>
-            {!user ? (
-              <>
-                <Tooltip title={navbarData?.profile.tooltip}>
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <Tooltip title={navbarData?.profile.tooltip}>
+              <IconButton
+                className="profile-btn"
+                onClick={handleOpenUserMenu}
+                sx={{ p: 0 }}
+              >
+                {user?.isLoggedIn ? (
+                  <div style={{ display: "flex", alignItems: "center" }}>
                     {!profileImageError ? (
                       <Avatar
-                        alt="User Profile"
+                        alt={user.name}
                         src={navbarData?.profile.defaultAvatar}
                         onError={handleProfileImageError}
+                        sx={{ width: 32, height: 32 }}
                       />
                     ) : (
                       <Avatar
                         alt="Default Profile"
                         src={navbarData?.profile.fallbackAvatar}
-                        sx={{ width: 40, height: 40 }}
+                        sx={{ width: 32, height: 32 }}
                       />
                     )}
-                  </IconButton>
-                </Tooltip>
-                <Menu
-                  sx={{ mt: "45px" }}
-                  id="menu-appbar"
-                  anchorEl={anchorElUser}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={Boolean(anchorElUser)}
-                  onClose={handleCloseUserMenu}
-                >
-                  {navbarData?.profile.menuItems.map((menuItem) => (
-                    <MenuItem
-                      key={menuItem.label}
-                      onClick={() => handleProfileMenuClick(menuItem)}
+                    <span
+                      style={{
+                        marginLeft: "8px",
+                        color: "#1a1a1a",
+                        fontSize: "14px",
+                      }}
                     >
-                      <Typography sx={{ textAlign: "center" }}>
-                        {menuItem.label}
-                      </Typography>
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </>
-            ) : (
-              <>
-                <button
-                  className="btn btn-outline-primary btn-login"
-                  onClick={() => navigate("/login")}
-                  style={{ marginRight: 8 }}
-                >
-                  Login
-                </button>
-
-                <button
-                  className="btn btn-primary btn-signup"
-                  onClick={() => navigate("/signup")}
-                >
-                  Sign Up
-                </button>
-              </>
-            )}
+                      {user.name}{" "}
+                      {anchorElUser ? (
+                        <KeyboardArrowUpIcon sx={{ fontSize: 20 }} />
+                      ) : (
+                        <KeyboardArrowDownIcon sx={{ fontSize: 20 }} />
+                      )}
+                    </span>
+                  </div>
+                ) : (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                    }}
+                  >
+                    <button
+                      className="btn btn-outline-primary btn-login"
+                      onClick={() => navigate("/login")}
+                    >
+                      Login
+                    </button>
+                    <button
+                      className="btn btn-primary btn-signup"
+                      onClick={() => navigate("/signup")}
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                )}
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{
+                mt: "45px",
+                "& .MuiPaper-root": {
+                  borderRadius: "12px",
+                  minWidth: "200px",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                },
+              }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {user?.isLoggedIn && (
+                <Box sx={{ px: 2, py: 1 }}>
+                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                    {user.name}
+                  </Typography>
+                  <Typography sx={{ fontSize: "12px", color: "gray" }}>
+                    {user.email}
+                  </Typography>
+                </Box>
+              )}
+              <MenuItem
+                onClick={() =>
+                  handleProfileMenuClick({
+                    action: "navigate",
+                    path: "/my-profile",
+                  })
+                }
+              >
+                <AccountCircleIcon sx={{ mr: 2, fontSize: 20 }} />
+                <Typography>Edit profile</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() =>
+                  handleProfileMenuClick({
+                    action: "navigate",
+                    path: "/my-orders",
+                  })
+                }
+              >
+                <ListAltIcon sx={{ mr: 2, fontSize: 20 }} />
+                <Typography>My Orders</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() =>
+                  handleProfileMenuClick({
+                    action: "navigate",
+                    path: "/my-wishlist",
+                  })
+                }
+              >
+                <FavoriteBorderIcon sx={{ mr: 2, fontSize: 20 }} />
+                <Typography>My Wishlist</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={() => handleProfileMenuClick({ action: "logout" })}
+              >
+                <LogoutIcon sx={{ mr: 2, fontSize: 20 }} />
+                <Typography>Log out</Typography>
+              </MenuItem>
+            </Menu>
           </Box>
         </Container>
       </Navbar>
