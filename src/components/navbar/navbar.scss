@@ -52,7 +52,9 @@
   }
 
   .btn-login {
-    padding: 8px 40px;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 6px;
 
     &:hover {
       background-color: #0d6efd;
@@ -62,12 +64,60 @@
   }
 
   .btn-signup {
-    padding: 8px 40px;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 6px;
 
     &:hover {
       background-color: white;
       border: 1px solid #0d6efd white !important;
       color: #0d6efd;
+    }
+  }
+
+  // Profile Menu Styles
+  .MuiMenu-paper {
+    margin-top: 8px !important;
+
+    .MuiMenuItem-root {
+      padding: 8px 16px;
+      min-height: 40px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+
+      .MuiTypography-root {
+        font-size: 14px;
+      }
+
+      .MuiSvgIcon-root {
+        color: #666;
+      }
+    }
+  }
+
+  .profile-button {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  .profile-btn {
+    color: #333 !important;
+    font-weight: 600;
+    font-size: 14px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: unset !important;
     }
   }
 }
