@@ -1,4 +1,7 @@
+// React Imports
 import React, { useState, useRef, useEffect } from "react";
+
+// Material UI Imports & Lib Imports
 import {
   TextField,
   Button,
@@ -29,6 +32,8 @@ import PlaceIcon from "@mui/icons-material/Place";
 import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 import dayjs from "dayjs";
+
+// Local Imports
 import timeSlotData from "../../data/time-slot-availability.json";
 import "./book-test-ride.scss";
 
