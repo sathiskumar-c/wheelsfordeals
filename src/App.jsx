@@ -21,6 +21,7 @@ import TermsandConditions from "./pages/terms-conditions/terms-conditions";
 import BookRide from "./pages/test-ride/test-ride";
 import BookBike from "./pages/book-bike/book-bike";
 import MyProfile from "./pages/my-profile/my-profile";
+import FeedbackDialog from "./pages/feedback/feedback";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -29,6 +30,7 @@ import PageNotFound from "./components/page-not-found/page-not-found";
 
 // Local Imports
 import "./App.scss";
+import UserSettings from "./pages/user-settings/user-settings";
 
 const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup", "/admin/login"];
 
@@ -46,6 +48,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/feedback" element={<FeedbackDialog />} />
           <Route
             path="/terms-and-conditions"
             element={<TermsandConditions />}
@@ -67,6 +70,8 @@ const App = () => {
             path="/book-bike/:bike_brand/:bike_model/:bike_id"
             element={<BookBike />}
           />
+
+          <Route path="/settings" element={<UserSettings />} />
 
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" replace />} />
