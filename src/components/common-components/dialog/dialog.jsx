@@ -1,3 +1,7 @@
+// React imports
+import React from "react";
+import PropTypes from "prop-types";
+
 // MUI Imports
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
@@ -63,6 +67,15 @@ const CommonDialog = ({
       {footer && <DialogActions>{footer}</DialogActions>}
     </BootstrapDialog>
   );
+};
+
+CommonDialog.propTypes = {
+  openDialog: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.node,
+  content: PropTypes.node,
+  footer: PropTypes.node,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default CommonDialog;

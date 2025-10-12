@@ -16,8 +16,6 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 // Local Imports
 import "./login.scss";
-import Img_Login from "/images/illustrations/login.png";
-import Img_Google from "/images/icons/google.png";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -82,7 +80,11 @@ const Login = () => {
       <form className="login-form" onSubmit={handleSubmit}>
         <h5 className="login-title">Login</h5>
 
-        <img className="login__img" src={Img_Login} alt="Login Illustration" />
+        <img
+          className="login__img"
+          src="/images/illustrations/login.png"
+          alt="Login Illustration"
+        />
 
         {/* Email Field */}
         <TextField
@@ -162,7 +164,7 @@ const Login = () => {
           <button type="button" className="login__social-btn google">
             <img
               className="login__google-img"
-              src={Img_Google}
+              src="/images/icons/google.png"
               alt="Google icon"
             />
             Continue With Google

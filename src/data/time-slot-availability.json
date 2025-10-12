@@ -1,0 +1,398 @@
+{
+  "branches": {
+    "bangalore-rajajinagar": {
+      "name": "Rajajinagar Branch",
+      "coordinates": {
+        "latitude": 11.443487,
+        "longitude": 77.707368
+      },
+      "serviceRadius": 10,
+      "workingDays": [1, 2, 3, 4, 5, 6],
+      "holidays": ["2025-09-02"],
+      "timeSlots": [
+        "10:00 AM to 10:30 AM",
+        "10:30 AM to 11:00 AM",
+        "11:00 AM to 11:30 AM",
+        "11:30 AM to 12:00 PM",
+        "12:00 PM to 12:30 PM",
+        "12:30 PM to 01:00 PM",
+        "01:00 PM to 01:30 PM",
+        "01:30 PM to 02:00 PM",
+        "02:00 PM to 02:30 PM",
+        "02:30 PM to 03:00 PM",
+        "03:00 PM to 03:30 PM",
+        "03:30 PM to 04:00 PM",
+        "04:00 PM to 04:30 PM",
+        "04:30 PM to 05:00 PM",
+        "05:00 PM to 05:30 PM",
+        "05:30 PM to 06:00 PM",
+        "06:00 PM to 06:30 PM",
+        "06:30 PM to 07:00 PM"
+      ]
+    },
+    "bangalore-koramangala": {
+      "name": "Koramangala Branch",
+      "coordinates": {
+        "latitude": 12.9279,
+        "longitude": 77.6271
+      },
+      "serviceRadius": 10,
+      "workingDays": [1, 2, 3, 4, 5, 6],
+      "holidays": ["2025-09-02"],
+      "timeSlots": [
+        "09:00 AM to 09:30 AM",
+        "09:30 AM to 10:00 AM",
+        "10:00 AM to 10:30 AM",
+        "10:30 AM to 11:00 AM",
+        "11:00 AM to 11:30 AM",
+        "11:30 AM to 12:00 PM",
+        "12:00 PM to 12:30 PM",
+        "01:00 PM to 01:30 PM",
+        "01:30 PM to 02:00 PM",
+        "02:00 PM to 02:30 PM",
+        "02:30 PM to 03:00 PM",
+        "03:00 PM to 03:30 PM",
+        "03:30 PM to 04:00 PM",
+        "04:00 PM to 04:30 PM",
+        "04:30 PM to 05:00 PM",
+        "05:00 PM to 05:30 PM",
+        "05:30 PM to 06:00 PM"
+      ]
+    }
+  },
+  "bookings": {
+    "2025-08-23": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "10:00 AM to 10:30 AM",
+          "11:30 AM to 12:00 PM",
+          "02:00 PM to 02:30 PM",
+          "04:00 PM to 04:30 PM",
+          "05:30 PM to 06:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:00 AM to 10:30 AM", "10:30 AM to 11:00 AM"],
+          "worker2": ["02:00 PM to 02:30 PM", "02:30 PM to 03:00 PM"],
+          "worker3": ["04:00 PM to 04:30 PM", "04:30 PM to 05:00 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "09:00 AM to 09:30 AM",
+          "10:30 AM to 11:00 AM",
+          "11:00 AM to 11:30 AM",
+          "01:30 PM to 02:00 PM",
+          "03:00 PM to 03:30 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["09:00 AM to 09:30 AM", "09:30 AM to 10:00 AM"],
+          "worker2": ["11:00 AM to 11:30 AM", "11:30 AM to 12:00 PM"],
+          "worker3": ["03:00 PM to 03:30 PM", "03:30 PM to 04:00 PM"]
+        }
+      }
+    },
+    "2025-08-24": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "10:30 AM to 11:00 AM",
+          "12:00 PM to 12:30 PM",
+          "01:00 PM to 01:30 PM",
+          "03:30 PM to 04:00 PM",
+          "05:00 PM to 05:30 PM",
+          "06:30 PM to 07:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:30 AM to 11:00 AM", "11:00 AM to 11:30 AM"],
+          "worker2": ["01:00 PM to 01:30 PM", "01:30 PM to 02:00 PM"],
+          "worker3": ["05:00 PM to 05:30 PM", "05:30 PM to 06:00 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "09:30 AM to 10:00 AM",
+          "10:00 AM to 10:30 AM",
+          "12:00 PM to 12:30 PM",
+          "02:30 PM to 03:00 PM",
+          "04:00 PM to 04:30 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:00 AM to 10:30 AM", "10:30 AM to 11:00 AM"],
+          "worker2": ["12:00 PM to 12:30 PM", "01:00 PM to 01:30 PM"]
+        }
+      }
+    },
+    "2025-08-25": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [],
+        "workerAvailability": {},
+        "note": "Sunday - Branch closed"
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [],
+        "workerAvailability": {},
+        "note": "Sunday - Branch closed"
+      }
+    },
+    "2025-08-26": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "11:00 AM to 11:30 AM",
+          "12:30 PM to 01:00 PM",
+          "02:30 PM to 03:00 PM",
+          "03:00 PM to 03:30 PM",
+          "04:30 PM to 05:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["11:00 AM to 11:30 AM", "11:30 AM to 12:00 PM"],
+          "worker2": ["02:30 PM to 03:00 PM", "03:00 PM to 03:30 PM"],
+          "worker3": ["04:30 PM to 05:00 PM", "05:00 PM to 05:30 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "09:00 AM to 09:30 AM",
+          "10:30 AM to 11:00 AM",
+          "01:00 PM to 01:30 PM",
+          "02:00 PM to 02:30 PM",
+          "03:30 PM to 04:00 PM",
+          "05:30 PM to 06:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["09:00 AM to 09:30 AM", "09:30 AM to 10:00 AM"],
+          "worker2": ["02:00 PM to 02:30 PM", "02:30 PM to 03:00 PM"],
+          "worker3": ["05:30 PM to 06:00 PM", "06:00 PM to 06:30 PM"]
+        }
+      }
+    },
+    "2025-08-27": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "10:00 AM to 10:30 AM",
+          "10:30 AM to 11:00 AM",
+          "01:30 PM to 02:00 PM",
+          "03:30 PM to 04:00 PM",
+          "06:00 PM to 06:30 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:00 AM to 10:30 AM", "10:30 AM to 11:00 AM"],
+          "worker2": ["01:30 PM to 02:00 PM", "02:00 PM to 02:30 PM"],
+          "worker3": ["06:00 PM to 06:30 PM", "06:30 PM to 07:00 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "09:30 AM to 10:00 AM",
+          "11:30 AM to 12:00 PM",
+          "01:30 PM to 02:00 PM",
+          "04:30 PM to 05:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["09:30 AM to 10:00 AM", "10:00 AM to 10:30 AM"],
+          "worker2": ["11:30 AM to 12:00 PM", "12:00 PM to 12:30 PM"],
+          "worker3": ["01:30 PM to 02:00 PM", "02:00 PM to 02:30 PM"]
+        }
+      }
+    },
+    "2025-08-28": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "11:30 AM to 12:00 PM",
+          "12:00 PM to 12:30 PM",
+          "01:00 PM to 01:30 PM",
+          "02:00 PM to 02:30 PM",
+          "04:00 PM to 04:30 PM",
+          "05:30 PM to 06:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["11:30 AM to 12:00 PM", "12:00 PM to 12:30 PM"],
+          "worker2": ["01:00 PM to 01:30 PM", "01:30 PM to 02:00 PM"],
+          "worker3": ["04:00 PM to 04:30 PM", "04:30 PM to 05:00 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "10:00 AM to 10:30 AM",
+          "11:00 AM to 11:30 AM",
+          "02:30 PM to 03:00 PM",
+          "03:00 PM to 03:30 PM",
+          "05:00 PM to 05:30 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:00 AM to 10:30 AM", "10:30 AM to 11:00 AM"],
+          "worker2": ["11:00 AM to 11:30 AM", "11:30 AM to 12:00 PM"],
+          "worker3": ["02:30 PM to 03:00 PM", "03:00 PM to 03:30 PM"]
+        }
+      }
+    },
+    "2025-08-29": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "10:30 AM to 11:00 AM",
+          "12:30 PM to 01:00 PM",
+          "02:30 PM to 03:00 PM",
+          "05:00 PM to 05:30 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:30 AM to 11:00 AM", "11:00 AM to 11:30 AM"],
+          "worker2": ["12:30 PM to 01:00 PM", "01:00 PM to 01:30 PM"],
+          "worker3": ["05:00 PM to 05:30 PM", "05:30 PM to 06:00 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "09:00 AM to 09:30 AM",
+          "10:30 AM to 11:00 AM",
+          "12:00 PM to 12:30 PM",
+          "01:00 PM to 01:30 PM",
+          "03:30 PM to 04:00 PM",
+          "04:30 PM to 05:00 PM",
+          "05:30 PM to 06:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["09:00 AM to 09:30 AM", "09:30 AM to 10:00 AM"],
+          "worker2": ["12:00 PM to 12:30 PM", "01:00 PM to 01:30 PM"],
+          "worker3": ["04:30 PM to 05:00 PM", "05:00 PM to 05:30 PM"]
+        }
+      }
+    },
+    "2025-08-30": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "10:00 AM to 10:30 AM",
+          "11:00 AM to 11:30 AM",
+          "01:30 PM to 02:00 PM",
+          "03:00 PM to 03:30 PM",
+          "04:30 PM to 05:00 PM",
+          "06:30 PM to 07:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:00 AM to 10:30 AM", "10:30 AM to 11:00 AM"],
+          "worker2": ["01:30 PM to 02:00 PM", "02:00 PM to 02:30 PM"],
+          "worker3": ["04:30 PM to 05:00 PM", "05:00 PM to 05:30 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "09:30 AM to 10:00 AM",
+          "11:30 AM to 12:00 PM",
+          "02:00 PM to 02:30 PM",
+          "04:00 PM to 04:30 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["09:30 AM to 10:00 AM", "10:00 AM to 10:30 AM"],
+          "worker2": ["11:30 AM to 12:00 PM", "12:00 PM to 12:30 PM"],
+          "worker3": ["02:00 PM to 02:30 PM", "02:30 PM to 03:00 PM"]
+        }
+      }
+    },
+    "2025-08-31": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "11:00 AM to 11:30 AM",
+          "12:00 PM to 12:30 PM",
+          "02:00 PM to 02:30 PM",
+          "03:30 PM to 04:00 PM",
+          "05:30 PM to 06:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["11:00 AM to 11:30 AM", "11:30 AM to 12:00 PM"],
+          "worker2": ["02:00 PM to 02:30 PM", "02:30 PM to 03:00 PM"],
+          "worker3": ["05:30 PM to 06:00 PM", "06:00 PM to 06:30 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "10:00 AM to 10:30 AM",
+          "12:00 PM to 12:30 PM",
+          "01:30 PM to 02:00 PM",
+          "03:00 PM to 03:30 PM",
+          "04:30 PM to 05:00 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:00 AM to 10:30 AM", "10:30 AM to 11:00 AM"],
+          "worker2": ["12:00 PM to 12:30 PM", "01:30 PM to 02:00 PM"],
+          "worker3": ["03:00 PM to 03:30 PM", "03:30 PM to 04:00 PM"]
+        }
+      }
+    },
+    "2025-09-01": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [
+          "10:30 AM to 11:00 AM",
+          "01:00 PM to 01:30 PM",
+          "02:30 PM to 03:00 PM",
+          "04:00 PM to 04:30 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["10:30 AM to 11:00 AM", "11:00 AM to 11:30 AM"],
+          "worker2": ["01:00 PM to 01:30 PM", "01:30 PM to 02:00 PM"],
+          "worker3": ["04:00 PM to 04:30 PM", "04:30 PM to 05:00 PM"]
+        }
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [
+          "09:00 AM to 09:30 AM",
+          "10:30 AM to 11:00 AM",
+          "11:00 AM to 11:30 AM",
+          "02:00 PM to 02:30 PM",
+          "03:30 PM to 04:00 PM",
+          "05:00 PM to 05:30 PM"
+        ],
+        "workerAvailability": {
+          "worker1": ["09:00 AM to 09:30 AM", "09:30 AM to 10:00 AM"],
+          "worker2": ["10:30 AM to 11:00 AM", "11:00 AM to 11:30 AM"],
+          "worker3": ["02:00 PM to 02:30 PM", "02:30 PM to 03:00 PM"]
+        }
+      }
+    },
+    "2025-09-02": {
+      "bangalore-rajajinagar": {
+        "occupiedSlots": [],
+        "workerAvailability": {},
+        "note": "Holiday - No service available"
+      },
+      "bangalore-koramangala": {
+        "occupiedSlots": [],
+        "workerAvailability": {},
+        "note": "Holiday - No service available"
+      }
+    }
+  },
+  "defaultAvailability": {
+    "weekdays": {
+      "slots": [
+        "10:00 AM to 10:30 AM",
+        "10:30 AM to 11:00 AM",
+        "11:00 AM to 11:30 AM",
+        "11:30 AM to 12:00 PM",
+        "12:00 PM to 12:30 PM",
+        "12:30 PM to 01:00 PM",
+        "01:00 PM to 01:30 PM",
+        "01:30 PM to 02:00 PM",
+        "02:00 PM to 02:30 PM",
+        "02:30 PM to 03:00 PM",
+        "03:00 PM to 03:30 PM",
+        "03:30 PM to 04:00 PM",
+        "04:00 PM to 04:30 PM",
+        "04:30 PM to 05:00 PM",
+        "05:00 PM to 05:30 PM",
+        "05:30 PM to 06:00 PM",
+        "06:00 PM to 06:30 PM",
+        "06:30 PM to 07:00 PM"
+      ]
+    },
+    "weekends": {
+      "slots": [
+        "10:00 AM to 10:30 AM",
+        "11:00 AM to 11:30 AM",
+        "12:00 PM to 12:30 PM",
+        "01:00 PM to 01:30 PM",
+        "02:00 PM to 02:30 PM",
+        "03:00 PM to 03:30 PM",
+        "04:00 PM to 04:30 PM",
+        "05:00 PM to 05:30 PM",
+        "06:00 PM to 06:30 PM"
+      ]
+    }
+  }
+}

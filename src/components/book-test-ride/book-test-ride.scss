@@ -1,0 +1,46 @@
+.booking-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 2rem auto;
+}
+
+.MuiFormControl-root {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.title {
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.booking-form {
+  .MuiTextField-root,
+  .MuiFormControlLabel-root {
+    margin-bottom: 1.1rem;
+  }
+
+  .MuiButton-root.submit-button {
+    background: #1976d2;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+    &:hover {
+      background: #1565c0;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 100%;
+  }
+}
