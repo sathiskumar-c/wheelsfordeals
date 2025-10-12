@@ -1,5 +1,8 @@
+// React Imports
 import React, { useState, useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
+// Material UI Imports & Lib Imports
 import {
   TextField,
   Button,
@@ -9,7 +12,6 @@ import {
   Box,
   Stack,
   CircularProgress,
-  // ...existing code...
   IconButton,
   Divider,
   useMediaQuery,
@@ -48,6 +50,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import StoreIcon from "@mui/icons-material/Store";
 import axios from "axios";
 import dayjs from "dayjs";
+
+// Local Imports
 import "./book-bike.scss";
 
 // Google Maps API Key from environment variables

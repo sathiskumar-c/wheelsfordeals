@@ -9,41 +9,46 @@ $shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   background: $bg-color;
   padding: 20px;
-}
 
-.cardContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 
-.card {
-  background: $card-bg;
-  border-radius: 10px;
-  box-shadow: $shadow;
-  padding: 20px;
-  text-align: center;
-  width: 250px;
-  transition: transform 0.3s ease-in-out;
+    .card {
+      background: $card-bg;
+      border-radius: 10px;
+      box-shadow: $shadow;
+      padding: 20px;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s ease-in-out;
 
-  &:hover {
-    transform: translateY(-5px);
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .image {
+        width: 80px;
+        height: auto;
+        margin-bottom: 15px;
+        margin: auto;
+      }
+
+      .text {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $primary-color;
+      }
+    }
   }
-}
 
-.image {
-  width: 80px;
-  height: auto;
-  margin-bottom: 15px;
-  margin: auto;
-}
+  .popularbike-link {
+    text-decoration: none !important;
+  }
 
-.text {
-  font-size: 1rem;
-  font-weight: 600;
-  color: $primary-color;
-}
-.popularbike-link {
-  text-decoration: none !important;
+  .info-card__image {
+    width: 100% !important;
+  }
 }

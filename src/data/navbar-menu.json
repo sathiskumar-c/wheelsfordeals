@@ -423,5 +423,46 @@
       "path": "/sell-your-bike",
       "submenu": false
     }
-  ]
+  ],
+  "logo": {
+    "url": "https://static.vecteezy.com/system/resources/previews/024/207/679/non_2x/vintage-motorcycle-cartoon-logo-with-ai-generative-free-png.png",
+    "alt": "WheelsForDeals Logo"
+  },
+  "profile": {
+    "tooltip": "Profile",
+    "defaultAvatar": "/static/images/avatar/2.jpg",
+    "fallbackAvatar": "/images/illustrations/fallback_profile.svg",
+    "menuItems": [
+      {
+        "label": "Profile",
+        "path": "/my-profile",
+        "action": "navigate"
+      },
+      {
+        "label": "My Orders",
+        "path": "/my-orders",
+        "action": "navigate"
+      },
+      {
+        "label": "My Wishlist",
+        "path": "/my-wishlist",
+        "action": "navigate"
+      },
+      {
+        "label": "Logout",
+        "action": "logout"
+      }
+    ]
+  },
+  "ui": {
+    "offcanvasTitle": "WheelsForDeals",
+    "defaultImage": "/default-image.jpg",
+    "animations": {
+      "arrowRotation": {
+        "collapsed": "rotate(0deg)",
+        "expanded": "rotate(180deg)",
+        "transition": "transform 0.3s ease"
+      }
+    }
+  }
 }
