@@ -30,6 +30,7 @@ import OrderTracking from "./pages/order-tracking/order-tracking";
 import NavbarDeskTop from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import PageNotFound from "./components/page-not-found/page-not-found";
+import NewsletterAndSupport from "./components/newsletter-and-support/newsletter-and-support";
 
 // Local Imports
 import "./App.scss";
@@ -88,6 +89,7 @@ const App = () => {
           <Route path="*" element={<Navigate to="/page-not-found" replace />} />
         </Routes>
 
+        {!hideHeaderFooter && <NewsletterAndSupport />}
         {!hideHeaderFooter && <Footer />}
       </Router>
     </React.Fragment>
