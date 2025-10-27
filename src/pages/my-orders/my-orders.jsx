@@ -1,15 +1,14 @@
 // React Imports
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // MUI Imports
 import {
   Button,
-  Chip,
   Card,
   CardContent,
   Typography,
   Grid,
-  Box,
   IconButton,
   Tooltip,
   useMediaQuery,
@@ -23,6 +22,7 @@ import {
   Schedule as PendingIcon,
   Phone as PhoneIcon,
   Email as EmailIcon,
+  FileDownload as DownloadIcon,
 } from "@mui/icons-material";
 
 // Local Imports
@@ -30,6 +30,7 @@ import "./my-orders.scss";
 
 const MyOrders = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [orders] = useState([
     {
@@ -137,58 +138,47 @@ const MyOrders = () => {
   const getStatusIcon = (status) => {
     switch (status) {
       case "Delivered":
-        return <DeliveredIcon sx={{ color: "#4caf50" }} />;
+        return <DeliveredIcon sx={{ color: "inherit" }} />;
       case "In Transit":
-        return <ShippingIcon sx={{ color: "#2196f3" }} />;
+        return <ShippingIcon sx={{ color: "inherit" }} />;
       case "Processing":
-        return <PendingIcon sx={{ color: "#ff9800" }} />;
+        return <PendingIcon sx={{ color: "inherit" }} />;
       case "Cancelled":
-        return <CancelIcon sx={{ color: "#f44336" }} />;
+        return <CancelIcon sx={{ color: "inherit" }} />;
       default:
-        return <PendingIcon sx={{ color: "#9e9e9e" }} />;
-    }
-  };
-
-  const getStatusColor = (status) => {
-    switch (status) {
-      case "Delivered":
-        return "success";
-      case "In Transit":
-        return "info";
-      case "Processing":
-        return "warning";
-      case "Cancelled":
-        return "error";
-      default:
-        return "default";
+        return <PendingIcon sx={{ color: "inherit" }} />;
     }
   };
 
   return (
     <div className="my-orders-container">
-      <div className="container">
+      <div
+        className="container"
+        role="main"
+        aria-labelledby="orders-page-title"
+      >
         <div className="my-orders-header">
           <Typography
             variant={isMobile ? "h5" : "h4"}
             component="h1"
             className="page-title"
-            tabIndex={0}
+            id="orders-page-title"
           >
             My Orders
           </Typography>
-          <Typography variant="body1" className="page-subtitle" tabIndex={0}>
+          <Typography variant="body1" className="page-subtitle">
             View and track all your pending, delivered, and returned orders
             here.
           </Typography>
         </div>
 
-        <div className="orders-list">
+        <div className="orders-list" role="list">
           {orders.map((order) => (
             <Card
               key={order.order_id}
               className="order-card"
               elevation={2}
-              role="article"
+              role="listitem"
               aria-labelledby={`order-${order.order_id}-title`}
             >
               <CardContent className="order-content">
@@ -200,14 +190,13 @@ const MyOrders = () => {
                       component="h2"
                       className="order-id"
                       id={`order-${order.order_id}-title`}
-                      tabIndex={0}
                     >
                       Order #{order.order_id}
                     </Typography>
                     <Typography
                       variant="body2"
                       className="order-date"
-                      tabIndex={0}
+                      aria-label={`Order placed on ${order.order_placed}`}
                     >
                       Order Placed: {order.order_placed}
                     </Typography>
@@ -218,6 +207,9 @@ const MyOrders = () => {
                     startIcon={<TrackIcon />}
                     className="track-order-btn"
                     aria-label={`Track order ${order.order_id}`}
+                    onClick={() =>
+                      navigate(`/track-my-order/${order.order_id}`)
+                    }
                   >
                     TRACK ORDER
                   </Button>
@@ -232,7 +224,12 @@ const MyOrders = () => {
                       role="group"
                       aria-labelledby={`bike-${bike.bike_id}-name`}
                     >
-                      <Grid container spacing={2} alignItems="center">
+                      <Grid
+                        container
+                        spacing={2}
+                        alignItems="center"
+                        justifyContent="space-between"
+                      >
                         {/* Bike Image */}
                         <Grid item xs={12} sm={3} md={2}>
                           <div className="bike-image-container">
@@ -253,26 +250,19 @@ const MyOrders = () => {
                               component="h3"
                               className="bike-name"
                               id={`bike-${bike.bike_id}-name`}
-                              tabIndex={0}
                             >
                               {bike.brand} {bike.model}
                             </Typography>
-                            <Typography
-                              variant="body2"
-                              className="bike-seller"
-                              tabIndex={0}
-                            >
+                            <Typography variant="body2" className="bike-seller">
                               By: {bike.seller}
                             </Typography>
                             <div className="bike-specs">
-                              <Typography variant="body2" tabIndex={0}>
-                                Size: {bike.size} &nbsp; Qty: {bike.quantity}
-                              </Typography>
-                              <Typography
-                                variant="h6"
-                                className="bike-price"
-                                tabIndex={0}
-                              >
+                              <Typography variant="h6" className="bike-price">
+                                <span
+                                  style={{ color: "#444", fontSize: "18px" }}
+                                >
+                                  Price :
+                                </span>{" "}
                                 ₹{bike.price.toLocaleString()}
                               </Typography>
                             </div>
@@ -282,66 +272,168 @@ const MyOrders = () => {
                         {/* Status & Delivery */}
                         <Grid item xs={12} sm={3} md={4}>
                           <div className="order-status">
-                            <Box className="status-container">
-                              {getStatusIcon(bike.status)}
-                              <Chip
-                                label={bike.status}
-                                color={getStatusColor(bike.status)}
-                                size="small"
-                                className="status-chip"
-                              />
-                            </Box>
-                            {bike.status === "Delivered" ? (
-                              <Typography
-                                variant="body2"
-                                className="delivery-info"
-                                tabIndex={0}
-                              >
-                                Delivered on {bike.delivered_date}
+                            <Button
+                              variant="contained"
+                              className="status-button"
+                              style={{
+                                marginBottom: "8px",
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "8px",
+                                padding: "5px 40px",
+                                textTransform: "none",
+                                transition: "all 0.3s ease",
+                                borderRadius: "25px",
+                                backgroundColor:
+                                  bike.status === "Delivered"
+                                    ? "#4caf50"
+                                    : bike.status === "In Transit"
+                                    ? "#2196f3"
+                                    : bike.status === "Processing"
+                                    ? "#ff9800"
+                                    : bike.status === "Cancelled"
+                                    ? "#f44336"
+                                    : "#9e9e9e",
+                                color: "#ffffff",
+                              }}
+                              onMouseEnter={(e) => {
+                                const statusColor =
+                                  bike.status === "Delivered"
+                                    ? "#4caf50"
+                                    : bike.status === "In Transit"
+                                    ? "#2196f3"
+                                    : bike.status === "Processing"
+                                    ? "#ff9800"
+                                    : bike.status === "Cancelled"
+                                    ? "#f44336"
+                                    : "#9e9e9e";
+                                e.currentTarget.style.backgroundColor =
+                                  "#ffffff";
+                                e.currentTarget.style.color = statusColor;
+                                const icon =
+                                  e.currentTarget.querySelector(
+                                    ".MuiSvgIcon-root"
+                                  );
+                                if (icon) icon.style.color = statusColor;
+                              }}
+                              onMouseLeave={(e) => {
+                                const statusColor =
+                                  bike.status === "Delivered"
+                                    ? "#4caf50"
+                                    : bike.status === "In Transit"
+                                    ? "#2196f3"
+                                    : bike.status === "Processing"
+                                    ? "#ff9800"
+                                    : bike.status === "Cancelled"
+                                    ? "#f44336"
+                                    : "#9e9e9e";
+                                e.currentTarget.style.backgroundColor =
+                                  statusColor;
+                                e.currentTarget.style.color = "#ffffff";
+                                const icon =
+                                  e.currentTarget.querySelector(
+                                    ".MuiSvgIcon-root"
+                                  );
+                                if (icon) icon.style.color = "#ffffff";
+                              }}
+                            >
+                              <div className="status-icon">
+                                {getStatusIcon(bike.status)}
+                              </div>
+                              <Typography variant="subtitle1" component="span">
+                                {bike.status}
                               </Typography>
-                            ) : bike.status === "Cancelled" ? (
-                              <Typography
-                                variant="body2"
-                                className="delivery-info cancelled"
-                                tabIndex={0}
-                              >
-                                {bike.cancellation_reason}
-                              </Typography>
-                            ) : (
-                              <Typography
-                                variant="body2"
-                                className="delivery-info"
-                                tabIndex={0}
-                              >
-                                Delivery Expected by {bike.delivery_expected}
-                              </Typography>
-                            )}
+                            </Button>
+                            <div
+                              className="status-info"
+                              style={{
+                                animation: "fadeInUp 0.5s ease",
+                                transform: "translateY(0)",
+                                opacity: 1,
+                                transition: "all 0.3s ease",
+                              }}
+                            >
+                              {bike.status === "Delivered" ? (
+                                <Typography
+                                  variant="body2"
+                                  className="delivery-info success"
+                                  role="status"
+                                  aria-label={`Order delivered on ${bike.delivered_date}`}
+                                >
+                                  Delivered on {bike.delivered_date}
+                                </Typography>
+                              ) : bike.status === "Cancelled" ? (
+                                <Typography
+                                  variant="body2"
+                                  className="delivery-info cancelled"
+                                  role="status"
+                                  aria-label={`Order cancelled: ${bike.cancellation_reason}`}
+                                >
+                                  {bike.cancellation_reason}
+                                </Typography>
+                              ) : (
+                                <Typography
+                                  variant="body2"
+                                  className="delivery-info"
+                                  role="status"
+                                  aria-label={`Expected delivery by ${bike.delivery_expected}`}
+                                >
+                                  Delivery Expected by {bike.delivery_expected}
+                                </Typography>
+                              )}
+                            </div>
                           </div>
                         </Grid>
 
                         {/* Actions */}
                         <Grid item xs={12} sm={12} md={2}>
-                          <div className="bike-actions">
-                            {bike.status !== "Cancelled" && (
-                              <>
-                                <Tooltip title="Contact Seller">
-                                  <IconButton
-                                    color="primary"
-                                    aria-label="Contact seller via phone"
-                                  >
-                                    <PhoneIcon />
-                                  </IconButton>
-                                </Tooltip>
-                                <Tooltip title="Email Support">
-                                  <IconButton
-                                    color="primary"
-                                    aria-label="Email support"
-                                  >
-                                    <EmailIcon />
-                                  </IconButton>
-                                </Tooltip>
-                              </>
-                            )}
+                          <div
+                            className="bike-actions"
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              gap: "8px",
+                            }}
+                          >
+                            <div
+                              style={{
+                                display: "flex",
+                                gap: "10px",
+                                justifyContent: "center",
+                              }}
+                            >
+                              {bike.status !== "Cancelled" && (
+                                <>
+                                  <Tooltip title="Contact Seller">
+                                    <IconButton
+                                      color="primary"
+                                      aria-label="Contact seller via phone"
+                                      size="small"
+                                    >
+                                      <PhoneIcon />
+                                    </IconButton>
+                                  </Tooltip>
+                                  <Tooltip title="Email Order Details">
+                                    <IconButton
+                                      color="primary"
+                                      aria-label="Email Order Details"
+                                      size="small"
+                                    >
+                                      <EmailIcon />
+                                    </IconButton>
+                                  </Tooltip>
+                                  <Tooltip title="Download Invoice">
+                                    <IconButton
+                                      color="primary"
+                                      aria-label="Download invoice"
+                                      size="small"
+                                    >
+                                      <DownloadIcon />
+                                    </IconButton>
+                                  </Tooltip>
+                                </>
+                              )}
+                            </div>
                             {bike.status === "Processing" && (
                               <Button
                                 variant="outlined"
@@ -350,10 +442,22 @@ const MyOrders = () => {
                                 startIcon={<CancelIcon />}
                                 className="cancel-btn"
                                 aria-label={`Cancel order for ${bike.brand} ${bike.model}`}
+                                fullWidth
                               >
                                 CANCEL ORDER
                               </Button>
                             )}
+                            <Button
+                              variant="outlined"
+                              color="primary"
+                              size="small"
+                              className="view-more-btn"
+                              aria-label={`View details for ${bike.brand} ${bike.model}`}
+                              fullWidth
+                              style={{ padding: "5px 25px" }}
+                            >
+                              VIEW DETAILS
+                            </Button>
                           </div>
                         </Grid>
                       </Grid>
@@ -364,20 +468,19 @@ const MyOrders = () => {
                 {/* Order Footer */}
                 <div className="order-footer">
                   <div className="payment-info">
-                    <Typography variant="body2" tabIndex={0}>
-                      Paid using {order.payment_method}
+                    <Typography variant="body2">
+                      *Paid using {order.payment_method}
                     </Typography>
                   </div>
-                  <div className="order-total">
+                  {/* <div className="order-total">
                     <Typography
                       variant="h6"
                       component="strong"
                       className="total-amount"
-                      tabIndex={0}
                     >
                       ₹{order.total_amount.toLocaleString()}
                     </Typography>
-                  </div>
+                  </div> */}
                 </div>
               </CardContent>
             </Card>

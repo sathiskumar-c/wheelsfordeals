@@ -23,6 +23,8 @@ import BookBike from "./pages/book-bike/book-bike";
 import MyOrders from "./pages/my-orders/my-orders";
 import HoldBike from "./pages/hold-bike/hold-bike";
 import MyProfile from "./pages/my-profile/my-profile";
+import FeedbackDialog from "./pages/feedback/feedback";
+import OrderTracking from "./pages/order-tracking/order-tracking";
 
 // Components Imports
 import NavbarDeskTop from "./components/navbar/navbar";
@@ -32,8 +34,9 @@ import NewsletterAndSupport from "./components/newsletter-and-support/newsletter
 
 // Local Imports
 import "./App.scss";
+import UserSettings from "./pages/user-settings/user-settings";
 
-const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup", "/admin/login"];
+const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup"];
 
 const App = () => {
   const hideHeaderFooter = HIDE_HEADER_FOOTER_PATHS.includes(location.pathname);
@@ -49,6 +52,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/feedback" element={<FeedbackDialog />} />
           <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
           <Route path="/my-orders" element={<MyOrders />} />
           <Route
@@ -67,6 +71,8 @@ const App = () => {
           />
           <Route path="/my-profile" element={<MyProfile />} />
 
+          <Route path="/track-my-order/:order_id" element={<OrderTracking />} />
+
           <Route
             path="/hold-bike/:bike_brand/:bike_model/:bike_id"
             element={<HoldBike />}
@@ -76,6 +82,8 @@ const App = () => {
             path="/book-bike/:bike_brand/:bike_model/:bike_id"
             element={<BookBike />}
           />
+
+          <Route path="/settings" element={<UserSettings />} />
 
           <Route path="/page-not-found" element={<PageNotFound />} />
           <Route path="*" element={<Navigate to="/page-not-found" replace />} />
