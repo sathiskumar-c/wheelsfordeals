@@ -1,0 +1,66 @@
+.contact-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: white;
+
+  .contact-banner-overlay {
+    padding: 3rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+
+    .contact-banner-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .contact-banner-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-banner-link {
+      display: inline-block;
+      color: white;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .contact-banner-info {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  .contact-banner-actions {
+    background: white;
+    color: #2c0053;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .contact-banner-action {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
