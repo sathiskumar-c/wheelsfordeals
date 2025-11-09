@@ -1,0 +1,36 @@
+{
+  "alerts": [
+    {
+      "id": 1,
+      "type": "Price Drop",
+      "bikeName": "Royal Enfield Classic 350",
+      "message": "Price dropped by ₹5,000",
+      "date": "2 hours ago",
+      "status": "unread"
+    },
+    {
+      "id": 2,
+      "type": "Stock Alert",
+      "bikeName": "Yamaha MT-15",
+      "message": "Back in stock in your preferred color",
+      "date": "1 day ago",
+      "status": "read"
+    },
+    {
+      "id": 3,
+      "type": "Test Ride",
+      "bikeName": "KTM Duke 390",
+      "message": "Test ride scheduled for tomorrow",
+      "date": "2 days ago",
+      "status": "read"
+    },
+    {
+      "id": 4,
+      "type": "Special Offer",
+      "bikeName": "Honda CB350",
+      "message": "Limited time offer: Free accessories worth ₹5,000",
+      "date": "3 days ago",
+      "status": "read"
+    }
+  ]
+}
