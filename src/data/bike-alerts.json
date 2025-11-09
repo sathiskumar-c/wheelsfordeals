@@ -1,0 +1,131 @@
+{
+  "priceRanges": [
+    { "id": "0-50000", "label": "Below ₹50,000" },
+    { "id": "50000-100000", "label": "₹50,000 - ₹1,00,000" },
+    { "id": "100000-150000", "label": "₹1,00,000 - ₹1,50,000" },
+    { "id": "150000-200000", "label": "₹1,50,000 - ₹2,00,000" },
+    { "id": "200000+", "label": "Above ₹2,00,000" }
+  ],
+  "brands": [
+    {
+      "name": "Bajaj",
+      "models": [
+        {
+          "name": "Pulsar",
+          "versions": [
+            "N125",
+            "125",
+            "NS125",
+            "N160",
+            "150",
+            "NS160",
+            "NS200",
+            "N250",
+            "220F",
+            "RS200",
+            "NS400Z"
+          ]
+        },
+        {
+          "name": "Dominar",
+          "versions": ["250", "400"]
+        },
+        {
+          "name": "Avenger",
+          "versions": ["Street 160", "Cruise 220"]
+        },
+        {
+          "name": "Platina",
+          "versions": ["100", "110"]
+        }
+      ]
+    },
+    {
+      "name": "Honda",
+      "models": [
+        {
+          "name": "CB Shine",
+          "versions": ["125"]
+        },
+        {
+          "name": "CB",
+          "versions": [
+            "125 Hornet",
+            "300F",
+            "350",
+            "350 H'ness",
+            "350RS",
+            "500F",
+            "650R"
+          ]
+        },
+        {
+          "name": "CBR",
+          "versions": ["300R", "500R", "650R", "1000RR-R Fireblade SP"]
+        },
+        {
+          "name": "Activa",
+          "versions": ["6G", "125"]
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "models": [
+        { "name": "Splendor", "versions": ["Plus", "Super"] },
+        { "name": "Xtreme", "versions": ["125R", "160R"] },
+        { "name": "Xpulse", "versions": ["200 4V", "210"] }
+      ]
+    },
+    {
+      "name": "TVS",
+      "models": [
+        {
+          "name": "Apache",
+          "versions": ["RTR 160", "RTR 160 4V", "RTR 200 4V", "RTR 310"]
+        },
+        {
+          "name": "Ntorq",
+          "versions": [
+            "125 (Disc)",
+            "125 Race Edition",
+            "125 Super Squad",
+            "150"
+          ]
+        },
+        { "name": "iQube", "versions": ["2.2 kWh", "3.5 kWh"] }
+      ]
+    },
+    {
+      "name": "Royal Enfield",
+      "models": [
+        { "name": "Classic", "versions": ["350", "650"] },
+        { "name": "Meteor", "versions": ["350"] },
+        { "name": "Himalayan", "versions": ["450"] }
+      ]
+    },
+    {
+      "name": "Suzuki",
+      "models": [
+        { "name": "Gixxer", "versions": ["Standard", "250", "SF", "SF 250"] },
+        { "name": "V-Strom", "versions": ["800 DE", "SX"] },
+        { "name": "Access", "versions": ["125"] }
+      ]
+    },
+    {
+      "name": "Yamaha",
+      "models": [
+        { "name": "R-Series", "versions": ["R15M", "R15 V4", "R3"] },
+        { "name": "FZ", "versions": ["FZ-S Fi", "FZ-X"] },
+        { "name": "Aerox", "versions": ["155"] }
+      ]
+    },
+    {
+      "name": "KTM",
+      "models": [
+        { "name": "Duke", "versions": ["125", "200", "250", "390", "790"] },
+        { "name": "Adventure", "versions": ["250", "390", "790", "1290"] }
+      ]
+    }
+  ]
+}
