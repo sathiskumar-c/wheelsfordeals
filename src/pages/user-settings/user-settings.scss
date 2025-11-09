@@ -17,9 +17,41 @@
   }
 }
 
-/* Notifications Tab */
+/* ---------------- Tabs ---------------- */
+.MuiTabs-root {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+
+  .MuiTab-root {
+    font-weight: 600;
+    color: #555;
+    text-transform: none;
+    transition: color 0.3s ease;
+
+    &.Mui-selected {
+      color: #1976d2;
+    }
+
+    &:hover {
+      color: #1565c0;
+    }
+  }
+
+  .MuiTabs-indicator {
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #1976d2, #42a5f5);
+  }
+}
+
+/* ---------------- Notifications Tab ---------------- */
 .notifications-container {
   margin-top: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 20px;
 
   .section-title {
     font-size: 1.6rem;
@@ -37,6 +69,25 @@
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .checkbox-parent {
+    row-gap: 20px;
+  }
+
+  .save-btn {
+    padding: 8px 25px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-left: 20px;
   }
 
   .channels {
@@ -53,50 +104,155 @@
       border-radius: 10px;
       flex: 1;
       justify-content: space-between;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #f0f6ff;
+      }
     }
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .settings-container {
-    padding: 1rem;
+/* ---------------- Alerts Tab (Bike Alert Form) ---------------- */
+.settings-form {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   }
 
-  .channels {
-    flex-direction: column;
+  .form-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+    text-align: center;
   }
 
-  .settings-title {
-    font-size: 1.4rem;
+  .form-subtitle {
+    margin-bottom: 2rem;
+    color: #64748b;
+    text-align: center;
+  }
+
+  .form-grid {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    .MuiFormControl-root {
+      background: #fafafa;
+      border-radius: 10px;
+
+      .MuiInputLabel-root {
+        color: #555;
+        font-weight: 500;
+      }
+
+      .MuiOutlinedInput-root {
+        border-radius: 10px;
+
+        fieldset {
+          border-color: #d0d7de;
+        }
+
+        &:hover fieldset {
+          border-color: #1976d2;
+        }
+
+        &.Mui-focused fieldset {
+          border-color: #1565c0;
+          border-width: 2px;
+        }
+      }
+    }
+  }
+
+  .button-wrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+
+    .save-btn {
+      padding: 8px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      text-transform: none;
+      box-shadow: 0 4px 10px rgba(25, 118, 210, 0.2);
+      transition: all 0.3s ease;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #1565c0;
+        box-shadow: 0 6px 16px rgba(25, 118, 210, 0.3);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 2rem;
+    .form-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 1.5rem;
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .button-wrapper {
+      margin-top: 2rem;
+      .save-btn {
+        width: 100%;
+      }
+    }
   }
 }
 
-@media (max-width: 480px) {
-  .settings-container {
-    padding: 0.8rem;
-  }
-
-  .settings-title {
-    font-size: 1.2rem;
-  }
-}
-
-
+/* ---------------- Security Tab ---------------- */
 .security-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   background: #fff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: "Segoe UI", sans-serif;
 
-  .password-section, .devices-section {
-    background: #fafafa;
+  .password-section,
+  .devices-section {
     padding: 1.5rem;
     border-radius: 12px;
+  }
+
+  .your-devices-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .change-password-btn {
+    padding: 8px 25px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
   }
 
   h3 {
@@ -172,5 +328,54 @@
         color: #0066ff;
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ---------------- Alerts Tab ---------------- //
+.alerts-container {
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .alert-item {
+    padding: 20px 0 0 15px;
+  }
+
+  .chip-parent {
+    border-radius: 5px 0px 5px 0px !important;
+    padding: 10px;
+  }
+
+  .dropdown-select {
+    border-radius: 4px !important;
+  }
+}
+
+/* ---------------- Responsive Base Adjustments ---------------- */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1rem;
+  }
+
+  .channels {
+    flex-direction: column;
+  }
+
+  .settings-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    padding: 0.8rem;
+  }
+
+  .settings-title {
+    font-size: 1.2rem;
   }
 }
