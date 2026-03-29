@@ -1,0 +1,32 @@
+{
+  "name": {
+    "label": "Name",
+    "required": true,
+    "pattern": "^[A-Za-z ]{3,50}$",
+    "errorMsg": "Name must contain only letters and be at least 3 characters long."
+  },
+  "mobile": {
+    "label": "Mobile Number",
+    "required": false,
+    "pattern": "^[0-9]{10}$",
+    "errorMsg": "Mobile number must be 10 digits."
+  },
+  "email": {
+    "label": "Email",
+    "required": true,
+    "pattern": "^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+    "errorMsg": "Please enter a valid email address."
+  },
+  "city": {
+    "label": "City",
+    "required": true
+  },
+  "message": {
+    "label": "Message",
+    "required": false
+  },
+  "satisfaction": {
+    "label": "Satisfaction Level",
+    "required": false
+  }
+}
