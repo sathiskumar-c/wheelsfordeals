@@ -1,0 +1,53 @@
+/* ── Global Font System ────────────────────────────────────────────────────── */
+/* Manrope: headlines, page titles, nav labels, sub-headers                     */
+/* Inter: body text, descriptions, paragraphs, form fields                      */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+/* Sub-headers, section labels ------------------------------------------------ */
+h3,
+h4 {
+  font-weight: 700;
+}
+
+/* Navigation links, primary labels ------------------------------------------ */
+nav a,
+nav button,
+.label-font {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+}
+
+/* Body / paragraph text ----------------------------------------------------- */
+p,
+li,
+span,
+td,
+th,
+input,
+textarea,
+select,
+label {
+  font-family: "Inter", sans-serif;
+}

@@ -1,0 +1,958 @@
+// ── Color Tokens ──────────────────────────────────────────────────────────────
+$tr-primary: #1c0070;
+$tr-primary-container: #311b92;
+$tr-secondary: #6c45c0;
+$tr-bg: #f9f9fb;
+$tr-surface: #ffffff;
+$tr-surface-low: #f3f3f5;
+$tr-outline: #787584;
+$tr-outline-variant: #c9c4d5;
+$tr-on-surface: #1a1c1d;
+$tr-on-surface-variant: #474553;
+$tr-primary-fixed: #e5deff;
+$tr-primary-fixed-dim: #c7bfff;
+$tr-error: #ba1a1a;
+$tr-success: #1b6e3b;
+
+// ── Shared input tokens (single source of truth) ──────────────────────────────
+$tr-input-height: 45px;
+$tr-input-radius: 3px;
+$tr-input-px: 1.125rem;
+$tr-input-font: 0.9375rem;
+$tr-placeholder-font: 0.8125rem; // placeholder text — slightly smaller than input text
+$tr-placeholder-color: #b0abbe;
+
+// ── Root ─────────────────────────────────────────────────────────────────────
+.tr-redesign {
+  background-color: $tr-bg;
+
+  // ── Hero Section ─────────────────────────────────────────────────────────
+  &__hero {
+    display: flex;
+    min-height: calc(100vh - 64px);
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  // ── Left — image panel ────────────────────────────────────────────────────
+  &__hero-image {
+    width: 60%;
+    position: relative;
+    background-color: #06001a;
+    background-size: 70%;
+    background-position: center right 2rem;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(6, 0, 26, 0.97) 0%,
+        rgba(28, 0, 112, 0.8) 45%,
+        rgba(49, 27, 146, 0.35) 100%
+      );
+      z-index: 1;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      min-height: 440px;
+      background-size: 60%;
+      background-position: center right -1rem;
+    }
+  }
+
+  &__hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem 3.5rem 4rem;
+
+    @media (max-width: 991px) {
+      padding: 2rem 2.5rem 3rem;
+    }
+
+    @media (max-width: 767px) {
+      padding: 2rem 1.75rem 2.5rem;
+    }
+  }
+
+  &__hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.875rem;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+  }
+
+  &__hero-heading {
+    color: #ffffff;
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1.08;
+    margin-bottom: 1.25rem;
+
+    @media (max-width: 1199px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 2.25rem;
+    }
+
+    &--accent {
+      color: $tr-primary-fixed;
+    }
+  }
+
+  &__hero-desc {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+  }
+
+  &__hero-stats {
+    display: flex;
+    gap: 3rem;
+
+    @media (max-width: 479px) {
+      gap: 2rem;
+    }
+  }
+
+  &__hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__hero-stat-label {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  &__hero-stat-value {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  // ── Right — form panel ────────────────────────────────────────────────────
+  &__hero-form-panel {
+    width: 40%;
+    background-color: $tr-surface;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 4.5rem;
+
+    @media (max-width: 1199px) {
+      padding: 3rem;
+    }
+
+    @media (max-width: 991px) {
+      padding: 3rem 2.5rem;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 2.5rem 1.5rem;
+    }
+  }
+
+  &__form-wrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__form-header {
+    margin-bottom: 1.5rem;
+  }
+
+  &__form-title {
+    color: $tr-primary;
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+
+  &__form-subtitle {
+    color: $tr-on-surface-variant;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  &__form-divider {
+    border: none;
+    border-top: 1px solid $tr-outline-variant;
+    margin: 1.25rem 0 0;
+    opacity: 0.25;
+  }
+
+  // ── Form Controls ─────────────────────────────────────────────────────────
+  &__form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  &__form-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: $tr-outline;
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+  }
+
+  &__form-input {
+    width: 100%;
+    height: $tr-input-height;
+    background: $tr-surface-low;
+    border: none;
+    border-radius: $tr-input-radius;
+    padding: 0 $tr-input-px;
+    font-size: $tr-input-font;
+    color: $tr-on-surface;
+    outline: none;
+    transition:
+      background 0.2s,
+      box-shadow 0.2s;
+    box-sizing: border-box;
+    font-family: inherit;
+
+    &::placeholder {
+      color: $tr-placeholder-color;
+      font-size: $tr-placeholder-font;
+    }
+
+    &:focus {
+      background: #ffffff;
+      box-shadow: 0 0 0 2.5px rgba($tr-primary, 0.18);
+    }
+
+    &--error {
+      box-shadow: 0 0 0 2px rgba($tr-error, 0.35) !important;
+    }
+
+    &--phone {
+      padding-left: 3.125rem;
+    }
+
+    &--location {
+      padding-right: 3rem;
+    }
+  }
+
+  &__form-phone-wrap {
+    position: relative;
+  }
+
+  &__form-phone-prefix {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $tr-outline;
+    font-size: 14px;
+    font-weight: 500;
+    pointer-events: none;
+    z-index: 1;
+    margin-top: 1px;
+    opacity: 0.5;
+  }
+
+  &__form-location-wrap {
+    position: relative;
+  }
+
+  &__form-location-icon {
+    position: absolute !important;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $tr-primary !important;
+    font-size: 1.25rem !important;
+    pointer-events: none;
+  }
+
+  &__form-select {
+    width: 100%;
+    height: $tr-input-height;
+    background: $tr-surface-low;
+    border: none;
+    border-radius: $tr-input-radius;
+    padding: 0 $tr-input-px;
+    font-size: $tr-input-font;
+    color: $tr-on-surface;
+    outline: none;
+    appearance: none;
+    transition:
+      background 0.2s,
+      box-shadow 0.2s;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: inherit;
+
+    &:focus {
+      background: #ffffff;
+      box-shadow: 0 0 0 2.5px rgba($tr-primary, 0.18);
+    }
+
+    &.tr-redesign__form-input--error {
+      box-shadow: 0 0 0 2px rgba($tr-error, 0.35) !important;
+    }
+
+    &--disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    // When no option is selected (value="") — show text in placeholder colour
+    &--empty {
+      color: $tr-placeholder-color;
+      font-size: $tr-placeholder-font;
+    }
+  }
+
+  &__form-time-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .tr-redesign__form-select {
+      flex: 1;
+      padding-right: 2.5rem;
+    }
+  }
+
+  &__time-spinner {
+    position: absolute !important;
+    right: 0.875rem;
+    color: $tr-primary !important;
+    pointer-events: none;
+  }
+
+  &__form-hint {
+    display: block;
+    font-size: 10px;
+    color: #787584;
+    margin-top: 0.35rem;
+    margin-left: 0.25rem;
+  }
+
+  // ── MUI DatePicker override (MUI v6 uses MuiPickersInputBase, not MuiInputBase)
+  &__mui-datepicker {
+    width: 100% !important;
+    display: block !important;
+
+    // v6 root – MuiPickersInputBase-root / MuiPickersOutlinedInput-root
+    // Also cover v5 MuiInputBase-root / MuiOutlinedInput-root as fallback
+    .MuiPickersInputBase-root,
+    .MuiPickersOutlinedInput-root,
+    .MuiOutlinedInput-root,
+    .MuiInputBase-root {
+      width: 100% !important;
+      height: $tr-input-height !important;
+      border-radius: $tr-input-radius !important;
+      background: $tr-surface-low !important;
+      background-color: $tr-surface-low !important;
+      font-family: inherit !important;
+      font-size: $tr-input-font !important;
+      transition:
+        background 0.2s,
+        box-shadow 0.2s;
+      box-sizing: border-box !important;
+      padding: 0 !important;
+
+      // Kill all border variants
+      fieldset,
+      .MuiOutlinedInput-notchedOutline,
+      .MuiPickersOutlinedInput-notchedOutline {
+        border: none !important;
+        border-width: 0 !important;
+        box-shadow: none !important;
+      }
+
+      &:hover {
+        background: $tr-surface-low !important;
+        background-color: $tr-surface-low !important;
+
+        fieldset,
+        .MuiOutlinedInput-notchedOutline,
+        .MuiPickersOutlinedInput-notchedOutline {
+          border: none !important;
+        }
+      }
+
+      &.Mui-focused {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 0 0 2.5px rgba($tr-primary, 0.18) !important;
+
+        fieldset,
+        .MuiOutlinedInput-notchedOutline,
+        .MuiPickersOutlinedInput-notchedOutline {
+          border: none !important;
+        }
+      }
+
+      &.Mui-error {
+        box-shadow: 0 0 0 2px rgba($tr-error, 0.35) !important;
+      }
+    }
+
+    // ── v6: the "MM / DD / YYYY" sections container — this IS the text area
+    .MuiPickersSectionList-root,
+    .MuiPickersInputBase-sectionsContainer {
+      height: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      padding: 0 $tr-input-px !important;
+      box-sizing: border-box !important;
+      font-size: $tr-placeholder-font !important;
+      font-family: inherit !important;
+    }
+
+    // Individual section (MM, DD, YYYY / separator)
+    .MuiPickersSectionList-section,
+    .MuiPickersInputBase-section {
+      font-size: $tr-placeholder-font !important;
+      font-family: inherit !important;
+      color: $tr-placeholder-color !important;
+    }
+
+    // The actual typed/selected content inside each section
+    .MuiPickersSectionList-sectionContent,
+    .MuiPickersInputBase-sectionContent {
+      font-size: $tr-placeholder-font !important;
+      font-family: inherit !important;
+      color: $tr-placeholder-color !important;
+    }
+
+    // ── v5 fallback: plain <input> element
+    .MuiInputBase-input {
+      height: $tr-input-height !important;
+      padding: 0 $tr-input-px !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      box-sizing: border-box !important;
+      font-size: $tr-placeholder-font !important;
+      color: $tr-placeholder-color !important;
+      font-family: inherit !important;
+
+      &::placeholder {
+        color: $tr-placeholder-color !important;
+        font-size: $tr-placeholder-font !important;
+        opacity: 1 !important;
+      }
+    }
+
+    // Calendar open icon
+    .MuiInputAdornment-root {
+      margin: 0 0.375rem 0 0;
+
+      button {
+        color: $tr-primary !important;
+
+        &:hover {
+          background: rgba($tr-primary, 0.06) !important;
+        }
+      }
+    }
+
+    // Error helper text
+    .MuiFormHelperText-root {
+      font-size: 0.75rem !important;
+      margin-left: 0.25rem !important;
+      font-family: inherit !important;
+    }
+  }
+
+  // ── MUI Calendar popup theme overrides ───────────────────────────────────
+  // These are portalled to body so they live outside .tr-redesign but
+  // scoped via MUI's global class names
+} // end .tr-redesign
+
+// Calendar popup global overrides (portalled outside component root)
+.MuiPickersPopper-root,
+.MuiPickersPopperRoot-root {
+  .MuiPaper-root {
+    border-radius: 1rem !important;
+    box-shadow: 0 12px 40px rgba(28, 0, 112, 0.12) !important;
+    border: 1px solid #e5deff;
+  }
+
+  // Header (month + nav arrows)
+  .MuiPickersCalendarHeader-root {
+    padding: 0.75rem 1rem 0;
+  }
+
+  .MuiPickersCalendarHeader-label {
+    font-weight: 700 !important;
+    color: #1c0070 !important;
+    font-family: inherit !important;
+  }
+
+  .MuiIconButton-root {
+    color: #1c0070 !important;
+
+    &:hover {
+      background: rgba(28, 0, 112, 0.06) !important;
+    }
+  }
+
+  // Day-of-week labels
+  .MuiDayCalendar-weekDayLabel {
+    font-weight: 700 !important;
+    color: #787584 !important;
+    font-family: inherit !important;
+  }
+
+  // Individual day buttons
+  .MuiPickersDay-root {
+    font-family: inherit !important;
+    border-radius: 0.5rem !important;
+    font-weight: 500;
+
+    &:hover:not(.Mui-disabled) {
+      background: #e5deff !important;
+      color: #1c0070 !important;
+    }
+
+    &.Mui-selected {
+      background: #311b92 !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+
+      &:hover {
+        background: #1c0070 !important;
+      }
+
+      &:focus {
+        background: #311b92 !important;
+      }
+    }
+
+    &.MuiPickersDay-today:not(.Mui-selected) {
+      border: 1.5px solid #311b92 !important;
+      color: #311b92 !important;
+      font-weight: 700;
+    }
+
+    &.Mui-disabled {
+      opacity: 0.3 !important;
+    }
+  }
+
+  // Action bar (OK/Cancel if shown)
+  .MuiDialogActions-root button {
+    color: #311b92 !important;
+    font-weight: 700 !important;
+    font-family: inherit !important;
+  }
+}
+
+// Re-open the block for remaining rules
+.tr-redesign {
+  // reopen
+
+  // ── Location search bar ───────────────────────────────────────────────────
+  &__location-search-wrap {
+    position: relative;
+  }
+
+  &__location-search {
+    display: flex;
+    align-items: center;
+    height: $tr-input-height;
+    background: $tr-surface-low;
+    border-radius: $tr-input-radius;
+    border: 1.5px solid transparent;
+    transition:
+      box-shadow 0.2s,
+      background 0.2s;
+    overflow: visible;
+    box-sizing: border-box;
+
+    &:focus-within {
+      background: #ffffff;
+      box-shadow: 0 0 0 2.5px rgba($tr-primary, 0.18);
+      border-color: transparent;
+    }
+
+    &--error {
+      box-shadow: 0 0 0 2px rgba($tr-error, 0.35) !important;
+    }
+  }
+
+  &__location-place-icon {
+    color: $tr-outline !important;
+    font-size: 1.2rem !important;
+    margin-left: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  &__location-input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 0.75rem;
+    font-size: $tr-input-font;
+    color: $tr-on-surface;
+    font-family: inherit;
+    min-width: 0;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $tr-placeholder-color;
+      font-size: $tr-placeholder-font;
+    }
+  }
+
+  &__location-search-btn,
+  &__location-gps-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $tr-outline;
+    transition: color 0.2s;
+    flex-shrink: 0;
+
+    svg {
+      font-size: 1.25rem !important;
+    }
+
+    &:hover {
+      color: $tr-primary;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__location-gps-btn {
+    color: $tr-primary;
+    margin-right: 0.25rem;
+  }
+
+  &__location-divider {
+    width: 1px;
+    height: 1.5rem;
+    background: $tr-outline-variant;
+    flex-shrink: 0;
+  }
+
+  &__location-suggestions {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-radius: $tr-input-radius;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid $tr-outline-variant;
+  }
+
+  &__location-suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    color: $tr-on-surface;
+    cursor: pointer;
+    transition: background 0.15s;
+    border-bottom: 1px solid rgba($tr-outline-variant, 0.5);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: $tr-surface-low;
+    }
+  }
+
+  &__location-suggestion-icon {
+    font-size: 1rem !important;
+    color: $tr-outline !important;
+    flex-shrink: 0;
+  }
+
+  // ── Location result block ─────────────────────────────────────────────────
+  &__location-result {
+    margin-top: 0.75rem;
+    padding: 0.875rem 1rem;
+    background: $tr-surface-low;
+    border-radius: $tr-input-radius;
+    font-size: 0.875rem;
+  }
+
+  &__location-address {
+    color: $tr-success;
+    font-style: italic;
+    margin: 0 0 0.3rem;
+    word-break: break-word;
+  }
+
+  &__location-distance {
+    color: $tr-on-surface-variant;
+    margin: 0 0 0.4rem;
+  }
+
+  &__location-pricing {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #f0fff4;
+    border-radius: 0.625rem;
+    border: 1px solid #22c55e;
+    color: $tr-success;
+    font-weight: 600;
+    line-height: 1.65;
+    font-size: 0.875rem;
+  }
+
+  // ── Checkbox ──────────────────────────────────────────────────────────────
+  &__form-group--checkbox {
+    margin-bottom: 0.5rem;
+    margin-left: 5px;
+  }
+
+  &__form-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    font-size: 13px;
+    color: #787584;
+    line-height: 1.5;
+  }
+
+  &__form-checkbox {
+    margin-top: 0.15rem;
+    width: 14px;
+    height: 14px;
+    accent-color: $tr-primary-container;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  &__form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__form-error {
+    display: block;
+    color: $tr-error;
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+    margin-left: 0.25rem;
+  }
+
+  &__form-submit-wrap {
+    margin-top: 1.5rem;
+  }
+
+  &__form-submit {
+    width: 100%;
+    background: $tr-primary-container;
+    color: #ffffff;
+    border: none;
+    border-radius: $tr-input-radius;
+    padding: 10px;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+    box-shadow: 0 8px 24px rgba($tr-primary-container, 0.28);
+    font-family: inherit;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba($tr-primary-container, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &__form-note {
+    text-align: center;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: $tr-outline;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  &__success-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba($tr-success, 0.08);
+    border: 1.5px solid rgba($tr-success, 0.25);
+    border-radius: $tr-input-radius;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.75rem;
+    color: $tr-success;
+    font-size: 0.9375rem;
+    font-weight: 500;
+
+    svg {
+      color: $tr-success !important;
+      flex-shrink: 0;
+      font-size: 1.375rem !important;
+    }
+  }
+
+  // ── Dialog buttons ─────────────────────────────────────────────────────────
+  &__dialog-btn {
+    padding: 0.625rem 1.5rem;
+    border-radius: $tr-input-radius;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+
+    &--outline {
+      background: transparent;
+      border: 1.5px solid $tr-primary;
+      color: $tr-primary;
+
+      &:hover {
+        background: rgba($tr-primary, 0.06);
+      }
+    }
+
+    &--confirm {
+      background: $tr-primary-container;
+      border: none;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba($tr-primary-container, 0.3);
+
+      &:hover {
+        box-shadow: 0 6px 16px rgba($tr-primary-container, 0.45);
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  // ── Features Section ──────────────────────────────────────────────────────
+  &__features {
+    background: $tr-surface;
+    padding: 5rem 2rem;
+
+    @media (max-width: 767px) {
+      padding: 3.5rem 1.5rem;
+    }
+  }
+
+  &__features-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 599px) {
+      grid-template-columns: 1fr;
+      gap: 2.25rem;
+    }
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background: rgba($tr-secondary, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      color: $tr-secondary !important;
+      font-size: 1.3rem !important;
+    }
+  }
+
+  &__feature-title {
+    color: $tr-primary;
+    font-size: 1.1875rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  &__feature-desc {
+    color: $tr-on-surface-variant;
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    margin: 0;
+  }
+}
