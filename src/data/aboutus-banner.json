@@ -1,13 +1,77 @@
 {
-  "label": "Our Mission",
-  "title": "To provide a",
-  "highlightedText": ["simplified", "credible", "and hassle-free"],
-  "description": "mobility ecosystem.",
+  "hero": {
+    "badge": "EST. 2024",
+    "title": "Redefining the Used Bike Experience",
+    "description": "Velocita Indigo is more than a marketplace. We are a digital curator for the modern rider, bringing editorial precision to the world of luxury motorcycles.",
+    "backgroundImage": "/images/icons/about-us.jpg"
+  },
+  "philosophy": {
+    "eyebrow": "The Philosophy",
+    "title": "Curation Over Commodity",
+    "mainCard": {
+      "title": "Unwavering Authenticity",
+      "description": "Every machine in our inventory undergoes a 200-point forensic inspection by master technicians. We don't just sell bikes; we certify legacies. Our provenance checks ensure every history is as clear as our commitment."
+    },
+    "accentCard": {
+      "title": "Global Network",
+      "description": "Connecting elite collectors across five continents with a seamless logistical pipeline."
+    },
+    "smallCard": {
+      "title": "Expertise",
+      "description": "Decades of automotive passion distilled into a seamless digital interface."
+    },
+    "curatorCard": {
+      "title": "The Curator's Standard",
+      "description": "Our standards are set by enthusiasts, for enthusiasts. We reject 85% of applicants to maintain our hallmark of quality.",
+      "linkText": "Learn our process",
+      "image": "/images/icons/quality.png"
+    }
+  },
   "stats": [
-    { "number": "40k+", "label": "Vehicles Sold" },
-    { "number": "50+", "label": "Stores" },
-    { "number": "1.4L+", "label": "Happy Customers" }
+    { "number": "40k+", "label": "Curated Vehicles" },
+    { "number": "50+", "label": "Global Stores" },
+    { "number": "1.4L+", "label": "Premium Customers" }
   ],
-  "image": "/images/icons/about-us.jpg",
-  "altText": "Founder Image"
+  "story": {
+    "title": "Crafting the narrative of speed.",
+    "paragraphs": [
+      "Founded by a collective of industrial designers and endurance racers, Velocita was born from a singular frustration: the transactional nature of the automotive secondary market.",
+      "We believe every ride has a soul, and every transition should be an event. We spent three years building the infrastructure to treat used assets with the same reverence as a new release.",
+      "Today, Velocita Indigo stands as the pinnacle of that vision—a sanctuary for the discerning rider where quality is the only currency that matters."
+    ],
+    "primaryCta": { "label": "View Inventory", "link": "/bikes" },
+    "secondaryCta": { "label": "Our Magazine", "link": "#" },
+    "image": "/images/icons/about-us.jpg",
+    "imageAlt": "Velocita story"
+  },
+  "team": {
+    "eyebrow": "The Curators",
+    "title": "Voices of Authority",
+    "members": [
+      {
+        "name": "Julian Sterling",
+        "role": "Principal Curator",
+        "bio": "Former design lead for European superbikes, Julian oversees the final certification for every Velocita asset.",
+        "image": "/images/icons/about-us.jpg"
+      },
+      {
+        "name": "Elena Vance",
+        "role": "Global Logistics Director",
+        "bio": "Architect of our white-glove delivery network, ensuring assets move across borders with surgical precision.",
+        "image": "/images/icons/about-us.jpg"
+      },
+      {
+        "name": "Marcus Thorne",
+        "role": "Heritage Expert",
+        "bio": "A specialized historian focusing on vintage cafe racers and rare Japanese engineering marvels.",
+        "image": "/images/icons/about-us.jpg"
+      },
+      {
+        "name": "Sofia Rossi",
+        "role": "Market Analyst",
+        "bio": "Defining value through data and desire. Sofia tracks global trends to keep Velocita at the edge of the market.",
+        "image": "/images/icons/about-us.jpg"
+      }
+    ]
+  }
 }

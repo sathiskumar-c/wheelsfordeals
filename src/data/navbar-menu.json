@@ -3,7 +3,6 @@
   "navLinks": [
     {
       "label": "Buy Used Bikes",
-      "path": "/",
       "submenu": true,
       "categories": [
         {
