@@ -12,29 +12,29 @@ import Home from "./pages/home/home";
 import AboutUs from "./pages/aboutus/aboutus";
 import ContactUs from "./pages/contactus/contactus";
 import ProductList from "./pages/product-list/product-list";
-import ProductDetails from "./pages/product-details/product-details";
 import FrequentlyAskedQuestions from "./pages/faq/faq";
 import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
 import PrivacyPolicy from "./pages/privacy-policy/privacy-policy";
 import TermsandConditions from "./pages/terms-conditions/terms-conditions";
-import BookRide from "./pages/test-ride/test-ride";
+import TestRide from "./pages/test-ride/test-ride";
 import BookBike from "./pages/book-bike/book-bike";
 import MyOrders from "./pages/my-orders/my-orders";
-import HoldBike from "./pages/hold-bike/hold-bike";
 import MyProfile from "./pages/my-profile/my-profile";
-import FeedbackDialog from "./pages/feedback/feedback";
 import OrderTracking from "./pages/order-tracking/order-tracking";
+import ProductDetails from "./pages/product-details/product-details";
+import HoldBike from "./pages/hold-bike/hold-bike";
 
 // Components Imports
-import NavbarDeskTop from "./components/navbar/navbar";
+import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import PageNotFound from "./components/page-not-found/page-not-found";
-import NewsletterAndSupport from "./components/newsletter-and-support/newsletter-and-support";
 
 // Local Imports
 import "./App.scss";
-import UserSettings from "./pages/user-settings/user-settings";
+
+// Utils Imports
+import ScrollToTop from "./utils/ScrollToTop";
 
 const HIDE_HEADER_FOOTER_PATHS = ["/login", "/signup"];
 
@@ -44,53 +44,57 @@ const App = () => {
   return (
     <React.Fragment>
       <Router>
-        {!hideHeaderFooter && <NavbarDeskTop />}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/feedback" element={<FeedbackDialog />} />
-          <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
-          <Route path="/my-orders" element={<MyOrders />} />
-          <Route
-            path="/terms-and-conditions"
-            element={<TermsandConditions />}
-          />
-          <Route path="/bikes" element={<ProductList />} />
-          <Route path="/bikes/*" element={<ProductList />} />
-          <Route
-            path="/bike/details/:brand/:bike-name/:bike_id"
-            element={<ProductDetails />}
-          />
-          <Route
-            path="/test-drive/:bike_brand/:bike_model/:bike_id"
-            element={<BookRide />}
-          />
-          <Route path="/my-profile" element={<MyProfile />} />
-
-          <Route path="/track-my-order/:order_id" element={<OrderTracking />} />
-
-          <Route
-            path="/hold-bike/:bike_brand/:bike_model/:bike_id"
-            element={<HoldBike />}
-          />
-
-          <Route
-            path="/book-bike/:bike_brand/:bike_model/:bike_id"
-            element={<BookBike />}
-          />
-
-          <Route path="/settings" element={<UserSettings />} />
-
-          <Route path="/page-not-found" element={<PageNotFound />} />
-          <Route path="*" element={<Navigate to="/page-not-found" replace />} />
-        </Routes>
-
-        {!hideHeaderFooter && <NewsletterAndSupport />}
-        {!hideHeaderFooter && <Footer />}
+        <ScrollToTop />
+        {hideHeaderFooter ? (
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+        ) : (
+          <Navbar>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
+              <Route path="/my-orders" element={<MyOrders />} />
+              <Route
+                path="/terms-and-conditions"
+                element={<TermsandConditions />}
+              />
+              <Route path="/bikes" element={<ProductList />} />
+              <Route path="/bikes/*" element={<ProductList />} />
+              <Route
+                path="/bike/details/:brand/:bike-name/:bike_id"
+                element={<ProductDetails />}
+              />
+              <Route
+                path="/test-drive/:bike_brand/:bike_model/:bike_id"
+                element={<TestRide />}
+              />
+              <Route path="/my-profile" element={<MyProfile />} />
+              <Route
+                path="/track-my-order/:order_id"
+                element={<OrderTracking />}
+              />
+              <Route
+                path="/hold-bike/:bike_brand/:bike_model/:bike_id"
+                element={<HoldBike />}
+              />
+              <Route
+                path="/book-bike/:bike_brand/:bike_model/:bike_id"
+                element={<BookBike />}
+              />
+              <Route path="/page-not-found" element={<PageNotFound />} />
+              <Route
+                path="*"
+                element={<Navigate to="/page-not-found" replace />}
+              />
+            </Routes>
+            <Footer />
+          </Navbar>
+        )}
       </Router>
     </React.Fragment>
   );

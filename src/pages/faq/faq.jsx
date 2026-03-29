@@ -1,97 +1,180 @@
 // React Imports
 import React, { useState } from "react";
-
-// Component Imports
-import InfoWithImageBlock from "../../components/common-components/info-with-image-block/info-with-image-block";
+import { Link } from "react-router-dom";
 
 // Local Imports
 import "./faq.scss";
+import faqData from "../../data/frequently-asked-questions.json";
 
-// JSON Import
-import FAQData from "../../data/frequently-asked-questions.json";
-import RaiseYourQuery from "../../data/raise-your-query.json";
+// MUI Icon Imports
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import DashboardRoundedIcon from "@mui/icons-material/DashboardRounded";
+import ShoppingBagRoundedIcon from "@mui/icons-material/ShoppingBagRounded";
+import SellRoundedIcon from "@mui/icons-material/SellRounded";
+import VerifiedRoundedIcon from "@mui/icons-material/VerifiedRounded";
+import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
+import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
+import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 
-// Tabs
-const tabs = ["Sell Car", "Buy Car"];
+const CATEGORY_ICONS = {
+  general: <DashboardRoundedIcon />,
+  buying: <ShoppingBagRoundedIcon />,
+  selling: <SellRoundedIcon />,
+  curation: <VerifiedRoundedIcon />,
+  shipping: <LocalShippingRoundedIcon />,
+};
 
-// Categories
-const categories = [
-  "Booking an Appointment",
-  "Branch Visit",
-  "CARS24 Best Price",
-  "CARS24 Seller Protection Policy",
-  "Post-Sales Service",
-  "Transaction Guidelines",
-  "Pricing and Documentation",
-  "Home Inspection",
-];
+const { hero, sidebar, categories, callout } = faqData;
 
 const FrequentlyAskedQuestions = () => {
-  // State Management
-  const [activeTab, setActiveTab] = useState("Sell Car");
-  const [activeCategory, setActiveCategory] = useState(
-    "Booking an Appointment"
-  );
+  const [activeCategory, setActiveCategory] = useState(categories[0].id);
+  const [openFaqId, setOpenFaqId] = useState(null);
 
-  // Data Access
-  const faqData = FAQData.faq_page;
-  const faqs = faqData[activeTab][activeCategory] || [];
+  const currentCategory = categories.find((c) => c.id === activeCategory);
+
+  const toggleFaq = (id) => {
+    setOpenFaqId((prev) => (prev === id ? null : id));
+  };
 
   return (
-    <div className="faq-page py-5">
-      <main className="faq-container container">
-        <h1 className="faq-main-heading">Frequently Asked Questions</h1>
-
-        <aside className="sidebar">
-          <div className="tab-buttons" role="tablist" aria-label="FAQ Tabs">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                role="tab"
-                aria-selected={activeTab === tab}
-                className={activeTab === tab ? "active" : ""}
-                onClick={() => {
-                  setActiveTab(tab);
-                  setActiveCategory("Booking an Appointment");
-                }}
-              >
-                {tab}
+    <div className="faq-redesign">
+      {/* ── Hero ── */}
+      <section className="faq-redesign__hero">
+        <div className="faq-redesign__hero-blur" />
+        <div className="faq-redesign__hero-inner">
+          <h1 className="faq-redesign__hero-heading">{hero.heading}</h1>
+          <div className="faq-redesign__search-wrap">
+            <SearchRoundedIcon className="faq-redesign__search-icon" />
+            <input
+              type="text"
+              className="faq-redesign__search-input"
+              placeholder={hero.searchPlaceholder}
+            />
+          </div>
+          <div className="faq-redesign__popular-tags">
+            <span className="faq-redesign__popular-label">Popular:</span>
+            {hero.popularTags.map((tag) => (
+              <button key={tag} type="button" className="faq-redesign__tag">
+                {tag}
               </button>
             ))}
           </div>
+        </div>
+      </section>
 
-          <nav className="category-nav" aria-label="FAQ Categories">
-            <ul className="category-list">
-              {categories.map((cat) => (
-                <li
-                  key={cat}
-                  className={activeCategory === cat ? "active" : ""}
-                  onClick={() => setActiveCategory(cat)}
+      {/* ── Body ── */}
+      <section className="faq-redesign__body">
+        <div className="faq-redesign__layout">
+          {/* Sidebar */}
+          <aside className="faq-redesign__sidebar">
+            <nav className="faq-redesign__sidebar-nav">
+              <p className="faq-redesign__categories-label">
+                {sidebar.categoriesLabel}
+              </p>
+              {sidebar.categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  type="button"
+                  className={`faq-redesign__cat-item${
+                    activeCategory === cat.id
+                      ? " faq-redesign__cat-item--active"
+                      : ""
+                  }`}
+                  onClick={() => {
+                    setActiveCategory(cat.id);
+                    setOpenFaqId(null);
+                  }}
                 >
-                  {cat}
-                </li>
+                  <span className="faq-redesign__cat-icon">
+                    {CATEGORY_ICONS[cat.icon]}
+                  </span>
+                  {cat.label}
+                </button>
               ))}
-            </ul>
-          </nav>
-        </aside>
+            </nav>
 
-        <section className="faq-content">
-          <h2 className="category-title">{activeCategory}</h2>
-
-          {faqs.map((faq, idx) => (
-            <div className="faq-item" key={idx}>
-              <h3 className="question">
-                <span className="highlight-bar" />
-                {faq.question}
-              </h3>
-              <p className="answer">{faq.answer}</p>
+            {/* Help Card */}
+            <div className="faq-redesign__help-card">
+              <SupportAgentRoundedIcon className="faq-redesign__help-icon" />
+              <h4 className="faq-redesign__help-title">
+                {sidebar.helpCard.title}
+              </h4>
+              <p className="faq-redesign__help-desc">
+                {sidebar.helpCard.description}
+              </p>
+              <Link to="/contact-us" className="faq-redesign__help-btn">
+                {sidebar.helpCard.buttonLabel}
+              </Link>
             </div>
-          ))}
-        </section>
-      </main>
-      <div className="container">
-        <InfoWithImageBlock content={RaiseYourQuery} />
-      </div>
+          </aside>
+
+          {/* Content */}
+          <div className="faq-redesign__content">
+            <header className="faq-redesign__content-header">
+              <h2 className="faq-redesign__content-title">
+                {currentCategory.title}
+              </h2>
+              <p className="faq-redesign__content-desc">
+                {currentCategory.description}
+              </p>
+            </header>
+
+            {/* Accordion */}
+            <div className="faq-redesign__accordion">
+              {currentCategory.faqs.map((faq) => {
+                const isOpen = openFaqId === faq.id;
+                return (
+                  <div
+                    key={faq.id}
+                    className={`faq-redesign__accordion-item${
+                      isOpen ? " faq-redesign__accordion-item--open" : ""
+                    }`}
+                  >
+                    <button
+                      type="button"
+                      className="faq-redesign__accordion-trigger"
+                      onClick={() => toggleFaq(faq.id)}
+                      aria-expanded={isOpen}
+                    >
+                      <span className="faq-redesign__accordion-question">
+                        {faq.question}
+                      </span>
+                      <ExpandMoreRoundedIcon
+                        className={`faq-redesign__accordion-chevron${
+                          isOpen ? " faq-redesign__accordion-chevron--open" : ""
+                        }`}
+                      />
+                    </button>
+                    {isOpen && (
+                      <div className="faq-redesign__accordion-body">
+                        <p className="faq-redesign__accordion-answer">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Callout Banner */}
+            <div className="faq-redesign__callout">
+              <div className="faq-redesign__callout-overlay" />
+              <div className="faq-redesign__callout-content">
+                <h3 className="faq-redesign__callout-heading">
+                  {callout.heading}
+                </h3>
+                <p className="faq-redesign__callout-desc">
+                  {callout.description}
+                </p>
+                <button type="button" className="faq-redesign__callout-btn">
+                  {callout.buttonLabel}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

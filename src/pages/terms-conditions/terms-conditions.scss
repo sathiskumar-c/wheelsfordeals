@@ -1,0 +1,584 @@
+// ── Color Tokens ──────────────────────────────────────────────────────────────
+$tc-primary: #1c0070;
+$tc-secondary: #6c45c0;
+$tc-bg: #f9f9fb;
+$tc-surface: #ffffff;
+$tc-surface-low: #f3f3f5;
+$tc-outline-variant: #c9c4d5;
+$tc-on-surface-variant: #474553;
+$tc-primary-container: #311b92;
+$tc-secondary-fixed: #eaddff;
+$tc-on-secondary-fixed: #24005b;
+$tc-error: #ba1a1a;
+
+// ── Font Tokens ───────────────────────────────────────────────────────────────
+$font-headline: "Manrope", sans-serif;
+$font-body: "Inter", sans-serif;
+
+// ── Root ─────────────────────────────────────────────────────────────────────
+.tc-redesign {
+  background-color: $tc-bg;
+
+  // ── Hero Header ──────────────────────────────────────────────────────────
+  &__hero {
+    background-color: $tc-surface-low;
+    padding: 8rem 2rem 4rem;
+
+    @media (max-width: 767px) {
+      padding: 6rem 1.25rem 3rem;
+    }
+  }
+
+  &__hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__hero-badge {
+    display: inline-block;
+    background-color: $tc-secondary-fixed;
+    color: $tc-on-secondary-fixed;
+    font-family: $font-headline;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+  }
+
+  &__hero-title {
+    font-family: $font-headline;
+    font-size: 3.75rem;
+    font-weight: 800;
+    color: $tc-primary;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+
+    @media (max-width: 767px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__hero-desc {
+    font-family: $font-body;
+    color: $tc-on-surface-variant;
+    font-size: 1.0625rem;
+    max-width: 640px;
+    line-height: 1.75;
+  }
+
+  // ── Body: sidebar + main content ─────────────────────────────────────────
+  &__body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (max-width: 767px) {
+      padding: 2.5rem 1.25rem;
+    }
+  }
+
+  // ── Sidebar ───────────────────────────────────────────────────────────────
+  &__sidebar {
+    flex-shrink: 0;
+    width: 16rem;
+    position: sticky;
+    top: 6rem;
+
+    @media (max-width: 991px) {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  &__sidebar-card {
+    background-color: $tc-surface-low;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sidebar-header {
+    padding: 1.25rem 1.25rem 1rem;
+    border-bottom: 1px solid rgba($tc-outline-variant, 0.4);
+  }
+
+  &__sidebar-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__sidebar-icon {
+    color: $tc-secondary !important;
+    font-size: 1.25rem !important;
+  }
+
+  &__sidebar-title {
+    font-family: $font-headline;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: $tc-secondary;
+  }
+
+  &__sidebar-meta {
+    display: block;
+    font-family: $font-body;
+    font-size: 0.6875rem;
+    color: $tc-on-surface-variant;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-top: 0.2rem;
+  }
+
+  &__sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    flex: 1;
+
+    @media (max-width: 991px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-family: $font-headline;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: $tc-on-surface-variant;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    svg {
+      font-size: 1.25rem !important;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      background-color: rgba($tc-primary, 0.06);
+      color: $tc-primary;
+    }
+
+    &--active {
+      background-color: $tc-surface;
+      color: $tc-secondary;
+      border-right: 3px solid $tc-secondary;
+      transform: translateX(2px);
+
+      svg {
+        color: $tc-secondary;
+      }
+    }
+
+    @media (max-width: 991px) {
+      width: auto;
+      font-size: 0.8125rem;
+      padding: 0.5rem 0.875rem;
+      border-right: none;
+
+      &--active {
+        transform: none;
+      }
+    }
+  }
+
+  &__nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba($tc-outline-variant, 0.3);
+  }
+
+  &__download-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: $tc-primary-container;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: $font-headline;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    svg {
+      font-size: 1.125rem !important;
+    }
+
+    &:hover {
+      opacity: 0.88;
+    }
+  }
+
+  // ── Main Content ──────────────────────────────────────────────────────────
+  &__content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    scroll-margin-top: 6rem;
+  }
+
+  &__section-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__section-rule {
+    display: inline-block;
+    width: 2rem;
+    height: 2px;
+    background-color: $tc-secondary;
+    flex-shrink: 0;
+  }
+
+  &__section-title {
+    font-family: $font-headline;
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: $tc-primary;
+    letter-spacing: -0.02em;
+  }
+
+  // ── Introduction: body + quick-take ──────────────────────────────────────
+  &__intro-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__body-text {
+    font-family: $font-body;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: $tc-on-surface-variant;
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  &__quick-take {
+    width: 13rem;
+    background-color: $tc-surface-low;
+    border-radius: 0.75rem;
+    border-left: 4px solid $tc-primary;
+    padding: 1.25rem;
+    flex-shrink: 0;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__quick-take-title {
+    font-family: $font-headline;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: $tc-primary;
+    margin-bottom: 0.5rem;
+  }
+
+  &__quick-take-text {
+    font-family: $font-body;
+    font-size: 0.75rem;
+    color: $tc-on-surface-variant;
+    line-height: 1.6;
+  }
+
+  // ── Eligibility card ──────────────────────────────────────────────────────
+  &__eligibility-card {
+    background-color: rgba($tc-surface-low, 0.5);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba($tc-outline-variant, 0.15);
+  }
+
+  &__eligibility-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__eligibility-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__eligibility-icon {
+    color: $tc-secondary !important;
+    font-size: 1.375rem !important;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+  }
+
+  &__eligibility-title {
+    font-family: $font-headline;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $tc-primary;
+    margin-bottom: 0.3rem;
+  }
+
+  &__eligibility-desc {
+    font-family: $font-body;
+    font-size: 0.875rem;
+    color: $tc-on-surface-variant;
+    line-height: 1.7;
+  }
+
+  // ── User Conduct ──────────────────────────────────────────────────────────
+  &__conduct-intro {
+    font-family: $font-body;
+    color: $tc-on-surface-variant;
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  &__conduct-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__conduct-card {
+    background-color: $tc-surface;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba($tc-outline-variant, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  &__conduct-card-title {
+    font-family: $font-headline;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    svg {
+      font-size: 1.125rem !important;
+    }
+
+    &--prohibited {
+      color: $tc-error;
+      svg {
+        color: $tc-error;
+      }
+    }
+
+    &--best {
+      color: $tc-primary-container;
+      svg {
+        color: $tc-primary-container;
+      }
+    }
+  }
+
+  &__conduct-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: $font-body;
+    font-size: 0.75rem;
+    color: $tc-on-surface-variant;
+    line-height: 1.6;
+  }
+
+  // ── IP Rights Banner ──────────────────────────────────────────────────────
+  &__ip-banner {
+    background: linear-gradient(
+      135deg,
+      $tc-primary-container 0%,
+      $tc-primary 60%,
+      #050020 100%
+    );
+    border-radius: 1.5rem;
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    scroll-margin-top: 6rem;
+
+    @media (max-width: 575px) {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  &__ip-blur {
+    position: absolute;
+    right: -5rem;
+    bottom: -5rem;
+    width: 16rem;
+    height: 16rem;
+    background-color: rgba($tc-secondary, 0.2);
+    border-radius: 9999px;
+    filter: blur(3rem);
+    pointer-events: none;
+  }
+
+  &__ip-title {
+    font-family: $font-headline;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__ip-desc {
+    font-family: $font-body;
+    color: rgba(#fff, 0.9);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
+
+  &__ip-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__ip-btn {
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: $font-headline;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border: none;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &--primary {
+      background-color: #fff;
+      color: $tc-primary;
+    }
+
+    &--outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(#fff, 0.3);
+    }
+  }
+
+  // ── Footer CTA ────────────────────────────────────────────────────────────
+  &__footer-cta {
+    padding-top: 3rem;
+    border-top: 1px solid rgba($tc-outline-variant, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__footer-caption {
+    font-family: $font-body;
+    font-size: 0.75rem;
+    color: $tc-on-surface-variant;
+    font-style: italic;
+    margin-bottom: 0.25rem;
+  }
+
+  &__footer-heading {
+    font-family: $font-headline;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $tc-primary;
+  }
+
+  &__footer-btn {
+    padding: 0.75rem 2rem;
+    background-color: $tc-secondary;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    font-family: $font-headline;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba($tc-secondary, 0.25);
+    transition: transform 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
