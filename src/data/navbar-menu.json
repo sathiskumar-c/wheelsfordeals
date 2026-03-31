@@ -434,7 +434,7 @@
     "menuItems": [
       {
         "label": "Profile",
-        "path": "/my-profile",
+        "path": "/profile",
         "action": "navigate"
       },
       {
