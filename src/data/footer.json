@@ -11,8 +11,8 @@
     {
       "title": "DISCOVER",
       "links": [
-        { "label": "Buy used bike", "path": "/buy-bike" },
-        { "label": "Sell used bike", "path": "/sell-bike" },
+        { "label": "Buy used bike", "path": "/bikes" },
+        { "label": "Sell used bike", "path": "/sellbikes" },
         { "label": "Check vehicle details", "path": "/check-vehicle" }
       ]
     },
@@ -35,5 +35,5 @@
       ]
     }
   ],
-  "copyright": "© 2025 WheelsForDeals, All rights reserved"
+  "copyright": "© 2026 WheelsForDeals, All rights reserved"
 }
