@@ -9,6 +9,9 @@
     "name": "Honda CBR650R",
     "category": "650cc",
     "price": "8,50,000",
-    "image": "https://i.imgur.com/iDwDQ4o.png"
+    "image": "https://i.imgur.com/iDwDQ4o.png",
+    "brand_slug": "honda",
+    "model_slug": "cbr650r",
+    "bike_id": "cbr650r-tn21u1256"
   }
 }

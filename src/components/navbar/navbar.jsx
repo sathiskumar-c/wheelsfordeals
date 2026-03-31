@@ -411,8 +411,8 @@ const Navbar = ({ children }) => {
         </Link>
 
         <Link
-          to="/my-profile"
-          className={`nbr__mobile-nav-item${location.pathname.startsWith("/my-profile") ? " nbr__mobile-nav-item--active" : ""}`}
+          to="/profile"
+          className={`nbr__mobile-nav-item${location.pathname.startsWith("/profile") ? " nbr__mobile-nav-item--active" : ""}`}
         >
           <PersonRoundedIcon />
           <span>Profile</span>

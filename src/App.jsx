@@ -19,8 +19,9 @@ import PrivacyPolicy from "./pages/privacy-policy/privacy-policy";
 import TermsandConditions from "./pages/terms-conditions/terms-conditions";
 import TestRide from "./pages/test-ride/test-ride";
 import BookBike from "./pages/book-bike/book-bike";
-import MyOrders from "./pages/my-orders/my-orders";
-import MyProfile from "./pages/my-profile/my-profile";
+import Orders from "./pages/orders/orders";
+import ViewProfile from "./pages/my-profile/view-profile";
+import EditProfile from "./pages/my-profile/edit-profile";
 import OrderTracking from "./pages/order-tracking/order-tracking";
 import ProductDetails from "./pages/product-details/product-details";
 import HoldBike from "./pages/hold-bike/hold-bike";
@@ -58,7 +59,7 @@ const App = () => {
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/faqs" element={<FrequentlyAskedQuestions />} />
-              <Route path="/my-orders" element={<MyOrders />} />
+              <Route path="/orders" element={<Orders />} />
               <Route
                 path="/terms-and-conditions"
                 element={<TermsandConditions />}
@@ -73,7 +74,8 @@ const App = () => {
                 path="/test-drive/:bike_brand/:bike_model/:bike_id"
                 element={<TestRide />}
               />
-              <Route path="/my-profile" element={<MyProfile />} />
+              <Route path="/profile" element={<ViewProfile />} />
+              <Route path="/profile/edit" element={<EditProfile />} />
               <Route
                 path="/track-my-order/:order_id"
                 element={<OrderTracking />}
