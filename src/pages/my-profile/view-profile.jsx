@@ -28,6 +28,18 @@ const ViewProfile = () => {
 
   return (
     <div className="profile-page">
+      {/* Breadcrumb */}
+      <nav className="profile-page__breadcrumb">
+        <span
+          className="profile-page__breadcrumb-link"
+          onClick={() => navigate("/")}
+        >
+          Home
+        </span>
+        <span className="profile-page__breadcrumb-sep">›</span>
+        <span className="profile-page__breadcrumb-current">My Profile</span>
+      </nav>
+
       {/* Hero */}
       <div className="profile-hero">
         <div className="profile-avatar-wrapper">

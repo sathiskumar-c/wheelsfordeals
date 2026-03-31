@@ -439,7 +439,7 @@
       },
       {
         "label": "My Orders",
-        "path": "/my-orders",
+        "path": "/orders",
         "action": "navigate"
       },
       {

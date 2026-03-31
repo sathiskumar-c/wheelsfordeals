@@ -16,6 +16,34 @@ $outline-variant: #c9c4d5;
   }
 }
 
+// Breadcrumb
+.profile-page__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: $on-surface-variant;
+  margin-bottom: 1.5rem;
+}
+
+.profile-page__breadcrumb-link {
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+    text-decoration: underline;
+  }
+}
+
+.profile-page__breadcrumb-sep {
+  color: $outline-variant;
+}
+
+.profile-page__breadcrumb-current {
+  color: $primary;
+  font-weight: 600;
+}
+
 // Hero
 .profile-hero {
   display: flex;
