@@ -1,29 +1,31 @@
 // React Imports
 import React from "react";
-import { Link } from "react-router-dom";
-
-// Component Imports
-import InfoCard from "../common-components/cards/info-card/infor-card";
 
 // Local Imports
 import "./popular-bikes.scss";
-import JSON from "../../../src/data/popular-bikes.json";
+import data from "../../../src/data/popular-bikes.json";
+import InfoCard from "../common-components/cards/info-card/infor-card";
 
 const PopularBikes = () => {
   return (
-    <section className="popular-bike-container container-fluid component-parent">
-      <h3 className="section-title text-center">{JSON.title}</h3>
-      <div className="cardContainer">
-        {JSON.popularbikedata.map((item) => (
-          <Link key={item.id} to={item.path} className="popularbike-link">
-            <InfoCard
-              imageUrl={JSON.popularbikedata[0].imgSrc}
-              title={item.title}
-              description={item.description}
-              actionText={item.actionText || "Learn More"}
-              actionLink={item.actionLink || item.path}
-            />
-          </Link>
+    <section className="popular-bikes container">
+      <div className="popular-bikes__header">
+        <h2 className="popular-bikes__title">{data.title}</h2>
+        {/* <p className="popular-bikes__subtitle">{data.subtitle}</p> */}
+      </div>
+
+      <div className="popular-bikes__grid">
+        {data.popularbikedata.map((item) => (
+          <InfoCard
+            key={item.id}
+            imageUrl={item.imgSrc}
+            title={item.cardTitle}
+            description={item.description}
+            actionText={item.actionText}
+            actionLink={item.path}
+            badge={item.badge}
+            badgeVariant={item.badgeVariant}
+          />
         ))}
       </div>
     </section>
