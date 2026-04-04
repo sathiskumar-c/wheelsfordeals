@@ -15,14 +15,12 @@ import MotivateUs from "../../components/motivate-us/motivate-us";
 import HorizontalTabs from "../../components/common-components/horizontal-tabs/horizontal-tabs";
 import Content from "../../components/common-components/content/content";
 import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
-import CardGrid from "../../components/common-components/card-grid/card-grid";
 
 // JSON Imports
 import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
 import BenefitsData from "../../data/benefits.json";
 import FAQ from "../../data/frequently-asked-questions.json";
 import ImageReviewData from "../../data/image-review.json";
-import InsightsData from "../../data/insight-driven.json";
 
 // Services & API
 import { getHomePageData } from "../../api/getHomePage";
@@ -47,8 +45,6 @@ const Home = () => {
       <NeedHelp />
       <ServiceCards />
       <WhyChooseUs />
-
-      <CardGrid data={InsightsData.data} title={InsightsData.title} />
 
       <div className="container">
         <div className="row">
