@@ -1,25 +1,35 @@
 {
-  "title": "Why Choose Us?",
+  "label": "The Digital Curator",
+  "title": "Why our selection is different.",
+  "curatorNote": {
+    "quote": "We believe a motorcycle is more than a machine; it's a legacy. Every bike in our collection undergoes a rigorous multi-point verification process, ensuring that only the most pristine examples reach our showroom floor.",
+    "author": "Julian Vance",
+    "role": "Lead Curator, Editorial Marketplace"
+  },
   "whychooseusdata": [
     {
-      "icon": "/images/brands/honda.jpeg",
+      "icon": "payments",
       "title": "Special Financing Offers",
-      "description": "Our stress-free finance department that can find financial solutions to save you money."
+      "description": "Tailored financial solutions designed for high-value assets, featuring competitive rates and flexible terms for discerning collectors.",
+      "linkLabel": "Explore Rates"
     },
     {
-      "icon": "/images/brands/honda.jpeg",
+      "icon": "verified",
       "title": "Trusted Bike Dealership",
-      "description": "Our stress-free finance department that can find financial solutions to save you money."
+      "description": "A reputation built on transparency and integrity. Our network ensures every transaction is secure and professionally managed.",
+      "linkLabel": "Our Standards"
     },
     {
-      "icon": "/images/brands/honda.jpeg",
+      "icon": "account_balance_wallet",
       "title": "Transparent Pricing",
-      "description": "Our stress-free finance department that can find financial solutions to save you money."
+      "description": "No hidden fees or surprises. We provide detailed market valuations and complete cost breakdowns for every motorcycle in our inventory.",
+      "linkLabel": "View Pricing Policy"
     },
     {
-      "icon": "/images/brands/honda.jpeg",
+      "icon": "handyman",
       "title": "Expert Bike Service",
-      "description": "Our stress-free finance department that can find financial solutions to save you money."
+      "description": "Post-purchase support from master technicians specializing in performance and vintage motorcycles to keep your ride in peak condition.",
+      "linkLabel": "Service Menu"
     }
   ]
 }
