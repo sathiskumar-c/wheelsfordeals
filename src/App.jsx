@@ -25,6 +25,7 @@ import EditProfile from "./pages/my-profile/edit-profile";
 import OrderTracking from "./pages/order-tracking/order-tracking";
 import ProductDetails from "./pages/product-details/product-details";
 import HoldBike from "./pages/hold-bike/hold-bike";
+import OurServicesPage from "./pages/our-services/our-services";
 
 // Components Imports
 import Navbar from "./components/navbar/navbar";
@@ -56,6 +57,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/our-services" element={<OurServicesPage />} />
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/faqs" element={<FrequentlyAskedQuestions />} />

@@ -1,4 +1,16 @@
 ﻿{
+  "home_section": {
+    "label": "Expert Help",
+    "title": "Common Inquiries",
+    "description": "Our curation team is here to provide high-end support for your most complex transactions. Discover answers to frequently asked questions about our marketplace standards.",
+    "viewAllLabel": "View All Support Resources",
+    "quote": "Quality is never an accident; it is always the result of intelligent effort.",
+    "helpCard": {
+      "title": "Still have questions?",
+      "description": "Our concierge team is available for real-time consultation every weekday.",
+      "buttonLabel": "Contact Specialist"
+    }
+  },
   "hero": {
     "heading": "How can we help you today?",
     "searchPlaceholder": "Search for answers about buying, selling, or curation...",

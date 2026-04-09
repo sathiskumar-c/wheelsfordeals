@@ -1,54 +1,59 @@
 @use "../../styles/colors";
 
-$primary-color: colors.$text-dark;
-$bg-color: colors.$super-light-gray;
-$card-bg: colors.$white;
-$shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$primary: #1c0070;
+$on-surface-variant: #474553;
+$surface: #f9f9fb;
 
-.popular-bike-container {
-  text-align: center;
-  background: $bg-color;
-  padding: 20px;
+.popular-bikes {
+  padding: 30px 20px;
+  background: $surface;
 
-  .cardContainer {
+  &__header {
+    margin-bottom: 35px;
+  }
+
+  &__title {
+    font-weight: 800;
+    color: $primary;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    color: $on-surface-variant;
+    max-width: 520px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  &__grid {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    column-gap: 35px;
+    justify-content: center;
 
-    .card {
-      background: $card-bg;
-      border-radius: 10px;
-      box-shadow: $shadow;
-      padding: 20px;
-      text-align: center;
-      width: 250px;
-      transition: transform 0.3s ease-in-out;
+    .info-card {
+      flex: 1 1 280px;
+      max-width: calc(33.333% - 19px);
 
-      &:hover {
-        transform: translateY(-5px);
+      @media (max-width: 1024px) {
+        max-width: calc(50% - 14px);
       }
 
-      .image {
-        width: 80px;
-        height: auto;
-        margin-bottom: 15px;
-        margin: auto;
-      }
-
-      .text {
-        font-size: 1rem;
-        font-weight: 600;
-        color: $primary-color;
+      @media (max-width: 640px) {
+        max-width: 100%;
       }
     }
   }
 
-  .popularbike-link {
-    text-decoration: none !important;
-  }
+  .info-card {
+    // margin: auto !important;
+    max-width: calc(33.333% - 60px) !important;
 
-  .info-card__image {
-    width: 100% !important;
+    :hover {
+      cursor: pointer;
+    }
   }
 }

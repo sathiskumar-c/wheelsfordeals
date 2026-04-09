@@ -1,13 +1,10 @@
 // React Imports
 import React from "react";
 import PropTypes from "prop-types";
-
-// MUI Imports
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Link } from "react-router-dom";
 
 // Local Imports
 import "./infor-card.scss";
-import AnimatedActionButton from "../../buttons/animated-action-button/animated-action-button";
 
 const InfoCard = ({
   imageUrl,
@@ -15,44 +12,40 @@ const InfoCard = ({
   description,
   actionText,
   actionLink = "#",
+  badge,
+  badgeVariant,
 }) => {
-  // Open link in same tab for now
-  const handleAction = (e) => {
-    e.preventDefault();
-    if (actionLink && actionLink !== "#") {
-      window.location.href = actionLink;
-    }
-  };
-
   return (
     <div className="info-card">
-      <div
-        className="info-card__image"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      ></div>
+      <div className="info-card__image-wrap">
+        <img src={imageUrl} alt={title} className="info-card__image" />
+        {badge && (
+          <span className={`info-card__badge info-card__badge--${badgeVariant}`}>
+            {badge}
+          </span>
+        )}
+      </div>
 
       <div className="info-card__content">
-        <a href={actionLink}>
-          <span className="info-card__title">{title}</span>
-        </a>
-
+        <h3 className="info-card__title">{title}</h3>
         <p className="info-card__desc">{description}</p>
-
-        <AnimatedActionButton
-          text={actionText}
-          onClick={handleAction}
-          icon={<ArrowForwardIcon className="icon" />}
-        />
+        <Link to={actionLink} className="info-card__action">
+          <span>{actionText}</span>
+          <span className="info-card__arrow">→</span>
+        </Link>
       </div>
     </div>
   );
 };
+
 InfoCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   actionText: PropTypes.string.isRequired,
   actionLink: PropTypes.string,
+  badge: PropTypes.string,
+  badgeVariant: PropTypes.string,
 };
 
 export default InfoCard;
