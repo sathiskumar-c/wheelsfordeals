@@ -1,0 +1,53 @@
+{
+  "sectionLabel": "Voice of Excellence",
+  "title": "What our riders say",
+  "titleHighlight": "about us.",
+  "ratingValue": "4.5/5",
+  "ratingLabel": "from 1.2k Reviews",
+  "footerTitle": "Join the Community",
+  "subtitle": "Join over 10,000 satisfied riders who found their perfect bike through WheelsForDeals.",
+  "ctaPrimary": { "label": "Read All Reviews", "path": "/reviews" },
+  "ctaSecondary": { "label": "Write a Review", "path": "/reviews/new" },
+  "reviews": [
+    {
+      "id": 1,
+      "featured": true,
+      "name": "Dhivya",
+      "role": "Verified Buyer, Chennai",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "rating": 5,
+      "text": "WheelsForDeals completely changed how I buy bikes. Their attention to mechanical detail and the end-to-end buying experience is absolutely unparalleled.",
+      "date": "15 Mar 2025"
+    },
+    {
+      "id": 2,
+      "featured": false,
+      "name": "Sushant Kumar",
+      "role": "Verified Buyer, Mumbai",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "rating": 5,
+      "text": "Seamless transaction from start to finish. The inspection reports are the gold standard for buyers. I've never felt more confident spending on a bike online.",
+      "date": "12 Mar 2025"
+    },
+    {
+      "id": 3,
+      "featured": false,
+      "name": "Vishwajit Dhale",
+      "role": "Verified Buyer, Pune",
+      "avatar": "https://randomuser.me/api/portraits/men/12.jpg",
+      "rating": 5,
+      "text": "White-glove delivery service was impeccable. The bike arrived in even better condition than the photos suggested. Truly remarkable experience.",
+      "date": "07 Mar 2025"
+    },
+    {
+      "id": 4,
+      "featured": false,
+      "name": "Adit Rao",
+      "role": "Verified Buyer, Bangalore",
+      "avatar": "https://randomuser.me/api/portraits/men/24.jpg",
+      "rating": 5,
+      "text": "Staff was super helpful and made the whole process smooth. The editorial content for each listing provides context that other platforms miss entirely.",
+      "date": "07 Mar 2025"
+    }
+  ]
+}
