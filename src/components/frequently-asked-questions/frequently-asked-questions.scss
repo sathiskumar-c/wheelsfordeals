@@ -1,0 +1,302 @@
+@use "../../styles/colors";
+
+// ── Design tokens ────────────────────────────────────────────────────────────
+$primary: #1c0070;
+$primary-container: #311b92;
+$primary-fixed: #e5deff;
+$on-primary: #ffffff;
+$secondary: #6c45c0;
+$secondary-fixed: #eaddff;
+$on-secondary-fixed: #24005b;
+$surface: #f9f9fb;
+$surface-low: #f3f3f5;
+$surface-container: #eeeef0;
+$surface-lowest: #ffffff;
+$on-surface: #1a1c1d;
+$on-surface-variant: #474553;
+$outline-variant: #c9c4d5;
+
+// ── Section shell ─────────────────────────────────────────────────────────────
+.faq {
+  background-color: $surface;
+  padding: 96px 32px;
+}
+
+.faq__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  align-items: start;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+// ── Left column ───────────────────────────────────────────────────────────────
+.faq__left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.faq__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background-color: $primary-fixed;
+  color: $on-secondary-fixed;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.faq__label-icon {
+  font-size: 14px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.faq__heading-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq__title {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 800;
+  color: $primary;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.faq__desc {
+  font-size: 16px;
+  color: $on-surface-variant;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 420px;
+}
+
+.faq__view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: $primary;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateX(4px);
+    color: $primary;
+  }
+}
+
+.faq__view-all-arrow {
+  font-size: 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  transition: transform 0.2s ease;
+
+  .faq__view-all:hover & {
+    transform: translateX(2px);
+  }
+}
+
+// ── Decorative image block ────────────────────────────────────────────────────
+.faq__image-block {
+  position: relative;
+  padding-top: 16px;
+}
+
+.faq__image-wrap {
+  width: 100%;
+  height: 240px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: $surface-low;
+
+  img {
+    mix-blend-mode: normal !important;
+  }
+}
+
+.faq__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.faq__quote-card {
+  position: absolute;
+  bottom: -24px;
+  right: -16px;
+  padding: 20px 24px;
+  background-color: $surface-lowest;
+  border-radius: 16px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  max-width: 200px;
+}
+
+.faq__quote-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: $primary;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0;
+}
+
+// ── Right column ──────────────────────────────────────────────────────────────
+.faq__right {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-top: 8px;
+}
+
+// ── Accordion ─────────────────────────────────────────────────────────────────
+.faq__accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__item {
+  border-bottom: 1px solid rgba($outline-variant, 0.3);
+
+  &:first-child {
+    border-top: 1px solid rgba($outline-variant, 0.3);
+  }
+}
+
+.faq__question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 28px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 16px;
+
+  span {
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $on-surface;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  &:hover span {
+    color: $primary;
+  }
+}
+
+.faq__item--open .faq__question span {
+  color: $primary;
+}
+
+.faq__toggle-icon {
+  flex-shrink: 0;
+  color: $primary-container;
+  font-size: 22px !important;
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.faq__answer {
+  padding: 0 0 24px;
+  font-size: 15px;
+  color: $on-surface-variant;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 640px;
+}
+
+// ── Help CTA card ─────────────────────────────────────────────────────────────
+.faq__cta {
+  position: relative;
+  overflow: hidden;
+  background-color: $primary;
+  color: $on-primary;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.faq__cta-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq__cta-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: $on-primary;
+  margin: 0;
+}
+
+.faq__cta-desc {
+  font-size: 14px;
+  color: rgba($on-primary, 0.8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 260px;
+}
+
+.faq__cta-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 24px;
+  background-color: $surface-lowest;
+  color: $primary;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+  width: fit-content;
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:hover {
+    background-color: $primary-fixed;
+    color: $primary;
+  }
+}
+
+.faq__cta-icon {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  font-size: 180px !important;
+  width: 180px !important;
+  height: 180px !important;
+  opacity: 0.1;
+  color: $on-primary;
+}
