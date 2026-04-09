@@ -8,10 +8,9 @@ import OurServices from "../../components/our-services/our-services";
 import NeedHelp from "../../components/need-help/need-help";
 import TopRecommendedBrand from "../../components/top-recommended-brand/top-recommended-brand";
 import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
-import GetUpdates from "../../components/get-updates/get-updates";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
 import ServiceCards from "../../components/services-slider/services-slider";
-import MotivateUs from "../../components/motivate-us/motivate-us";
+import CustomerReviews from "../../components/customer-reviews/customer-reviews";
 import HorizontalTabs from "../../components/common-components/horizontal-tabs/horizontal-tabs";
 import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
 
@@ -47,8 +46,7 @@ const Home = () => {
 
       <FrequentlyAskedQuestions JSON={FAQ} />
 
-      <GetUpdates />
-      <MotivateUs />
+      <CustomerReviews />
       <HorizontalTabs data={ExploreByBodyTypeData} page="ExploreBodyType" />
       <ImageCardSlider
         data={ImageReviewData}
