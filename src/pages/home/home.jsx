@@ -9,16 +9,15 @@ import NeedHelp from "../../components/need-help/need-help";
 import TopRecommendedBrand from "../../components/top-recommended-brand/top-recommended-brand";
 import BrowseBikesBy from "../../components/browse-bikes/browse-bikes";
 import WhyChooseUs from "../../components/why-choose-us/why-choose-us";
-import ServiceCards from "../../components/services-slider/services-slider";
 import CustomerReviews from "../../components/customer-reviews/customer-reviews";
 import HorizontalTabs from "../../components/common-components/horizontal-tabs/horizontal-tabs";
-import ImageCardSlider from "../../components/common-components/image-card-slider/image-card-slider";
+import CardCarousel from "../../components/common-components/card-carousel/card-carousel";
 
 // JSON Imports
-import ExploreByBodyTypeData from "../../data/explore-bodytype.json";
 import BenefitsData from "../../data/benefits.json";
 import FAQ from "../../data/frequently-asked-questions.json";
-import ImageReviewData from "../../data/image-review.json";
+import ServicesCarouselData from "../../data/services-carousel.json";
+import ServicesCarouselConfig from "../../data/services-carousel-config.json";
 
 // Services & API
 import { getHomePageData } from "../../api/getHomePage";
@@ -37,22 +36,26 @@ const Home = () => {
     <React.Fragment>
       <PopularBikes />
       <BrowseBikesBy />
-      <HorizontalTabs data={BenefitsData} component="Benefits" />
       <OurServices />
+      <HorizontalTabs data={BenefitsData} component="Benefits" />
+      <CardCarousel
+        items={ServicesCarouselData.servicesCarousel}
+        config={ServicesCarouselConfig}
+        headerData={{
+          title: ServicesCarouselData.title,
+          subtitle: ServicesCarouselData.subtitle,
+        }}
+        showHeader={true}
+        showViewAllLink={true}
+        viewAllPath="/our-services"
+      />
       <TopRecommendedBrand />
       <NeedHelp />
-      <ServiceCards />
       <WhyChooseUs />
 
       <FrequentlyAskedQuestions JSON={FAQ} />
 
       <CustomerReviews />
-      <HorizontalTabs data={ExploreByBodyTypeData} page="ExploreBodyType" />
-      <ImageCardSlider
-        data={ImageReviewData}
-        show={{ title: true, logo: true, content: true }}
-        styles={{ aspectRatio: " 3/4" }}
-      />
     </React.Fragment>
   );
 };
