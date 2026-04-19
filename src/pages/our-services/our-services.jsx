@@ -56,16 +56,16 @@ export default function OurServicesPage() {
   const { title, ourservicesdata } = servicesData;
 
   const featureItem = ourservicesdata.find(
-    (s) => CARD_CONFIG[s.id]?.cardType === "feature"
+    (s) => CARD_CONFIG[s.id]?.cardType === "feature",
   );
   const hubItem = ourservicesdata.find(
-    (s) => CARD_CONFIG[s.id]?.cardType === "hub"
+    (s) => CARD_CONFIG[s.id]?.cardType === "hub",
   );
   const standardItems = ourservicesdata.filter(
-    (s) => CARD_CONFIG[s.id]?.cardType === "standard"
+    (s) => CARD_CONFIG[s.id]?.cardType === "standard",
   );
   const calculatorItem = ourservicesdata.find(
-    (s) => CARD_CONFIG[s.id]?.cardType === "calculator"
+    (s) => CARD_CONFIG[s.id]?.cardType === "calculator",
   );
 
   return (
@@ -74,8 +74,7 @@ export default function OurServicesPage() {
       <div className="os-header">
         <span className="os-header__eyebrow">The Digital Curator</span>
         <h1 className="os-header__title">
-          {title.split(" ").slice(0, 2).join(" ")}{" "}
-          <br />
+          {title.split(" ").slice(0, 2).join(" ")} <br />
           <span className="os-header__title--accent">Services</span>
         </h1>
         <p className="os-header__subtitle">
@@ -88,63 +87,73 @@ export default function OurServicesPage() {
       {/* Bento Grid */}
       <div className="os-bento">
         {/* Feature Card */}
-        {featureItem && (() => {
-          const cfg = CARD_CONFIG[featureItem.id];
-          return (
-            <div className="os-card os-card--feature">
-              <div className="os-card__content">
-                <div className="os-card__icon-wrap os-card__icon-wrap--feature">
-                  <span
-                    className="material-symbols-outlined"
-                    style={cfg.iconFill ? { fontVariationSettings: "'FILL' 1" } : {}}
-                  >
-                    {cfg.icon}
-                  </span>
+        {featureItem &&
+          (() => {
+            const cfg = CARD_CONFIG[featureItem.id];
+            return (
+              <div className="os-card os-card--feature">
+                <div className="os-card__content">
+                  <div className="os-card__icon-wrap os-card__icon-wrap--feature">
+                    <span
+                      className="material-symbols-outlined"
+                      style={
+                        cfg.iconFill
+                          ? { fontVariationSettings: "'FILL' 1" }
+                          : {}
+                      }
+                    >
+                      {cfg.icon}
+                    </span>
+                  </div>
+                  <h3 className="os-card__title os-card__title--lg">
+                    {featureItem.title}
+                  </h3>
+                  <p className="os-card__desc os-card__desc--lg">
+                    {cfg.fullDescription}
+                  </p>
                 </div>
-                <h3 className="os-card__title os-card__title--lg">
-                  {featureItem.title}
-                </h3>
-                <p className="os-card__desc os-card__desc--lg">
-                  {cfg.fullDescription}
-                </p>
+                <a href={featureItem.path} className="os-card__cta">
+                  {cfg.ctaLabel}
+                  <span className="material-symbols-outlined">
+                    arrow_forward
+                  </span>
+                </a>
+                <div className="os-card__feature-gradient" />
+                <img
+                  src={cfg.bgImage}
+                  alt={featureItem.title}
+                  className="os-card__feature-img"
+                />
               </div>
-              <a href={featureItem.path} className="os-card__cta">
-                {cfg.ctaLabel}
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </a>
-              <div className="os-card__feature-gradient" />
-              <img
-                src={cfg.bgImage}
-                alt={featureItem.title}
-                className="os-card__feature-img"
-              />
-            </div>
-          );
-        })()}
+            );
+          })()}
 
         {/* Hub Card */}
-        {hubItem && (() => {
-          const cfg = CARD_CONFIG[hubItem.id];
-          return (
-            <div className="os-card os-card--hub">
-              <div>
-                <div className="os-card__icon-wrap os-card__icon-wrap--hub">
-                  <span className="material-symbols-outlined">{cfg.icon}</span>
+        {hubItem &&
+          (() => {
+            const cfg = CARD_CONFIG[hubItem.id];
+            return (
+              <div className="os-card os-card--hub">
+                <div>
+                  <div className="os-card__icon-wrap os-card__icon-wrap--hub">
+                    <span className="material-symbols-outlined">
+                      {cfg.icon}
+                    </span>
+                  </div>
+                  <h3 className="os-card__title os-card__title--hub">
+                    {hubItem.title}
+                  </h3>
+                  <p className="os-card__desc os-card__desc--hub">
+                    {cfg.fullDescription}
+                  </p>
                 </div>
-                <h3 className="os-card__title os-card__title--hub">
-                  {hubItem.title}
-                </h3>
-                <p className="os-card__desc os-card__desc--hub">
-                  {cfg.fullDescription}
-                </p>
+                <div className="os-card__hub-footer">
+                  <span>{cfg.ctaLabel}</span>
+                  <span className="material-symbols-outlined">north_east</span>
+                </div>
               </div>
-              <div className="os-card__hub-footer">
-                <span>{cfg.ctaLabel}</span>
-                <span className="material-symbols-outlined">north_east</span>
-              </div>
-            </div>
-          );
-        })()}
+            );
+          })()}
 
         {/* Standard Cards */}
         {standardItems.map((item) => {
@@ -162,24 +171,27 @@ export default function OurServicesPage() {
         })}
 
         {/* Calculator Card */}
-        {calculatorItem && (() => {
-          const cfg = CARD_CONFIG[calculatorItem.id];
-          return (
-            <div className="os-card os-card--calculator">
-              <div className="os-card__calc-inner">
-                <div className="os-card__icon-wrap os-card__icon-wrap--calc">
-                  <span className="material-symbols-outlined">{cfg.icon}</span>
+        {calculatorItem &&
+          (() => {
+            const cfg = CARD_CONFIG[calculatorItem.id];
+            return (
+              <div className="os-card os-card--calculator">
+                <div className="os-card__calc-inner">
+                  <div className="os-card__icon-wrap os-card__icon-wrap--calc">
+                    <span className="material-symbols-outlined">
+                      {cfg.icon}
+                    </span>
+                  </div>
+                  <h3 className="os-card__title">{calculatorItem.title}</h3>
+                  <p className="os-card__desc">{cfg.fullDescription}</p>
+                  <button className="os-card__calc-btn">{cfg.ctaLabel}</button>
                 </div>
-                <h3 className="os-card__title">{calculatorItem.title}</h3>
-                <p className="os-card__desc">{cfg.fullDescription}</p>
-                <button className="os-card__calc-btn">{cfg.ctaLabel}</button>
+                <div className="os-card__calc-bg">
+                  <span className="material-symbols-outlined">functions</span>
+                </div>
               </div>
-              <div className="os-card__calc-bg">
-                <span className="material-symbols-outlined">functions</span>
-              </div>
-            </div>
-          );
-        })()}
+            );
+          })()}
       </div>
 
       {/* Stats */}

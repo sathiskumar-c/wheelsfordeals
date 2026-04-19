@@ -3,148 +3,262 @@ import * as React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-// Material UI Imports
-import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
-import { Button } from "@mui/material";
-
 // Local Imports
 import "./browse-bikes.scss";
 import JSON from "../../data/browse-bikes.json";
 
-// Reusable component for rendering data
-const AppendData = ({ data, renderItem }) => {
-  return (
-    <>
-      {data.map((item) => (
-        <React.Fragment key={item.id}>{renderItem({ item })}</React.Fragment>
-      ))}
-    </>
-  );
-};
-
-// Specific render functions for Price, CC, and Brand
-const renderPriceOrCC = ({ item }) => (
-  <article>
-    <Button
-      key={item.id}
-      component={Link}
-      to={item.path}
-      variant="outlined"
-      aria-label={`Browse bikes by ${item.title}`}
-      className="browsebybikes_btn"
-    >
-      {item.title}
-    </Button>
-  </article>
-);
-
-const renderBrand = ({ item }) => (
-  <article
-    className="append-brand-parent"
-    id={item.id}
-    aria-label={`Bike brand: ${item.alt || item.title}`}
-  >
-    <Link
-      to={`/bikes/brands/${item.path}`}
-      className="brand-link"
-      aria-label={`View bikes from brand ${item.alt || item.title}`}
-    >
-      <img
-        className="append-brand-img"
-        id={`img-${item.id}`}
-        src={item.image}
-        alt={item.alt ? `Logo of ${item.alt}` : "Brand logo"}
-        title={item.alt || "Brand"}
-        loading="lazy"
-        onError={(e) => {
-          e.target.src = "/default-image.jpg";
-          console.error(`Image failed to load: ${item.image}`);
-        }}
-      />
-    </Link>
-  </article>
-);
-
 const BrowseBikesBy = () => {
   // State management
-  const [tabValue, setTabValue] = useState("brand");
+  const [activeCategory, setActiveCategory] = useState("brand");
 
-  const handleChangeTab = (event, newValue) => {
-    setTabValue(newValue);
+  const handleCategoryChange = (categoryValue) => {
+    setActiveCategory(categoryValue);
   };
 
-  const tabs = [
-    {
-      label: JSON.browsebybrand?.tabtitle || "Brands",
-      value: JSON.browsebybrand?.value || "brand",
-      data: JSON.browsebybrand?.data || [],
-      render: renderBrand,
-    },
-    {
-      label: JSON.browsebyprice?.tabtitle || "Price",
-      value: JSON.browsebyprice?.value || "price",
-      data: JSON.browsebyprice?.data || [],
-      render: renderPriceOrCC,
-    },
-    {
-      label: JSON.browsebydisplacement?.tabtitle || "Displacement",
-      value: JSON.browsebydisplacement?.value || "displacement",
-      data: JSON.browsebydisplacement?.data || [],
-      render: renderPriceOrCC,
-    },
-  ];
+  // Get the active category data
+  const getCategoryData = (categoryValue) => {
+    switch (categoryValue) {
+      case "brand":
+        return JSON.browsebybrand?.data || [];
+      case "price":
+        return JSON.browsebyprice?.data || [];
+      case "displacement":
+        return JSON.browsebydisplacement?.data || [];
+      case "evtech":
+        return JSON.browsebyevtech?.data || [];
+      default:
+        return [];
+    }
+  };
 
   return (
-    <section
-      className="container component-parent browsebikesby-parent"
-      aria-labelledby="browse-bikes-section"
-      role="region"
-    >
-      <h2 className="section-title" id="browse-bikes-section">
-        {JSON.title || "Browse Bikes By"}
-      </h2>
-      <Box sx={{ width: "100%", typography: "body1" }}>
-        <TabContext value={tabValue}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }} component="nav">
-            <TabList
-              onChange={handleChangeTab}
-              aria-label="Select a category to browse bikes by"
-            >
-              {tabs.map((tab) => (
-                <Tab
-                  key={tab.value}
-                  label={tab.label}
-                  value={tab.value}
-                  aria-controls={`tabpanel-${tab.value}`}
-                  id={`tab-${tab.value}`}
-                />
-              ))}
-            </TabList>
-          </Box>
-          {tabs.map((tab) => (
-            <TabPanel
-              key={tab.value}
-              className={`tabpanel ${
-                tabValue === tab.value ? "active-tabpanel" : ""
-              }`}
-              value={tab.value}
-              id={`tabpanel-${tab.value}`}
-              role="tabpanel"
-              aria-labelledby={`tab-${tab.value}`}
-              style={{
-                columnGap: tab.value === "brand" ? "30px" : "15px",
-                rowGap: tab.value === "brand" ? "20px" : "10px",
-              }}
-            >
-              <AppendData data={tab.data} renderItem={tab.render} />
-            </TabPanel>
-          ))}
-        </TabContext>
-      </Box>
+    <section className="browse-bikes-container">
+      {/* Header Section */}
+      <header className="browse-bikes__header">
+        <p className="browse-bikes__subtitle">{JSON.subtitle}</p>
+        <h1 className="browse-bikes__title">
+          Curated Selection
+          <br />
+          <span style={{ color: "#6c45c0" }}>by Preference</span>
+        </h1>
+      </header>
+
+      {/* Browse Bikes Split Layout */}
+      <div className="browse-bikes__wrapper">
+        {/* Left Sidebar */}
+        <aside className="browse-bikes__sidebar">
+          <nav className="browse-bikes__categories">
+            {JSON.categories.map((category) => (
+              <div
+                key={category.id}
+                className={`browse-bikes__category-item ${activeCategory === category.value ? "active" : ""}`}
+                onClick={() => handleCategoryChange(category.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    handleCategoryChange(category.value);
+                  }
+                }}
+                role="button"
+                tabIndex="0"
+                aria-pressed={activeCategory === category.value}
+              >
+                <span className="browse-bikes__category-number">
+                  {category.categoryNumber}
+                </span>
+                <h3 className="browse-bikes__category-label">
+                  {category.icon && (
+                    <span className="material-symbols-outlined browse-bikes__category-icon">
+                      {category.icon}
+                    </span>
+                  )}
+                  {category.label}
+                </h3>
+              </div>
+            ))}
+          </nav>
+          <div className="browse-bikes__quote">
+            <p>{JSON.tagline}</p>
+          </div>
+        </aside>
+
+        {/* Right Content Area */}
+        <div className="browse-bikes__content">
+          {activeCategory === "brand" ? (
+            // Brand Grid (Simple Card Style)
+            <div className="browse-bikes__brand-section">
+              <div className="browse-bikes__brand-header">
+                <h2 className="browse-bikes__brand-title">
+                  {JSON.browsebybrand?.title}
+                </h2>
+                <p className="browse-bikes__brand-subtitle">
+                  {JSON.browsebybrand?.subtitle}
+                </p>
+              </div>
+              <div className="browse-bikes__brand-grid">
+                {getCategoryData("brand").map((brand) => (
+                  <Link
+                    key={brand.id}
+                    to={`/bikes/brands/${brand.path}`}
+                    className="browse-bikes__brand-card"
+                    aria-label={`View bikes from ${brand.name}`}
+                  >
+                    <div className="browse-bikes__brand-card-logo">
+                      <img
+                        src={brand.image}
+                        alt={brand.alt}
+                        className="browse-bikes__brand-card-logo-img"
+                      />
+                    </div>
+                    <h3 className="browse-bikes__brand-card-name">
+                      {brand.name}
+                    </h3>
+                    <p className="browse-bikes__brand-card-description">
+                      {brand.description}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : activeCategory === "price" ? (
+            // Budget Grid
+            <div className="browse-bikes__budget-section">
+              <div className="browse-bikes__budget-header">
+                <h2 className="browse-bikes__budget-title">
+                  {JSON.browsebyprice?.title}
+                </h2>
+                <p className="browse-bikes__budget-subtitle">
+                  {JSON.browsebyprice?.subtitle}
+                </p>
+              </div>
+              <div className="browse-bikes__budget-grid">
+                {getCategoryData("price").map((item) => (
+                  <Link
+                    key={item.id}
+                    to={`/bikes/budget/${item.path}`}
+                    className={`browse-bikes__budget-card ${item.isFlagship ? "flagship" : ""}`}
+                  >
+                    <div className="browse-bikes__budget-card-icon">
+                      <span className="material-symbols-outlined">
+                        {item.icon}
+                      </span>
+                    </div>
+                    <div className="browse-bikes__budget-card-content">
+                      <span className="browse-bikes__budget-category">
+                        {item.category}
+                      </span>
+                      <h3 className="browse-bikes__budget-card-title">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p className="browse-bikes__budget-card-description">
+                      {item.description}
+                    </p>
+                  </Link>
+                ))}
+
+                {/* Custom Quote Empty State */}
+                <div className="browse-bikes__budget-card browse-bikes__budget-card--empty">
+                  <p className="browse-bikes__budget-empty-text">
+                    Can&apos;t find your range?
+                  </p>
+                  <button className="browse-bikes__budget-custom-btn">
+                    Request Custom Quote
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : activeCategory === "displacement" ? (
+            // Displacement Bento Grid
+            <div className="browse-bikes__displacement-section">
+              <div className="browse-bikes__displacement-header">
+                <h2 className="browse-bikes__displacement-title">
+                  {JSON.browsebydisplacement?.title}
+                </h2>
+                <p className="browse-bikes__displacement-subtitle">
+                  {JSON.browsebydisplacement?.subtitle}
+                </p>
+              </div>
+              <div className="browse-bikes__bento-grid">
+                {getCategoryData("displacement").map((item) => (
+                  <Link
+                    key={item.id}
+                    to={`/bikes/displacement/${item.path}`}
+                    className={`browse-bikes__bento-card ${item.featured ? "featured" : ""} ${item.isFlagship ? "flagship" : ""}`}
+                  >
+                    <div className="browse-bikes__bento-card-content">
+                      <span className="browse-bikes__bento-category">{`CATEGORY: ${item.category.toUpperCase()}`}</span>
+                      <h3 className="browse-bikes__bento-title">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <div className="browse-bikes__bento-footer">
+                      <p className="browse-bikes__bento-description">
+                        {item.description}
+                      </p>
+                      <span className="material-symbols-outlined browse-bikes__bento-icon">
+                        {item.icon}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : activeCategory === "evtech" ? (
+            // EV Tech Bento Grid
+            <div className="browse-bikes__evtech-section">
+              <div className="browse-bikes__evtech-header">
+                <h2 className="browse-bikes__evtech-title">
+                  {JSON.browsebyevtech?.title}
+                </h2>
+                <p className="browse-bikes__evtech-subtitle">
+                  {JSON.browsebyevtech?.subtitle}
+                </p>
+              </div>
+              <div className="browse-bikes__bento-grid">
+                {getCategoryData("evtech").map((item) => (
+                  <Link
+                    key={item.id}
+                    to={`/bikes/evtech/${item.path}`}
+                    className={`browse-bikes__bento-card ${item.featured ? "featured" : ""} ${item.isFlagship ? "flagship" : ""}`}
+                  >
+                    <div className="browse-bikes__bento-card-content">
+                      <span className="browse-bikes__bento-category">{`CATEGORY: ${item.category.toUpperCase()}`}</span>
+                      <h3 className="browse-bikes__bento-title">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <div className="browse-bikes__bento-footer">
+                      <p className="browse-bikes__bento-description">
+                        {item.description}
+                      </p>
+                      <span className="material-symbols-outlined browse-bikes__bento-icon">
+                        {item.icon}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {/* Pagination */}
+          {activeCategory === "brand" && (
+            <div className="browse-bikes__pagination">
+              <p>
+                Showing{" "}
+                <span className="browse-bikes__pagination-count">
+                  {getCategoryData("brand").length}
+                </span>{" "}
+                premier partners
+              </p>
+              <Link to="/bikes/all" className="browse-bikes__view-all">
+                VIEW ALL BRANDS
+                <span className="material-symbols-outlined">arrow_forward</span>
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
     </section>
   );
 };

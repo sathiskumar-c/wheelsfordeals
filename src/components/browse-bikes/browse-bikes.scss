@@ -1,44 +1,809 @@
-.browsebikesby-parent {
-  .append-brand-parent {
-    .append-brand-img {
-      height: 75px;
-      width: 75px;
-      object-fit: contain;
+// Color variables from design system
+$primary: #1c0070;
+$secondary: #6c45c0;
+$secondary-fixed: #eaddff;
+$background: #f9f9fb;
+$surface: #f9f9fb;
+$surface-container-low: #f3f3f5;
+$surface-container-lowest: #ffffff;
+$on-surface: #1a1c1d;
+$on-surface-variant: #474553;
+$outline: #e2e2e4;
+$outline-variant: #c9c4d5;
+$on-primary: #ffffff;
+
+.browse-bikes-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  background-color: $background;
+
+  @media (max-width: 768px) {
+    padding: 32px 24px;
+  }
+}
+
+// Header Section
+.browse-bikes__header {
+  margin-bottom: 48px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.browse-bikes__subtitle {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $secondary;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.browse-bikes__title {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $primary;
+  line-height: 1.1;
+
+  // "by Preference" in secondary color
+  display: block;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+// Main Wrapper
+.browse-bikes__wrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 60px;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+// Sidebar
+.browse-bikes__sidebar {
+  position: sticky;
+  top: 100px;
+
+  @media (max-width: 768px) {
+    position: static;
+  }
+}
+
+.browse-bikes__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.browse-bikes__category-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 16px;
+  border-left: 4px solid transparent;
+  border-radius: 4px;
+  margin-left: -4px;
+
+  &.active {
+    .browse-bikes__category-label {
+      color: $primary;
+      font-weight: 700;
     }
 
-    :hover {
-      cursor: pointer;
+    .browse-bikes__category-number {
+      display: none;
+    }
+
+    background-color: $background;
+    border-left-color: $primary;
+  }
+
+  &:not(.active) {
+    .browse-bikes__category-label {
+      color: $on-surface-variant;
+      font-weight: 500;
+    }
+
+    .browse-bikes__category-number {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $surface-container-low;
+      transform: translateX(4px);
+    }
+  }
+}
+
+.browse-bikes__category-number {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $on-surface-variant;
+}
+
+.browse-bikes__category-label {
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  font-family: "Manrope", sans-serif;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.browse-bikes__category-icon {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.browse-bikes__quote {
+  background-color: transparent;
+  padding: 24px 0;
+  border-radius: 0;
+
+  p {
+    font-size: 13px;
+    color: $on-surface;
+    line-height: 1.6;
+    font-style: italic;
+  }
+}
+
+// Content Area
+.browse-bikes__content {
+  display: flex;
+  flex-direction: column;
+}
+
+// Brand Grid
+.browse-bikes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+// Brand Section
+.browse-bikes__brand-section {
+  width: 100%;
+}
+
+.browse-bikes__brand-header {
+  margin-bottom: 32px;
+}
+
+.browse-bikes__brand-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $primary;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.browse-bikes__brand-subtitle {
+  font-size: 14px;
+  color: $on-surface-variant;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+// Brand Grid Layout
+.browse-bikes__brand-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Brand Card Style
+.browse-bikes__brand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  background-color: $surface-container-lowest;
+  border-radius: 16px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(26, 28, 29, 0.05);
+
+  &:hover {
+    box-shadow: 0 20px 40px rgba(26, 28, 29, 0.12);
+    border-bottom-color: $primary;
+
+    .browse-bikes__brand-card-logo {
+      background-color: $secondary-fixed;
+    }
+  }
+}
+
+.browse-bikes__brand-card-logo {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $surface-container-low;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.browse-bikes__brand-card-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.browse-bikes__brand-card-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: $primary;
+  margin-bottom: 4px;
+  line-height: 1.3;
+  font-family: "Manrope", sans-serif;
+}
+
+.browse-bikes__brand-card-description {
+  font-size: 14px;
+  color: $on-surface-variant;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+// Options (Price/Displacement)
+.browse-bikes__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.browse-bikes__option-btn {
+  min-width: 120px;
+  padding: 10px 20px;
+  border: 1px solid $outline;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: $on-surface;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $surface-container-low;
+    border-color: $on-surface-variant;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    min-width: 110px;
+    padding: 8px 16px;
+  }
+}
+
+// Pagination
+.browse-bikes__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+  border-top: 1px solid $outline;
+
+  p {
+    font-size: 12px;
+    color: $on-surface-variant;
+  }
+}
+
+.browse-bikes__pagination-count {
+  font-weight: 700;
+  color: $primary;
+}
+
+.browse-bikes__view-all {
+  font-size: 12px;
+  font-weight: 700;
+  color: $primary;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    .material-symbols-outlined {
+      transform: translateX(2px);
     }
   }
 
-  .tabpanel {
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  .material-symbols-outlined {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+  }
+}
 
-    opacity: 0; /* Hide tab initially */
-    transform: translateY(10px); /* Slightly slide up the tab */
-    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+// Displacement / Bento Grid Section
+.browse-bikes__displacement-section {
+  width: 100%;
+}
 
-    &.active-tabpanel {
-      opacity: 1; /* Make tab visible */
-      transform: translateY(0); /* Slide tab back to normal position */
+.browse-bikes__displacement-header {
+  margin-bottom: 32px;
+}
+
+.browse-bikes__displacement-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $primary;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.browse-bikes__displacement-subtitle {
+  font-size: 14px;
+  color: $on-surface-variant;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+// EV Tech Section
+.browse-bikes__evtech-section {
+  width: 100%;
+}
+
+.browse-bikes__evtech-header {
+  margin-bottom: 32px;
+}
+
+.browse-bikes__evtech-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $primary;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.browse-bikes__evtech-subtitle {
+  font-size: 14px;
+  color: $on-surface-variant;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+// Bento Grid Layout
+.browse-bikes__bento-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.browse-bikes__bento-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 256px;
+  padding: 32px;
+  background-color: $surface-container-lowest;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 24px 48px rgba(28, 0, 112, 0.08);
+    border-color: $outline;
+  }
+
+  // Featured card (125cc - 150cc)
+  &.featured {
+    background-color: #311b92;
+    color: $on-primary;
+
+    .browse-bikes__bento-category {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .browse-bikes__bento-title {
+      color: $on-primary;
+    }
+
+    .browse-bikes__bento-description {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .browse-bikes__bento-icon {
+      color: $on-primary;
+    }
+
+    &:hover {
+      box-shadow: 0 24px 48px rgba(28, 0, 112, 0.2);
+    }
+
+    @media (min-width: 640px) {
+      grid-column: span 1;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: span 1;
     }
   }
 
-  .browsebybikes_btn {
-    min-width: 160px;
-  }
+  // Flagship card (Above 500cc)
+  &.flagship {
+    background-color: $primary;
+    color: $on-primary;
 
-  div[hidden] {
-    padding: 0px !important;
-  }
-
-  @media screen and (max-width: 768px) {
-    .browsebybikes_btn {
-      font-size: 12px;
-      min-width: 140px;
+    .browse-bikes__bento-category {
+      color: rgba(255, 255, 255, 0.6);
     }
+
+    .browse-bikes__bento-title {
+      font-size: 32px;
+      color: $on-primary;
+    }
+
+    .browse-bikes__bento-description {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      max-width: 300px;
+    }
+
+    .browse-bikes__bento-footer {
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .browse-bikes__bento-footer > span {
+      color: $on-primary;
+    }
+
+    &:hover {
+      box-shadow: 0 24px 48px rgba(28, 0, 112, 0.3);
+    }
+
+    @media (min-width: 640px) {
+      grid-column: span 2;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: span 2;
+    }
+  }
+}
+
+.browse-bikes__bento-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.browse-bikes__bento-category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $secondary;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.browse-bikes__bento-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: $primary;
+  line-height: 1.2;
+}
+
+.browse-bikes__bento-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.browse-bikes__bento-description {
+  font-size: 14px;
+  color: $on-surface-variant;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.browse-bikes__bento-icon {
+  font-size: 24px;
+  color: $primary;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+
+  .browse-bikes__bento-card:hover & {
+    transform: translateX(4px);
+  }
+}
+
+// Budget / Price Section
+.browse-bikes__budget-section {
+  width: 100%;
+}
+
+.browse-bikes__budget-header {
+  margin-bottom: 32px;
+}
+
+.browse-bikes__budget-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: $primary;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.browse-bikes__budget-subtitle {
+  font-size: 14px;
+  color: $on-surface-variant;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+// Budget Grid Layout
+.browse-bikes__budget-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.browse-bikes__budget-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 256px;
+  padding: 32px;
+  background-color: $surface-container-lowest;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 24px 48px rgba(28, 0, 112, 0.08);
+    border-color: $outline;
+
+    .browse-bikes__budget-card-icon {
+      background-color: $primary;
+      color: $on-primary;
+    }
+  }
+
+  // Flagship card (Premium - Under ₹1 lakh)
+  &.flagship {
+    background-color: $primary;
+    color: $on-primary;
+    box-shadow: 0 16px 32px rgba(28, 0, 112, 0.16);
+    position: relative;
+    overflow: hidden;
+
+    .browse-bikes__budget-card-icon {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: $on-primary;
+      backdrop-filter: blur(12px);
+    }
+
+    .browse-bikes__budget-category {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .browse-bikes__budget-card-title {
+      color: $on-primary;
+    }
+
+    &:hover {
+      box-shadow: 0 24px 48px rgba(28, 0, 112, 0.24);
+    }
+
+    // Decorative background element
+    &::before {
+      content: "";
+      position: absolute;
+      right: -16px;
+      top: -16px;
+      font-size: 200px;
+      opacity: 0.08;
+      color: rgba(255, 255, 255, 0.1);
+      pointer-events: none;
+    }
+  }
+
+  @media (min-width: 640px) {
+    &.flagship {
+      grid-column: span 1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &.flagship {
+      grid-column: span 1;
+    }
+  }
+}
+
+.browse-bikes__budget-card-icon {
+  height: 48px;
+  width: 48px;
+  border-radius: 16px;
+  background-color: $surface-container-low;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.browse-bikes__budget-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.browse-bikes__budget-category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $on-surface-variant;
+  margin-bottom: 8px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.browse-bikes__budget-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: $primary;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+.browse-bikes__budget-card-description {
+  font-size: 12px;
+  color: $on-surface-variant;
+  font-weight: 500;
+  line-height: 1.4;
+  // margin-top: auto;
+  text-align: left;
+}
+
+.browse-bikes__budget-card.flagship {
+  .browse-bikes__budget-card-description {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+// Empty State / Custom Quote Card
+.browse-bikes__budget-card--empty {
+  background-color: $surface-container-low;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: default;
+
+  &:hover {
+    box-shadow: none;
+    border-color: transparent;
+  }
+}
+
+.browse-bikes__budget-empty-text {
+  font-size: 14px;
+  color: $on-surface-variant;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.browse-bikes__budget-custom-btn {
+  background-color: $surface-container-lowest;
+  color: $primary;
+  padding: 10px 20px;
+  border-radius: 24px;
+  border: none;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: "Manrope", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 }
