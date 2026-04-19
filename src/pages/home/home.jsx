@@ -34,8 +34,8 @@ const Home = () => {
 
   return (
     <React.Fragment>
-      <PopularBikes />
       <BrowseBikesBy />
+      <PopularBikes />
       <OurServices />
       <HorizontalTabs data={BenefitsData} component="Benefits" />
       <CardCarousel

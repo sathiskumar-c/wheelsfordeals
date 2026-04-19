@@ -1,286 +1,340 @@
 {
   "title": "Browse Bikes By",
+  "subtitle": "The Digital Curator",
+  "heading": "Curated Selection by Preference",
+  "tagline": "Selecting a machine is an extension of identity. Our curated brand grid focuses on heritage, performance, and engineering excellence.",
+
+  "categories": [
+    {
+      "id": "category-1",
+      "label": "Brand",
+      "categoryNumber": "01",
+      "value": "brand",
+      "icon": "stars"
+    },
+    {
+      "id": "category-2",
+      "label": "Budget",
+      "categoryNumber": "02",
+      "value": "price",
+      "icon": "payments"
+    },
+    {
+      "id": "category-3",
+      "label": "Displacement",
+      "categoryNumber": "03",
+      "value": "displacement",
+      "icon": "settings"
+    },
+    {
+      "id": "category-4",
+      "label": "EV Tech",
+      "categoryNumber": "04",
+      "value": "evtech",
+      "icon": "bolt"
+    }
+  ],
 
   "browsebybrand": {
+    "title": "Premium Brands",
+    "subtitle": "Discover world-class motorcycle brands. From heritage manufacturers to innovative startups, find your perfect ride.",
     "tabtitle": "Brand",
     "value": "brand",
     "data": [
       {
-        "id": "brand-honda",
-        "name": "Honda",
-        "image": "/images/brands/honda.jpeg",
-        "alt": "Honda",
-        "path": "honda",
-        "fuel_type": "hybrid"
-      },
-      {
-        "id": "brand-hero",
-        "name": "Hero MotoCorp",
-        "image": "/images/brands/hero.png",
-        "alt": "Hero MotoCorp",
-        "path": "hero",
-        "fuel_type": "petrol"
-      },
-      {
-        "id": "brand-bajaj",
-        "name": "Bajaj Auto Ltd",
-        "image": "/images/brands/bajaj.png",
-        "alt": "Bajaj Auto Ltd",
-        "path": "bajaj",
-        "fuel_type": "hybrid"
-      },
-      {
-        "id": "brand-tvs",
-        "name": "TVS Motor Company",
-        "image": "/images/brands/tvs.png",
-        "alt": "TVS Motor Company",
-        "path": "tvs",
-        "fuel_type": "hybrid"
-      },
-      {
-        "id": "brand-suzuki",
-        "name": "Suzuki Motorcycle",
-        "image": "/images/brands/suzuki.png",
-        "alt": "Suzuki Motorcycle",
-        "path": "suzuki",
-        "fuel_type": "petrol"
-      },
-      {
-        "id": "brand-royal-enfield",
-        "name": "Royal Enfield",
-        "image": "/images/brands/royal-enfield.png",
-        "alt": "Royal Enfield",
-        "path": "royal-enfield",
-        "fuel_type": "petrol"
-      },
-      {
-        "id": "brand-yamaha",
-        "name": "Yamaha Motor India",
-        "image": "/images/brands/yamaha.png",
-        "alt": "Yamaha Motor India",
-        "path": "yamaha",
-        "fuel_type": "hybrid"
-      },
-      {
-        "id": "brand-ktm",
-        "name": "KTM India",
-        "image": "/images/brands/ktm.png",
-        "alt": "KTM India",
-        "path": "ktm",
-        "fuel_type": "petrol"
-      },
-      {
-        "id": "brand-kawasaki",
-        "name": "Kawasaki India",
-        "image": "/images/brands/kawasaki.png",
-        "alt": "Kawasaki India",
-        "path": "kawasaki",
-        "fuel_type": "petrol"
-      },
-      {
-        "id": "brand-bmw-motorrad",
-        "name": "BMW Motorrad",
-        "image": "/images/brands/bmw motorrad.png",
-        "alt": "BMW Motorrad",
-        "path": "bmw-motorrad",
-        "fuel_type": "petrol"
-      },
-      {
         "id": "brand-ducati",
-        "name": "Ducati Indianapolis",
-        "image": "/images/brands/ducati.png",
-        "alt": "Ducati Indianapolis",
+        "name": "Ducati",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA761Mbiqbg3zBxRlqKsJtCZyVPAT1nBWQW-dibRP1zFaPhXpyUoO33dmfxImPUskxO1v-8DylkW2Ta2hXwcQIl-g4TxwjBvc3esec7VdGsONbdsPaS8eQfQbkw-ruEBZEIl92aYSvRRoLAsiPi51tVSvZUTUNzHHhFvrvQwUH0QzxhlrjB_Bpy5fEYkGywM1k9zcW4MnJ5UcJVE-mZARXswwndngT14XS0G-65UNB8F_q5c2pVXqKbygaUxZV0kUe3behfU1SF_YM",
+        "alt": "Ducati Logo",
         "path": "ducati",
-        "fuel_type": "petrol"
+        "fuel_type": "petrol",
+        "country": "Italy",
+        "description": "Mastery of Italian performance"
       },
       {
-        "id": "brand-mahindra",
-        "name": "Mahindra Two Wheelers",
-        "image": "/images/brands/mahindra.png",
-        "alt": "Mahindra Two Wheelers",
-        "path": "mahindra",
-        "fuel_type": "hybrid"
-      },
-      {
-        "id": "brand-harley-davidson",
-        "name": "Harley-Davidson",
-        "image": "/images/brands/harley-davidson.png",
-        "alt": "Harley-Davidson",
-        "path": "harley-davidson",
-        "fuel_type": "petrol"
-      },
-      {
-        "id": "brand-benelli",
-        "name": "Benelli",
-        "image": "/images/brands/benelli.png",
-        "alt": "Benelli",
-        "path": "benelli",
-        "fuel_type": "petrol"
+        "id": "brand-bmw",
+        "name": "BMW",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBTUHli1geneG3MjAt9MzimK2vU6jtWiefexeSApG4TzlOAjwCduZWbex5LJWfp1BQCXCiQ1-9_B__hCcO2dRUqRtJTsCo37nqXXVWL1Pj61v6DB_PpnXO-h2HZ8o-oizGuSNcUgO-WFr68qAun2Hn4RhChBeZ_eL0HpV8Z8rzk_DjrH_sdZ7YKxhob9BldMAasB738MwWKx6NYOzINH8tDU9nGnNa77AGjzje9J0GYOAlUsUCQEzwTyZpRFlR3U2wy2uRTNCQUjFk",
+        "alt": "BMW Logo",
+        "path": "bmw",
+        "fuel_type": "petrol",
+        "country": "Germany",
+        "description": "Precision engineering touring"
       },
       {
         "id": "brand-triumph",
-        "name": "Triumph Motorcycles",
-        "image": "/images/brands/triumph.png",
-        "alt": "Triumph Motorcycles",
+        "name": "Triumph",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBzFEvzd3F-RiQS9H7wemYh426XcnPaJSzOcnPinJecXRDWAa1yTx4JARHzDflvoxz4KIpP5satyuZfjUJgKTWnOJQBF_DFEvkhYK0_KXImoiFe8PhXOI_GhCSIkC4HhdmiUUvGBTDNv-87DksFv4BPQTyN7gfWV9ijik9WoZCJePqbXF7lmZLg3QDSluVRMr7SXjCwiSssaKMYyDoaDxUfiqVkoLxuMgPupVGSYBk7-dppySKhXZteTt_ws5Agie2Joihl4tAv60g",
+        "alt": "Triumph Logo",
         "path": "triumph",
-        "fuel_type": "petrol"
+        "fuel_type": "petrol",
+        "country": "United Kingdom",
+        "description": "British character meets modern"
       },
       {
-        "id": "brand-jawa",
-        "name": "Jawa Motorcycles",
-        "image": "/images/brands/jawa.png",
-        "alt": "Jawa Motorcycles",
-        "path": "jawa",
-        "fuel_type": "petrol"
+        "id": "brand-harley",
+        "name": "Harley-Davidson",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuArBn8IMCirMu553afF06G_8ywzBRo5Lw9n59NdZP0VkVueaEchdBbaF7rHVbouKbj-hfYLcVXbNHCF8jrXqukAkmai2BiLVV8rU_hgS1rAXUktDoAfryXTTaMOChXosuVEu6sN24DLYIgTa_5byFb3uWmMTziH3cAEBap_XgJHM-OCjikDMY-oDnVgfzo4cwxnIKVAux16xmYTOhKHR-PJIqq3ROxhI3qiSV2-f5yucehza738Yxi9Q31p35357aBXyOJg6Zq9Ue8",
+        "alt": "Harley-Davidson Logo",
+        "path": "harley-davidson",
+        "fuel_type": "petrol",
+        "country": "USA",
+        "description": "Spirit of the open road"
       },
       {
-        "id": "brand-yezdi",
-        "name": "Yezdi",
-        "image": "/images/brands/yezdi.png",
-        "alt": "Yezdi",
-        "path": "yezdi",
-        "fuel_type": "petrol"
+        "id": "brand-ktm",
+        "name": "KTM",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBRsqueN8pA7ohyGSjdQrgLOhM8JJ5Wet2YjxpbDP_v3QDjDuEh-xt7cborEa-i0IcuxEt_4YUqZ96VD4vUKMIOFjqhLgsViTv2OE-0HH_vP4d_NpS5wDQwaQVhPILL1QtiGOmV1fxsy6iUQcknD4lxdjvytziNYcvlBkUZYsb5AjLlyVWakBA-ARQW4WIHRaoM3P8ZWLgVcOtpLnPWDZAylWphwbRQ4PjEtuRmlxIp-71R3HORr2u3X5AD-VgJR7t2VUCdclWkOjw",
+        "alt": "KTM Logo",
+        "path": "ktm",
+        "fuel_type": "petrol",
+        "country": "Austria",
+        "description": "Ready to Race performance"
       },
       {
-        "id": "brand-indian-motorcycles",
-        "name": "Indian Motorcycles",
-        "image": "/images/brands/indian-motorcycle.png",
-        "alt": "Indian Motorcycles",
-        "path": "indian-motorcycles",
-        "fuel_type": "petrol"
-      },
-      {
-        "id": "brand-mv-agusta",
-        "name": "MV Agusta Motor",
-        "image": "/images/brands/mv-agusta.png",
-        "alt": "MV Agusta Motor",
-        "path": "mv-agusta",
-        "fuel_type": "petrol"
-      },
-      {
-        "id": "brand-ather",
-        "name": "Ather Energy",
-        "image": "/images/brands/ather.png",
-        "alt": "Ather Energy",
-        "path": "ather",
-        "fuel_type": "ev"
-      },
-      {
-        "id": "brand-ola",
-        "name": "Ola Electric",
-        "image": "/images/brands/ola.png",
-        "alt": "Ola Electric",
-        "path": "ola",
-        "fuel_type": "ev"
-      },
-      {
-        "id": "brand-revolt",
-        "name": "Revolt Motors",
-        "image": "/images/brands/revolt.jpeg",
-        "alt": "Revolt Motors",
-        "path": "revolt",
-        "fuel_type": "ev"
-      },
-      {
-        "id": "brand-pure-ev",
-        "name": "PURE EV",
-        "image": "/images/brands/pure-ev.png",
-        "alt": "PURE EV",
-        "path": "pure-ev",
-        "fuel_type": "ev"
+        "id": "brand-husqvarna",
+        "name": "Husqvarna",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDw7r1mXLSibiAa74a3lzaHWvPIpZ2273ka5tuqvidYnfZWi-ecq-cFYTwR2g87BmcFABKdT-UCnnkIlp0cRIUwqBB-6vmvnSgOLU62aEkG5jkxG6TMtcic7uBFD5DUHoDX0j6tn0OX_ltmPTPnaUdP053WnM3iWhnA_jRkTN7roPZSlS4A3mDJTLN-vP0WdcN-leY6d501fVupn56lPIS-g4q9JzKH753zKpto_OWbcJtHEoM1TPmU_vSJMPT8t_e2HD16YlBdzLg",
+        "alt": "Husqvarna Logo",
+        "path": "husqvarna",
+        "fuel_type": "petrol",
+        "country": "Sweden",
+        "description": "Pioneering design since 1921"
       }
     ]
   },
 
   "browsebyprice": {
+    "title": "Budget Range",
+    "subtitle": "Find the perfect bike that matches your budget. From entry-level commuters to premium superbikes.",
     "tabtitle": "Budget",
-    "value": "budget",
+    "value": "price",
     "data": [
       {
         "id": "under_20k",
         "path": "below-20000",
-        "title": "Under ₹20,000"
+        "title": "Under ₹20,000",
+        "category": "Entry Level",
+        "description": "Perfect for daily commute",
+        "icon": "payments",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "under_30k",
         "path": "below-30000",
-        "title": "Under ₹30,000"
+        "title": "Under ₹30,000",
+        "category": "Standard",
+        "description": "Reliable performance",
+        "icon": "wallet",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "under_50k",
         "path": "below-50000",
-        "title": "Under ₹50,000"
+        "title": "Under ₹50,000",
+        "category": "Commuter",
+        "description": "Comfort & efficiency",
+        "icon": "account_balance_wallet",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "under_70k",
         "path": "below-70000",
-        "title": "Under ₹70,000"
+        "title": "Under ₹70,000",
+        "category": "Mid Range",
+        "description": "Enhanced features",
+        "icon": "savings",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "under_1lakh",
         "path": "below-1lakh",
-        "title": "Under ₹1 lakh"
+        "title": "Under ₹1 lakh",
+        "category": "Premium",
+        "description": "Premium experience",
+        "icon": "star",
+        "featured": true,
+        "isFlagship": true
       },
       {
         "id": "under_1_5lakh",
         "path": "below-1.5lakh",
-        "title": "Under ₹1.5 lakh"
+        "title": "Under ₹1.5 lakh",
+        "category": "Performance",
+        "description": "High performance",
+        "icon": "speed",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "under_2lakh",
         "path": "below-2lakh",
-        "title": "Under ₹2 lakh"
+        "title": "Under ₹2 lakh",
+        "category": "Enthusiast",
+        "description": "Advanced capability",
+        "icon": "diamond",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "above_2lakh",
         "path": "above-2lakh",
-        "title": "Above ₹2 lakh"
+        "title": "Above ₹2 lakh",
+        "category": "Elite Collection",
+        "description": "Ultimate luxury",
+        "icon": "workspace_premium",
+        "featured": false,
+        "isFlagship": false
       }
     ]
   },
   "browsebydisplacement": {
+    "title": "Engine Displacement",
+    "subtitle": "Select a performance tier tailored to your riding style. From fuel-efficient city commuters to high-performance touring machines.",
     "tabtitle": "Displacement",
     "value": "displacement",
     "data": [
       {
         "id": "upto_100cc",
         "path": "upto-100cc",
-        "title": "Upto 100cc"
+        "title": "Upto 100cc",
+        "category": "Entry",
+        "description": "Ultra-efficient urban commuting",
+        "icon": "pip",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "100_110cc",
         "path": "100-110cc",
-        "title": "100cc - 110cc"
+        "title": "100cc - 110cc",
+        "category": "Commuter",
+        "description": "Reliable daily performance",
+        "icon": "pip",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "110_125cc",
         "path": "110-125cc",
-        "title": "110cc - 125cc"
+        "title": "110cc - 125cc",
+        "category": "Utility",
+        "description": "Balanced power and economy",
+        "icon": "pip",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "125_150cc",
         "path": "125-150cc",
-        "title": "125cc - 150cc"
+        "title": "125cc - 150cc",
+        "category": "Performance Commuter",
+        "description": "Dynamic city maneuvers",
+        "icon": "bolt",
+        "featured": true,
+        "isFlagship": false
       },
       {
         "id": "150_200cc",
         "path": "150-200cc",
-        "title": "150cc - 200cc"
+        "title": "150cc - 200cc",
+        "category": "Executive",
+        "description": "Spirited weekend rides",
+        "icon": "pip",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "200_250cc",
         "path": "200-250cc",
-        "title": "200cc - 250cc"
+        "title": "200cc - 250cc",
+        "category": "Sport",
+        "description": "Entry-level racing thrill",
+        "icon": "pip",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "250_500cc",
         "path": "250-500cc",
-        "title": "250cc - 500cc"
+        "title": "250cc - 500cc",
+        "category": "Middleweight",
+        "description": "Highway dominance & touring",
+        "icon": "pip",
+        "featured": false,
+        "isFlagship": false
       },
       {
         "id": "above_500cc",
         "path": "above-500cc",
-        "title": "Above 500cc"
+        "title": "Above 500cc",
+        "category": "Superbike",
+        "description": "Uncompromising power for the ultimate enthusiast.",
+        "icon": "speed",
+        "featured": true,
+        "isFlagship": true
+      }
+    ]
+  },
+  "browsebyevtech": {
+    "title": "Electric Revolution",
+    "subtitle": "Explore the future of two-wheelers. Zero emissions, maximum performance, and cutting-edge technology.",
+    "tabtitle": "EV Tech",
+    "value": "evtech",
+    "data": [
+      {
+        "id": "ev_scooters",
+        "path": "ev-scooters",
+        "title": "E-Scooters",
+        "category": "Urban Mobility",
+        "description": "Compact & eco-friendly commuting",
+        "icon": "electric_scooter",
+        "featured": false,
+        "isFlagship": false
+      },
+      {
+        "id": "ev_bikes_150cc",
+        "path": "ev-bikes-150cc",
+        "title": "E-Bikes (150cc equivalent)",
+        "category": "Performance",
+        "description": "Speed & sustainability combined",
+        "icon": "two_wheeler",
+        "featured": false,
+        "isFlagship": false
+      },
+      {
+        "id": "ev_cruisers",
+        "path": "ev-cruisers",
+        "title": "E-Cruisers",
+        "category": "Comfort",
+        "description": "Relaxed riding position",
+        "icon": "directions_bike",
+        "featured": false,
+        "isFlagship": false
+      },
+      {
+        "id": "ev_bikes_300cc",
+        "path": "ev-bikes-300cc",
+        "title": "E-Bikes (300cc equivalent)",
+        "category": "Premium",
+        "description": "Long-range electric touring",
+        "icon": "rocket_launch",
+        "featured": true,
+        "isFlagship": true
+      },
+      {
+        "id": "ev_adventure",
+        "path": "ev-adventure",
+        "title": "E-Adventure Bikes",
+        "category": "Exploration",
+        "description": "Off-road electric capability",
+        "icon": "terrain",
+        "featured": false,
+        "isFlagship": false
       }
     ]
   }
