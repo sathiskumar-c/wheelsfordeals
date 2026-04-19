@@ -190,9 +190,7 @@ const NeedHelp = () => {
       role="region"
       aria-labelledby="need-help-title"
     >
-      <h3 className="section-title text-center" id="need-help-title">
-        {JSON.title || "Need Help?"}
-      </h3>
+      <h2 id="need-help-title">{JSON.title || "Need Help?"}</h2>
 
       <div className="help-options">{helpOptions}</div>
 
