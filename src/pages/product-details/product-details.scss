@@ -1,16 +1,773 @@
-.product-details {
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+// --- Color Tokens ---
+$pd-primary: #1c0070;
+$pd-primary-container: #311b92;
+$pd-secondary: #6c45c0;
+$pd-bg: #f9f9fb;
+$pd-surface: #ffffff;
+$pd-surface-low: #f3f3f5;
+$pd-surface-high: #e8e8ea;
+$pd-surface-highest: #e2e2e4;
+$pd-on-surface: #1a1c1d;
+$pd-on-surface-variant: #474553;
+$pd-outline-variant: #c9c4d5;
 
-    &::after {
-      font-size: 20px;
+// --- Font Imports ---
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+// =====================================================
+// Root Wrapper
+// =====================================================
+.pd-redesign {
+  background: $pd-bg;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: $pd-on-surface;
+
+  // =====================================================
+  // Container
+  // =====================================================
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+  }
+
+  // =====================================================
+  // Breadcrumb
+  // =====================================================
+  &__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: $pd-on-surface-variant;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+
+    .breadcrumb-sep {
+      font-size: 1rem;
+      color: $pd-outline-variant;
+      display: flex;
+      align-items: center;
+    }
+
+    &-active {
+      color: $pd-primary;
+      font-weight: 600;
     }
   }
 
-  .mySwiper {
-    border-radius: 10px;
+  // =====================================================
+  // Header — Title + Price
+  // =====================================================
+  // =====================================================
+  // Layout Grid
+  // =====================================================
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    @media (min-width: 1024px) {
+      grid-column: span 8;
+    }
+  }
+
+  &__sidebar {
+    @media (min-width: 1024px) {
+      grid-column: span 4;
+    }
+
+    &-inner {
+      position: sticky;
+      top: 5.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  // =====================================================
+  // Hero Image
+  // =====================================================
+  &__hero {
+    position: relative;
+    height: 450px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: $pd-surface-high;
+    box-shadow:
+      0 20px 60px rgba($pd-primary, 0.1),
+      0 4px 16px rgba(0, 0, 0, 0.08);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &-overlay {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    &-btn {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      color: $pd-primary;
+      font-weight: 700;
+      font-size: 0.875rem;
+      border: none;
+      cursor: pointer;
+      font-family: "Inter", sans-serif;
+      transition: background 0.2s;
+
+      svg {
+        font-size: 1.125rem !important;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  // =====================================================
+  // Section Title with Accent Bar
+  // =====================================================
+  &__section-title {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $pd-primary;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+
+    &-bar {
+      display: inline-block;
+      width: 6px;
+      height: 24px;
+      background: $pd-secondary;
+      border-radius: 9999px;
+      flex-shrink: 0;
+    }
+  }
+
+  // =====================================================
+  // General Overview — 4-col icon cards
+  // =====================================================
+  &__overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__overview-card {
+    background: $pd-surface-low;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.75rem;
+
+    .ov-icon {
+      color: $pd-secondary;
+      margin-bottom: 0.625rem;
+      display: block;
+
+      svg {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    .ov-label {
+      color: $pd-on-surface-variant;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.2rem;
+      font-family: "Inter", sans-serif;
+    }
+
+    .ov-value {
+      color: $pd-primary;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin: 0;
+    }
+  }
+
+  // =====================================================
+  // Performance & Engineering — 3-col icon-text cards
+  // =====================================================
+  &__perf-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__perf-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: $pd-surface;
+    border-radius: 0.75rem;
+    border: 1px solid rgba($pd-outline-variant, 0.2);
+    box-shadow: 0 1px 4px rgba($pd-on-surface, 0.04);
+
+    &-icon {
+      background: rgba($pd-secondary, 0.1);
+      padding: 0.625rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      svg {
+        color: $pd-secondary;
+        font-size: 1.25rem !important;
+      }
+    }
+
+    &-label {
+      color: $pd-on-surface-variant;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.2rem;
+      margin-top: 0;
+    }
+
+    &-value {
+      color: $pd-primary;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      margin: 0;
+    }
+  }
+
+  // =====================================================
+  // History & Legal
+  // =====================================================
+  &__history {
+    background: $pd-surface-low;
+    border-radius: 1rem;
+    padding: 2rem;
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    &-item {
+      .hi-label {
+        color: $pd-on-surface-variant;
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.25rem;
+      }
+
+      .hi-value {
+        color: $pd-primary;
+        font-weight: 700;
+        font-size: 0.9375rem;
+        margin: 0;
+        word-break: break-word;
+      }
+    }
+  }
+
+  // =====================================================
+  // Sidebar — Action Card
+  // =====================================================
+  &__action-card {
+    background: $pd-surface;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow:
+      0 20px 48px rgba($pd-primary, 0.05),
+      0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba($pd-outline-variant, 0.1);
+  }
+
+  // --- Card Name + Price Header ---
+  &__card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__card-title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $pd-on-surface;
+    margin: 0 0 0.25rem;
+    line-height: 1.3;
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+  }
+
+  &__card-title-asterisk {
+    color: #dc2626;
+    font-size: 1rem;
+  }
+
+  &__card-subtitle {
+    color: $pd-on-surface-variant;
+    font-size: 0.9375rem;
+    margin: 0;
+  }
+
+  &__card-price {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 2.375rem;
+    color: $pd-primary;
+    margin: 0.25rem 0 0;
+    line-height: 1.2;
+  }
+
+  // --- Features block (replaces inline location) ---
+  &__features {
+    margin: 0.5rem 0 0;
+
+    &-label {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: $pd-on-surface-variant;
+      margin: 0 0 1rem;
+
+      svg {
+        color: $pd-secondary;
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+  // --- Seller Row ---
+  &__seller {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 10px 10px 0px 0px;
+    border-radius: 5px;
+    margin-bottom: 0;
+
+    &-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: $pd-surface-high;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    &-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    &-name {
+      color: $pd-primary;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin: 0 0 0.125rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    &-badge {
+      color: $pd-on-surface-variant;
+      font-size: 0.75rem;
+      margin: 0;
+    }
+
+    &-verified {
+      background: rgba($pd-primary, 0.05);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      svg {
+        color: $pd-primary;
+        font-size: 1.25rem !important;
+      }
+    }
+
+    // Inline verified checkmark (next to dealer name, like Instagram)
+    &-verified-inline {
+      color: #1877f2 !important; // Facebook/Instagram blue
+      font-size: 1rem !important;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    // Hold + Favorite grouped together
+    &-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.125rem;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+  }
+
+  // --- CTA Buttons ---
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .pd-chip {
+    background: $pd-surface-highest;
+    color: $pd-on-surface-variant;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0px 10px 0px 10px;
+    font-family: "Inter", sans-serif;
+  }
+
+  // --- CTA row (Book Now + Free Test Drive side-by-side) ---
+  &__cta-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  &__cta-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+    border-radius: 0px;
+    background: #6d28d9;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition:
+      background 0.2s,
+      transform 0.1s;
+    text-align: center;
+
+    &:hover {
+      background: #5b21b6;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  &__cta-testdrive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+    border-radius: 0px;
+    background: #f43f5e;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    transition:
+      background 0.2s,
+      transform 0.1s;
+    text-align: center;
+
+    &:hover {
+      background: #e11d48;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  &__cta-hold {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border-radius: 0.75rem;
+    background: transparent;
+    border: 1px solid rgba($pd-outline-variant, 0.6);
+    color: $pd-on-surface-variant;
+    font-weight: 700;
+    font-size: 0.875rem;
+    font-family: "Inter", sans-serif;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &__hold-info {
+    font-size: 0.8125rem;
+    color: #ef4444;
+    margin: 0.375rem 0 0;
+    text-align: center;
+  }
+
+  // --- CTA Buttons ---
+  &__cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__cta-primary {
+    width: 100%;
+    background: $pd-primary;
+    color: #ffffff !important;
+    font-weight: 700;
+    padding: 0.875rem 1rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba($pd-primary, 0.2);
+    transition:
+      background 0.2s,
+      transform 0.1s;
+    font-size: 0.9375rem;
+    font-family: "Inter", sans-serif;
+    text-decoration: none !important;
+
+    svg {
+      font-size: 1.25rem !important;
+    }
+
+    &:hover {
+      background: $pd-primary-container;
+      color: #ffffff !important;
+      text-decoration: none;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &__cta-secondary {
+    width: 100%;
+    background: $pd-surface-high;
+    color: $pd-primary;
+    font-weight: 700;
+    padding: 0.875rem 1rem;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition:
+      background 0.2s,
+      transform 0.1s;
+    font-size: 0.9375rem;
+    font-family: "Inter", sans-serif;
+
+    svg {
+      font-size: 1.25rem !important;
+    }
+
+    &:hover {
+      background: $pd-surface-highest;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  // --- Location Block ---
+  &__location {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba($pd-outline-variant, 0.3);
+
+    &-title {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: $pd-primary;
+      margin: 0 0 1rem;
+    }
+
+    &-map {
+      width: 100%;
+      height: 160px;
+      border-radius: 0.75rem;
+      background: $pd-surface-high;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      svg {
+        color: $pd-primary;
+        font-size: 3rem !important;
+        opacity: 0.6;
+      }
+    }
+
+    &-address {
+      margin-top: 0.875rem;
+      font-size: 0.875rem;
+      color: $pd-on-surface-variant;
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+
+      svg {
+        font-size: 1rem !important;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  // --- Share Section ---
+  &__divider {
+    border: 0;
+    border-top: 1px solid rgba($pd-outline-variant, 0.25) !important;
+    margin: 1.25rem 0;
+    opacity: 1;
+  }
+
+  &__share {
+    display: flex;
+    align-items: end;
+    gap: 3px;
+
+    &-label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $pd-on-surface;
+      margin: 0 0 0.5rem;
+    }
+
+    &-icons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+  }
+
+  .pd-share-icon {
+    color: $pd-on-surface-variant !important;
+    transition: color 0.15s;
+
+    &:hover {
+      color: $pd-secondary !important;
+    }
+  }
+
+  // =====================================================
+  // Purchase Protection Badge
+  // =====================================================
+  &__protection {
+    background: rgba($pd-secondary, 0.05);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba($pd-secondary, 0.1);
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      margin-bottom: 0.625rem;
+
+      svg {
+        color: $pd-secondary;
+        font-size: 1.375rem !important;
+      }
+
+      span {
+        font-weight: 700;
+        color: $pd-secondary;
+        font-size: 0.9375rem;
+      }
+    }
+
+    &-text {
+      font-size: 0.8125rem;
+      color: $pd-on-surface-variant;
+      line-height: 1.65;
+      margin: 0;
+    }
   }
 }

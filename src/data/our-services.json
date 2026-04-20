@@ -1,40 +1,42 @@
 {
   "title": "Our Services",
+  "subtitle": "Premium Ecosystem",
+  "description": "A suite of premium tools designed to simplify your journey, from discovery to ownership and beyond.",
   "ourservicesdata": [
     {
       "id": "ourservices-usedbike",
-      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "icon": "pedal_bike",
       "title": "Buy Used Bike",
       "path": "/bikes",
-      "description": "A bike for every budget"
+      "description": "Expertly inspected inventory with certification."
     },
     {
       "id": "ourservices-visithub",
-      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "icon": "storefront",
       "title": "Visit Our Hub",
       "path": "/contact-us",
-      "description": "Explore, Inspect & Ride!"
+      "description": "Experience the community at our physical locations."
     },
     {
       "id": "ourservices-finance",
-      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "icon": "payments",
       "title": "Finance",
       "path": "/contact-us",
-      "description": "Low Intrest Rates"
+      "description": "Tailored payment plans to suit your lifestyle."
     },
     {
       "id": "ourservices-rctransfer",
-      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
+      "icon": "description",
       "title": "RC Transfer",
       "path": "/contact-us",
-      "description": "Hassle-free & safe"
+      "description": "Seamless ownership documentation and transfer."
     },
     {
       "id": "ourservices-bikeprice",
-      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYywpKSy7Z-aOYNVVG_98VGHgOFyOXwisvmQRC0xqvfnn8A6n7_x-qv7etSKNToK7m7Zc&usqp=CAU",
-      "title": "Bike Price Calculator",
+      "icon": "calculate",
+      "title": "Price Calculator",
       "path": "/bikes",
-      "description": "Get instant price"
+      "description": "Real-time market valuation for any bike."
     }
   ]
 }

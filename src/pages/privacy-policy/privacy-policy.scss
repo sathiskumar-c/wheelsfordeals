@@ -1,0 +1,440 @@
+// ── Color Tokens ──────────────────────────────────────────────────────────────
+$pp-primary: #1c0070;
+$pp-secondary: #6c45c0;
+$pp-bg: #f9f9fb;
+$pp-surface: #ffffff;
+$pp-surface-low: #f3f3f5;
+$pp-surface-high: #e8e8ea;
+$pp-surface-highest: #e2e2e4;
+$pp-outline-variant: #c9c4d5;
+$pp-on-surface: #1a1c1d;
+$pp-on-surface-variant: #474553;
+$pp-primary-fixed: #e5deff;
+$pp-primary-fixed-dim: #c7bfff;
+$pp-primary-container: #311b92;
+$pp-secondary-fixed: #eaddff;
+$pp-on-secondary-fixed: #24005b;
+
+// ── Font Tokens ───────────────────────────────────────────────────────────────
+$font-headline: 'Manrope', sans-serif;   // titles, headings, labels
+$font-body: 'Inter', sans-serif;         // body copy, descriptions, paragraphs
+
+// ── Root ─────────────────────────────────────────────────────────────────────
+.pp-redesign {
+  background-color: $pp-bg;
+
+  // ── Hero Header ──────────────────────────────────────────────────────────
+  &__hero {
+    background-color: $pp-surface-low;
+    padding: 8rem 2rem 4rem;
+
+    @media (max-width: 767px) {
+      padding: 6rem 1.25rem 3rem;
+    }
+  }
+
+  &__hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: $pp-secondary-fixed;
+    color: $pp-on-secondary-fixed;
+    font-family: $font-headline;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+
+    svg {
+      font-size: 1rem !important;
+    }
+  }
+
+  &__hero-title {
+    font-family: $font-headline;
+    font-size: 3.75rem;
+    font-weight: 800;
+    color: $pp-primary;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+
+    @media (max-width: 767px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__hero-desc {
+    font-family: $font-body;
+    color: $pp-on-surface-variant;
+    font-size: 1.0625rem;
+    max-width: 640px;
+    line-height: 1.75;
+  }
+
+  // ── Body: sidebar + content ───────────────────────────────────────────────
+  &__body {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (max-width: 767px) {
+      padding: 2.5rem 1.25rem;
+    }
+  }
+
+  // ── Sidebar ───────────────────────────────────────────────────────────────
+  &__sidebar {
+    flex-shrink: 0;
+    width: 16rem;
+    position: sticky;
+    top: 6rem;
+
+    @media (max-width: 991px) {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  &__sidebar-card {
+    background-color: $pp-surface-low;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  &__sidebar-header {
+    padding: 1.25rem 1.25rem 1rem;
+    border-bottom: 1px solid rgba($pp-outline-variant, 0.4);
+  }
+
+  &__sidebar-title {
+    display: block;
+    font-family: $font-headline;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $pp-primary;
+  }
+
+  &__sidebar-meta {
+    display: block;
+    font-family: $font-body;
+    font-size: 0.75rem;
+    color: $pp-on-surface-variant;
+    margin-top: 0.2rem;
+    font-weight: 500;
+  }
+
+  &__sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem;
+
+    @media (max-width: 991px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-family: $font-headline;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: $pp-on-surface-variant;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: all 0.2s;
+
+    svg {
+      font-size: 1.25rem !important;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      background-color: rgba($pp-primary, 0.06);
+      color: $pp-primary;
+    }
+
+    &--active {
+      background-color: $pp-surface;
+      color: $pp-secondary;
+      font-weight: 600;
+      transform: translateX(2px);
+
+      svg {
+        color: $pp-secondary;
+      }
+    }
+
+    @media (max-width: 991px) {
+      width: auto;
+      font-size: 0.8125rem;
+      padding: 0.5rem 0.875rem;
+    }
+  }
+
+  // ── Content ───────────────────────────────────────────────────────────────
+  &__content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__divider {
+    border: none;
+    border-top: 1px solid rgba($pp-outline-variant, 0.3);
+    margin-bottom: 0;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    scroll-margin-top: 6rem;
+  }
+
+  &__section-title {
+    font-family: $font-headline;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: $pp-primary;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+
+  &__body-text {
+    font-family: $font-body;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: $pp-on-surface-variant;
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  &__section-intro {
+    font-family: $font-body;
+    color: $pp-on-surface-variant;
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  // ── Core Principles Card ──────────────────────────────────────────────────
+  &__principles-card {
+    background-color: $pp-surface;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 1px 4px rgba($pp-primary, 0.06);
+    margin-top: 0.5rem;
+  }
+
+  &__principles-title {
+    font-family: $font-headline;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $pp-primary;
+    margin-bottom: 1.5rem;
+  }
+
+  &__principles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__principle-label {
+    display: block;
+    font-family: $font-headline;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: $pp-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+  }
+
+  &__principle-desc {
+    font-family: $font-body;
+    font-size: 0.875rem;
+    color: $pp-on-surface-variant;
+    line-height: 1.7;
+  }
+
+  // ── Data Cards ────────────────────────────────────────────────────────────
+  &__data-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__data-card {
+    background-color: $pp-surface-low;
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__data-card-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: $pp-surface;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba($pp-primary, 0.1);
+
+    svg {
+      color: $pp-primary-container !important;
+      font-size: 1.25rem !important;
+    }
+  }
+
+  &__data-card-title {
+    font-family: $font-headline;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: $pp-primary;
+    margin-bottom: 0.35rem;
+  }
+
+  &__data-card-desc {
+    font-family: $font-body;
+    font-size: 0.875rem;
+    color: $pp-on-surface-variant;
+    line-height: 1.65;
+  }
+
+  // ── Checklist ─────────────────────────────────────────────────────────────
+  &__checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-family: $font-body;
+    color: $pp-on-surface-variant;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  &__check-icon {
+    color: $pp-secondary !important;
+    font-size: 1.125rem !important;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  // ── Data Banner ───────────────────────────────────────────────────────────
+  &__banner {
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 16rem;
+    background: linear-gradient(
+      135deg,
+      $pp-primary-container 0%,
+      $pp-primary 60%,
+      #050020 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 2.5rem;
+    margin-top: 0.5rem;
+  }
+
+  &__banner-text {
+    font-family: $font-headline;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+    max-width: 480px;
+  }
+
+  // ── Cookie Table ──────────────────────────────────────────────────────────
+  &__table-wrap {
+    border: 1px solid rgba($pp-outline-variant, 0.25);
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    text-align: left;
+
+    thead {
+      background-color: $pp-surface-low;
+
+      th {
+        padding: 1rem 1.5rem;
+        font-family: $font-headline;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        color: $pp-primary;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+    }
+
+    tbody {
+      tr {
+        border-top: 1px solid rgba($pp-outline-variant, 0.15);
+
+        td {
+          padding: 1rem 1.5rem;
+          font-family: $font-body;
+          color: $pp-on-surface-variant;
+          line-height: 1.65;
+        }
+      }
+    }
+  }
+
+  &__table-type {
+    font-family: $font-headline;
+    font-weight: 600;
+    color: $pp-primary !important;
+  }
+}

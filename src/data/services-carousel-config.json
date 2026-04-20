@@ -1,0 +1,38 @@
+{
+  "ourservices-usedbike": {
+    "bgImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuD5E9_ze6hdM6MeaNCB4n3UU1bgGAK5tOaAv3N6I0pSusuJiogbFxpsDP90uO7MF-IG4EvOpt2idhO6GNX7kWu8q34hn3_qkRGP_Ah0AdWz_yXPj610RtHdLvptHxCMqS8_22JHF0lHH5lKFU2FI10L6h5XnWQ9iWrEwPjfeI9idXxyfAx3dQSvZcOJxlKFdCPwj5wWN6kkQCIb5S86S1DSip2CD5fd5BGW64E2EfZa3K8SDlWnQBHNUzP4sZCqGGBRM1BAxhyBM8c",
+    "fullDescription": "Access an elite catalog of vetted motorcycles. Each machine undergoes a 120-point digital diagnostic to ensure aesthetic and mechanical perfection.",
+    "features": [
+      { "icon": "/images/icons/quality.png", "label": "Verified Units" },
+      { "icon": "/images/icons/date.png", "label": "120 Check Points" },
+      { "icon": "/images/icons/finance.png", "label": "Best Prices" }
+    ]
+  },
+  "ourservices-finance": {
+    "bgImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuB4-Jc5JRYhW9DO1vwLXVRl7np8ziYcb1pl-2_kB_KdUUjDK3vpYqzuANH0IAumdAN8TeEmFP56dx73YC8s2vvWbcaAtZEJBPr7znGKKCKjNRtyiSTIG8Ij6VCGm66HBMOmEs5Nf7W_QJlQ_58xitvXhjuar9uwmASRnu9BTd3-rp5bOZqIuK4hOFS2PUpAGk2ARQSyG5lwm29F0apT-UttYQHtGDLNnOHs1_EJ-EJjw-q-0_FZYYiS3zBhJzt-JXPd9D0pSmWTgC0",
+    "fullDescription": "Tailored financial blueprints designed to align with your acquisition goals.",
+    "features": [
+      { "icon": "/images/icons/quality.png", "label": "Attractive Interest" },
+      { "icon": "/images/icons/date.png", "label": "Disbursal in 5 mins" },
+      { "icon": "/images/icons/finance.png", "label": "Up to 10L Limit" }
+    ]
+  },
+  "ourservices-rctransfer": {
+    "bgImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCQ0MQXKwDE5pU_XCIdELPVJoonXneNWgM-ayA64_vi_b824o8W9PS8erjlStY46uhfDyVZ58bIqFdEDxZvvOP8HzNZxTICuBio_35zrUA5f2rpiLnGZ1TxkX5bKEUUI0cNJAR3iXIKBVyhdFKkP010DaQUrcmSgcu3vJ9GQsk6ztiLvG0G5v_mppcz4NTWWqzmBOzF8mVHcrvPJ9sE2ftMpUh_oPGQm-hHQ5MUfjwGfzUJdGeiSHfz4CXmvUCo-o0MpGtrwxVY1Eo",
+    "fullDescription": "Concierge-level documentation handling for a seamless ownership transition.",
+    "features": [
+      { "icon": "/images/icons/quality.png", "label": "Complete Docs" },
+      { "icon": "/images/icons/date.png", "label": "100% Legal" },
+      { "icon": "/images/icons/finance.png", "label": "Quick Transfer" }
+    ]
+  },
+  "ourservices-bikeprice": {
+    "bgImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuDZVJAWEXPbqFqW0KCTsA_mSyJIVJXGYUTeg_2oUfVA6tqNaORwNJUOn3pUmsq-Lzii0vmlqKen1Ek___kx25xd4YuT8Vg9gRT3i7TkgtyxQIXxCyKs_FlR88C9d7OLCj2xbGMQCMDul4w6uqa9EJA7x3QQ9AmoRAIdubxlxKqN7JrypdJKdNBB85a5jZMCxBEKlhwjLTY93DZNNq4p40Bzhv3NpFKjiGbF6w3g2j3kDOoYmjzp0tthv3SUeloPWFdsBA4rsTAc4ss",
+    "fullDescription": "Algorithmic valuation based on rarity, provenance, and condition.",
+    "features": [
+      { "icon": "/images/icons/quality.png", "label": "Fair Valuation" },
+      { "icon": "/images/icons/date.png", "label": "Market Insights" },
+      { "icon": "/images/icons/finance.png", "label": "Instant Quote" }
+    ]
+  }
+}

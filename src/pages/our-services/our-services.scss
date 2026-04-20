@@ -1,0 +1,357 @@
+.os-page {
+  padding: 2rem 1.5rem 6rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// ── Header ──────────────────────────────────────────────
+.os-header {
+  margin-bottom: 4rem;
+
+  &__eyebrow {
+    display: inline-block;
+    color: #6c45c0;
+    font-weight: 700;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: #1c0070;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+
+    &--accent {
+      color: rgba(108, 69, 192, 0.6);
+      font-style: italic;
+      font-weight: 500;
+    }
+  }
+
+  &__subtitle {
+    color: #474553;
+    max-width: 36rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+}
+
+// ── Bento Grid ──────────────────────────────────────────
+.os-bento {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+// ── Base Card ───────────────────────────────────────────
+.os-card {
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  transition: all 0.4s ease;
+
+  &__title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    color: #1c0070;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+
+    &--lg {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    &--hub {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__desc {
+    color: #474553;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+
+    &--lg {
+      font-size: 1.0625rem;
+      max-width: 28rem;
+    }
+
+    &--hub {
+      color: rgba(#e5deff, 0.7);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon-wrap {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+
+    &--feature {
+      background-color: #e5deff;
+      color: #1c0070;
+      transition: transform 0.4s ease;
+
+      .material-symbols-outlined {
+        font-size: 1.75rem;
+      }
+    }
+
+    &--hub {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0.5rem;
+      width: 3rem;
+      height: 3rem;
+
+      .material-symbols-outlined {
+        color: #fff;
+        font-size: 1.25rem;
+      }
+    }
+
+    &--standard {
+      background: transparent;
+      width: auto;
+      height: auto;
+      justify-content: flex-start;
+
+      .material-symbols-outlined {
+        color: #6c45c0;
+        font-size: 2.25rem;
+      }
+    }
+
+    &--calc {
+      background: transparent;
+      width: auto;
+      height: auto;
+      justify-content: flex-start;
+
+      .material-symbols-outlined {
+        color: #1c0070;
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  &__accent-bar {
+    height: 0.25rem;
+    width: 3rem;
+    background: rgba(108, 69, 192, 0.3);
+    border-radius: 9999px;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #1c0070;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: gap 0.25s ease;
+
+    &:hover {
+      gap: 1rem;
+    }
+  }
+
+  &__hub-footer {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+// ── Feature Card ────────────────────────────────────────
+.os-card--feature {
+  flex: 1 1 55%;
+  min-height: 400px;
+  background: #fff;
+  box-shadow: 0 24px 48px -12px rgba(28, 0, 112, 0.04);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    transform: scale(1.01);
+
+    .os-card__icon-wrap--feature {
+      transform: rotate(12deg);
+    }
+
+    .os-card__feature-img {
+      opacity: 0.3;
+    }
+  }
+
+  .os-card__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .os-card__cta {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.os-card__feature-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(28, 0, 112, 0.05), transparent);
+  transform: skewX(-12deg) translateX(33%);
+}
+
+.os-card__feature-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  object-fit: contain;
+  opacity: 0.1;
+  filter: grayscale(1);
+  transition: opacity 0.4s ease;
+}
+
+// ── Hub Card ─────────────────────────────────────────────
+.os-card--hub {
+  flex: 1 1 28%;
+  min-height: 340px;
+  background: #1c0070;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    box-shadow: 0 24px 48px -8px rgba(28, 0, 112, 0.3);
+  }
+}
+
+// ── Standard Cards ───────────────────────────────────────
+.os-card--standard {
+  flex: 1 1 28%;
+  background: #f3f3f5;
+
+  &:hover {
+    background: #e8e8ea;
+  }
+}
+
+// ── Calculator Card ──────────────────────────────────────
+.os-card--calculator {
+  flex: 1 1 28%;
+  background: #fff;
+  box-shadow: 0 24px 48px -12px rgba(28, 0, 112, 0.04);
+  border: 1px solid rgba(#c9c4d5, 0.15);
+  position: relative;
+  overflow: hidden;
+
+  .os-card__calc-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover .os-card__calc-bg {
+    transform: scale(1.1);
+  }
+}
+
+.os-card__calc-bg {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  opacity: 0.03;
+  pointer-events: none;
+  transition: transform 1s ease;
+
+  .material-symbols-outlined {
+    font-size: 10rem;
+  }
+}
+
+.os-card__calc-btn {
+  background: #1c0070;
+  color: #fff;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(28, 0, 112, 0.25);
+  }
+}
+
+// ── Stats Bar ────────────────────────────────────────────
+.os-stats {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(#c9c4d5, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+  text-align: center;
+
+  &__value {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #1c0070;
+    margin-bottom: 0.25rem;
+  }
+
+  &__label {
+    color: #474553;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+  }
+}
+
+// ── Responsive ───────────────────────────────────────────
+@media (max-width: 768px) {
+  .os-card--feature,
+  .os-card--hub,
+  .os-card--standard,
+  .os-card--calculator {
+    flex: 1 1 100%;
+  }
+}

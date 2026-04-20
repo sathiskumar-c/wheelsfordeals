@@ -1,0 +1,35 @@
+{
+  "title": "Premium Services Carousel",
+  "subtitle": "Our Services",
+  "description": "Explore our comprehensive suite of services designed to simplify your bike journey.",
+  "servicesCarousel": [
+    {
+      "id": "ourservices-usedbike",
+      "icon": "verified",
+      "title": "Buy Used Bike",
+      "path": "/bikes",
+      "description": "Expertly inspected inventory with certification."
+    },
+    {
+      "id": "ourservices-finance",
+      "icon": "payments",
+      "title": "Finance",
+      "path": "/contact-us",
+      "description": "Tailored payment plans to suit your lifestyle."
+    },
+    {
+      "id": "ourservices-rctransfer",
+      "icon": "description",
+      "title": "RC Transfer",
+      "path": "/contact-us",
+      "description": "Seamless ownership documentation and transfer."
+    },
+    {
+      "id": "ourservices-bikeprice",
+      "icon": "calculate",
+      "title": "Price Calculator",
+      "path": "/bikes",
+      "description": "Real-time market valuation for any bike."
+    }
+  ]
+}

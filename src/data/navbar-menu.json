@@ -3,7 +3,6 @@
   "navLinks": [
     {
       "label": "Buy Used Bikes",
-      "path": "/",
       "submenu": true,
       "categories": [
         {
@@ -435,12 +434,12 @@
     "menuItems": [
       {
         "label": "Profile",
-        "path": "/my-profile",
+        "path": "/profile",
         "action": "navigate"
       },
       {
         "label": "My Orders",
-        "path": "/my-orders",
+        "path": "/orders",
         "action": "navigate"
       },
       {

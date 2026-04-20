@@ -1,227 +1,220 @@
-{
+﻿{
+  "home_section": {
+    "label": "Expert Help",
+    "title": "Common Inquiries",
+    "description": "Our curation team is here to provide high-end support for your most complex transactions. Discover answers to frequently asked questions about our marketplace standards.",
+    "viewAllLabel": "View All Support Resources",
+    "quote": "Quality is never an accident; it is always the result of intelligent effort.",
+    "helpCard": {
+      "title": "Still have questions?",
+      "description": "Our concierge team is available for real-time consultation every weekday.",
+      "buttonLabel": "Contact Specialist"
+    }
+  },
+  "hero": {
+    "heading": "How can we help you today?",
+    "searchPlaceholder": "Search for answers about buying, selling, or curation...",
+    "popularTags": ["Inspection process", "RC transfer", "Financing options"]
+  },
+  "sidebar": {
+    "categoriesLabel": "Categories",
+    "categories": [
+      { "id": "general", "label": "General", "icon": "general" },
+      { "id": "buying", "label": "Buying", "icon": "buying" },
+      { "id": "selling", "label": "Selling", "icon": "selling" },
+      { "id": "curation", "label": "Curation", "icon": "curation" },
+      { "id": "shipping", "label": "Shipping", "icon": "shipping" }
+    ],
+    "helpCard": {
+      "title": "Need direct help?",
+      "description": "Our curation experts are available 24/7 for white-glove assistance.",
+      "buttonLabel": "Contact Support"
+    }
+  },
+  "categories": [
+    {
+      "id": "general",
+      "title": "General Inquiry",
+      "description": "Everything you need to know about the WheelsForDeals ecosystem.",
+      "faqs": [
+        {
+          "id": "g-1",
+          "question": "What is WheelsForDeals?",
+          "answer": "WheelsForDeals is a curated marketplace for pre-owned bikes. Every bike listed undergoes a thorough inspection and editorial review to meet our standards of quality, provenance, and performance."
+        },
+        {
+          "id": "g-2",
+          "question": "How do I verify the authenticity of a listed bike?",
+          "answer": "Each listing includes a digital Provenance Passport tracking ownership history, service logs, and official inspection certificates. View this on the product detail page under the Authenticity tab."
+        },
+        {
+          "id": "g-3",
+          "question": "What membership tiers are available?",
+          "answer": "We offer three tiers: Explorer (Standard), Premiere (Priority Access), and Elite (Invitation Only). Premiere members get 24-hour early access to new curations, while Elite members receive dedicated concierge service."
+        },
+        {
+          "id": "g-4",
+          "question": "Can I cancel a transaction after it has been initiated?",
+          "answer": "Transactions can be cancelled within a 12-hour Reflection Window without penalty. After this period, a curation fee may apply to cover logistics and administrative efforts already undertaken."
+        }
+      ]
+    },
+    {
+      "id": "buying",
+      "title": "Buying a Bike",
+      "description": "All you need to know about purchasing through WheelsForDeals.",
+      "faqs": [
+        {
+          "id": "b-1",
+          "question": "What should I check before buying a used bike?",
+          "answer": "Always check the service history, RC book, insurance, chassis number, and overall mechanical condition. Our inspection report covers all of these and more."
+        },
+        {
+          "id": "b-2",
+          "question": "Is a test ride available before purchasing?",
+          "answer": "Yes, you can schedule a test ride at our nearest hub or request a home test ride based on availability in your area."
+        },
+        {
+          "id": "b-3",
+          "question": "Can I get financing to buy a used bike?",
+          "answer": "Yes, we offer easy financing options with competitive interest rates and flexible EMI plans for eligible customers. Apply directly from the product listing page."
+        },
+        {
+          "id": "b-4",
+          "question": "What documents do I need to complete a purchase?",
+          "answer": "You will need a valid ID proof, address proof, and a passport-size photograph. Our team will guide you through any additional paperwork."
+        }
+      ]
+    },
+    {
+      "id": "selling",
+      "title": "Selling Your Bike",
+      "description": "Get the best price for your bike with our transparent selling process.",
+      "faqs": [
+        {
+          "id": "s-1",
+          "question": "How do I sell my bike through WheelsForDeals?",
+          "answer": "Submit your bike details through our Sell page. Our team will contact you within 24 hours to schedule a free doorstep or hub inspection and provide a price estimate."
+        },
+        {
+          "id": "s-2",
+          "question": "How is the value of my bike calculated?",
+          "answer": "Pricing is based on your bike brand, model, year, mileage, mechanical condition, and current market demand. We strive for transparent, fair valuations."
+        },
+        {
+          "id": "s-3",
+          "question": "How long does payment take after selling?",
+          "answer": "Once the deal is confirmed and paperwork is complete, payment is processed on the same day directly to your bank account."
+        },
+        {
+          "id": "s-4",
+          "question": "Can I sell a bike that is still under finance?",
+          "answer": "Yes, but you must clear any pending dues beforehand or provide an NOC from your financier. Our team can help guide you through this."
+        }
+      ]
+    },
+    {
+      "id": "curation",
+      "title": "Curation Standards",
+      "description": "How we ensure every bike meets our quality benchmark before listing.",
+      "faqs": [
+        {
+          "id": "c-1",
+          "question": "What is the curation process?",
+          "answer": "Every bike undergoes a comprehensive 48-point inspection covering engine health, frame integrity, tyre condition, electrical systems, and documentation validity before being approved for listing."
+        },
+        {
+          "id": "c-2",
+          "question": "Are all inspections done in-house?",
+          "answer": "Yes, our certified technicians conduct all inspections at our own hubs. We do not rely on third-party inspection services to maintain quality consistency."
+        },
+        {
+          "id": "c-3",
+          "question": "What happens if a bike fails the inspection?",
+          "answer": "Bikes that do not meet our curation standards are rejected. Sellers are informed and provided with a detailed report on the areas that did not pass."
+        },
+        {
+          "id": "c-4",
+          "question": "Do curated bikes come with a warranty?",
+          "answer": "Yes, selected curated models come with a limited warranty. Coverage details are mentioned on the individual product listing page and can vary by model and condition grade."
+        }
+      ]
+    },
+    {
+      "id": "shipping",
+      "title": "Shipping & Delivery",
+      "description": "Everything about how we deliver your bike safely to your doorstep.",
+      "faqs": [
+        {
+          "id": "sh-1",
+          "question": "Do you offer home delivery for bikes?",
+          "answer": "Yes, we offer doorstep delivery across major cities. Delivery timelines and charges vary by location and are displayed at checkout."
+        },
+        {
+          "id": "sh-2",
+          "question": "How is the bike prepared for delivery?",
+          "answer": "Before dispatch, the bike undergoes a final pre-delivery inspection, full servicing, and a thorough cleaning. All relevant documents are also packed and handed over."
+        },
+        {
+          "id": "sh-3",
+          "question": "Is the bike insured during transit?",
+          "answer": "Yes, all bikes are fully insured during transit. In the rare event of any damage during delivery, we take full responsibility for repairs or replacements."
+        },
+        {
+          "id": "sh-4",
+          "question": "What is the return policy if I am not satisfied?",
+          "answer": "You can return the bike within 3 days of delivery if there is a significant issue not disclosed in the listing. Our team will review the case and initiate a resolution promptly."
+        }
+      ]
+    }
+  ],
+  "callout": {
+    "heading": "Still looking for specific details?",
+    "description": "Our comprehensive documentation covers every aspect of the WheelsForDeals experience from acquisition to asset management.",
+    "buttonLabel": "Download User Guide"
+  },
   "faq_data": {
     "title": "Frequently asked questions",
     "faqData": [
       {
-        "question": "🏍️ What should I check before buying a used bike?",
+        "question": "What should I check before buying a used bike?",
         "answer": "Always check the service history, RC book, insurance, chassis number, and test the bike's overall condition."
       },
       {
-        "question": "🏍️ How do I know if a used bike is accident-free?",
+        "question": "How do I know if a used bike is accident-free?",
         "answer": "Inspect the chassis and frame for welding or damage, or get it inspected by our experts."
       },
       {
-        "question": "🏍️ Can I get a loan to buy a used bike?",
+        "question": "Can I get a loan to buy a used bike?",
         "answer": "Yes, we offer easy financing options with low-interest EMIs for eligible customers."
       },
       {
-        "question": "🏍️ Is test ride available before purchasing?",
+        "question": "Is test ride available before purchasing?",
         "answer": "Yes, you can test ride the bike at our hub or request a home test ride (based on availability)."
       },
       {
-        "question": "🏍️ How is RC transfer handled?",
-        "answer": "We take care of complete RC transfer and ensure it’s done safely and legally."
+        "question": "How is RC transfer handled?",
+        "answer": "We take care of complete RC transfer and ensure it's done safely and legally."
       },
       {
-        "question": "🏍️ What documents do I need to buy a used bike?",
+        "question": "What documents do I need to buy a used bike?",
         "answer": "You'll need an ID proof, address proof, and a passport-size photo."
       },
       {
-        "question": "🏍️ How do I sell my bike through WheelsForDeals?",
-        "answer": "Submit your bike details, and we’ll contact you for inspection and price estimation."
+        "question": "How do I sell my bike through WheelsForDeals?",
+        "answer": "Submit your bike details, and we'll contact you for inspection and price estimation."
       },
       {
-        "question": "🏍️ How do you decide the price of my bike?",
-        "answer": "Pricing is based on your bike’s condition, model, year, kilometers run, and current market rates."
+        "question": "How do you decide the price of my bike?",
+        "answer": "Pricing is based on your bike's condition, model, year, kilometers run, and current market rates."
       },
       {
-        "question": "🏍️ How long does it take to get payment after selling?",
+        "question": "How long does it take to get payment after selling?",
         "answer": "Once the deal is confirmed and paperwork is completed, payment is done on the same day."
       },
       {
-        "question": "🏍️ Who will handle the paperwork and RC transfer after I sell?",
+        "question": "Who will handle the paperwork and RC transfer after I sell?",
         "answer": "We handle the full RC transfer and ownership change to ensure a smooth experience for you."
-      }
-    ]
-  },
-
-  "vertical_tabs_faq": {
-    "title": "Frequently Asked Questions",
-    "ariaLabel": "FAQ Categories",
-    "categories": [
-      {
-        "category": "Buy Bikes",
-        "tabId": "vertical-tab-0",
-        "panelId": "vertical-tabpanel-0",
-        "question_answer": [
-          {
-            "question": "What should I check before buying a used bike?",
-            "answer": "Always check the service history, RC book, insurance, chassis number, and test the bike's overall condition.",
-            "id": "faq-0-0-header",
-            "ariaControls": "faq-0-0-content",
-            "ariaLabelledby": "faq-0-0-header",
-            "panelId": "faq-0-0"
-          },
-          {
-            "question": "Is test ride available before purchasing?",
-            "answer": "Yes, you can test ride the bike at our hub or request a home test ride (based on availability).",
-            "id": "faq-0-1-header",
-            "ariaControls": "faq-0-1-content",
-            "ariaLabelledby": "faq-0-1-header",
-            "panelId": "faq-0-1"
-          },
-          {
-            "question": "Can I get a loan to buy a used bike?",
-            "answer": "Yes, we offer easy financing options with low-interest EMIs for eligible customers.",
-            "id": "faq-0-2-header",
-            "ariaControls": "faq-0-2-content",
-            "ariaLabelledby": "faq-0-2-header",
-            "panelId": "faq-0-2"
-          },
-          {
-            "question": "Do bikes come with active insurance?",
-            "answer": "Most bikes come with valid insurance. We also assist with new policies if required.",
-            "id": "faq-0-3-header",
-            "ariaControls": "faq-0-3-content",
-            "ariaLabelledby": "faq-0-3-header",
-            "panelId": "faq-0-3"
-          },
-          {
-            "question": "Are all bikes inspected before listing?",
-            "answer": "Yes, each bike undergoes a thorough inspection before being listed on our platform.",
-            "id": "faq-0-4-header",
-            "ariaControls": "faq-0-4-content",
-            "ariaLabelledby": "faq-0-4-header",
-            "panelId": "faq-0-4"
-          },
-          {
-            "question": "Do I get a warranty with my bike?",
-            "answer": "Yes, we provide a limited warranty for certain models. Check with our team for more details.",
-            "id": "faq-0-5-header",
-            "ariaControls": "faq-0-5-content",
-            "ariaLabelledby": "faq-0-5-header",
-            "panelId": "faq-0-5"
-          },
-          {
-            "question": "Can I reserve a bike before visiting?",
-            "answer": "Yes, you can reserve a bike for up to 24 hours through our online portal.",
-            "id": "faq-0-6-header",
-            "ariaControls": "faq-0-6-content",
-            "ariaLabelledby": "faq-0-6-header",
-            "panelId": "faq-0-6"
-          },
-          {
-            "question": "What documents do I need to purchase a bike?",
-            "answer": "You need ID proof, address proof, and a passport-size photograph.",
-            "id": "faq-0-7-header",
-            "ariaControls": "faq-0-7-content",
-            "ariaLabelledby": "faq-0-7-header",
-            "panelId": "faq-0-7"
-          },
-          {
-            "question": "Is there any return policy?",
-            "answer": "Yes, you can return the bike within 3 days if there is a major issue not disclosed earlier.",
-            "id": "faq-0-8-header",
-            "ariaControls": "faq-0-8-content",
-            "ariaLabelledby": "faq-0-8-header",
-            "panelId": "faq-0-8"
-          },
-          {
-            "question": "How is the RC transferred to my name?",
-            "answer": "We handle the complete RC transfer process for a hassle-free experience.",
-            "id": "faq-0-9-header",
-            "ariaControls": "faq-0-9-content",
-            "ariaLabelledby": "faq-0-9-header",
-            "panelId": "faq-0-9"
-          }
-        ]
-      },
-      {
-        "category": "Sell Bikes",
-        "tabId": "vertical-tab-1",
-        "panelId": "vertical-tabpanel-1",
-        "question_answer": [
-          {
-            "question": "How do I sell my bike through WheelsForDeals?",
-            "answer": "Submit your bike details, and we’ll contact you for inspection and price estimation.",
-            "id": "faq-1-0-header",
-            "ariaControls": "faq-1-0-content",
-            "ariaLabelledby": "faq-1-0-header",
-            "panelId": "faq-1-0"
-          },
-          {
-            "question": "How long does it take to get payment after selling?",
-            "answer": "Once the deal is confirmed and paperwork is completed, payment is done on the same day.",
-            "id": "faq-1-1-header",
-            "ariaControls": "faq-1-1-content",
-            "ariaLabelledby": "faq-1-1-header",
-            "panelId": "faq-1-1"
-          },
-          {
-            "question": "Do I need to bring the bike to your center?",
-            "answer": "We offer both in-hub and doorstep evaluation options for your convenience.",
-            "id": "faq-1-2-header",
-            "ariaControls": "faq-1-2-content",
-            "ariaLabelledby": "faq-1-2-header",
-            "panelId": "faq-1-2"
-          },
-          {
-            "question": "How is the value of my bike calculated?",
-            "answer": "We evaluate based on age, brand, model, mileage, condition, and current market demand.",
-            "id": "faq-1-3-header",
-            "ariaControls": "faq-1-3-content",
-            "ariaLabelledby": "faq-1-3-header",
-            "panelId": "faq-1-3"
-          },
-          {
-            "question": "Who handles the RC and ownership transfer?",
-            "answer": "We manage the full paperwork and legal transfer on your behalf.",
-            "id": "faq-1-4-header",
-            "ariaControls": "faq-1-4-content",
-            "ariaLabelledby": "faq-1-4-header",
-            "panelId": "faq-1-4"
-          },
-          {
-            "question": "Is there a service charge to sell my bike?",
-            "answer": "We charge a minimal service fee, which is deducted from the final sale amount.",
-            "id": "faq-1-5-header",
-            "ariaControls": "faq-1-5-content",
-            "ariaLabelledby": "faq-1-5-header",
-            "panelId": "faq-1-5"
-          },
-          {
-            "question": "Can I sell a bike that is still under finance?",
-            "answer": "Yes, but you must clear the pending dues or provide an NOC from your financer.",
-            "id": "faq-1-6-header",
-            "ariaControls": "faq-1-6-content",
-            "ariaLabelledby": "faq-1-6-header",
-            "panelId": "faq-1-6"
-          },
-          {
-            "question": "Do I need to service my bike before selling?",
-            "answer": "It's not mandatory, but a well-maintained bike typically fetches a better price.",
-            "id": "faq-1-7-header",
-            "ariaControls": "faq-1-7-content",
-            "ariaLabelledby": "faq-1-7-header",
-            "panelId": "faq-1-7"
-          },
-          {
-            "question": "What documents are required to sell my bike?",
-            "answer": "You'll need the RC book, valid insurance, ID proof, and two passport-size photos.",
-            "id": "faq-1-8-header",
-            "ariaControls": "faq-1-8-content",
-            "ariaLabelledby": "faq-1-8-header",
-            "panelId": "faq-1-8"
-          },
-          {
-            "question": "Will I get a confirmation of sale?",
-            "answer": "Yes, you'll receive a formal sale confirmation and receipt after deal completion.",
-            "id": "faq-1-9-header",
-            "ariaControls": "faq-1-9-content",
-            "ariaLabelledby": "faq-1-9-header",
-            "panelId": "faq-1-9"
-          }
-        ]
       }
     ]
   },
@@ -245,238 +238,6 @@
       "path": "faqs",
       "ariaLabel": "View more frequently asked questions"
     },
-    "section": {
-      "ariaLabelledBy": "faq-sidebar-heading"
-    }
-  },
-  "faq_page": {
-    "Sell Car": {
-      "Booking an Appointment": [
-        {
-          "question": "I cannot find my car’s registration state while booking the appointment online.",
-          "answer": "This may just happen because we are not currently present in your state. However, we are expanding at a rapid pace and plan to launch the used car buying service in many more cities pan India, very soon."
-        },
-        {
-          "question": "Does CARS24 provide home inspection?",
-          "answer": "Yes, CARS24 is currently offering Car Inspection at Home for a hassle-free selling experience."
-        },
-        {
-          "question": "Can I reschedule my appointment?",
-          "answer": "Yes, you can change your appointment time, date or branch by logging in with your mobile number."
-        }
-      ],
-      "Branch Visit": [
-        {
-          "question": "Where are your branches located?",
-          "answer": "You can find our branches using the locator on our site."
-        },
-        {
-          "question": "Can I walk in without an appointment?",
-          "answer": "Yes, but appointments are preferred to save time."
-        },
-        {
-          "question": "What documents should I carry?",
-          "answer": "RC book, ID proof, and insurance copy are required."
-        }
-      ],
-      "CARS24 Best Price": [
-        {
-          "question": "How is the best price calculated?",
-          "answer": "Based on inspection, market data, and demand."
-        },
-        {
-          "question": "Is the quoted price negotiable?",
-          "answer": "Yes, we offer a transparent price but minor negotiations are possible."
-        },
-        {
-          "question": "Do you match competitor offers?",
-          "answer": "We strive to offer the best rate. You can share other quotes."
-        }
-      ],
-      "CARS24 Seller Protection Policy": [
-        {
-          "question": "What is the seller protection policy?",
-          "answer": "It ensures safe transactions and document verification."
-        },
-        {
-          "question": "Am I liable after selling?",
-          "answer": "No, liability transfers post ownership change."
-        },
-        {
-          "question": "What does the policy cover?",
-          "answer": "Covers document handling, RC transfer, and fraud protection."
-        }
-      ],
-      "Post-Sales Service": [
-        {
-          "question": "What happens after I sell my car?",
-          "answer": "We handle ownership transfer and payment."
-        },
-        {
-          "question": "How long for payment after sale?",
-          "answer": "Typically within 1 working day."
-        },
-        {
-          "question": "How do I get proof of sale?",
-          "answer": "We email and upload it in your dashboard."
-        }
-      ],
-      "Transaction Guidelines": [
-        {
-          "question": "What are your transaction policies?",
-          "answer": "We follow verified payment and RC transfer practices."
-        },
-        {
-          "question": "Do you charge extra fees?",
-          "answer": "No hidden charges. Final quote includes everything."
-        },
-        {
-          "question": "Is payment instant?",
-          "answer": "Mostly within hours of final confirmation."
-        }
-      ],
-      "Pricing and Documentation": [
-        {
-          "question": "Do I need insurance?",
-          "answer": "Yes, even expired insurance is acceptable during valuation."
-        },
-        {
-          "question": "Is NOC required?",
-          "answer": "Yes, for interstate or loan closure sales."
-        },
-        {
-          "question": "What affects my car’s price?",
-          "answer": "Model, mileage, condition, service history etc."
-        }
-      ],
-      "Home Inspection": [
-        {
-          "question": "How to book a home inspection?",
-          "answer": "Select your city and choose home inspection while booking."
-        },
-        {
-          "question": "Is it free?",
-          "answer": "Yes, currently it’s a free service."
-        },
-        {
-          "question": "What happens during inspection?",
-          "answer": "Our experts check the car and provide a quote."
-        }
-      ]
-    },
-    "Buy Car": {
-      "Booking an Appointment": [
-        {
-          "question": "How do I book a car test drive?",
-          "answer": "Go to the car listing and click on 'Book Test Drive'."
-        },
-        {
-          "question": "Is test drive free?",
-          "answer": "Yes, we offer free test drives in selected cities."
-        },
-        {
-          "question": "Can I cancel my test drive?",
-          "answer": "Yes, you can cancel or reschedule through your account."
-        }
-      ],
-      "Branch Visit": [
-        {
-          "question": "Can I visit without booking?",
-          "answer": "Yes, but booking is recommended for faster service."
-        },
-        {
-          "question": "What are your branch timings?",
-          "answer": "We’re open 10AM–7PM on all working days."
-        },
-        {
-          "question": "Do branches have all cars?",
-          "answer": "Only select inventory is available. Confirm before visiting."
-        }
-      ],
-      "CARS24 Best Price": [
-        {
-          "question": "Is price negotiable?",
-          "answer": "We offer competitive pricing, but deals are non-negotiable."
-        },
-        {
-          "question": "Do I get discounts?",
-          "answer": "Yes, seasonal and coupon-based offers are available."
-        },
-        {
-          "question": "Can I see price history?",
-          "answer": "Yes, pricing transparency is available on listings."
-        }
-      ],
-      "CARS24 Seller Protection Policy": [
-        {
-          "question": "Is buyer protected?",
-          "answer": "Yes, with warranties and return windows."
-        },
-        {
-          "question": "What if the car has issues?",
-          "answer": "Return or claim support is available within warranty."
-        },
-        {
-          "question": "Does it cover refund?",
-          "answer": "Yes, for eligible vehicles under buyer protection."
-        }
-      ],
-      "Post-Sales Service": [
-        {
-          "question": "Do you offer car servicing?",
-          "answer": "Yes, with partner garages post-sale."
-        },
-        {
-          "question": "What is the return policy?",
-          "answer": "Cars can be returned within 7 days if eligible."
-        },
-        {
-          "question": "How do I claim warranty?",
-          "answer": "Via the app or customer support within coverage terms."
-        }
-      ],
-      "Transaction Guidelines": [
-        {
-          "question": "What is the payment method?",
-          "answer": "Online payments, loan EMI, or UPI."
-        },
-        {
-          "question": "Is there a finance option?",
-          "answer": "Yes, via partner NBFCs with flexible EMIs."
-        },
-        {
-          "question": "Can I use my credit card?",
-          "answer": "Yes, subject to amount limits and transaction fees."
-        }
-      ],
-      "Pricing and Documentation": [
-        {
-          "question": "Do I get all documents?",
-          "answer": "Yes, including RC, insurance and service history."
-        },
-        {
-          "question": "How is tax handled?",
-          "answer": "RTO taxes are included in the final price shown."
-        },
-        {
-          "question": "Is invoice provided?",
-          "answer": "Yes, digital and printed invoice both available."
-        }
-      ],
-      "Home Inspection": [
-        {
-          "question": "Can I inspect the car at home?",
-          "answer": "Not available. Cars are inspected before listing."
-        },
-        {
-          "question": "How to trust the condition?",
-          "answer": "Cars are inspected and certified before sale."
-        },
-        {
-          "question": "Are photos real?",
-          "answer": "Yes, taken during physical inspection by our experts."
-        }
-      ]
-    }
+    "section": { "ariaLabelledBy": "faq-sidebar-heading" }
   }
 }

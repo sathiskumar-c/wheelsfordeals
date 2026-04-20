@@ -1,22 +1,26 @@
 // React Imports
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useRef, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
-// Bootstrap Imports
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Offcanvas from "react-bootstrap/Offcanvas";
-import Collapse from "react-bootstrap/Collapse";
-
-// Material UI Imports
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import ListAltIcon from "@mui/icons-material/ListAlt";
+// MUI & MUI Icon Imports
+import TwoWheelerRoundedIcon from "@mui/icons-material/TwoWheelerRounded";
+import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
+import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import PaymentsRoundedIcon from "@mui/icons-material/PaymentsRounded";
+import CategoryRoundedIcon from "@mui/icons-material/CategoryRounded";
+import LocalGasStationRoundedIcon from "@mui/icons-material/LocalGasStationRounded";
+import SettingsInputComponentRoundedIcon from "@mui/icons-material/SettingsInputComponentRounded";
+import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
+import StorefrontRoundedIcon from "@mui/icons-material/StorefrontRounded";
+import AddRoundedIcon from "@mui/icons-material/AddRounded";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import ExploreRoundedIcon from "@mui/icons-material/ExploreRounded";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import LogoutIcon from "@mui/icons-material/Logout";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
+import ListAltRoundedIcon from "@mui/icons-material/ListAltRounded";
+import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import Avatar from "@mui/material/Avatar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -24,87 +28,96 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Box from "@mui/material/Box";
+import Badge from "@mui/material/Badge";
+
+// PropTypes
+import PropTypes from "prop-types";
 
 // Local Imports
 import "./navbar.scss";
-import JSON from "../../../src/data/navbar-menu.json";
-import { getScreenInfo } from "../../utils/getScreenSize";
+import navbarData from "../../data/navbar-menu.json";
 
-function NavbarDeskTop() {
+// Icon map keyed to category names from navbar-menu.json
+const CATEGORY_ICONS = {
+  "Browse by Top deal": <StarRoundedIcon />,
+  "Browse by Brand": <StorefrontRoundedIcon />,
+  "Browse by Price": <PaymentsRoundedIcon />,
+  "Select by Type": <CategoryRoundedIcon />,
+  "Browse by Fuel Type": <LocalGasStationRoundedIcon />,
+  "Browse by Transmission": <SettingsInputComponentRoundedIcon />,
+  "Browse by City": <LocationOnRoundedIcon />,
+};
+
+// Profile menu icon map keyed to label
+const PROFILE_MENU_ICONS = {
+  Profile: (
+    <AccountCircleRoundedIcon
+      sx={{ mr: 1.5, fontSize: 20, color: "#474553" }}
+    />
+  ),
+  "My Orders": (
+    <ListAltRoundedIcon sx={{ mr: 1.5, fontSize: 20, color: "#474553" }} />
+  ),
+  "My Wishlist": (
+    <FavoriteBorderIcon sx={{ mr: 1.5, fontSize: 20, color: "#474553" }} />
+  ),
+  Logout: (
+    <LogoutRoundedIcon sx={{ mr: 1.5, fontSize: 20, color: "#474553" }} />
+  ),
+};
+
+// Temporary profile data (swap with Redux auth when ready)
+const TEMP_USER = {
+  name: "Musharof Chowdhury",
+  email: "randomuser@pimjo.com",
+  memberLabel: "Premium Member",
+  isLoggedIn: true,
+};
+
+const Navbar = ({ children }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // Temporary profile data (remove once Redux auth is implemented)
-  const tempProfileData = {
-    name: "Musharof Chowdhury",
-    email: "randomuser@pimjo.com",
-    profileImage: "https://avatars.githubusercontent.com/u/1234567",
-    isLoggedIn: true,
-  };
-
-  // Get user from Redux store (commented out until Redux auth is implemented)
-  // const user = useSelector((state) => state.auth?.user);
-  const user = tempProfileData;
-
-  const { isMobile } = getScreenInfo();
-  const [navbarData, setNavbarData] = useState(null);
-  const [isMenuHovered, setIsMenuHovered] = useState(null);
-  const [currentSubMenuData, setCurrentSubMenuData] = useState(null);
-  const [currentMenuData, setCurrentMenuData] = useState(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState({});
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [profileImageError, setProfileImageError] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  // null = nothing selected by default — only set on explicit click
+  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeNavLabel, setActiveNavLabel] = useState(null);
 
-  const handleMenuHoverandLeave = (response) => {
-    setIsMenuHovered(response);
-    const findCurrentMenu = navbarData?.navLinks.find(
-      (item) => item.label === response
-    );
-    setCurrentMenuData(findCurrentMenu);
-  };
+  // Discovery categories live under navLinks[0] ("Buy Used Bikes")
+  const discoveryCategories = navbarData.navLinks[0]?.categories ?? [];
 
-  const handleSubMenuHover = (e, category) => {
-    const findCurrentSubMenu = currentMenuData.categories.find(
-      (item) => item.name === category
-    );
-    setCurrentSubMenuData(findCurrentSubMenu);
-  };
+  // Derive the full category data object for the active category
+  const activeCategoryData =
+    discoveryCategories.find((c) => c.name === activeCategory) ?? null;
 
-  const handleNavigation = (subcategory) => {
-    if (!subcategory || subcategory.trim() === "") {
-      console.error("Invalid category, redirecting to home.");
-      navigate("/error");
-      return;
-    }
+  const sidebarRef = useRef(null);
+  const flyoutRef = useRef(null);
+  const headerRef = useRef(null);
 
-    if (subcategory.startsWith("http")) {
-      window.open(subcategory, "_blank", "noopener,noreferrer");
-    } else {
-      navigate(`/bikes/brands/${subcategory}`);
-    }
-  };
+  // Close both sidebar + flyout when clicking outside
+  useEffect(() => {
+    if (!activeNavLabel && !activeCategory) return;
+    const handleClickOutside = (e) => {
+      if (
+        sidebarRef.current?.contains(e.target) ||
+        flyoutRef.current?.contains(e.target) ||
+        headerRef.current?.contains(e.target)
+      )
+        return;
+      setActiveNavLabel(null);
+      setActiveCategory(null);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [activeNavLabel, activeCategory]);
 
-  const toggleMobileMenu = (menuLabel) => {
-    setMobileMenuOpen((prev) => ({
-      ...prev,
-      [menuLabel]: !prev[menuLabel],
-    }));
-  };
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-  const handleProfileImageError = () => {
-    setProfileImageError(true);
-  };
+  const handleOpenUserMenu = (event) => setAnchorElUser(event.currentTarget);
+  const handleCloseUserMenu = () => setAnchorElUser(null);
 
   const handleProfileMenuClick = (menuItem) => {
     handleCloseUserMenu();
-
     if (menuItem.action === "navigate" && menuItem.path) {
       navigate(menuItem.path);
     } else if (menuItem.action === "logout") {
@@ -112,385 +125,305 @@ function NavbarDeskTop() {
     }
   };
 
-  useEffect(() => {
-    setNavbarData(JSON);
-  }, []);
+  // Click to expand, click same item again to collapse
+  const toggleCategory = (categoryName) => {
+    setActiveCategory(categoryName); // always select, never deselect on same-row click
+  };
+
+  // also reset activeCategory when closing top nav
+  const handleTopNavClick = (navItem) => {
+    if (navItem.submenu) {
+      if (activeNavLabel === navItem.label) {
+        // toggle close — hide everything
+        setActiveNavLabel(null);
+        setActiveCategory(null);
+      } else {
+        // open sidebar and auto-select the first category
+        setActiveNavLabel(navItem.label);
+        const firstCat = navItem.categories?.[0]?.name ?? null;
+        setActiveCategory(firstCat);
+      }
+    } else {
+      setActiveNavLabel(null);
+      setActiveCategory(null);
+    }
+  };
+
+  // Navigate to the correct route when a subcategory item is clicked (same as old navbar logic)
+  const handleSubcategoryNav = (sub, category) => {
+    setActiveCategory(null);
+    setActiveNavLabel(null); // close everything on navigate
+    const target =
+      category.section_type === "append_as_image" && sub.path
+        ? sub.path
+        : sub.name;
+    if (!target || target.trim() === "") {
+      navigate("/page-not-found");
+      return;
+    }
+    if (target.startsWith("http")) {
+      window.open(target, "_blank", "noopener,noreferrer");
+    } else {
+      navigate(`/bikes/brands/${target}`);
+    }
+  };
 
   return (
     <>
-      <Navbar expand="md" className="bg-body-tertiary navbar-menu">
-        <Container>
-          {isMobile && (
-            <Navbar.Toggle
-              aria-controls="offcanvasNavbar-md"
-              className="border-0"
-            />
-          )}
+      {/* Header */}
+      <header className="nbr__header" ref={headerRef}>
+        <div className="nbr__header-inner">
+          {/* Left: logo + top nav links */}
+          <div className="nbr__header-left">
+            <Link to="/" className="nbr__logo">
+              <TwoWheelerRoundedIcon className="nbr__logo-icon" />
+              <span className="nbr__logo-text">{navbarData.title}</span>
+            </Link>
 
-          {!isMobile && (
-            <Navbar.Brand as={Link} to="/">
-              <img
-                src={navbarData?.logo.url}
-                alt={navbarData?.logo.alt}
-                style={{ height: "40px", width: "auto" }}
-              />
-            </Navbar.Brand>
-          )}
-
-          <Navbar.Offcanvas
-            className="offcanvasNavbar"
-            id="offcanvasNavbar-md"
-            placement="end"
-          >
-            <Offcanvas.Header closeButton>
-              {isMobile ? (
-                <Offcanvas.Title
-                  style={{ display: "flex", alignItems: "center", gap: "10px" }}
-                >
-                  <img
-                    src={navbarData?.logo.url}
-                    alt={navbarData?.logo.alt}
-                    style={{ height: "35px", width: "auto" }}
-                  />
-                  <span>{navbarData?.title}</span>
-                </Offcanvas.Title>
-              ) : (
-                <Offcanvas.Title>
-                  {navbarData?.ui.offcanvasTitle}
-                </Offcanvas.Title>
-              )}
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="flex-grow-1">
-                {navbarData?.navLinks.map((navItem) => (
-                  <div
+            <nav className="nbr__top-nav">
+              {navbarData.navLinks.map((navItem) =>
+                navItem.submenu ? (
+                  <button
                     key={navItem.label}
-                    className="menu-container"
-                    onMouseEnter={() =>
-                      !isMobile && handleMenuHoverandLeave(navItem.label)
-                    }
-                    onMouseLeave={() =>
-                      !isMobile && handleMenuHoverandLeave(null)
-                    }
+                    type="button"
+                    className={`nbr__top-nav-link${activeNavLabel === navItem.label ? " nbr__top-nav-link--active" : ""}`}
+                    onClick={() => handleTopNavClick(navItem)}
                   >
-                    {isMobile && navItem.submenu ? (
-                      <div
-                        className="nav-link"
-                        onClick={() => toggleMobileMenu(navItem.label)}
-                        style={{ cursor: "pointer" }}
-                      >
-                        {navItem.label}
-                        {mobileMenuOpen[navItem.label] ? (
-                          <KeyboardArrowUpIcon />
-                        ) : (
-                          <KeyboardArrowDownIcon />
-                        )}
-                      </div>
-                    ) : (
-                      <Nav.Link as={Link} to={navItem.path}>
-                        {navItem.label}
-                        {navItem.submenu && !isMobile && (
-                          <KeyboardArrowDownIcon
-                            style={{
-                              transform:
-                                isMenuHovered === navItem.label
-                                  ? navbarData?.ui.animations.arrowRotation
-                                      .expanded
-                                  : navbarData?.ui.animations.arrowRotation
-                                      .collapsed,
-                              transition:
-                                navbarData?.ui.animations.arrowRotation
-                                  .transition,
-                            }}
-                          />
-                        )}
-                      </Nav.Link>
-                    )}
-                    {!isMobile &&
-                      isMenuHovered === navItem.label &&
-                      navItem.submenu && (
-                        <div className="sub-menu-desktop">
-                          <div className="sub-menu-desktop-left">
-                            <ul className="sub-menu-ul-left">
-                              {currentMenuData?.categories?.length > 0 &&
-                                currentMenuData?.categories.map((category) => (
-                                  <li
-                                    key={category.name}
-                                    onMouseEnter={(e) =>
-                                      handleSubMenuHover(e, category.name)
-                                    }
-                                  >
-                                    {category.name}
-                                    <KeyboardArrowRightIcon className="arrow_right_icon" />
-                                  </li>
-                                ))}
-                            </ul>
-                          </div>
-
-                          <div className="sub-menu-desktop-right">
-                            {currentSubMenuData?.section_type ===
-                              "append_as_link" && (
-                              <ul className="sub-menu-ul-right">
-                                {currentSubMenuData.subcategories.map((sub) => (
-                                  <li
-                                    key={sub.id}
-                                    id={sub.id}
-                                    onClick={() => handleNavigation(sub.name)}
-                                  >
-                                    {sub.name}
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-
-                            {currentSubMenuData?.section_type ===
-                              "append_as_image" && (
-                              <ul className="sub-menu-ul-right append_as_image">
-                                {currentSubMenuData.subcategories.map((sub) => {
-                                  return (
-                                    <li
-                                      className="append_as_image_li"
-                                      key={sub.id}
-                                      id={sub.id}
-                                      onClick={() => handleNavigation(sub.path)}
-                                    >
-                                      <img
-                                        className="append_as_image_img"
-                                        id={sub.id}
-                                        src={sub.image}
-                                        alt={sub.alt}
-                                        title={sub.alt}
-                                        onError={(e) => {
-                                          e.target.src = JSON.ui.defaultImage;
-                                          console.error(
-                                            `Image failed to load: ${sub.image}`
-                                          );
-                                        }}
-                                      />
-                                    </li>
-                                  );
-                                })}
-                              </ul>
-                            )}
-                          </div>
-                        </div>
-                      )}
-
-                    {isMobile && navItem.submenu && (
-                      <Collapse in={mobileMenuOpen[navItem.label]}>
-                        <div className="sub-menu-mobile">
-                          {navItem.categories?.map((category) => (
-                            <div
-                              key={category.name}
-                              className="sub-menu-category"
-                            >
-                              <div className="category-title">
-                                {category.name}
-                              </div>
-
-                              {category.section_type === "append_as_link" && (
-                                <ul className="subcategory-list">
-                                  {category.subcategories.map((sub) => (
-                                    <li
-                                      key={sub.id}
-                                      onClick={() => {
-                                        handleNavigation(sub.name);
-                                        setMobileMenuOpen({});
-                                      }}
-                                    >
-                                      {sub.name}
-                                    </li>
-                                  ))}
-                                </ul>
-                              )}
-
-                              {category.section_type === "append_as_image" && (
-                                <div className="subcategory-grid">
-                                  {category.subcategories.map((sub) => (
-                                    <div
-                                      key={sub.id}
-                                      className="subcategory-item"
-                                      onClick={() => {
-                                        handleNavigation(sub.path);
-                                        setMobileMenuOpen({});
-                                      }}
-                                    >
-                                      <img
-                                        src={sub.image}
-                                        alt={sub.alt}
-                                        title={sub.alt}
-                                        onError={(e) => {
-                                          e.target.src = JSON.ui.defaultImage;
-                                          console.error(
-                                            `Image failed to load: ${sub.image}`
-                                          );
-                                        }}
-                                      />
-                                      {(category.name === "Select by Type" ||
-                                        category.name ===
-                                          "Browse by Fuel Type") && (
-                                        <div
-                                          style={{ fontWeight: "500" }}
-                                          className="subcategory-name"
-                                        >
-                                          {sub.name}
-                                        </div>
-                                      )}
-                                    </div>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </Collapse>
-                    )}
-                  </div>
-                ))}
-              </Nav>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title={navbarData?.profile.tooltip}>
-              <IconButton
-                className="profile-btn"
-                onClick={handleOpenUserMenu}
-                sx={{ p: 0 }}
-              >
-                {user?.isLoggedIn ? (
-                  <div style={{ display: "flex", alignItems: "center" }}>
-                    {!profileImageError ? (
-                      <Avatar
-                        alt={user.name}
-                        src={navbarData?.profile.defaultAvatar}
-                        onError={handleProfileImageError}
-                        sx={{ width: 32, height: 32 }}
-                      />
-                    ) : (
-                      <Avatar
-                        alt="Default Profile"
-                        src={navbarData?.profile.fallbackAvatar}
-                        sx={{ width: 32, height: 32 }}
-                      />
-                    )}
-                    <span
-                      style={{
-                        marginLeft: "8px",
-                        color: "#1a1a1a",
-                        fontSize: "14px",
-                      }}
-                    >
-                      {user.name}{" "}
-                      {anchorElUser ? (
-                        <KeyboardArrowUpIcon sx={{ fontSize: 20 }} />
-                      ) : (
-                        <KeyboardArrowDownIcon sx={{ fontSize: 20 }} />
-                      )}
-                    </span>
-                  </div>
+                    {navItem.label}
+                  </button>
                 ) : (
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "8px",
-                    }}
+                  <Link
+                    key={navItem.label}
+                    to={navItem.path}
+                    className={`nbr__top-nav-link${activeNavLabel === navItem.label ? " nbr__top-nav-link--active" : ""}`}
+                    onClick={() => handleTopNavClick(navItem)}
                   >
-                    <button
-                      className="btn btn-outline-primary btn-login"
-                      onClick={() => navigate("/login")}
-                    >
-                      Login
-                    </button>
-                    <button
-                      className="btn btn-primary btn-signup"
-                      onClick={() => navigate("/signup")}
-                    >
-                      Sign Up
-                    </button>
-                  </div>
-                )}
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{
-                mt: "45px",
-                "& .MuiPaper-root": {
-                  borderRadius: "12px",
-                  minWidth: "200px",
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
-                },
-              }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {user?.isLoggedIn && (
-                <Box sx={{ px: 2, py: 1 }}>
-                  <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
-                    {user.name}
-                  </Typography>
-                  <Typography sx={{ fontSize: "12px", color: "gray" }}>
-                    {user.email}
-                  </Typography>
-                </Box>
+                    {navItem.label}
+                  </Link>
+                ),
               )}
-              <MenuItem
-                onClick={() =>
-                  handleProfileMenuClick({
-                    action: "navigate",
-                    path: "/my-profile",
-                  })
-                }
+            </nav>
+          </div>
+
+          {/* Right: search + notifications + profile */}
+          <div className="nbr__header-right">
+            <div className="nbr__search">
+              <SearchRoundedIcon className="nbr__search-icon" />
+              <input
+                className="nbr__search-input"
+                type="text"
+                placeholder="Search brands or models..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+
+            <IconButton className="nbr__notif-btn" size="small">
+              <Badge color="error" variant="dot">
+                <NotificationsRoundedIcon className="nbr__notif-icon" />
+              </Badge>
+            </IconButton>
+
+            <div className="nbr__profile">
+              <Tooltip title={navbarData.profile.tooltip}>
+                <IconButton
+                  onClick={handleOpenUserMenu}
+                  className="nbr__profile-btn"
+                  sx={{ p: 0 }}
+                >
+                  <div className="nbr__profile-inner">
+                    <div className="nbr__profile-info">
+                      <span className="nbr__profile-name">
+                        {TEMP_USER.name}
+                      </span>
+                      <span className="nbr__profile-badge">
+                        {TEMP_USER.memberLabel}
+                      </span>
+                    </div>
+                    <Avatar
+                      alt={TEMP_USER.name}
+                      src={
+                        profileImageError
+                          ? navbarData.profile.fallbackAvatar
+                          : navbarData.profile.defaultAvatar
+                      }
+                      onError={() => setProfileImageError(true)}
+                      className="nbr__avatar"
+                      sx={{ width: 40, height: 40 }}
+                    />
+                  </div>
+                </IconButton>
+              </Tooltip>
+
+              <Menu
+                id="nbr-profile-menu"
+                anchorEl={anchorElUser}
+                anchorOrigin={{ vertical: "top", horizontal: "right" }}
+                keepMounted
+                transformOrigin={{ vertical: "top", horizontal: "right" }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+                sx={{
+                  mt: "56px",
+                  "& .MuiPaper-root": {
+                    borderRadius: "12px",
+                    minWidth: "200px",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                  },
+                }}
               >
-                <AccountCircleIcon sx={{ mr: 2, fontSize: 20 }} />
-                <Typography>Edit profile</Typography>
-              </MenuItem>
-              <MenuItem
-                onClick={() =>
-                  handleProfileMenuClick({
-                    action: "navigate",
-                    path: "/my-orders",
-                  })
-                }
-              >
-                <ListAltIcon sx={{ mr: 2, fontSize: 20 }} />
-                <Typography>My Orders</Typography>
-              </MenuItem>
-              <MenuItem
-                onClick={() =>
-                  handleProfileMenuClick({
-                    action: "navigate",
-                    path: "/my-wishlist",
-                  })
-                }
-              >
-                <FavoriteBorderIcon sx={{ mr: 2, fontSize: 20 }} />
-                <Typography>My Wishlist</Typography>
-              </MenuItem>
-              <MenuItem
-                onClick={() => handleProfileMenuClick({ action: "logout" })}
-              >
-                <LogoutIcon sx={{ mr: 2, fontSize: 20 }} />
-                <Typography>Log out</Typography>
-              </MenuItem>
-            </Menu>
-          </Box>
-        </Container>
-      </Navbar>
+                {TEMP_USER.isLoggedIn && (
+                  <Box sx={{ px: 2, py: 1, borderBottom: "1px solid #f0f0f2" }}>
+                    <Typography sx={{ fontSize: "14px", fontWeight: 600 }}>
+                      {TEMP_USER.name}
+                    </Typography>
+                    <Typography sx={{ fontSize: "12px", color: "gray" }}>
+                      {TEMP_USER.email}
+                    </Typography>
+                  </Box>
+                )}
+                {navbarData.profile.menuItems.map((menuItem) => (
+                  <MenuItem
+                    key={menuItem.label}
+                    onClick={() => handleProfileMenuClick(menuItem)}
+                  >
+                    {PROFILE_MENU_ICONS[menuItem.label] ?? null}
+                    <Typography sx={{ fontSize: "14px" }}>
+                      {menuItem.label}
+                    </Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Sidebar overlay - visible when a top nav item with submenu is active */}
+      {activeNavLabel && (
+        <aside className="nbr__sidebar" ref={sidebarRef}>
+          <div className="nbr__sidebar-section">
+            <p className="nbr__sidebar-section-label">Discovery</p>
+            <nav className="nbr__sidebar-nav">
+              {discoveryCategories.map((category) => (
+                <button
+                  key={category.name}
+                  className={`nbr__sidebar-item${activeCategory === category.name ? " nbr__sidebar-item--active" : ""}`}
+                  onClick={() => toggleCategory(category.name)}
+                >
+                  <span className="nbr__sidebar-item-icon">
+                    {CATEGORY_ICONS[category.name] ?? <StorefrontRoundedIcon />}
+                  </span>
+                  <span className="nbr__sidebar-item-label">
+                    {category.name}
+                  </span>
+                </button>
+              ))}
+            </nav>
+          </div>
+        </aside>
+      )}
+
+      {/* Flyout panel - visible when a sidebar category is selected */}
+      {activeCategoryData && (
+        <div className="nbr__flyout" ref={flyoutRef}>
+          <p className="nbr__flyout-title">{activeCategoryData.name}</p>
+
+          {activeCategoryData.section_type === "append_as_image" && (
+            <div className="nbr__flyout-grid">
+              {activeCategoryData.subcategories.map((sub) => (
+                <div
+                  key={sub.id}
+                  className="nbr__flyout-grid-item"
+                  onClick={() => handleSubcategoryNav(sub, activeCategoryData)}
+                >
+                  <div className="nbr__flyout-grid-item-img">
+                    <img
+                      src={sub.image}
+                      alt={sub.alt}
+                      title={sub.alt}
+                      onError={(e) => {
+                        e.target.src = navbarData.ui.defaultImage;
+                      }}
+                    />
+                  </div>
+                  <span>{sub.name}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {activeCategoryData.section_type === "append_as_link" && (
+            <ul className="nbr__flyout-list">
+              {activeCategoryData.subcategories.map((sub) => (
+                <li
+                  key={sub.id}
+                  className="nbr__flyout-list-item"
+                  onClick={() => handleSubcategoryNav(sub, activeCategoryData)}
+                >
+                  {sub.name}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+
+      {/* Body Layout */}
+      <div className="nbr__layout">
+        <main className="nbr__main">{children}</main>
+      </div>
+
+      {/* Mobile Bottom Navigation */}
+      <nav className="nbr__mobile-nav">
+        <Link
+          to="/"
+          className={`nbr__mobile-nav-item${location.pathname === "/" ? " nbr__mobile-nav-item--active" : ""}`}
+        >
+          <HomeRoundedIcon />
+          <span>Home</span>
+        </Link>
+
+        <Link
+          to="/bikes"
+          className={`nbr__mobile-nav-item${location.pathname.startsWith("/bikes") ? " nbr__mobile-nav-item--active" : ""}`}
+        >
+          <ExploreRoundedIcon />
+          <span>Explore</span>
+        </Link>
+
+        <button
+          className="nbr__mobile-nav-fab"
+          onClick={() =>
+            navigate(navbarData.navLinks[1]?.path ?? "/sell-your-bike")
+          }
+          aria-label="Post an Ad"
+        >
+          <AddRoundedIcon />
+        </button>
+
+        <Link
+          to="/my-wishlist"
+          className={`nbr__mobile-nav-item${location.pathname.startsWith("/my-wishlist") ? " nbr__mobile-nav-item--active" : ""}`}
+        >
+          <FavoriteBorderIcon />
+          <span>Favorites</span>
+        </Link>
+
+        <Link
+          to="/profile"
+          className={`nbr__mobile-nav-item${location.pathname.startsWith("/profile") ? " nbr__mobile-nav-item--active" : ""}`}
+        >
+          <PersonRoundedIcon />
+          <span>Profile</span>
+        </Link>
+      </nav>
     </>
   );
-}
+};
 
-export default NavbarDeskTop;
+Navbar.propTypes = {
+  children: PropTypes.node,
+};
+
+export default Navbar;

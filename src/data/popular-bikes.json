@@ -1,28 +1,35 @@
 {
-  "title": "Popular Used Bikes Searches",
+  "title": "Popular Used Bikes",
+  "subtitle": "Explore the most sought-after categories in our curated collection. Every vehicle is vetted for excellence.",
   "popularbikedata": [
     {
       "id": 1,
-      "imgSrc": "https://media.istockphoto.com/id/1225772778/vector/man-buying-motorcycle-on-sale-flat-doodle-illustration-tourist-purchasing-local-transport.jpg?s=612x612&w=0&k=20&c=hSYarWP2cDx_DEOqPSqjvag_z5wTreWFW_ehEAqAY3M=",
-      "title": "Trending Now",
-      "description": "Check out the most popular bikes among buyers this week.",
-      "actionText": "See Trending Bikes",
+      "imgSrc": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
+      "badge": "Trending Now",
+      "badgeVariant": "primary",
+      "cardTitle": "Sport Excellence",
+      "description": "The most popular bikes among buyers this week. High velocity meets indigo soul.",
+      "actionText": "Explore Trending",
       "path": "/bikes"
     },
     {
       "id": 2,
-      "imgSrc": "https://media.istockphoto.com/id/1225772778/vector/man-buying-motorcycle-on-sale-flat-doodle-illustration-tourist-purchasing-local-transport.jpg?s=612x612&w=0&k=20&c=hSYarWP2cDx_DEOqPSqjvag_z5wTreWFW_ehEAqAY3M=",
-      "title": "Best Value",
-      "description": "Bikes that offer the best features for your budget.",
-      "actionText": "Explore Value Picks",
+      "imgSrc": "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=800&auto=format&fit=crop",
+      "badge": "Best Value",
+      "badgeVariant": "secondary",
+      "cardTitle": "Daily Precision",
+      "description": "Bikes that offer the best features for your budget. Practicality without compromise.",
+      "actionText": "View Value Picks",
       "path": "/bikes"
     },
     {
       "id": 3,
-      "imgSrc": "https://media.istockphoto.com/id/1225772778/vector/man-buying-motorcycle-on-sale-flat-doodle-illustration-tourist-purchasing-local-transport.jpg?s=612x612&w=0&k=20&c=hSYarWP2cDx_DEOqPSqjvag_z5wTreWFW_ehEAqAY3M=",
-      "title": "Certified Pre-Owned",
+      "imgSrc": "https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=800&auto=format&fit=crop",
+      "badge": "Certified",
+      "badgeVariant": "certified",
+      "cardTitle": "Heritage Icons",
       "description": "Buy with confidence—our certified bikes come with warranty and inspection.",
-      "actionText": "Shop Certified Bikes",
+      "actionText": "Shop Certified",
       "path": "/bikes"
     }
   ]
