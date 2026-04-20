@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "backgroundImage": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmlrZXN8ZW58MHx8MHx8fDA%3D",
+    "backgroundAlt": "second-hand motorcycle in excellent condition parked in a modern showroom with professional lighting",
+    "tagline": "Trust & Transparency",
+    "heading": "Buy & Sell Used Bikes with Confidence.",
+    "description": "Your trusted marketplace for quality second-hand motorcycles. Verified listings, transparent pricing, and hassle-free transactions.",
+    "buttons": [
+      {
+        "label": "Browse Used Bikes",
+        "type": "primary",
+        "href": "/product-list"
+      },
+      {
+        "label": "Sell Your Bike",
+        "type": "secondary",
+        "href": "/sell-bike"
+      }
+    ],
+    "featuredCard": {
+      "image": "https://images.pexels.com/photos/8532378/pexels-photo-8532378.png?cs=srgb&dl=pexels-abhinav-8532378.jpg&fm=jpg",
+      "imageAlt": "well-maintained second-hand motorcycle showcased in professional photography",
+      "badge": "Featured Listing",
+      "lotNumber": "Listing ID: 8274",
+      "title": "2015 Honda CB500F - Excellent Condition",
+      "exploreLink": "/product-details/8274"
+    },
+    "statsCard": {
+      "badge": "Quality Checked",
+      "stats": [
+        {
+          "label": "Engine Health",
+          "value": "Verified",
+          "percentage": 100
+        },
+        {
+          "label": "Inspection Status",
+          "value": "Passed"
+        }
+      ]
+    }
+  },
+  "features": [
+    {
+      "icon": "verified",
+      "title": "Complete Inspection",
+      "description": "Every bike undergoes a thorough inspection report covering engine, suspension, brakes, and overall condition."
+    },
+    {
+      "icon": "trending_up",
+      "title": "Fair Market Pricing",
+      "description": "Transparent valuation based on market trends, condition, and specifications. No hidden charges or surprise fees."
+    },
+    {
+      "icon": "directions_bike",
+      "title": "Easy Selling Process",
+      "description": "List your bike in minutes, manage inquiries, and close deals seamlessly through our secure platform."
+    }
+  ]
+}

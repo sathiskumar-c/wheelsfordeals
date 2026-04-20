@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 
 // Components Imports
+import MainBanner from "../../components/main-banner/main-banner";
 import PopularBikes from "../../components/popular-bikes/popular-bikes";
 import FrequentlyAskedQuestions from "../../components/frequently-asked-questions/frequently-asked-questions";
 import OurServices from "../../components/our-services/our-services";
@@ -14,6 +15,7 @@ import HorizontalTabs from "../../components/common-components/horizontal-tabs/h
 import CardCarousel from "../../components/common-components/card-carousel/card-carousel";
 
 // JSON Imports
+import MainBannerData from "../../data/main-banner.json";
 import BenefitsData from "../../data/benefits.json";
 import FAQ from "../../data/frequently-asked-questions.json";
 import ServicesCarouselData from "../../data/services-carousel.json";
@@ -34,6 +36,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
+      <MainBanner data={MainBannerData} />
       <BrowseBikesBy />
       <PopularBikes />
       <OurServices />

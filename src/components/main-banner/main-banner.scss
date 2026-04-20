@@ -1,0 +1,454 @@
+/* Main Banner Component Styles */
+
+.main-banner {
+  .main-banner-main {
+    padding-top: 0;
+    padding-bottom: 96px;
+  }
+
+  .main-banner-hero {
+    position: relative;
+    min-height: 921px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .main-banner-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .main-banner-hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+  }
+
+  .main-banner-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      #f9f9fb,
+      rgba(249, 249, 251, 0.6),
+      transparent
+    );
+  }
+
+  .main-banner-hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+
+  .main-banner-hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: 1024px) {
+      grid-column: span 7;
+    }
+  }
+
+  .main-banner-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .main-banner-tagline {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    background-color: #eaddff;
+    color: #24005b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    width: fit-content;
+  }
+
+  .main-banner-hero-heading {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #1c0070;
+    font-family: "Manrope", sans-serif;
+
+    @media (min-width: 768px) {
+      font-size: 56px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 64px;
+    }
+
+    word-break: break-word;
+  }
+
+  .main-banner-hero-description {
+    max-width: 480px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #474553;
+    font-weight: 300;
+    font-family: "Inter", sans-serif;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  .main-banner-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 16px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .main-banner-btn {
+    border: none;
+    border-radius: 4px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.main-banner-btn-primary {
+      background-color: #1c0070;
+      color: #ffffff;
+      box-shadow: 0 16px 32px rgba(28, 0, 112, 0.15);
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:active {
+        scale: 0.95;
+      }
+    }
+
+    &.main-banner-btn-secondary {
+      background-color: #e8e8ea;
+      color: #1c0070;
+
+      &:hover {
+        background-color: #e2e2e4;
+      }
+
+      &:active {
+        scale: 0.95;
+      }
+    }
+  }
+
+  .main-banner-hero-right {
+    display: none;
+    position: relative;
+
+    @media (min-width: 1024px) {
+      display: block;
+      grid-column: span 5;
+    }
+  }
+
+  .main-banner-featured-card {
+    position: relative;
+  }
+
+  .main-banner-featured-shadow {
+    position: absolute;
+    inset: -16px;
+    background-color: rgba(49, 27, 146, 0.05);
+    filter: blur(48px);
+    border-radius: 48px;
+  }
+
+  .main-banner-featured-content {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(26, 28, 29, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+  }
+
+  .main-banner-featured-media {
+    position: relative;
+    aspect-ratio: 4 / 5;
+  }
+
+  .main-banner-featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main-banner-featured-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 9999px;
+    box-shadow: 0 20px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-banner-badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #6c45c0;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .main-banner-badge-text {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1a1c1d;
+    font-family: "Inter", sans-serif;
+  }
+
+  .main-banner-featured-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: #ffffff;
+  }
+
+  .main-banner-featured-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .main-banner-lot-number {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 4px;
+    font-family: "Inter", sans-serif;
+  }
+
+  .main-banner-featured-title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+  }
+
+  .main-banner-featured-btn {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #1c0070;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e5deff;
+    }
+  }
+
+  .main-banner-stats-card {
+    position: absolute;
+    bottom: -32px;
+    left: -48px;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e8e8ea;
+    max-width: 220px;
+  }
+
+  .main-banner-stats-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .main-banner-stats-icon {
+    color: #6c45c0;
+    font-size: 20px;
+  }
+
+  .main-banner-stats-badge {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #474553;
+  }
+
+  .main-banner-stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-banner-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main-banner-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-banner-stat-label {
+    font-size: 10px;
+    color: #cbd5e1;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+  }
+
+  .main-banner-stat-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e1b4b;
+    font-family: "Manrope", sans-serif;
+  }
+
+  .main-banner-stat-bar {
+    width: 100%;
+    background-color: #e8e8ea;
+    height: 6px;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+
+  .main-banner-stat-progress {
+    background-color: #1e40af;
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+  }
+
+  .main-banner-features {
+    margin-top: -48px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .main-banner-features-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .main-banner-feature-card {
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 24px 48px rgba(26, 28, 29, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .main-banner-feature-icon {
+    color: #1e40af;
+    font-size: 30px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .main-banner-feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c0070;
+    margin-bottom: 8px;
+    font-family: "Manrope", sans-serif;
+  }
+
+  .main-banner-feature-description {
+    color: #474553;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .main-banner-hero {
+      min-height: 600px;
+    }
+
+    .main-banner-hero-heading {
+      font-size: 36px;
+    }
+
+    .main-banner-stats-card {
+      position: static;
+      margin-top: 24px;
+    }
+
+    .main-banner-featured-card {
+      margin-top: 24px;
+    }
+  }
+}
